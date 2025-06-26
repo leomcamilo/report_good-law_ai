@@ -1,0 +1,21 @@
+[project]
+name = "analise-lei-do-bem"
+version = "0.1.0"
+description = "Análise de dados de projetos da Lei do Bem com Pandas e LangChain usando uv."
+authors = [{name = "IA Budy", email = "ia@budy.com"}]
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = [
+    "pandas>=1.5.0",
+    "psycopg2-binary>=2.9.0",
+    "sqlalchemy>=1.4.0",
+    "numpy>=1.21.0",
+    "openpyxl>=3.0.0",
+    "pyarrow>=5.0.0",
+    "langchain>=0.3.0",
+    "langchain-openai>=0.1.0",
+    "python-dotenv>=1.0.0",
+]
+
+[tool.uv]
+# Configurações futuras do uv podem ser adicionadas aqui
