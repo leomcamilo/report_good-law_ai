@@ -1,3 +1,13 @@
 .env
-projetos_lei_do_bem_2023.csv
-projetos_lei_do_bem_2023.xlsx
+
+# Ignorar arquivos de ambiente Python
+.venv/
+
+# Ignorar arquivos gerados e dados
+tabelas_csv_xlsx/
+*.npy
+*.csv
+
+# Ignorar caches do Python
+__pycache__/
+*.pyc

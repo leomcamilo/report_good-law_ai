@@ -1,6 +1,6 @@
-# Análise de Projetos da Lei do Bem - DataFrame Pandas
+# Análise e Clusterização de Projetos da Lei do Bem
 
-Este projeto converte a consulta SQL dos projetos da Lei do Bem em um DataFrame pandas para análise e processamento de dados, utilizando o modelo Claude-3.5-Sonnet para análises avançadas.
+Este projeto extrai, processa e analisa dados de projetos da Lei do Bem. Ele opera em um pipeline de dois estágios para primeiro consolidar os dados de um banco de dados e, em seguida, aplicar técnicas de Machine Learning para agrupar projetos similares.
 
 ## 📋 Pré-requisitos
 
@@ -8,7 +8,6 @@ Este projeto converte a consulta SQL dos projetos da Lei do Bem em um DataFrame 
 - PostgreSQL rodando localmente na porta 5432
 - Banco de dados `dbs_mctic2` configurado
 - Credenciais: usuário `ia_budy`, senha `ia_budy`
-- Chave API do Anthropic Claude
 - [uv](https://docs.astral.sh/uv/) - Gerenciador de pacotes Python moderno
 
 ## 🚀 Instalação
@@ -21,9 +20,6 @@ curl -LsSf https://astral.sh/uv/install.sh | sh
 
 # Windows
 powershell -c "irm https://astral.sh/uv/install.ps1 | iex"
-
-# Via pip (alternativa)
-pip install uv
 ```
 
 ### 2. **Configurar o projeto:**
@@ -33,6 +29,7 @@ pip install uv
 cd /home/leomcamilo/projects/test_pgai
 
 # Instalar dependências e criar ambiente virtual
+# Isso instalará pandas, sqlalchemy, sentence-transformers, umap-learn, hdbscan, etc.
 uv sync
 
 # Ativar ambiente virtual
@@ -41,354 +38,87 @@ source .venv/bin/activate  # Linux/macOS
 .venv\Scripts\activate     # Windows
 ```
 
-### 3. **Configurar ambiente:**
-
-```bash
-# Copiar arquivo de configuração
-cp .env.example .env
-
-# Editar com suas credenciais (IMPORTANTE: configure sua chave do Claude)
-nano .env
-```
-
-### 4. **Testar sistema:**
-
-```bash
-python test_sistema.py
-```
-
-## 📦 Gerenciamento de Dependências com uv
-
-### Comandos Básicos do uv
-
-```bash
-# Instalar todas as dependências (primeira vez)
-uv sync
-
-# Adicionar nova dependência
-uv add nome-do-pacote
-
-# Adicionar dependência de desenvolvimento
-uv add --dev nome-do-pacote
-
-# Remover dependência
-uv remove nome-do-pacote
-
-# Atualizar dependências
-uv sync --upgrade
-
-# Mostrar dependências instaladas
-uv pip list
-
-# Ativar ambiente virtual
-source .venv/bin/activate
-```
-
-### Estrutura do Projeto
+## 🏗️ Estrutura do Projeto
 
 ```
 test_pgai/
 ├── pyproject.toml          # Configuração e dependências
-├── .env                    # Variáveis de ambiente
 ├── .venv/                  # Ambiente virtual (criado pelo uv)
-├── analise_projetos.py     # Script principal
-├── consulta_simples.py     # Script simples
-├── analise_langchain_claude.py    # Análise com IA
-├── test_sistema.py         # Testes
-└── README.md              # Este arquivo
+├── analise_projetos.py     # Etapa 1: Extração de dados do DB
+├── criar_resumo.py         # Etapa 2: Clusterização com ML
+├── tabelas_csv_xlsx/       # Diretório para os dados extraídos
+└── README.md               # Este arquivo
 ```
 
-## 📊 Uso
+## 📊 Fluxo de Trabalho e Uso
 
-### Opção 1: Script Completo (Recomendado)
+O processo é dividido em duas etapas principais, que devem ser executadas em ordem.
 
-Execute o script principal que inclui análises automáticas:
+### Etapa 1: Extrair Dados do Banco de Dados
+
+O script `analise_projetos.py` conecta ao PostgreSQL, executa uma consulta consolidada e salva os dados brutos em um arquivo CSV.
 
 ```bash
 # Ativar ambiente (se não estiver ativo)
 source .venv/bin/activate
 
-# Executar análise
+# Executar o script de extração
 python analise_projetos.py
 ```
 
-**Funcionalidades:**
-- Carrega dados da consulta SQL consolidada
-- Gera estatísticas e relatórios automáticos
-- Salva dados em CSV e Excel
-- Fornece insights sobre o processo da Lei do Bem
+Isso criará um arquivo CSV dentro da pasta `tabelas_csv_xlsx/`, que será usado na próxima etapa.
 
-### Opção 2: Script Simples
+### Etapa 2: Clusterizar Projetos com Machine Learning
 
-Para uso rápido e direto:
+O script `criar_resumo.py` lê o arquivo CSV gerado, aplica um modelo de linguagem para entender o conteúdo dos projetos e os agrupa por similaridade.
 
 ```bash
-python consulta_simples.py
+# Executar o script de clusterização
+python criar_resumo.py
 ```
 
-**Funcionalidades:**
-- Carrega apenas os dados em DataFrame
-- Salva como CSV
-- Ideal para uso interativo
+## 🤖 Pipeline de Machine Learning
 
-### Opção 3: Uso Programático
+A clusterização realizada pelo `criar_resumo.py` segue os seguintes passos:
 
-```python
-from analise_projetos import AnalisadorProjetosLeiDoBem
-
-# Inicializar analisador
-analisador = AnalisadorProjetosLeiDoBem()
-
-# Conectar e carregar dados
-analisador.conectar_banco()
-df = analisador.carregar_dados()
-
-# Usar o DataFrame
-print(df.head())
-print(df.info())
-
-# Análises específicas
-projetos_aprovados = df[df['do_resultado'] == 'RECOMENDADO']
-print(f"Projetos recomendados: {len(projetos_aprovados)}")
-```
-
-## 📈 Estrutura dos Dados
-
-O DataFrame resultante contém as seguintes categorias de colunas:
-
-### 🏢 Identificação e Empresa
-- `iddadoanaliseprojeto`, `projeto_numero`, `projeto_nome`
-- `empresa_cnpj`, `empresa_razao_social`, `empresa_ano_base`
-
-### 📝 Fase 1: Preenchimento
-- `preen_tipo_organismo`, `preen_receita_liquida`
-- `preen_total_funcionarios`, `preen_pesquisadores_exclusivos`
-
-### 🔬 Dados Técnicos do Projeto
-- `projeto_area`, `projeto_tipo_pesquisa`, `projeto_natureza`
-- `projeto_elemento_tecnologico`, `projeto_metodologia`
-
-### 🔍 Fase 2: Análise DO
-- `do_resultado`, `do_valor_declarado`, `do_tipo_avaliacao`
-- `do_justificativa_resumo`, `do_observacao_resumo`
-
-### 📋 Fase 3: Parecer
-- `parecer_resultado`, `parecer_valor_aprovado`, `parecer_valor_glosa`
-- `parecer_projetos_aprovados`, `parecer_conclusao_resumo`
-
-### ⚖️ Fase 4: Contestação
-- `contestacao_solicita_reanalise`
-- `contestacao_justificativa_resumo`, `contestacao_resposta_resumo`
-
-### 📊 Indicadores de Progresso
-- `passou_analise_do`, `passou_parecer`, `teve_contestacao`
-- `status_atual_processo`
-
-## 🔧 Exemplos de Análise
-
-### Estatísticas Básicas
-```python
-# Distribuição por status
-print(df['status_atual_processo'].value_counts())
-
-# Valores por fase
-print(df['do_valor_declarado'].describe())
-print(df['parecer_valor_aprovado'].describe())
-```
-
-### Análises por Empresa
-```python
-# Projetos por empresa
-empresas = df.groupby('empresa_razao_social').agg({
-    'projeto_numero': 'count',
-    'do_valor_declarado': 'sum',
-    'parecer_valor_aprovado': 'sum'
-}).sort_values('projeto_numero', ascending=False)
-
-print(empresas.head(10))
-```
-
-### Análises por Área
-```python
-# Projetos por área
-areas = df.groupby('projeto_area').size().sort_values(ascending=False)
-print(areas.head(10))
-
-# Taxa de aprovação por área
-aprovacao_area = df.groupby('projeto_area').agg({
-    'passou_parecer': 'mean',
-    'teve_contestacao': 'mean'
-})
-print(aprovacao_area)
-```
-
-### Análise Temporal
-```python
-# Análise por data de início (se disponível)
-if 'projeto_inicio' in df.columns:
-    df['projeto_inicio'] = pd.to_datetime(df['projeto_inicio'])
-    temporal = df.groupby(df['projeto_inicio'].dt.year).size()
-    print(temporal)
-```
+1.  **Criação de Embeddings**: Textos de cada projeto são convertidos em vetores numéricos (embeddings) usando o modelo `neuralmind/bert-base-portuguese-cased`.
+2.  **Redução de Dimensionalidade**: O `UMAP` é usado para reduzir a complexidade dos vetores, otimizando a performance do clustering.
+3.  **Clusterização**: O `HDBSCAN` é aplicado para agrupar os projetos em clusters com base na proximidade de seus vetores.
 
 ## 📁 Arquivos de Saída
 
-O script gera automaticamente:
+Ao final do processo, os seguintes arquivos serão gerados:
 
-- `projetos_lei_do_bem_2023.csv` - Dados em formato CSV
-- `projetos_lei_do_bem_2023.xlsx` - Dados em formato Excel
-- Relatório de estatísticas no console
-
-## ⚠️ Observações Importantes
-
-1. **Filtro de Ano**: A consulta está filtrada para ano base 2023
-2. **Campos de Texto**: Limitados a 200 caracteres para otimização
-3. **Valores Nulos**: Campos opcionais podem conter valores nulos
-4. **Performance**: Para grandes volumes, considere usar `chunksize` no pandas
+-   **Da Etapa 1:**
+    -   `tabelas_csv_xlsx/projetos_lei_do_bem_2023_TODAS_AS_EMPRESAS.csv`: Dados brutos extraídos do banco de dados.
+-   **Da Etapa 2:**
+    -   `projetos_com_clusters.csv`: Arquivo final com uma coluna adicional `cluster` que identifica o grupo de cada projeto.
+    -   `embeddings_reduced.npy`: Arquivo NumPy com os vetores de embeddings de dimensionalidade reduzida.
 
 ## 🆘 Troubleshooting
 
-### Erro de Conexão
+### Erro de Conexão com Banco
 ```
 psycopg2.OperationalError: could not connect to server
 ```
-**Solução**: Verificar se PostgreSQL está rodando e credenciais estão corretas.
+**Solução**: Verifique se o serviço do PostgreSQL está ativo e se as credenciais no script `analise_projetos.py` estão corretas.
 
-### Erro de Permissão
+### Erro de `ParserError` em `criar_resumo.py`
 ```
-permission denied for table
+pandas.errors.ParserError: Error tokenizing data.
 ```
-**Solução**: Verificar se usuário `ia_budy` tem permissões adequadas.
+**Solução**: Verifique se o separador no `pd.read_csv()` em `criar_resumo.py` (ex: `sep=';'`) corresponde ao separador usado para salvar o arquivo em `analise_projetos.py`.
 
-### Erro de Memória
-```
-MemoryError
-```
-**Solução**: Usar `chunksize` no `pd.read_sql_query()` para grandes datasets.
-
-### Problemas com uv
+### Problemas com `uv`
 
 ```bash
-# Recriar ambiente virtual
+# Recriar ambiente virtual do zero
 rm -rf .venv
 uv sync
 
 # Limpar cache do uv
 uv clean
-
-# Verificar versão
-uv --version
 ```
-
-## 📚 Recursos Adicionais
-
-- [Documentação uv](https://docs.astral.sh/uv/)
-- [Documentação Pandas](https://pandas.pydata.org/docs/)
-- [SQLAlchemy Documentation](https://docs.sqlalchemy.org/)
-- [PostgreSQL Documentation](https://www.postgresql.org/docs/)
-
-## 🤖 Análise com IA (LangChain + Claude)
-
-### Configuração da API
-
-1. **Obter chave da API Anthropic Claude:**
-   - Acesse: https://console.anthropic.com/
-   - Crie uma conta e obtenha sua API key
-
-2. **Configurar a chave:**
-   ```bash
-   # Edite o arquivo .env
-   nano .env
-   
-   # Substitua pela sua chave real:
-   ANTHROPIC_API_KEY=sk-ant-api03-xxxxxxxxxxxxxxxxxxxxxxxx
-   ```
-
-3. **Testar configuração:**
-   ```bash
-   python test_claude_config.py
-   ```
-
-### Scripts de Análise com IA
-
-Certifique-se de que o ambiente virtual está ativo:
-
-```bash
-source .venv/bin/activate
-```
-
-#### Opção 1: Script Interativo (Recomendado)
-```bash
-python analise_simples.py
-```
-
-**Menu interativo com opções:**
-- Análise Rápida (30 projetos)
-- Análise Completa (100 projetos)  
-- Análise Customizada
-- Verificação de configuração
-
-#### Opção 2: Script Completo
-```bash
-python analise_langchain_claude.py
-```
-
-**Funcionalidades:**
-- Carregamento automático dos dados
-- Análise avançada com Claude-3.5-Sonnet
-- Identificação de padrões e inconsistências
-- Geração de relatório detalhado em Markdown
-- Propostas de otimização do processo
-
-### Análises Fornecidas pela IA
-
-O Claude analisa automaticamente:
-
-1. **Consistência entre Fases**
-   - Comparação DO vs Parecer
-   - Taxa de concordância entre avaliadores
-   - Mudanças de decisão e suas causas
-
-2. **Padrões de Contestação**
-   - Tipos de projetos mais contestados
-   - Eficácia dos argumentos de contestação
-   - Características das empresas que contestam
-
-3. **Detecção de Inconsistências**
-   - Vieses por área tecnológica
-   - Tratamento diferenciado por porte da empresa
-   - Padrões anômalos de aprovação/glosa
-
-4. **Propostas de Otimização**
-   - Novos indicadores de qualidade
-   - Melhorias no fluxo do processo
-   - Automatizações possíveis
-
-### Exemplo de Uso Programático
-
-```python
-from analise_langchain_claude import AnalisadorLeiDoBemLangChain
-
-# Inicializar analisador
-analisador = AnalisadorLeiDoBemLangChain()
-
-# Executar análise
-analise = analisador.executar_analise_completa(
-    max_rows=50,  # Número de projetos
-    salvar=True   # Salvar em arquivo
-)
-
-# Exibir resultado
-print(analise)
-```
-
-### Arquivos de Saída
-
-- `Análise Completa - Projetos Lei do Bem.md` - Relatório completo da IA
-- `projetos_lei_do_bem_2023.csv` - Dados brutos
-- `projetos_lei_do_bem_2023.xlsx` - Dados em Excel
-
----
 
 ## 🔄 Desenvolvimento
 
@@ -399,39 +129,8 @@ print(analise)
 source .venv/bin/activate
 
 # Adicionar nova dependência
-uv add matplotlib seaborn
+uv add matplotlib
 
-# Ou para desenvolvimento
-uv add --dev pytest black flake8
-
-# Sincronizar após mudanças
+# Sincronizar após mudanças manuais no pyproject.toml
 uv sync
 ```
-
-### Fluxo de Trabalho Recomendado
-
-1. **Desenvolvimento diário:**
-   ```bash
-   source .venv/bin/activate
-   python seu_script.py
-   ```
-
-2. **Atualizações do projeto:**
-   ```bash
-   uv sync --upgrade
-   ```
-
-3. **Compartilhamento:**
-   - Commitar apenas `pyproject.toml`
-   - O `.venv/` está no `.gitignore`
-   - Outros desenvolvedores usam `uv sync`
-
-## 🔄 Próximos Passos
-
-Após carregar os dados, você pode:
-
-1. **Análise com IA** usando Claude para insights avançados
-2. **Criar visualizações** com matplotlib/seaborn (`uv add matplotlib seaborn`)
-3. **Aplicar machine learning** para predições (`uv add scikit-learn`)
-4. **Gerar relatórios automáticos** com templates (`uv add jinja2`)
-5. **Integrar com BI tools** como Power BI

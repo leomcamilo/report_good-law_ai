@@ -115,24 +115,10 @@ class CarregadorDadosLeiDoBem:
             logger.info(f"✅ Dados carregados: {len(self.df_projetos)} projetos encontrados")
             logger.info(f"📊 Colunas disponíveis: {len(self.df_projetos.columns)}")
             
-            # Aplicar filtro de empresas
-            logger.info("🔍 Aplicando filtro de empresas: BANCO ITAU, BANCO DO BRASIL, PETROBRAS")
-            
-            # Criar condição de filtro usando LIKE para padrões com %
-            mask = pd.Series([False] * len(self.df_projetos))
-            
-            # Filtrar por padrões específicos na coluna empresa concatenada
-            mask |= self.df_projetos['empresa'].str.contains('BANCO ITAU', case=False, na=False)
-            mask |= self.df_projetos['empresa'].str.contains('BANCO DO BRASIL', case=False, na=False)
-            mask |= self.df_projetos['empresa'].str.contains('PETROBRAS', case=False, na=False)
-            
-            self.df_projetos = self.df_projetos[mask]
-            
-            logger.info(f"✅ Filtro aplicado: {len(self.df_projetos)} projetos após filtro")
-            
             # Log das empresas encontradas
-            empresas_encontradas = self.df_projetos['empresa'].str.extract(r'RAZÃO SOCIAL :([^A-Z]*?)(?=[A-Z]|$)')[0].str.strip().unique()
-            logger.info(f"📋 Empresas encontradas: {list(empresas_encontradas[:5])}")  # Limitar a 5 para evitar spam
+            if not self.df_projetos.empty:
+                empresas_encontradas = self.df_projetos['empresa'].str.extract(r'RAZÃO SOCIAL :([^A-Z]*?)(?=[A-Z]|$)')[0].str.strip().unique()
+                logger.info(f"📋 Amostra de empresas encontradas: {list(empresas_encontradas[:5])}")  # Limitar a 5 para evitar spam
             
             return self.df_projetos
             
@@ -254,11 +240,11 @@ def main():
     """Função principal para execução do script."""
     print("🚀 Iniciando Análise de Projetos da Lei do Bem\n")
     
-    # Criar instâncias das classes (sem filtro específico, já aplicado no código)
+    # Criar instâncias das classes
     carregador = CarregadorDadosLeiDoBem()
     analisador = AnalisadorProjetosLeiDoBem()
     
-    print("📋 Filtro aplicado: BANCO ITAU, BANCO DO BRASIL, PETROBRAS")
+    print("📋 Carregando todos os projetos do ano base (sem filtro de empresa).")
     
     # Conectar ao banco
     if not carregador.conectar_banco():
@@ -273,7 +259,7 @@ def main():
     
     # Transferir dados para o analisador
     analisador.df_projetos = df
-    analisador.empresas_filtro = ["BANCO ITAU", "BANCO DO BRASIL", "PETROBRAS"]  # Para uso no nome do arquivo
+    analisador.empresas_filtro = ["TODAS_AS_EMPRESAS"]  # Para uso no nome do arquivo
     
     print(f"\n📋 Resumo dos dados carregados:")
     print(f"   • Shape: {df.shape}")

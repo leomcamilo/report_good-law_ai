@@ -20,7 +20,7 @@ def carregar_dados_csv():
         print(f"Múltiplos arquivos CSV encontrados. Usando: {arquivos_csv[0]}")
     
     # Carrega o primeiro arquivo CSV encontrado
-    df_projetos_unico = pd.read_csv(arquivos_csv[0])
+    df_projetos_unico = pd.read_csv(arquivos_csv[0], sep=';')
     print(f"Dados carregados: {df_projetos_unico.shape[0]} projetos")
     
     return df_projetos_unico
