@@ -15,6 +15,11 @@ dependencies = [
     "langchain>=0.3.0",
     "langchain-openai>=0.1.0",
     "python-dotenv>=1.0.0",
+    "langchain-anthropic>=0.3.16",
+    "sentence-transformers>=5.0.0",
+    "umap-learn>=0.5.8",
+    "hdbscan>=0.8.40",
+    "scikit-learn>=1.6.1",
 ]
 
 [tool.uv]

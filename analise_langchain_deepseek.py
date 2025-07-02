@@ -25,7 +25,7 @@ load_dotenv()
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 logger = logging.getLogger(__name__)
 
-class AnalisadorLeiDoBemLangChain:
+class AnalisadorLeiDoBemLangChainDeepseek:
     def __init__(self):
         self.engine = None
         self.llm = None
@@ -87,7 +87,7 @@ class AnalisadorLeiDoBemLangChain:
                 model="deepseek-chat",
                 openai_api_key=api_key,
                 openai_api_base="https://api.deepseek.com",
-                temperature=0.3,
+                temperature=0.7,
                 max_tokens=4000
             )
             
@@ -250,10 +250,15 @@ Por favor, analise estes dados considerando o contexto da Lei do Bem e forneça 
             return None
     
     def salvar_analise(self, analise_texto):
-        """Salva a análise em arquivo Markdown na raiz do projeto"""
+        """Salva a análise em arquivo Markdown no diretório ./Analises"""
         try:
+            # Criar diretório Analises se não existir
+            diretorio_analises = "./Analises"
+            os.makedirs(diretorio_analises, exist_ok=True)
+            
             # Nome do arquivo fixo conforme solicitado
             nome_arquivo = "Análise Completa - Projetos Lei do Bem.md"
+            caminho_completo = os.path.join(diretorio_analises, nome_arquivo)
             
             # Cabeçalho com informações da análise
             cabecalho = f"""# Análise Completa - Projetos Lei do Bem
@@ -270,13 +275,13 @@ Por favor, analise estes dados considerando o contexto da Lei do Bem e forneça 
             conteudo_completo = cabecalho + analise_texto
             
             # Salvar arquivo
-            with open(nome_arquivo, 'w', encoding='utf-8') as f:
+            with open(caminho_completo, 'w', encoding='utf-8') as f:
                 f.write(conteudo_completo)
             
-            logger.info(f"Análise salva em: {nome_arquivo}")
-            print(f"\n✅ Análise salva em: {nome_arquivo}")
+            logger.info(f"Análise salva em: {caminho_completo}")
+            print(f"\n✅ Análise salva em: {caminho_completo}")
             
-            return nome_arquivo
+            return caminho_completo
             
         except Exception as e:
             logger.error(f"Erro ao salvar análise: {e}")
@@ -330,7 +335,7 @@ def main():
     """Função principal"""
     try:
         # Inicializar analisador
-        analisador = AnalisadorLeiDoBemLangChain()
+        analisador = AnalisadorLeiDoBemLangChainDeepseek()
         
         # Executar análise
         resultado = analisador.executar_analise_completa(
@@ -343,7 +348,7 @@ def main():
             print("ANÁLISE CONCLUÍDA COM SUCESSO!")
             print("="*80)
             print("\nResumo dos próximos passos:")
-            print("1. Verifique o arquivo 'Análise Completa - Projetos Lei do Bem.md'")
+            print("1. Verifique o arquivo './Analises/Análise Completa - Projetos Lei do Bem.md'")
             print("2. Revise os insights e recomendações")
             print("3. Implemente as otimizações sugeridas")
         else:

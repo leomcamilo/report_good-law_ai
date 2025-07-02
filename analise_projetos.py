@@ -16,7 +16,7 @@ import psycopg2
 from sqlalchemy import create_engine, text
 import numpy as np
 import warnings
-from typing import Optional, Dict, Any
+from typing import Optional, Dict, Any, List
 import logging
 
 # Configuração de logging
@@ -26,11 +26,13 @@ logger = logging.getLogger(__name__)
 # Suprimir warnings do pandas
 warnings.filterwarnings('ignore')
 
-class AnalisadorProjetosLeiDoBem:
+class CarregadorDadosLeiDoBem:
     """Classe para análise de projetos da Lei do Bem usando dados do PostgreSQL."""
     
     def __init__(self):
-        """Inicializa o analisador com as configurações de banco."""
+        """
+        Inicializa o analisador com as configurações de banco.
+        """
         self.config_db = {
             'user': 'ia_budy',
             'password': 'ia_budy',
@@ -81,206 +83,28 @@ class AnalisadorProjetosLeiDoBem:
             return None
             
         try:
-            # Query SQL consolidada (extraída do arquivo public.sql)
+            # Query SQL baseada no arquivo descricao dos projetos.sql
+            # Substituindo ";" por "," nas colunas concatenadas
             query_sql = """
-            -- CONSULTA CONSOLIDADA: UMA LINHA POR PROJETO COM TODO O FLUXO DO PROCESSO
-            -- Baseada na transcrição da reunião e estrutura do MER da Lei do Bem
-
-            WITH base_projetos AS (
-                -- Dados básicos do projeto e empresa
-                SELECT 
-                    -- IDENTIFICAÇÃO PRINCIPAL
-                    proj.iddadoanaliseprojeto,
-                    proj.idprenchimentosituacaoanalise,
-                    proj.nritem as projeto_numero,
-                    proj.noprojeto as projeto_nome,
-                    proj.dsprojeto as projeto_descricao,
-                    
-                    -- DADOS DA EMPRESA
-                    emp.nranobase as empresa_ano_base,
-                    emp.nrcnpj as empresa_cnpj,
-                    emp.norazaosocial as empresa_razao_social,
-                    
-                    -- DADOS DO PREENCHIMENTO (FASE 1)
-                    preen.tporganismo as preen_tipo_organismo,
-                    preen.vlreceitaliquida as preen_receita_liquida,
-                    preen.nrtotalfuncionario as preen_total_funcionarios,
-                    preen.nrmediopesquisadordedicacaoexclusiva as preen_pesquisadores_exclusivos,
-                    preen.pcrecursoproprio as preen_percentual_recurso_proprio,
-                    
-                    -- DADOS DO PROJETO (DETALHES TÉCNICOS)
-                    proj.tppbpade as projeto_tipo_pesquisa,
-                    proj.dsareaprojeto as projeto_area,
-                    proj.dspalavrachave as projeto_palavras_chave,
-                    proj.tpnatureza as projeto_natureza,
-                    proj.dselementotecnologico as projeto_elemento_tecnologico,
-                    proj.dsdesafiotecnologico as projeto_desafio_tecnologico,
-                    proj.dsmetodologiautilizada as projeto_metodologia,
-                    proj.dsinicioatividade as projeto_inicio,
-                    proj.dsprevisaotermino as projeto_previsao_termino
-                    
-                FROM tbdadoanaliseprojeto proj
-                INNER JOIN tbdadoanalisepreenchimento preen 
-                    ON proj.idprenchimentosituacaoanalise = preen.idprenchimentosituacaoanalise
-                INNER JOIN listaempresasporanobasesituacaoanalise emp 
-                    ON preen.idprenchimentosituacaoanalise = emp.idprenchimentosituacaoanalise
-            ),
-
-            marcos_do AS (
-                -- ANÁLISE DO (FASE 2)
-                SELECT 
-                    ma.idprenchimentosituacaoanalise,
-                    aom.iddadoanaliseprojeto,
-                    ma.idmarcoanalise as do_id_marco,
-                    ma.nrmarcoanalise as do_numero_marco,
-                    ma.dsobservacao as do_observacao,
-                    aom.dsjustificativapadrao as do_justificativa,
-                    aom.dsobservacaogeral as do_observacao_geral,
-                    aom.vltotaldeclarado as do_valor_declarado,
-                    ta.notipoavaliacaoanalise as do_tipo_avaliacao,
-                    CASE 
-                        WHEN ta.idtipoavaliacaoanalise = 1 THEN 'NÃO RECOMENDADO'
-                        WHEN ta.idtipoavaliacaoanalise = 2 THEN 'RECOMENDADO PARCIALMENTE' 
-                        WHEN ta.idtipoavaliacaoanalise = 3 THEN 'RECOMENDADO'
-                        ELSE 'AGUARDANDO ANÁLISE'
-                    END as do_resultado
-                FROM tbmarcoanalise ma
-                INNER JOIN tbanaliseobjetomarcoprojeto aom 
-                    ON ma.idmarcoanalise = aom.idmarcoanalise
-                LEFT JOIN tbtipoavaliacaoanalise ta 
-                    ON aom.idtipoavaliacaoanalise = ta.idtipoavaliacaoanalise
-                WHERE ma.cdtipomarcoanalise = 1  -- DO/Consolidação
-            ),
-
-            marcos_parecer AS (
-                -- PARECER (FASE 3)
-                SELECT 
-                    ma.idprenchimentosituacaoanalise,
-                    ma.idmarcoanalise as parecer_id_marco,
-                    ma.nrmarcoanalise as parecer_numero_marco,
-                    ma.dsobservacao as parecer_observacao,
-                    mdc.dsconclusao as parecer_conclusao,
-                    mdc.dsobservacaodo as parecer_observacao_do,
-                    mdc.vltotaldispendio as parecer_total_dispendio,
-                    mdc.vlaprovado as parecer_valor_aprovado,
-                    mdc.vlglosa as parecer_valor_glosa,
-                    mdc.nrtotalprojeto as parecer_total_projetos,
-                    mdc.nrtotalaprovado as parecer_projetos_aprovados,
-                    mdc.nrtotalreprovado as parecer_projetos_reprovados,
-                    rm.noresultadomarcoanalise as parecer_resultado
-                FROM tbmarcoanalise ma
-                LEFT JOIN tbmarcoanalisedadoconsolidado mdc 
-                    ON ma.idmarcoanalise = mdc.idmarcoanalise
-                LEFT JOIN tbresultadomarcoanalise rm 
-                    ON ma.cdresultadomarcoanalise = rm.cdresultadomarcoanalise
-                WHERE ma.cdtipomarcoanalise = 2  -- Parecer
-            ),
-
-            marcos_contestacao AS (
-                -- CONTESTAÇÃO (FASE 4)
-                SELECT 
-                    ma.idprenchimentosituacaoanalise,
-                    ma.idmarcoanalise as contestacao_id_marco,
-                    ma.nrmarcoanalise as contestacao_numero_marco,
-                    apc.dsjustificativacontestacao as contestacao_justificativa,
-                    apc.dsjustificativapadrao as contestacao_resposta_padrao,
-                    apc.dsconsideracaoobservacaogeral as contestacao_consideracao,
-                    apc.dsobservacaogeralparecer as contestacao_obs_parecer,
-                    apc.dsrecursoadministrativo as contestacao_recurso_adm,
-                    apc.icsolicitacaoreanalise as contestacao_solicita_reanalise
-                FROM tbmarcoanalise ma
-                LEFT JOIN tbanaliseobjetomarcoprojetocontestacao apc 
-                    ON ma.idmarcoanalise = apc.idmarcoanalise
-                WHERE ma.cdtipomarcoanalise = 3  -- Contestação
-            )
-
-            -- CONSULTA PRINCIPAL: CONSOLIDAÇÃO DE TODAS AS FASES
-            -- FILTRO: APENAS PROJETOS DE 2023 (conforme query original)
-            SELECT 
-                -- === IDENTIFICAÇÃO ===
-                bp.iddadoanaliseprojeto,
-                bp.idprenchimentosituacaoanalise,
-                bp.projeto_numero,
-                bp.projeto_nome,
-                
-                -- === EMPRESA ===
-                bp.empresa_ano_base,
-                bp.empresa_cnpj,
-                bp.empresa_razao_social,
-                
-                -- === FASE 1: PREENCHIMENTO ===
-                bp.preen_tipo_organismo,
-                bp.preen_receita_liquida,
-                bp.preen_total_funcionarios,
-                bp.preen_pesquisadores_exclusivos,
-                bp.preen_percentual_recurso_proprio,
-                
-                -- === DADOS TÉCNICOS DO PROJETO ===
-                bp.projeto_tipo_pesquisa,
-                bp.projeto_area,
-                bp.projeto_natureza,
-                bp.projeto_elemento_tecnologico,
-                bp.projeto_desafio_tecnologico,
-                bp.projeto_metodologia,
-                bp.projeto_inicio,
-                bp.projeto_previsao_termino,
-                SUBSTRING(bp.projeto_descricao, 1, 200) as projeto_descricao_resumo,
-                
-                -- === FASE 2: ANÁLISE DO ===
-                md.do_id_marco,
-                md.do_numero_marco,
-                md.do_resultado,
-                md.do_valor_declarado,
-                md.do_tipo_avaliacao,
-                SUBSTRING(md.do_justificativa, 1, 200) as do_justificativa_resumo,
-                SUBSTRING(md.do_observacao_geral, 1, 200) as do_observacao_resumo,
-                
-                -- === FASE 3: PARECER ===
-                mp.parecer_id_marco,
-                mp.parecer_numero_marco,
-                mp.parecer_resultado,
-                mp.parecer_valor_aprovado,
-                mp.parecer_valor_glosa,
-                mp.parecer_projetos_aprovados,
-                mp.parecer_projetos_reprovados,
-                SUBSTRING(mp.parecer_conclusao, 1, 200) as parecer_conclusao_resumo,
-                
-                -- === FASE 4: CONTESTAÇÃO ===
-                mc.contestacao_id_marco,
-                mc.contestacao_numero_marco,
-                mc.contestacao_solicita_reanalise,
-                SUBSTRING(mc.contestacao_justificativa, 1, 200) as contestacao_justificativa_resumo,
-                SUBSTRING(mc.contestacao_resposta_padrao, 1, 200) as contestacao_resposta_resumo,
-                
-                -- === INDICADORES DE PROGRESSO ===
-                CASE WHEN md.do_id_marco IS NOT NULL THEN 1 ELSE 0 END as passou_analise_do,
-                CASE WHEN mp.parecer_id_marco IS NOT NULL THEN 1 ELSE 0 END as passou_parecer,
-                CASE WHEN mc.contestacao_id_marco IS NOT NULL THEN 1 ELSE 0 END as teve_contestacao,
-                
-                -- === STATUS ATUAL ===
-                CASE 
-                    WHEN mc.contestacao_id_marco IS NOT NULL THEN 'CONTESTAÇÃO'
-                    WHEN mp.parecer_id_marco IS NOT NULL THEN 'PARECER CONCLUÍDO'
-                    WHEN md.do_id_marco IS NOT NULL THEN 'ANÁLISE DO CONCLUÍDA'
-                    ELSE 'PREENCHIMENTO'
-                END as status_atual_processo
-
-            FROM base_projetos bp
-            LEFT JOIN marcos_do md 
-                ON bp.idprenchimentosituacaoanalise = md.idprenchimentosituacaoanalise 
-                AND bp.iddadoanaliseprojeto = md.iddadoanaliseprojeto
-            LEFT JOIN marcos_parecer mp 
-                ON bp.idprenchimentosituacaoanalise = mp.idprenchimentosituacaoanalise
-            LEFT JOIN marcos_contestacao mc 
-                ON bp.idprenchimentosituacaoanalise = mc.idprenchimentosituacaoanalise
-
-            -- FILTRO: APENAS PROJETOS DO ANO BASE 2023
-            WHERE bp.empresa_ano_base = 2023
-
-            -- Ordenação por empresa e projeto
-            ORDER BY 
-                bp.empresa_razao_social,
-                bp.projeto_numero;
+            select 
+            lst.idprenchimentosituacaoanalise as id_empresa_ano
+            ,lst.nranobase as ano_referencia
+            , replace(concat('CNPJ: '::text , lst.nrcnpj::text ,' RAZÃO SOCIAL :'::text , lst.norazaosocial::text, ' ATIVIDADE ECONOMICA :'::text, lst.noatividadeeconomica::text,' Cd ATIV.ECONOMICA IBGE :'::text, lst.cdatividadeeconomicaibge::text, ' PORTE '::text, lst.notipoportepessoajuridica::text, ' ID EMPRESA/ANO :'::text, lst.idprenchimentosituacaoanalise), ';', ',') as empresa
+            , replace(concat('NÚMERO: '::text, daproj.nritem::text ,' ID ÚNICO: '::text, daproj.iddadoanaliseprojeto::text ,' NOME: '::text, daproj.noprojeto::text ,' DESCRIÇÃO: '::text, daproj.dsprojeto::text ,' TIPO (PA ou DE): '::text, daproj.tppbpade::text ,' AREA: '::text, daproj.dsareaprojeto::text ,' PALAVRAS CHAVE: '::text, daproj.dspalavrachave::text ,' NATUREZA: '::text, daproj.tpnatureza::text ,' ELEMENTO TECNOLÓGICO: '::text, daproj.dselementotecnologico::text ,' DESAFIO TECNOLÓGICO: '::text, daproj.dsdesafiotecnologico::text ,' METODOLOGIA: '::text, daproj.dsmetodologiautilizada::text ,' INFORMAÇÃO COMPLEMENTAR: '::text, daproj.dsinformacaocomplementar::text ,' RESULTADO ECONÔMICO: '::text, daproj.dsresultadoeconomico::text ,' RESULTADO INOVAÇÃO: '::text, daproj.dsresultadoinovacao::text ,' DESCRIÇÃO RH: '::text, daproj.dsrecursoshumanos::text ,' DESCRIÇÃO MATERIAIS: '::text, daproj.dsrecursosmateriais::text ,' SETOR PARA ANALISE DO PROJETO: '::text, do_set.nosetor::text), ';', ',') as projeto
+            , replace(concat('CICLO MAIOR QUE 1 ANO: '::text, daproj.icciclomaior::text , ' ATIVIDADE PDI CONTINUADA ANO ANTERIOR :'::text, daproj.dsatividadepdicontinuadaanobase::text), ';', ',') as projeto_multianual
+            
+            from tbdadoempresamarco dem
+            left join listaempresasporanobasesituacaoanalise lst on lst.idprenchimentosituacaoanalise = dem.idprenchimentosituacaoanalise 
+            left join tbdadoanaliseprojeto daproj on daproj.idprenchimentosituacaoanalise  = dem.idprenchimentosituacaoanalise
+            --
+            --DO
+            --
+            left join tbanaliseobjetomarcoprojeto do_aomproj on do_aomproj.idmarcoanalise = dem.idmarcoanalisedo and do_aomproj.iddadoanaliseprojeto = daproj.iddadoanaliseprojeto 
+            left join tbanaliseat do_aat on do_aat.iddadoanaliseprojeto = daproj.iddadoanaliseprojeto and do_aat.idmarcoanalise = dem.idmarcoanalisedo
+            left join tbsituacaoanaliseat do_saat on do_saat.idanaliseat = do_aat.idanaliseat and do_saat.icativo 
+            left join tbsetor do_set on do_set.idsetor = do_saat.idsetor
+            where lst.nranobase = 2023
+            order by lst.idprenchimentosituacaoanalise, daproj.nritem
             """
             
             logger.info("🔍 Executando consulta SQL...")
@@ -291,11 +115,38 @@ class AnalisadorProjetosLeiDoBem:
             logger.info(f"✅ Dados carregados: {len(self.df_projetos)} projetos encontrados")
             logger.info(f"📊 Colunas disponíveis: {len(self.df_projetos.columns)}")
             
+            # Aplicar filtro de empresas
+            logger.info("🔍 Aplicando filtro de empresas: BANCO ITAU, BANCO DO BRASIL, PETROBRAS")
+            
+            # Criar condição de filtro usando LIKE para padrões com %
+            mask = pd.Series([False] * len(self.df_projetos))
+            
+            # Filtrar por padrões específicos na coluna empresa concatenada
+            mask |= self.df_projetos['empresa'].str.contains('BANCO ITAU', case=False, na=False)
+            mask |= self.df_projetos['empresa'].str.contains('BANCO DO BRASIL', case=False, na=False)
+            mask |= self.df_projetos['empresa'].str.contains('PETROBRAS', case=False, na=False)
+            
+            self.df_projetos = self.df_projetos[mask]
+            
+            logger.info(f"✅ Filtro aplicado: {len(self.df_projetos)} projetos após filtro")
+            
+            # Log das empresas encontradas
+            empresas_encontradas = self.df_projetos['empresa'].str.extract(r'RAZÃO SOCIAL :([^A-Z]*?)(?=[A-Z]|$)')[0].str.strip().unique()
+            logger.info(f"📋 Empresas encontradas: {list(empresas_encontradas[:5])}")  # Limitar a 5 para evitar spam
+            
             return self.df_projetos
             
         except Exception as e:
             logger.error(f"❌ Erro ao executar consulta: {e}")
             return None
+
+class AnalisadorProjetosLeiDoBem:
+    """Classe para análise de projetos da Lei do Bem usando dados do PostgreSQL."""
+    
+    def __init__(self):
+        """Inicializa o analisador."""
+        self.df_projetos = None
+        self.empresas_filtro = None
     
     def processar_dados(self) -> Dict[str, Any]:
         """
@@ -310,42 +161,17 @@ class AnalisadorProjetosLeiDoBem:
         
         logger.info("🔄 Processando dados...")
         
-        # Estatísticas básicas
+        # Estatísticas básicas simples
         stats = {
             'total_projetos': len(self.df_projetos),
-            'total_empresas': self.df_projetos['empresa_cnpj'].nunique(),
-            'ano_base': self.df_projetos['empresa_ano_base'].iloc[0]
+            'total_empresas': self.df_projetos['id_empresa_ano'].nunique(),
+            'ano_base': self.df_projetos['ano_referencia'].iloc[0] if not self.df_projetos.empty else None
         }
         
-        # Análise por status do processo
-        status_counts = self.df_projetos['status_atual_processo'].value_counts()
-        stats['distribuicao_status'] = status_counts.to_dict()
-        
-        # Análise por fases
-        stats['projetos_analise_do'] = self.df_projetos['passou_analise_do'].sum()
-        stats['projetos_com_parecer'] = self.df_projetos['passou_parecer'].sum()
-        stats['projetos_com_contestacao'] = self.df_projetos['teve_contestacao'].sum()
-        
-        # Análise de valores (quando disponível)
-        valores_declarados = self.df_projetos['do_valor_declarado'].dropna()
-        if not valores_declarados.empty:
-            stats['valor_total_declarado'] = valores_declarados.sum()
-            stats['valor_medio_projeto'] = valores_declarados.mean()
-        
-        valores_aprovados = self.df_projetos['parecer_valor_aprovado'].dropna()
-        if not valores_aprovados.empty:
-            stats['valor_total_aprovado'] = valores_aprovados.sum()
-            stats['taxa_aprovacao_valor'] = (valores_aprovados.sum() / valores_declarados.sum() * 100) if not valores_declarados.empty else 0
-        
-        # Análise por área de projeto
-        if 'projeto_area' in self.df_projetos.columns:
-            areas_counts = self.df_projetos['projeto_area'].value_counts().head(10)
-            stats['top_areas_projeto'] = areas_counts.to_dict()
-        
-        # Análise por tipo de organismo
-        if 'preen_tipo_organismo' in self.df_projetos.columns:
-            organismo_counts = self.df_projetos['preen_tipo_organismo'].value_counts()
-            stats['distribuicao_organismos'] = organismo_counts.to_dict()
+        # Extrair razão social das empresas da coluna concatenada
+        razoes_sociais = self.df_projetos['empresa'].str.extract(r'RAZÃO SOCIAL :([^A-Z]*?)(?=[A-Z]|$)')[0].str.strip()
+        empresas_stats = razoes_sociais.value_counts()
+        stats['distribuicao_empresas'] = empresas_stats.to_dict()
         
         logger.info("✅ Processamento concluído")
         return stats
@@ -366,17 +192,23 @@ class AnalisadorProjetosLeiDoBem:
             return False
         
         try:
+            # Criar diretório tabelas_csv_xlsx se não existir
+            import os
+            diretorio_destino = "tabelas_csv_xlsx"
+            os.makedirs(diretorio_destino, exist_ok=True)
+            
             if not nome_arquivo:
-                nome_arquivo = f"projetos_lei_do_bem_2023"
+                empresas_filtradas = "_".join([emp.replace('%', '').replace(' ', '_').upper() for emp in self.empresas_filtro[:2]])
+                nome_arquivo = f"projetos_lei_do_bem_2023_{empresas_filtradas}"
             
             if formato.lower() == 'csv':
-                arquivo = f"{nome_arquivo}.csv"
-                self.df_projetos.to_csv(arquivo, index=False, encoding='utf-8')
+                arquivo = os.path.join(diretorio_destino, f"{nome_arquivo}.csv")
+                self.df_projetos.to_csv(arquivo, index=False, encoding='utf-8', sep=';')
             elif formato.lower() == 'excel':
-                arquivo = f"{nome_arquivo}.xlsx"
+                arquivo = os.path.join(diretorio_destino, f"{nome_arquivo}.xlsx")
                 self.df_projetos.to_excel(arquivo, index=False)
             elif formato.lower() == 'parquet':
-                arquivo = f"{nome_arquivo}.parquet"
+                arquivo = os.path.join(diretorio_destino, f"{nome_arquivo}.parquet")
                 self.df_projetos.to_parquet(arquivo, index=False)
             else:
                 logger.error(f"❌ Formato não suportado: {formato}")
@@ -407,32 +239,11 @@ class AnalisadorProjetosLeiDoBem:
         • Total de Empresas: {total_empresas:,}
         • Ano Base: {ano_base}
         
-        🔄 PROGRESSO POR FASES:
-        • Projetos com Análise DO: {projetos_analise_do:,}
-        • Projetos com Parecer: {projetos_com_parecer:,}
-        • Projetos com Contestação: {projetos_com_contestacao:,}
-        
-        📋 DISTRIBUIÇÃO POR STATUS:
+        🏢 DISTRIBUIÇÃO POR EMPRESAS:
         """.format(**stats)
         
-        for status, count in stats.get('distribuicao_status', {}).items():
-            relatorio += f"        • {status}: {count:,}\n"
-        
-        if 'valor_total_declarado' in stats:
-            relatorio += f"""
-        💰 ANÁLISE FINANCEIRA:
-        • Valor Total Declarado: R$ {stats['valor_total_declarado']:,.2f}
-        • Valor Médio por Projeto: R$ {stats['valor_medio_projeto']:,.2f}
-        """
-            
-            if 'valor_total_aprovado' in stats:
-                relatorio += f"        • Valor Total Aprovado: R$ {stats['valor_total_aprovado']:,.2f}\n"
-                relatorio += f"        • Taxa de Aprovação: {stats['taxa_aprovacao_valor']:.1f}%\n"
-        
-        if 'top_areas_projeto' in stats:
-            relatorio += "\n        🔬 TOP 5 ÁREAS DE PROJETO:\n"
-            for i, (area, count) in enumerate(list(stats['top_areas_projeto'].items())[:5], 1):
-                relatorio += f"        {i}. {area}: {count:,}\n"
+        for empresa, count in stats.get('distribuicao_empresas', {}).items():
+            relatorio += f"        • {empresa}: {count:,} projetos\n"
         
         relatorio += "\n        ====================================================="
         
@@ -443,19 +254,26 @@ def main():
     """Função principal para execução do script."""
     print("🚀 Iniciando Análise de Projetos da Lei do Bem\n")
     
-    # Inicializar analisador
+    # Criar instâncias das classes (sem filtro específico, já aplicado no código)
+    carregador = CarregadorDadosLeiDoBem()
     analisador = AnalisadorProjetosLeiDoBem()
     
+    print("📋 Filtro aplicado: BANCO ITAU, BANCO DO BRASIL, PETROBRAS")
+    
     # Conectar ao banco
-    if not analisador.conectar_banco():
+    if not carregador.conectar_banco():
         print("❌ Falha na conexão com banco. Encerrando...")
-        return
+        return None, None
     
     # Carregar dados
-    df = analisador.carregar_dados()
+    df = carregador.carregar_dados()
     if df is None:
         print("❌ Falha ao carregar dados. Encerrando...")
-        return
+        return None, None
+    
+    # Transferir dados para o analisador
+    analisador.df_projetos = df
+    analisador.empresas_filtro = ["BANCO ITAU", "BANCO DO BRASIL", "PETROBRAS"]  # Para uso no nome do arquivo
     
     print(f"\n📋 Resumo dos dados carregados:")
     print(f"   • Shape: {df.shape}")
@@ -480,23 +298,28 @@ def main():
     print("   print(df.head())")
     print("   print(df.info())")
     
-    return analisador
+    return analisador, carregador
 
 
 if __name__ == "__main__":
     # Executar análise
-    analisador = main()
+    resultado = main()
     
-    # Disponibilizar DataFrame para uso interativo
-    if analisador and analisador.df_projetos is not None:
-        df = analisador.df_projetos
-        print(f"\n🎯 DataFrame 'df' disponível com {len(df)} registros")
-        print("\nExemplos de uso:")
-        print("# Ver primeiras linhas")
-        print("df.head()")
-        print("\n# Filtrar por status")
-        print("df[df['status_atual_processo'] == 'PARECER CONCLUÍDO']")
-        print("\n# Agrupar por empresa")
-        print("df.groupby('empresa_razao_social').size()")
-        print("\n# Estatísticas de valores")
-        print("df['do_valor_declarado'].describe()")
+    if resultado[0] is not None:
+        analisador, carregador = resultado
+        
+        # Disponibilizar DataFrame para uso interativo
+        if analisador and analisador.df_projetos is not None:
+            df = analisador.df_projetos
+            print(f"\n🎯 DataFrame 'df' disponível com {len(df)} registros")
+            print("\nExemplos de uso:")
+            print("# Ver primeiras linhas")
+            print("df.head()")
+            print("\n# Filtrar por empresa")
+            print("df[df['lst_norazaosocial'].str.contains('BANCO')]")
+            print("\n# Agrupar por empresa")
+            print("df.groupby('lst_norazaosocial').size()")
+            print("\n# Estatísticas de valores")
+            print("df['do_aat_vltotaldeclarado'].describe()")
+    else:
+        print("❌ Execução interrompida devido a erros.")

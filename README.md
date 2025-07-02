@@ -1,6 +1,6 @@
 # Análise de Projetos da Lei do Bem - DataFrame Pandas
 
-Este projeto converte a consulta SQL dos projetos da Lei do Bem em um DataFrame pandas para análise e processamento de dados.
+Este projeto converte a consulta SQL dos projetos da Lei do Bem em um DataFrame pandas para análise e processamento de dados, utilizando o modelo Claude-3.5-Sonnet para análises avançadas.
 
 ## 📋 Pré-requisitos
 
@@ -8,6 +8,7 @@ Este projeto converte a consulta SQL dos projetos da Lei do Bem em um DataFrame 
 - PostgreSQL rodando localmente na porta 5432
 - Banco de dados `dbs_mctic2` configurado
 - Credenciais: usuário `ia_budy`, senha `ia_budy`
+- Chave API do Anthropic Claude
 - [uv](https://docs.astral.sh/uv/) - Gerenciador de pacotes Python moderno
 
 ## 🚀 Instalação
@@ -46,7 +47,7 @@ source .venv/bin/activate  # Linux/macOS
 # Copiar arquivo de configuração
 cp .env.example .env
 
-# Editar com suas credenciais
+# Editar com suas credenciais (IMPORTANTE: configure sua chave do Claude)
 nano .env
 ```
 
@@ -92,7 +93,7 @@ test_pgai/
 ├── .venv/                  # Ambiente virtual (criado pelo uv)
 ├── analise_projetos.py     # Script principal
 ├── consulta_simples.py     # Script simples
-├── analise_langchain_deepseek.py  # Análise com IA
+├── analise_langchain_claude.py    # Análise com IA
 ├── test_sistema.py         # Testes
 └── README.md              # Este arquivo
 ```
@@ -286,12 +287,12 @@ uv --version
 - [SQLAlchemy Documentation](https://docs.sqlalchemy.org/)
 - [PostgreSQL Documentation](https://www.postgresql.org/docs/)
 
-## 🤖 Análise com IA (LangChain + DeepSeek)
+## 🤖 Análise com IA (LangChain + Claude)
 
 ### Configuração da API
 
-1. **Obter chave da API DeepSeek:**
-   - Acesse: https://platform.deepseek.com/
+1. **Obter chave da API Anthropic Claude:**
+   - Acesse: https://console.anthropic.com/
    - Crie uma conta e obtenha sua API key
 
 2. **Configurar a chave:**
@@ -300,7 +301,12 @@ uv --version
    nano .env
    
    # Substitua pela sua chave real:
-   DEEPSEEK_API_KEY=sk-xxxxxxxxxxxxxxxxxxxxxxxx
+   ANTHROPIC_API_KEY=sk-ant-api03-xxxxxxxxxxxxxxxxxxxxxxxx
+   ```
+
+3. **Testar configuração:**
+   ```bash
+   python test_claude_config.py
    ```
 
 ### Scripts de Análise com IA
@@ -324,19 +330,19 @@ python analise_simples.py
 
 #### Opção 2: Script Completo
 ```bash
-python analise_langchain_deepseek.py
+python analise_langchain_claude.py
 ```
 
 **Funcionalidades:**
 - Carregamento automático dos dados
-- Análise avançada com IA
+- Análise avançada com Claude-3.5-Sonnet
 - Identificação de padrões e inconsistências
 - Geração de relatório detalhado em Markdown
 - Propostas de otimização do processo
 
 ### Análises Fornecidas pela IA
 
-A IA analisa automaticamente:
+O Claude analisa automaticamente:
 
 1. **Consistência entre Fases**
    - Comparação DO vs Parecer
@@ -361,7 +367,7 @@ A IA analisa automaticamente:
 ### Exemplo de Uso Programático
 
 ```python
-from analise_langchain_deepseek import AnalisadorLeiDoBemLangChain
+from analise_langchain_claude import AnalisadorLeiDoBemLangChain
 
 # Inicializar analisador
 analisador = AnalisadorLeiDoBemLangChain()
@@ -378,7 +384,7 @@ print(analise)
 
 ### Arquivos de Saída
 
-- `analise_lei_do_bem_deepseek_YYYYMMDD_HHMMSS.md` - Relatório completo da IA
+- `Análise Completa - Projetos Lei do Bem.md` - Relatório completo da IA
 - `projetos_lei_do_bem_2023.csv` - Dados brutos
 - `projetos_lei_do_bem_2023.xlsx` - Dados em Excel
 
@@ -424,7 +430,7 @@ uv sync
 
 Após carregar os dados, você pode:
 
-1. **Análise com IA** usando DeepSeek para insights avançados
+1. **Análise com IA** usando Claude para insights avançados
 2. **Criar visualizações** com matplotlib/seaborn (`uv add matplotlib seaborn`)
 3. **Aplicar machine learning** para predições (`uv add scikit-learn`)
 4. **Gerar relatórios automáticos** com templates (`uv add jinja2`)

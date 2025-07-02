@@ -5,5 +5,5 @@ numpy>=1.21.0
 openpyxl>=3.0.0
 pyarrow>=5.0.0
 langchain>=0.1.0
-langchain-openai>=0.1.0
+langchain-anthropic>=0.1.0
 python-dotenv>=1.0.0
