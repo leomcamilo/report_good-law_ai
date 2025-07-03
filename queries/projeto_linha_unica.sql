@@ -1,3 +1,4 @@
+-- Active: 1750170051954@@127.0.0.1@5432@dbs_mctic2@public
 select daproj.nritem
 , lst.nranobase as lst_nranobase
 , lst.nrcnpj as lst_nrcnpj
@@ -378,38 +379,5 @@ left join(
 		left join tbjustificativaanalise ra_japroj on ra_japroj.idjustificativaanalise = ra_aomprojj.idjustificativaanalise
 		left join tbtipojustificativaanalise ra_tjaproj on ra_tjaproj.cdtipojustificativaanalise = ra_japroj.cdtipojustificativaanalise
 		group by ra_aomprojj.idanaliseobjetomarcoprojeto ) ra_a_proj on ra_a_proj.idanaliseobjetomarcoprojeto = ra_aomproj.idanaliseobjetomarcoprojeto
-order by dem.idprenchimentosituacaoanalise, daproj.nritem
-		
-		where lst.nranobase = 2023
-		
-		
-		
-		
-where dem.idprenchimentosituacaoanalise in 
-		(select distinct t3.idprenchimentosituacaoanalise
-	from tbanaliseobjetomarcodispendiocontestacao t 
-	left join tbmarcoanalisedadoconsolidado t2 on t2.idmarcoanalise = t.idmarcoanalise
-	left join tbmarcoanalise t3 on t3.idmarcoanalise = t.idmarcoanalise
-	left join vwprojetosporpreenchimento v1 on v1.idprenchimentosituacaoanalise = t3.idprenchimentosituacaoanalise	
-	where t.dsjustificativaanalisecontestacao is not null
-	and t.dsjustificativacontestacao is not null
-	and t.dsjustificativaparecer is not null
-	and t.dsjustificativarecursoadministrativo is not null
-	--and v1.nprojs = 10
-	--and t2.nranobase = 2019
-	)
-	
-	
-order by dem.idprenchimentosituacaoanalise, daproj.nritem 
-		
-		
-		
-		
-		
-		
-		
-where dem.idprenchimentosituacaoanalise =753
---where lst.nranobase = 2021
---and dem.idmarcoanaliseparecercontestacao is not null
---where dapempcoop.nritem is not null
-order by daproj.nritem
+where lst.nranobase = 2023
+order by dem.idprenchimentosituacaoanalise, daproj.nritem;

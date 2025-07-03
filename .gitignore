@@ -4,9 +4,10 @@
 .venv/
 
 # Ignorar arquivos gerados e dados
-tabelas_csv_xlsx/
 *.npy
 *.csv
+*.json
+*.xlsx
 
 # Ignorar caches do Python
 __pycache__/
