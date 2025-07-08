@@ -111,8 +111,8 @@ def main():
     
     # 1. Carregar dados dos clusters
     try:
-        print("📂 Carregando arquivo projetos_com_clusters.csv...")
-        df_original = pd.read_csv('projetos_com_clusters.csv')
+        print("📂 Carregando arquivo projetos_com_clusters_final.csv...")
+        df_original = pd.read_csv('projetos_com_clusters_final.csv', sep = ';', encoding='utf-8')
         print(f"✅ Dados carregados: {len(df_original):,} projetos")
         
         # Verificar se as colunas necessárias existem

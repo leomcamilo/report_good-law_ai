@@ -1,6 +1,7 @@
 import pandas as pd
 import numpy as np
 import os
+import nltk
 from sentence_transformers import SentenceTransformer
 import umap
 import hdbscan
@@ -34,6 +35,16 @@ def criar_embeddings(df):
     
     if colunas_faltantes:
         raise ValueError(f"Colunas faltantes no DataFrame: {colunas_faltantes}")
+    
+    # Baixar stopwords do NLTK se necessário
+    try:
+        nltk.data.find('corpora/stopwords')
+    except LookupError:
+        print("Baixando stopwords do NLTK...")
+        nltk.download('stopwords')
+    
+    # Carregar stopwords do NLTK
+    stopwords_nltk = set(nltk.corpus.stopwords.words('portuguese'))
     
     # LISTA DE STOP WORDS CUSTOMIZADA PARA PROJETOS DE P&D
     stop_words_personalizadas = {
@@ -76,8 +87,13 @@ def criar_embeddings(df):
         'momento', 'momentos', 'fase', 'fases', 'etapa', 'etapas', 'início', 'fim', 'final'
     }
     
-    print(f"📝 Lista de stop words: {len(stop_words_personalizadas)} palavras")
-    print(f"   Amostra: {list(sorted(stop_words_personalizadas))[:20]}...")
+    # Unir stopwords do NLTK com as personalizadas (sem duplicatas)
+    stop_words_completas = stopwords_nltk.union(stop_words_personalizadas)
+    
+    print(f"📝 Stopwords NLTK: {len(stopwords_nltk)} palavras")
+    print(f"📝 Stopwords personalizadas: {len(stop_words_personalizadas)} palavras")
+    print(f"📝 Total de stop words (únicas): {len(stop_words_completas)} palavras")
+    print(f"   Amostra: {list(sorted(stop_words_completas))[:20]}...")
     
     def remover_stop_words(texto):
         """Remove stop words do texto preservando contexto técnico"""
@@ -97,7 +113,7 @@ def criar_embeddings(df):
             # 1. Não é stop word
             # 2. Tem mais de 3 caracteres (palavras técnicas tendem a ser maiores)
             # 3. Contém números (códigos, versões, etc.)
-            if (palavra_limpa not in stop_words_personalizadas and 
+            if (palavra_limpa not in stop_words_completas and 
                 (len(palavra_limpa) > 3 or any(c.isdigit() for c in palavra_limpa))):
                 palavras_filtradas.append(palavra_limpa)
         
@@ -245,7 +261,7 @@ def main():
         # 5. Salvar resultado
         print("4. Salvando resultado...")
         nome_arquivo = 'projetos_com_clusters_final.csv'
-        df_projetos_unico.to_csv(nome_arquivo, index=False)
+        df_projetos_unico.to_csv(nome_arquivo, index=False, sep=';')
         
         print(f"\n✅ Processo concluído com sucesso!")
         print(f"📁 Arquivo salvo: {nome_arquivo}")

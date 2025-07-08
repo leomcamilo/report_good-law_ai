@@ -23,6 +23,7 @@ dependencies = [
     "matplotlib>=3.9.4",
     "seaborn>=0.13.2",
     "modal>=1.0.5",
+    "nltk>=3.9.1",
 ]
 
 [tool.uv]
