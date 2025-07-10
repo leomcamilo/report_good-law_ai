@@ -103,7 +103,7 @@ class CarregadorDadosAglomeradosLeiDoBem:
             left join tbanaliseat do_aat on do_aat.iddadoanaliseprojeto = daproj.iddadoanaliseprojeto and do_aat.idmarcoanalise = dem.idmarcoanalisedo
             left join tbsituacaoanaliseat do_saat on do_saat.idanaliseat = do_aat.idanaliseat and do_saat.icativo 
             left join tbsetor do_set on do_set.idsetor = do_saat.idsetor
-            where lst.nranobase = 2023
+            where lst.nranobase = 2021
             order by lst.idprenchimentosituacaoanalise, daproj.nritem
             """
             
@@ -531,7 +531,7 @@ class CarregadorDadosLeiDoBem:
                     left join tbjustificativaanalise ra_japroj on ra_japroj.idjustificativaanalise = ra_aomprojj.idjustificativaanalise
                     left join tbtipojustificativaanalise ra_tjaproj on ra_tjaproj.cdtipojustificativaanalise = ra_japroj.cdtipojustificativaanalise
                     group by ra_aomprojj.idanaliseobjetomarcoprojeto ) ra_a_proj on ra_a_proj.idanaliseobjetomarcoprojeto = ra_aomproj.idanaliseobjetomarcoprojeto
-            where lst.nranobase = 2023
+            where lst.nranobase = 2021
             order by dem.idprenchimentosituacaoanalise, daproj.nritem
             """
             
