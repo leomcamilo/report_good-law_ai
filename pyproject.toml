@@ -24,6 +24,7 @@ dependencies = [
     "seaborn>=0.13.2",
     "modal>=1.0.5",
     "nltk>=3.9.1",
+    "reportlab>=4.4.2",
 ]
 
 [tool.uv]
