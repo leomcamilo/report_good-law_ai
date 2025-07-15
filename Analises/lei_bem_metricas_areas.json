@@ -1,0 +1,117 @@
+{
+  "Mecânica": {
+    "k_optimal": 19,
+    "best_silhouette": 0.1212526187300682,
+    "num_projetos": 931
+  },
+  "Metalurgia": {
+    "k_optimal": 20,
+    "best_silhouette": 0.1253761351108551,
+    "num_projetos": 707
+  },
+  "Bens de Consumo": {
+    "k_optimal": 20,
+    "best_silhouette": 0.15779832005500793,
+    "num_projetos": 365
+  },
+  "Software": {
+    "k_optimal": 2,
+    "best_silhouette": 0.04093017801642418,
+    "num_projetos": 2164
+  },
+  "TIC - Software": {
+    "k_optimal": 20,
+    "best_silhouette": 0.06667878478765488,
+    "num_projetos": 909
+  },
+  "Outros": {
+    "k_optimal": 20,
+    "best_silhouette": 0.12046785652637482,
+    "num_projetos": 3635
+  },
+  "Farmacêutica": {
+    "k_optimal": 17,
+    "best_silhouette": 0.12117647379636765,
+    "num_projetos": 784
+  },
+  "Alimentos": {
+    "k_optimal": 18,
+    "best_silhouette": 0.14247314631938934,
+    "num_projetos": 659
+  },
+  "Química": {
+    "k_optimal": 19,
+    "best_silhouette": 0.17032453417778015,
+    "num_projetos": 1021
+  },
+  "TIC": {
+    "k_optimal": 19,
+    "best_silhouette": 0.12200977653265,
+    "num_projetos": 183
+  },
+  "Eletroeletrônica": {
+    "k_optimal": 17,
+    "best_silhouette": 0.14127925038337708,
+    "num_projetos": 689
+  },
+  "Telecomunicações": {
+    "k_optimal": 14,
+    "best_silhouette": 0.29579365253448486,
+    "num_projetos": 114
+  },
+  "Transporte": {
+    "k_optimal": 20,
+    "best_silhouette": 0.15241706371307373,
+    "num_projetos": 152
+  },
+  "Têxtil ": {
+    "k_optimal": 20,
+    "best_silhouette": 0.17408259212970734,
+    "num_projetos": 115
+  },
+  "Finança": {
+    "k_optimal": 20,
+    "best_silhouette": 0.27141624689102173,
+    "num_projetos": 117
+  },
+  "Mineração": {
+    "k_optimal": 20,
+    "best_silhouette": 0.21546950936317444,
+    "num_projetos": 244
+  },
+  "Construção Civil": {
+    "k_optimal": 8,
+    "best_silhouette": 0.07433661073446274,
+    "num_projetos": 87
+  },
+  "Celulose": {
+    "k_optimal": 10,
+    "best_silhouette": 0.06962352246046066,
+    "num_projetos": 34
+  },
+  "Seguro": {
+    "k_optimal": 11,
+    "best_silhouette": 0.17429247498512268,
+    "num_projetos": 43
+  },
+  "Moveleira": {
+    "k_optimal": 18,
+    "best_silhouette": 0.15130814909934998,
+    "num_projetos": 60
+  },
+  "Papel": {
+    "k_optimal": 20,
+    "best_silhouette": 0.06584842503070831,
+    "num_projetos": 59
+  },
+  "Petroquímica": {
+    "k_optimal": 18,
+    "best_silhouette": 0.2705429494380951,
+    "num_projetos": 87
+  },
+  "TIC - Telecomunicações": {
+    "k_optimal": 12,
+    "best_silhouette": 0.08640729635953903,
+    "num_projetos": 28
+  }
+}

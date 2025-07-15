@@ -1,0 +1,7 @@
+{
+  "k_optimal": 29,
+  "best_silhouette": 0.08059338480234146,
+  "total_projetos": 13198,
+  "total_clusters": 29,
+  "k_range_tested": "1-30"
+}
