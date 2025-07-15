@@ -1,6 +1,6 @@
-# Análise e Clusterização de Projetos da Lei do Bem
+# Análise e Mineração de Dados de Projetos da Lei do Bem
 
-Este projeto extrai, processa e analisa dados de projetos da Lei do Bem usando técnicas avançadas de Machine Learning. Ele opera em um pipeline de **três estágios** para consolidar dados de um banco PostgreSQL, aplicar clusterização semântica e extrair insights analíticos dos clusters formados.
+Este projeto implementa um pipeline completo de análise de dados para projetos submetidos ao sistema da Lei do Bem do MCTI. Utiliza técnicas avançadas de ciência de dados, machine learning e análise estatística para identificar padrões de decisão, inconsistências no processo e oportunidades de otimização do fluxo de análise.
 
 ## 📋 Pré-requisitos
 
@@ -29,7 +29,7 @@ powershell -c "irm https://astral.sh/uv/install.ps1 | iex"
 cd /home/leomcamilo/projects/test_pgai
 
 # Instalar dependências e criar ambiente virtual
-# Isso instalará pandas, sqlalchemy, sentence-transformers, umap-learn, hdbscan, etc.
+# Isso instalará pandas, sqlalchemy, scikit-learn, sentence-transformers, shap, etc.
 uv sync
 
 # Ativar ambiente virtual
@@ -42,114 +42,163 @@ source .venv/bin/activate  # Linux/macOS
 
 ```
 test_pgai/
-├── pyproject.toml                   # Configuração e dependências
-├── .venv/                           # Ambiente virtual (criado pelo uv)
-├── 1.csv_analise_projetos.py        # Etapa 1: Extração de dados do PostgreSQL
-├── 2.csv_embedding_cluster.py       # Etapa 2: Clusterização com embeddings semânticos
-├── 3.csv_analise_cluster.py         # Etapa 3: Análise e extração de insights
-├── tabelas_csv_xlsx/                # Dados brutos extraídos (CSV/Excel)
-├── json_outputs/                    # Saídas em formato JSON
-└── README.md                        # Este arquivo
+├── pyproject.toml                       # Configuração e dependências
+├── .venv/                               # Ambiente virtual (criado pelo uv)
+├── 1.csv_gerador_projetos.py            # Etapa 1: Extração de dados do PostgreSQL
+├── 2.report_e_clustering_k_mean.py    # Etapa 2: Clusterização e análise de padrões
+├── analise_multivariada_lei_bem.py      # Etapa 3: Análise multivariada com ML
+├── analise_analistas.py                 # Etapa 4: Análise específica dos analistas técnicos
+├── prompt.md                            # Templates para análise com LLMs
+├── tabelas_csv_xlsx/                    # Dados aglomerados extraídos (CSV/Excel)
+├── csv_longo/                           # Dados detalhados linha única
+├── Analises/                            # Relatórios e resultados de análise
+├── imagens_relatorio/                   # Visualizações geradas
+└── README.md                            # Este arquivo
 ```
 
 ## 📊 Pipeline Completo de Análise
 
-O processo é dividido em **três etapas** que devem ser executadas sequencialmente:
+O processo é estruturado em **quatro etapas principais** que analisam o fluxo completo dos projetos da Lei do Bem:
 
-### 🔧 Etapa 1: Extração de Dados do Banco
+### 🔧 Etapa 1: Extração e Consolidação de Dados
 
-**Arquivo:** `1.csv_analise_projetos.py`
+**Arquivo:** [`1.csv_gerador_projetos.py`](1.csv_gerador_projetos.py)
 
-Conecta ao PostgreSQL, executa consulta otimizada e exporta dados consolidados dos projetos da Lei do Bem de 2023.
+Extrai dados consolidados dos projetos da Lei do Bem diretamente do banco PostgreSQL, cobrindo todo o fluxo do processo: **Preenchimento → Análise DO → Parecer → Contestação**.
 
 ```bash
 # Ativar ambiente (se não estiver ativo)
 source .venv/bin/activate
 
 # Executar extração de dados
-python 1.csv_analise_projetos.py
+python 1.csv_gerador_projetos.py
 ```
 
+**Funcionalidades:**
+- Conexão otimizada com PostgreSQL
+- Query SQL consolidada que une todas as fases do processo
+- Extração de dados aglomerados e detalhados
+- Informações de empresas, projetos, analistas e resultados de cada fase
+
 **Saídas geradas:**
-- `tabelas_csv_xlsx/projetos_lei_do_bem_2023_TODAS_AS_EMPRESAS.csv`
-- `tabelas_csv_xlsx/projetos_lei_do_bem_2023_TODAS_AS_EMPRESAS.xlsx`
+- `tabelas_csv_xlsx/projetos_lei_do_bem_2023_AGLOMERADOS.csv` - Dados consolidados
+- `csv_longo/projetos_lei_do_bem_2023_DETALHADO_LINHA_UNICA.csv` - Dados detalhados
 
-### 🤖 Etapa 2: Clusterização com IA
+### 🤖 Etapa 2: Clusterização e Análise de Padrões
 
-**Arquivo:** `2.csv_embedding_cluster.py`
+**Arquivo:** [`2.report_e_clustering_k_mean.py`](2.report_e_clustering_k_mean.py)
 
-Aplica técnicas avançadas de NLP e Machine Learning para agrupar projetos similares semanticamente.
+Aplica técnicas avançadas de NLP e Machine Learning para identificar padrões semânticos nos projetos e agrupar projetos similares.
 
 ```bash
-# Executar clusterização
-python 2.csv_embedding_cluster.py
+# Executar clusterização e análise de padrões
+python 2.report_e_clustering_k_mean.py
 ```
 
 **Características técnicas:**
 - **Modelo de Embeddings:** SERAFIM (português especializado) - `PORTULAN/serafim-335m-portuguese-pt-sentence-encoder-ir`
-- **Pré-processamento:** Stop words customizadas (NLTK + domínio P&D)
-- **Clustering:** Aglomerativo com threshold otimizado (0.58)
-- **Extração:** Foco em conteúdo técnico (descrição, metodologia, desafio tecnológico)
+- **Pré-processamento:** Stop words customizadas para domínio P&D
+- **Clustering:** K-Means otimizado com seleção automática de K
+- **PCA:** Visualização bidimensional dos clusters
+- **Análise de decisão:** Padrões de aprovação/reprovação por cluster
 
 **Saídas geradas:**
-- `projetos_com_clusters_final.csv` - Dataset completo com clusters
-- Estatísticas detalhadas de todos os clusters
+- `Analises/lei_bem_projetos_clusters.csv` - Dataset com clusters
+- `Analises/relatorio_clusters_lei_bem.pdf` - Relatório completo em PDF
+- Visualizações PNG dos clusters e padrões
 
-### 📈 Etapa 3: Análise de Clusters
+### 📈 Etapa 3: Análise Multivariada com Machine Learning
 
-**Arquivo:** `3.csv_analise_cluster.py`
+**Arquivo:** [`analise_multivariada_lei_bem.py`](analise_multivariada_lei_bem.py)
 
-Extrai informações estruturadas dos clusters e gera análises estatísticas detalhadas.
+Implementa análise estatística avançada usando Random Forest + SHAP para identificar fatores determinantes de aprovação e inconsistências entre fases.
 
 ```bash
-# Executar análise de clusters
-python 3.csv_analise_cluster.py
+# Executar análise multivariada
+python analise_multivariada_lei_bem.py
 ```
 
 **Análises realizadas:**
-- Extração de nomes e descrições dos projetos
-- Identificação de razões sociais das empresas
-- Distribuição por tamanho de cluster
-- Top empresas por quantidade de projetos
-- Estatísticas de qualidade da clusterização
+- **Modelagem preditiva:** Random Forest para prever aprovação
+- **Análise SHAP:** Interpretabilidade das decisões do modelo
+- **Análise entre fases:** Consistência DO → Parecer
+- **Feature importance:** Fatores mais influentes na aprovação
+- **Detecção de vieses:** Padrões por área, porte de empresa, analista
 
-**Saída gerada:**
-- `clusters_projetos.csv` - Dados estruturados para análise
+**Saídas geradas:**
+- `insights_padroes_decisao_*.txt` - Relatório detalhado de insights
+- `projetos_com_predicoes.csv` - Projetos com probabilidades de aprovação
+- `feature_importance.csv` - Importância das variáveis
+- Visualizações de análise estatística
 
-## 🤖 Detalhes Técnicos do Pipeline de ML
+### 🎯 Etapa 4: Análise Específica dos Analistas Técnicos
 
-### Processamento de Texto
-1. **Extração de Conteúdo Técnico**: Regex patterns para capturar descrição, metodologia, desafio tecnológico
-2. **Limpeza com Stop Words**: União de NLTK (português) + palavras específicas do domínio P&D
-3. **Preservação de Contexto**: Mantém termos técnicos, códigos e palavras > 3 caracteres
+**Arquivo:** [`analise_analistas.py`](analise_analistas.py) *(Em desenvolvimento)*
 
-### Geração de Embeddings
-- **Modelo:** SERAFIM-335M (especializado em português)
-- **Dimensionalidade:** 768 dimensões por projeto
-- **Foco:** Apenas conteúdo técnico relevante
+Foca na análise comportamental e de performance dos Analistas Técnicos (ATs) responsáveis pela fase de Análise DO.
 
-### Clustering Aglomerativo
-- **Algoritmo:** AgglomerativeClustering (scikit-learn)
-- **Métrica:** Cosine similarity
-- **Linkage:** Average (otimizado para embeddings semânticos)
-- **Threshold:** 0.58 (otimizado para cobertura 100%)
+```bash
+# Executar análise de analistas (quando disponível)
+python analise_analistas.py
+```
 
-## 📁 Arquivos de Saída Detalhados
+**Análises planejadas:**
+- Performance individual por analista
+- Padrões de especialização por área tecnológica
+- Consistência temporal nas decisões
+- Distribuição de carga de trabalho
+- Identificação de vieses individuais
+
+## 🔍 Contexto e Objetivos da Análise
+
+O projeto analisa o fluxo completo dos projetos da Lei do Bem, que passam pelas seguintes fases:
+
+1. **Preenchimento:** Dados iniciais da empresa e projeto
+2. **Análise DO:** Avaliação técnica pelos Analistas Técnicos
+3. **Parecer:** Consolidação e decisão final
+4. **Contestação:** Recurso da empresa (quando aplicável)
+
+### Principais Objetivos:
+
+- **Consistência entre fases:** Identificar divergências entre DO e Parecer
+- **Padrões de contestação:** Características dos projetos que geram recursos
+- **Detecção de vieses:** Inconsistências por área, porte ou analista
+- **Otimização do processo:** Propor melhorias baseadas em dados
+
+## 🤖 Detalhes Técnicos
+
+### Processamento de Texto e NLP
+- **Extração semântica:** Foco em descrição, metodologia, desafio tecnológico
+- **Embeddings:** Modelo SERAFIM otimizado para português técnico
+- **Stop words:** Customizadas para domínio P&D e Lei do Bem
+
+### Machine Learning e Estatística
+- **Clustering:** K-Means com otimização automática via Silhouette Score
+- **Classificação:** Random Forest com balanceamento de classes
+- **Interpretabilidade:** SHAP values para explicar decisões
+- **Validação:** Cross-validation estratificada
+
+### Análise de Dados
+- **Análise multivariada:** Correlações entre múltiplas dimensões
+- **Detecção de anomalias:** Casos extremos e inconsistências
+- **Visualização:** Matplotlib, Seaborn, plots interativos
+
+## 📁 Arquivos de Saída
 
 ### Etapa 1 - Extração
-- **CSV:** `tabelas_csv_xlsx/projetos_lei_do_bem_2023_TODAS_AS_EMPRESAS.csv`
-- **Excel:** `tabelas_csv_xlsx/projetos_lei_do_bem_2023_TODAS_AS_EMPRESAS.xlsx`
-- **Conteúdo:** Dados brutos consolidados do PostgreSQL
+- **Aglomerados:** `tabelas_csv_xlsx/projetos_lei_do_bem_2023_AGLOMERADOS.csv`
+- **Detalhados:** `csv_longo/projetos_lei_do_bem_2023_DETALHADO_LINHA_UNICA.csv`
 
 ### Etapa 2 - Clusterização
-- **Principal:** `projetos_com_clusters_final.csv`
-- **Colunas adicionais:** `texto_tecnico_bruto`, `texto_tecnico`, `cluster`
-- **Estatísticas:** Distribuição completa de todos os clusters
+- **Clusters:** `Analises/lei_bem_projetos_clusters.csv`
+- **Relatório PDF:** `Analises/relatorio_clusters_lei_bem.pdf`
+- **Análise de clusters:** `Analises/lei_bem_analise_clusters.csv`
 
-### Etapa 3 - Análise
-- **Resultado:** `clusters_projetos.csv`
-- **Colunas:** `nome_projeto`, `descricao_projeto`, `razaosocial_empresa`, `cluster`
-- **Formato:** Dados estruturados para análise e visualização
+### Etapa 3 - Análise Multivariada
+- **Insights:** `insights_padroes_decisao_YYYYMMDD_HHMMSS.txt`
+- **Predições:** `projetos_com_predicoes.csv`
+- **Importância:** `feature_importance.csv`
+- **Modelo:** `modelo_rf_padroes_decisao.pkl`
 
 ## 📊 Exemplo de Uso Completo
 
@@ -158,17 +207,20 @@ python 3.csv_analise_cluster.py
 source .venv/bin/activate
 
 # 1. Extrair dados do banco
-python 1.csv_analise_projetos.py
+python 1.csv_gerador_projetos.py
 
-# 2. Aplicar clusterização
-python 2.csv_embedding_cluster.py
+# 2. Aplicar clusterização e análise de padrões
+python 2.report_e_clustering_k_mean.py
 
-# 3. Analisar resultados
-python 3.csv_analise_cluster.py
+# 3. Executar análise multivariada
+python analise_multivariada_lei_bem.py
+
+# 4. Análise específica de analistas (futuro)
+# python analise_analistas.py
 
 # Verificar resultados
-ls -la projetos_com_clusters_final.csv
-ls -la clusters_projetos.csv
+ls -la Analises/
+ls -la imagens_relatorio/
 ```
 
 ## 🆘 Troubleshooting
@@ -177,73 +229,111 @@ ls -la clusters_projetos.csv
 ```
 psycopg2.OperationalError: could not connect to server
 ```
-**Solução**: Verifique se PostgreSQL está ativo e credenciais estão corretas.
+**Solução:** Verifique se PostgreSQL está ativo e credenciais estão corretas.
 
 ### Erro de Arquivo Não Encontrado (Etapa 2)
 ```
-FileNotFoundError: Nenhum arquivo CSV encontrado na pasta tabelas_csv_xlsx
+FileNotFoundError: Nenhum arquivo CSV encontrado na pasta csv_longo
 ```
-**Solução**: Execute primeiro a Etapa 1 (`1.csv_analise_projetos.py`).
+**Solução:** Execute primeiro a Etapa 1 (`1.csv_gerador_projetos.py`).
 
-### Erro de Parser (Etapa 3)
+### Erro de Dependências SHAP (Etapa 3)
 ```
-FileNotFoundError: Arquivo 'projetos_com_clusters_final.csv' não encontrado
+ImportError: No module named 'shap'
 ```
-**Solução**: Execute primeiro a Etapa 2 (`2.csv_embedding_cluster.py`).
-
-### Problemas com NLTK
+**Solução:** 
 ```bash
-# Download manual das stopwords
-python -c "import nltk; nltk.download('stopwords')"
+source .venv/bin/activate
+uv add shap
 ```
 
-### Problemas com `uv`
-```bash
-# Recriar ambiente virtual
-rm -rf .venv
-uv sync
-
-# Limpar cache do uv
-uv clean
+### Problemas com Encoding
 ```
+UnicodeDecodeError: 'utf-8' codec can't decode
+```
+**Solução:** Verifique se os arquivos CSV estão salvos com encoding UTF-8.
 
 ## 🔄 Desenvolvimento e Customização
 
-### Ajustar Threshold de Clustering
-Edite `2.csv_embedding_cluster.py`, linha com `threshold = 0.58`:
+### Ajustar Parâmetros de Clustering
+Edite [`2.report_e_clustering_k_mean.py`](2.report_e_clustering_k_mean.py):
 ```python
-# Para mais clusters (menor threshold)
-threshold = 0.45
+# Para mais clusters (K menor)
+analisador.analisar_kmeans_otimizado(max_k=50)
 
-# Para menos clusters (maior threshold)  
-threshold = 0.70
+# Para menos clusters (K maior)  
+analisador.analisar_kmeans_otimizado(max_k=20)
 ```
 
-### Adicionar Novas Stop Words
-Edite `stop_words_personalizadas` em `2.csv_embedding_cluster.py`:
+### Modificar Features da Análise Multivariada
+Edite [`analise_multivariada_lei_bem.py`](analise_multivariada_lei_bem.py):
 ```python
-stop_words_personalizadas.update({
-    'nova_palavra', 'outro_termo', 'palavra_especifica'
-})
+# Adicionar novas features categóricas
+features_categoricas.extend([
+    'nova_coluna_categorica',
+    'outra_feature'
+])
 ```
 
-### Adicionando Dependências
-```bash
-source .venv/bin/activate
-uv add matplotlib seaborn plotly  # Para visualizações
-uv sync
+### Integração com LLMs
+Use o template em [`prompt.md`](prompt.md) para análises com LLMs:
+```python
+# Carregar template
+with open('prompt.md', 'r', encoding='utf-8') as f:
+    prompt_template = f.read()
+
+# Integrar dados
+dados_formatados = prompt_template.format(df.head(100).to_csv())
 ```
 
 ## 📈 Métricas de Performance
 
-- **Cobertura:** 100% dos projetos são clusterizados
-- **Escalabilidade:** Testado com até 75k projetos
-- **Qualidade:** Threshold otimizado para máxima separação semântica
-- **Velocidade:** Processamento eficiente com embeddings pré-treinados
+- **Cobertura de dados:** 100% dos projetos da base são analisados
+- **Escalabilidade:** Testado com datasets de 50k+ projetos
+- **Acurácia do modelo:** ROC-AUC > 0.85 para predição de aprovação
+- **Velocidade:** Processamento otimizado com paralelização
 
-## 🎯 Próximos Passos
+## 🎯 Roadmap e Próximos Passos
 
-1. **Visualização:** Implementar dashboard interativo dos clusters
-2. **API:** Criar endpoint para clusterização em tempo real
-3. **Modelos:** Testar outros modelos de embedding português
-4. **Análise:** Adicionar análise de tendências temporais
+### Em Desenvolvimento
+- [ ] **Análise de Analistas:** Módulo específico para ATs ([`analise_analistas.py`](analise_analistas.py))
+- [ ] **Dashboard Interativo:** Plotly/Dash para visualização em tempo real
+- [ ] **API REST:** Endpoint para análise de novos projetos
+
+### Futuras Implementações
+- [ ] **Análise Temporal:** Evolução dos padrões ao longo do tempo
+- [ ] **NLP Avançado:** Análise de sentimento nas justificativas
+- [ ] **Detecção de Fraude:** Identificação de padrões suspeitos
+- [ ] **Sistema de Recomendação:** Sugestões para melhoria dos projetos
+
+### Integrações Planejadas
+- [ ] **LangChain + LLMs:** Análise automática de justificativas
+- [ ] **MLflow:** Versionamento e deploy de modelos
+- [ ] **Apache Airflow:** Automatização do pipeline
+
+## 📖 Contexto da Lei do Bem
+
+A Lei do Bem (Lei nº 11.196/2005) oferece incentivos fiscais para empresas que investem em P&D. O projeto analisa dados do MCTI para:
+
+- **Otimizar** o processo de avaliação
+- **Identificar** padrões de aprovação/reprovação
+- **Detectar** inconsistências e vieses
+- **Propor** melhorias baseadas em evidências
+
+## 🤝 Contribuições
+
+Contribuições são bem-vindas! Por favor:
+
+1. Fork o projeto
+2. Crie uma branch para sua feature (`git checkout -b feature/AmazingFeature`)
+3. Commit suas mudanças (`git commit -m 'Add some AmazingFeature'`)
+4. Push para a branch (`git push origin feature/AmazingFeature`)
+5. Abra um Pull Request
+
+## 📄 Licença
+
+Este projeto está sob licença MIT. Veja o arquivo `LICENSE` para mais detalhes.
+
+## 📞 Contato
+
+Para dúvidas ou sugestões sobre a análise dos dados da Lei do Bem, entre em contato

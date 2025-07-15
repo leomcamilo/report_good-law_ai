@@ -18,6 +18,7 @@ import numpy as np
 import warnings
 from typing import Optional, Dict, Any, List
 import logging
+import os
 
 # Configuração de logging
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
@@ -25,107 +26,6 @@ logger = logging.getLogger(__name__)
 
 # Suprimir warnings do pandas
 warnings.filterwarnings('ignore')
-
-class CarregadorDadosAglomeradosLeiDoBem:
-    """Classe para análise de projetos da Lei do Bem usando dados do PostgreSQL."""
-    
-    def __init__(self):
-        """
-        Inicializa o analisador com as configurações de banco.
-        """
-        self.config_db = {
-            'user': 'ia_budy',
-            'password': 'ia_budy',
-            'host': 'localhost',
-            'port': 5432,
-            'database': 'dbs_mctic2'
-        }
-        self.engine = None
-        self.df_projetos = None
-        
-    def conectar_banco(self) -> bool:
-        """
-        Estabelece conexão com o banco PostgreSQL.
-        
-        Returns:
-            bool: True se conexão bem-sucedida, False caso contrário
-        """
-        try:
-            # Criar string de conexão
-            connection_string = (
-                f"postgresql://{self.config_db['user']}:{self.config_db['password']}"
-                f"@{self.config_db['host']}:{self.config_db['port']}/{self.config_db['database']}"
-            )
-            
-            # Criar engine SQLAlchemy
-            self.engine = create_engine(connection_string)
-            
-            # Testar conexão
-            with self.engine.connect() as conn:
-                conn.execute(text("SELECT 1"))
-                
-            logger.info("✅ Conexão com banco estabelecida com sucesso")
-            return True
-            
-        except Exception as e:
-            logger.error(f"❌ Erro ao conectar com banco: {e}")
-            return False
-    
-    def carregar_dados(self) -> Optional[pd.DataFrame]:
-        """
-        Executa a consulta SQL e carrega os dados em um DataFrame pandas.
-        
-        Returns:
-            pd.DataFrame: DataFrame com os dados dos projetos ou None se erro
-        """
-        if not self.engine:
-            logger.error("❌ Conexão com banco não estabelecida")
-            return None
-            
-        try:
-            # Query SQL baseada no arquivo descricao dos projetos.sql
-            # Substituindo ";" por "," nas colunas concatenadas
-            query_sql = """
-            select 
-            lst.idprenchimentosituacaoanalise as id_empresa_ano
-            ,lst.nranobase as ano_referencia
-            , replace(concat('CNPJ: '::text , lst.nrcnpj::text ,' RAZÃO SOCIAL :'::text , lst.norazaosocial::text, ' ATIVIDADE ECONOMICA :'::text, lst.noatividadeeconomica::text,' Cd ATIV.ECONOMICA IBGE :'::text, lst.cdatividadeeconomicaibge::text, ' PORTE '::text, lst.notipoportepessoajuridica::text, ' ID EMPRESA/ANO :'::text, lst.idprenchimentosituacaoanalise), ';', ',') as empresa
-            , replace(concat('NÚMERO: '::text, daproj.nritem::text ,' ID ÚNICO: '::text, daproj.iddadoanaliseprojeto::text ,' NOME: '::text, daproj.noprojeto::text ,' DESCRIÇÃO: '::text, daproj.dsprojeto::text ,' TIPO (PA ou DE): '::text, daproj.tppbpade::text ,' AREA: '::text, daproj.dsareaprojeto::text ,' PALAVRAS CHAVE: '::text, daproj.dspalavrachave::text ,' NATUREZA: '::text, daproj.tpnatureza::text ,' ELEMENTO TECNOLÓGICO: '::text, daproj.dselementotecnologico::text ,' DESAFIO TECNOLÓGICO: '::text, daproj.dsdesafiotecnologico::text ,' METODOLOGIA: '::text, daproj.dsmetodologiautilizada::text ,' INFORMAÇÃO COMPLEMENTAR: '::text, daproj.dsinformacaocomplementar::text ,' RESULTADO ECONÔMICO: '::text, daproj.dsresultadoeconomico::text ,' RESULTADO INOVAÇÃO: '::text, daproj.dsresultadoinovacao::text ,' DESCRIÇÃO RH: '::text, daproj.dsrecursoshumanos::text ,' DESCRIÇÃO MATERIAIS: '::text, daproj.dsrecursosmateriais::text ,' SETOR PARA ANALISE DO PROJETO: '::text, do_set.nosetor::text), ';', ',') as projeto
-            , replace(concat('CICLO MAIOR QUE 1 ANO: '::text, daproj.icciclomaior::text , ' ATIVIDADE PDI CONTINUADA ANO ANTERIOR :'::text, daproj.dsatividadepdicontinuadaanobase::text), ';', ',') as projeto_multianual
-            
-            from tbdadoempresamarco dem
-            left join listaempresasporanobasesituacaoanalise lst on lst.idprenchimentosituacaoanalise = dem.idprenchimentosituacaoanalise 
-            left join tbdadoanaliseprojeto daproj on daproj.idprenchimentosituacaoanalise  = dem.idprenchimentosituacaoanalise
-            --
-            --DO
-            --
-            left join tbanaliseobjetomarcoprojeto do_aomproj on do_aomproj.idmarcoanalise = dem.idmarcoanalisedo and do_aomproj.iddadoanaliseprojeto = daproj.iddadoanaliseprojeto 
-            left join tbanaliseat do_aat on do_aat.iddadoanaliseprojeto = daproj.iddadoanaliseprojeto and do_aat.idmarcoanalise = dem.idmarcoanalisedo
-            left join tbsituacaoanaliseat do_saat on do_saat.idanaliseat = do_aat.idanaliseat and do_saat.icativo 
-            left join tbsetor do_set on do_set.idsetor = do_saat.idsetor
-            where lst.nranobase = 2021
-            order by lst.idprenchimentosituacaoanalise, daproj.nritem
-            """
-            
-            logger.info("🔍 Executando consulta SQL...")
-            
-            # Executar query e carregar em DataFrame
-            self.df_projetos = pd.read_sql_query(query_sql, self.engine)
-            
-            logger.info(f"✅ Dados carregados: {len(self.df_projetos)} projetos encontrados")
-            logger.info(f"📊 Colunas disponíveis: {len(self.df_projetos.columns)}")
-            
-            # Log das empresas encontradas
-            if not self.df_projetos.empty:
-                empresas_encontradas = self.df_projetos['empresa'].str.extract(r'RAZÃO SOCIAL :([^A-Z]*?)(?=[^A-Z]|$)')[0].str.strip().unique()
-                logger.info(f"📋 Amostra de empresas encontradas: {list(empresas_encontradas[:5])}")  # Limitar a 5 para evitar spam
-            
-            return self.df_projetos
-            
-        except Exception as e:
-            logger.error(f"❌ Erro ao executar consulta: {e}")
-            return None
-
 
 class CarregadorDadosLeiDoBem:
     """Classe para carregar dados detalhados dos projetos da Lei do Bem usando query linha única."""
@@ -165,11 +65,11 @@ class CarregadorDadosLeiDoBem:
             with self.engine.connect() as conn:
                 conn.execute(text("SELECT 1"))
                 
-            logger.info("✅ Conexão com banco estabelecida com sucesso (CarregadorDadosLeiDoBem)")
+            logger.info("✅ Conexão com banco estabelecida com sucesso")
             return True
             
         except Exception as e:
-            logger.error(f"❌ Erro ao conectar com banco (CarregadorDadosLeiDoBem): {e}")
+            logger.error(f"❌ Erro ao conectar com banco: {e}")
             return False
     
     def carregar_dados_detalhados(self) -> Optional[pd.DataFrame]:
@@ -535,7 +435,7 @@ class CarregadorDadosLeiDoBem:
             order by dem.idprenchimentosituacaoanalise, daproj.nritem
             """
             
-            logger.info("🔍 Executando consulta SQL detalhada (projeto_linha_unica)...")
+            logger.info("🔍 Executando consulta SQL detalhada...")
             
             # Executar query e carregar em DataFrame
             self.df_projetos_detalhado = pd.read_sql_query(query_sql, self.engine)
@@ -546,57 +446,14 @@ class CarregadorDadosLeiDoBem:
             # Log das empresas encontradas
             if not self.df_projetos_detalhado.empty:
                 empresas_encontradas = self.df_projetos_detalhado['lst_norazaosocial'].unique()
-                logger.info(f"📋 Amostra de empresas encontradas: {list(empresas_encontradas[:5])}")  # Limitar a 5 para evitar spam
+                logger.info(f"📋 Amostra de empresas encontradas: {list(empresas_encontradas[:5])}")
             
             return self.df_projetos_detalhado
             
         except Exception as e:
             logger.error(f"❌ Erro ao executar consulta detalhada: {e}")
             return None
-    
-    def salvar_dados_detalhados(self, formato: str = 'csv', nome_arquivo: str = None) -> bool:
-        """
-        Salva o DataFrame detalhado em arquivo.
-        
-        Args:
-            formato (str): Formato do arquivo ('csv', 'excel', 'parquet')
-            nome_arquivo (str): Nome do arquivo (opcional)
-        
-        Returns:
-            bool: True se salvou com sucesso, False caso contrário
-        """
-        if self.df_projetos_detalhado is None or self.df_projetos_detalhado.empty:
-            logger.error("❌ Nenhum dado detalhado disponível para salvar")
-            return False
-        
-        try:
-            # Criar diretório tabelas_csv_xlsx se não existir
-            import os
-            diretorio_destino = "tabelas_csv_xlsx"
-            os.makedirs(diretorio_destino, exist_ok=True)
-            
-            if not nome_arquivo:
-                nome_arquivo = f"projetos_lei_do_bem_2023_DETALHADO_TODAS_AS_EMPRESAS"
-            
-            if formato.lower() == 'csv':
-                arquivo = os.path.join(diretorio_destino, f"{nome_arquivo}.csv")
-                self.df_projetos_detalhado.to_csv(arquivo, index=False, encoding='utf-8', sep=';')
-            elif formato.lower() == 'excel':
-                arquivo = os.path.join(diretorio_destino, f"{nome_arquivo}.xlsx")
-                self.df_projetos_detalhado.to_excel(arquivo, index=False)
-            elif formato.lower() == 'parquet':
-                arquivo = os.path.join(diretorio_destino, f"{nome_arquivo}.parquet")
-                self.df_projetos_detalhado.to_parquet(arquivo, index=False)
-            else:
-                logger.error(f"❌ Formato não suportado: {formato}")
-                return False
-            
-            logger.info(f"💾 Dados detalhados salvos em: {arquivo}")
-            return True
-            
-        except Exception as e:
-            logger.error(f"❌ Erro ao salvar arquivo detalhado: {e}")
-            return False
+
 
 def main():
     """
@@ -605,94 +462,48 @@ def main():
     print("🚀 Iniciando análise de projetos da Lei do Bem...")
     print("=" * 60)
     
-    # 1. Carregar dados aglomerados
-    print("\n📊 CARREGANDO DADOS AGLOMERADOS...")
-    carregador_aglomerado = CarregadorDadosAglomeradosLeiDoBem()
+    # Carregar dados detalhados
+    print("\n📊 CARREGANDO DADOS DETALHADOS...")
+    carregador = CarregadorDadosLeiDoBem()
     
-    if not carregador_aglomerado.conectar_banco():
+    if not carregador.conectar_banco():
         print("❌ Falha na conexão com banco. Encerrando...")
         return
     
-    df_aglomerado = carregador_aglomerado.carregar_dados()
-    if df_aglomerado is None:
-        print("❌ Falha ao carregar dados aglomerados. Encerrando...")
+    df_detalhado = carregador.carregar_dados_detalhados()
+    if df_detalhado is None:
+        print("❌ Falha ao carregar dados detalhados. Encerrando...")
         return
     
-    # 2. Mostrar informações básicas dos dados aglomerados
-    print("\n🔄 PROCESSANDO DADOS AGLOMERADOS...")
-    print(f"✅ Dados aglomerados carregados: {len(df_aglomerado)} registros")
-    print(f"📊 Colunas disponíveis: {list(df_aglomerado.columns)}")
+    print(f"✅ Dados detalhados carregados: {len(df_detalhado)} registros")
+    print(f"📊 Colunas disponíveis: {len(df_detalhado.columns)}")
     
-    if not df_aglomerado.empty:
-        # Extrair informações das empresas
-        empresas_info = df_aglomerado['empresa'].str.extract(r'RAZÃO SOCIAL :([^,]*),')[0].str.strip()
-        empresas_unicas = empresas_info.dropna().unique()
+    # Mostrar informações básicas dos dados
+    if not df_detalhado.empty:
+        empresas_unicas = df_detalhado['lst_norazaosocial'].unique()
         print(f"📋 Total de empresas encontradas: {len(empresas_unicas)}")
         print(f"📋 Amostra de empresas: {list(empresas_unicas[:5])}")
     
-    # 3. Salvar dados aglomerados apenas em tabelas_csv_xlsx
-    print("\n💾 SALVANDO DADOS AGLOMERADOS...")
+    # Salvar dados detalhados
+    print("\n💾 SALVANDO DADOS DETALHADOS...")
     
-    # Criar diretório se não existir
-    import os
-    diretorio_destino = "tabelas_csv_xlsx"
-    os.makedirs(diretorio_destino, exist_ok=True)
+    # Criar diretório csv_longo se não existir
+    diretorio_csv_longo = "csv_longo"
+    os.makedirs(diretorio_csv_longo, exist_ok=True)
     
     try:
-        # Salvar CSV
-        arquivo_csv = os.path.join(diretorio_destino, "projetos_lei_do_bem_2023_AGLOMERADOS.csv")
-        df_aglomerado.to_csv(arquivo_csv, index=False, encoding='utf-8', sep=';')
-        print("✅ Dados aglomerados salvos em CSV")
-        
-        # Salvar Excel
-        arquivo_excel = os.path.join(diretorio_destino, "projetos_lei_do_bem_2023_AGLOMERADOS.xlsx")
-        df_aglomerado.to_excel(arquivo_excel, index=False)
-        print("✅ Dados aglomerados salvos em Excel")
+        # Salvar arquivo CSV na pasta csv_longo
+        arquivo_csv_longo = os.path.join(diretorio_csv_longo, "projetos_lei_do_bem_2023_DETALHADO_LINHA_UNICA.csv")
+        df_detalhado.to_csv(arquivo_csv_longo, index=False, encoding='utf-8', sep=';')
+        print(f"✅ Dados detalhados salvos em: {arquivo_csv_longo}")
         
     except Exception as e:
-        print(f"❌ Erro ao salvar dados aglomerados: {e}")
-    
-    # 4. Carregar dados detalhados usando CarregadorDadosLeiDoBem
-    print("\n📊 CARREGANDO DADOS DETALHADOS...")
-    carregador_detalhado = CarregadorDadosLeiDoBem()
-    
-    if not carregador_detalhado.conectar_banco():
-        print("❌ Falha na conexão com banco para dados detalhados.")
-    else:
-        df_detalhado = carregador_detalhado.carregar_dados_detalhados()
-        if df_detalhado is not None:
-            print(f"✅ Dados detalhados carregados: {len(df_detalhado)} registros")
-            print(f"📊 Colunas disponíveis: {len(df_detalhado.columns)}")
-            
-            # Salvar dados detalhados apenas na pasta csv_longo
-            print("\n💾 SALVANDO DADOS DETALHADOS...")
-            
-            # Criar diretório csv_longo se não existir
-            import os
-            diretorio_csv_longo = "csv_longo"
-            os.makedirs(diretorio_csv_longo, exist_ok=True)
-            
-            try:
-                # Salvar arquivo CSV na pasta csv_longo
-                arquivo_csv_longo = os.path.join(diretorio_csv_longo, "projetos_lei_do_bem_2023_DETALHADO_LINHA_UNICA.csv")
-                df_detalhado.to_csv(arquivo_csv_longo, index=False, encoding='utf-8', sep=';')
-                print(f"✅ Dados detalhados salvos em: {arquivo_csv_longo}")
-                
-                # Salvar também em Excel na pasta csv_longo
-                arquivo_excel_longo = os.path.join(diretorio_csv_longo, "projetos_lei_do_bem_2023_DETALHADO_LINHA_UNICA.xlsx")
-                df_detalhado.to_excel(arquivo_excel_longo, index=False)
-                print(f"✅ Dados detalhados salvos em: {arquivo_excel_longo}")
-                
-            except Exception as e:
-                print(f"❌ Erro ao salvar dados detalhados na pasta csv_longo: {e}")
-        else:
-            print("❌ Falha ao carregar dados detalhados")
+        print(f"❌ Erro ao salvar dados detalhados: {e}")
     
     print("\n🎉 Análise concluída!")
     print("=" * 60)
-    print("📁 Dados aglomerados salvos no diretório: tabelas_csv_xlsx/")
     print("📁 Dados detalhados salvos no diretório: csv_longo/")
-    print("📋 Verifique os arquivos gerados para análise posterior.")
+    print("📋 Arquivo pronto para próximas etapas do pipeline.")
 
 
 if __name__ == "__main__":
