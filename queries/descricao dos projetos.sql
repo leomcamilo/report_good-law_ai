@@ -21,7 +21,8 @@ left join tbanaliseobjetomarcoprojeto do_aomproj on do_aomproj.idmarcoanalise = 
 left join tbanaliseat do_aat on do_aat.iddadoanaliseprojeto = daproj.iddadoanaliseprojeto and do_aat.idmarcoanalise = dem.idmarcoanalisedo
 left join tbsituacaoanaliseat do_saat on do_saat.idanaliseat = do_aat.idanaliseat and do_saat.icativo 
 left join tbsetor do_set on do_set.idsetor = do_saat.idsetor
-where lst.norazaosocial ilike '%BANCO ITAU%' or  lst.norazaosocial ilike '%BANCO do brasil%' or  lst.norazaosocial ilike '%petrobras%'
+where (lst.norazaosocial ilike '%BANCO ITAU%' or  lst.norazaosocial ilike '%BANCO do brasil%' or  lst.norazaosocial ilike '%petrobras%') AND lst.nranobase = 2021
+order by lst.idprenchimentosituacaoanalise, daproj.nritem;
 
 --where --daproj.dsrecursoshumanos is not null
 --daproj.icciclomaior is not null

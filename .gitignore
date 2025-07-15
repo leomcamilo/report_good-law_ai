@@ -6,8 +6,8 @@
 # Ignorar arquivos gerados e dados
 *.npy
 *.csv
-*.json
 *.xlsx
+*.pkl
 
 # Ignorar caches do Python
 __pycache__/

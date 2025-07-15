@@ -26,6 +26,7 @@ from reportlab.platypus import SimpleDocTemplate, Table, TableStyle, Paragraph, 
 from reportlab.lib.styles import getSampleStyleSheet, ParagraphStyle
 from reportlab.lib.units import inch
 import io
+import os
 
 warnings.filterwarnings('ignore')
 
@@ -65,6 +66,7 @@ class AnalisadorClusterAvancado:
             'daproj_dselementotecnologico': 'elemento_tecnologico',
             'daproj_dsdesafiotecnologico': 'desafio_tecnologico',
             'daproj_dsmetodologiautilizada': 'metodologia',
+            'daproj_dspalavrachave': 'palavra_chave',
             'lst_norazaosocial': 'razao_social',
             'lst_noatividadeeconomica': 'atividade_economica',
             'lst_notipoportepessoajuridica': 'porte_empresa'
@@ -109,17 +111,18 @@ class AnalisadorClusterAvancado:
         def criar_texto_ponderado(row):
             componentes = []
             
-            # Alta prioridade (peso 3)
-            if pd.notna(row.get('descricao_projeto')):
-                componentes.extend([str(row['descricao_projeto'])] * 3)
-            
-            # Média prioridade (peso 2)
-            for campo in ['elemento_tecnologico', 'desafio_tecnologico']:
+            # Alta prioridade (peso 6)
+            for campo in ['area_projeto', 'palavra_chave', 'razao_social']:
                 if pd.notna(row.get(campo)):
-                    componentes.extend([str(row[campo])] * 2)
+                    componentes.extend([str(row[campo])] * 6)
+            
+            # Média prioridade (peso 5)
+            for campo in ['atividade_economica', 'tipo_projeto']:
+                if pd.notna(row.get(campo)):
+                    componentes.extend([str(row[campo])] * 5)
             
             # Baixa prioridade (peso 1)
-            for campo in ['area_projeto', 'tipo_projeto', 'atividade_economica']:
+            for campo in ['descricao_projeto', 'desafio_tecnologico', 'elemento_tecnologico']:
                 if pd.notna(row.get(campo)):
                     componentes.append(str(row[campo]))
             
@@ -139,19 +142,19 @@ class AnalisadorClusterAvancado:
         
         return self.embeddings
     
-    def analisar_kmeans_otimizado(self, max_k: int = 30):
+    def analisar_kmeans_otimizado(self, max_k: int = 50):
         """Aplica K-Means com seleção otimizada de K"""
         print("🎯 Analisando K-Means otimizado...")
         
         # Normalizar embeddings
         embeddings_norm = self.scaler.fit_transform(self.embeddings)
         
-        # Testar diferentes valores de K
+        # Testar diferentes valores de K (a partir de 2)
         inertias = []
         silhouettes = []
         calinski_scores = []
         k_values = range(2, min(max_k + 1, len(self.df) // 10))
-        
+
         for k in k_values:
             print(f"  Testando K={k}...")
             kmeans = KMeans(n_clusters=k, random_state=42, n_init=10)
@@ -161,24 +164,11 @@ class AnalisadorClusterAvancado:
             silhouettes.append(silhouette_score(embeddings_norm, clusters))
             calinski_scores.append(calinski_harabasz_score(embeddings_norm, clusters))
         
-        # Encontrar K ótimo usando método do cotovelo + silhouette
-        # Calcular segunda derivada da inércia
-        if len(inertias) > 2:
-            second_derivative = np.diff(np.diff(inertias))
-            elbow_idx = np.argmax(second_derivative) + 2  # +2 por causa dos diffs
-            k_elbow = list(k_values)[elbow_idx]
-        else:
-            k_elbow = 10
+        # K ótimo baseado apenas no melhor silhouette score
+        k_optimal = list(k_values)[np.argmax(silhouettes)]
         
-        # K com melhor silhouette
-        k_silhouette = list(k_values)[np.argmax(silhouettes)]
-        
-        # K final: média entre elbow e silhouette
-        k_optimal = (k_elbow + k_silhouette) // 2
-        
-        print(f"📊 K ótimo encontrado: {k_optimal}")
-        print(f"   K (cotovelo): {k_elbow}")
-        print(f"   K (silhouette): {k_silhouette}")
+        print(f"📊 K ótimo encontrado: {k_optimal} (baseado no Silhouette Score)")
+        print(f"   Melhor Silhouette Score: {max(silhouettes):.4f}")
         
         # Aplicar K-Means com K ótimo
         self.kmeans_final = KMeans(n_clusters=k_optimal, random_state=42, n_init=20)
@@ -187,8 +177,7 @@ class AnalisadorClusterAvancado:
         # Salvar métricas
         self.resultados_analise['kmeans'] = {
             'k_optimal': k_optimal,
-            'k_elbow': k_elbow,
-            'k_silhouette': k_silhouette,
+            'best_silhouette': max(silhouettes),
             'inertias': inertias,
             'silhouettes': silhouettes,
             'k_values': list(k_values)
@@ -232,11 +221,28 @@ class AnalisadorClusterAvancado:
             
             # Análise de resultados se campo existir
             if 'do_taaproj_notipoavaliacaoanalise' in cluster_data.columns:
-                resultados = cluster_data['do_taaproj_notipoavaliacaoanalise'].value_counts(normalize=True)
-                if 'Recomendado' in resultados:
-                    padrao['taxa_recomendado'] = resultados['Recomendado'] * 100
-                if 'Não Recomendado' in resultados:
-                    padrao['taxa_nao_recomendado'] = resultados['Não Recomendado'] * 100
+                # Remover valores nulos primeiro
+                resultados_validos = cluster_data['do_taaproj_notipoavaliacaoanalise'].dropna()
+                
+                if len(resultados_validos) > 0:
+                    # Contar exatamente "Recomendado" (sem "Não Recomendado")
+                    recomendados = resultados_validos.apply(
+                        lambda x: str(x).strip().lower() == 'recomendado'
+                    ).sum()
+                    
+                    # Contar "Não Recomendado"
+                    nao_recomendados = resultados_validos.apply(
+                        lambda x: 'não recomendado' in str(x).strip().lower()
+                    ).sum()
+                    
+                    total_analisados = len(resultados_validos)
+                    
+                    if total_analisados > 0:
+                        padrao['taxa_recomendado'] = (recomendados / total_analisados) * 100
+                        padrao['taxa_nao_recomendado'] = (nao_recomendados / total_analisados) * 100
+                    
+                    # Debug info
+                    print(f"Cluster {cluster_id}: {recomendados}/{total_analisados} recomendados = {padrao['taxa_recomendado']:.1f}%")
             
             # Análise de concentração por analista
             if 'do_saat_idunicopessoaanalise' in cluster_data.columns:
@@ -262,17 +268,62 @@ class AnalisadorClusterAvancado:
                         'num_projetos': len(projetos_analista),
                         'clusters_atendidos': projetos_analista['cluster_kmeans'].nunique(),
                         'area_especializada': projetos_analista['area_projeto'].mode().iloc[0] if not projetos_analista['area_projeto'].mode().empty else 'N/A',
-                        'taxa_aprovacao': 0
+                        'taxa_aprovacao': 0,
+                        'total_analisados': 0,
+                        'total_recomendados': 0,
+                        'total_nao_recomendados': 0
                     }
                     
                     # Taxa de aprovação se disponível
                     if 'do_taaproj_notipoavaliacaoanalise' in projetos_analista.columns:
-                        aprovados = projetos_analista['do_taaproj_notipoavaliacaoanalise'].str.contains('Recomendado', na=False).sum()
-                        padrao_analista['taxa_aprovacao'] = (aprovados / len(projetos_analista)) * 100
+                        # Remover valores nulos
+                        resultados_validos = projetos_analista['do_taaproj_notipoavaliacaoanalise'].dropna()
+                        
+                        if len(resultados_validos) > 0:
+                            # Análise precisa do texto
+                            recomendados = 0
+                            nao_recomendados = 0
+                            
+                            for resultado in resultados_validos:
+                                resultado_str = str(resultado).strip().lower()
+                                # Verificar se é exatamente "recomendado" (sem "não" antes)
+                                if resultado_str == 'recomendado':
+                                    recomendados += 1
+                                elif 'não recomendado' in resultado_str or 'nao recomendado' in resultado_str:
+                                    nao_recomendados += 1
+                            
+                            total_analisados = len(resultados_validos)
+                            padrao_analista['total_analisados'] = total_analisados
+                            padrao_analista['total_recomendados'] = recomendados
+                            padrao_analista['total_nao_recomendados'] = nao_recomendados
+                            
+                            if total_analisados > 0:
+                                padrao_analista['taxa_aprovacao'] = (recomendados / total_analisados) * 100
+                            
+                            # Debug para verificar
+                            if padrao_analista['taxa_aprovacao'] == 100.0 and total_analisados > 10:
+                                print(f"⚠️ Analista {analista_id}: {recomendados}/{total_analisados} aprovados")
+                                # Mostrar amostra dos resultados
+                                amostra = resultados_validos.head(5).tolist()
+                                print(f"   Amostra de resultados: {amostra}")
                     
                     padroes_analista.append(padrao_analista)
             
             self.resultados_analise['padroes_analista'] = pd.DataFrame(padroes_analista)
+            
+            # Estatísticas gerais de aprovação
+            df_analistas = self.resultados_analise['padroes_analista']
+            print(f"\n📊 Estatísticas Gerais dos Analistas:")
+            print(f"   Taxa média de aprovação: {df_analistas['taxa_aprovacao'].mean():.1f}%")
+            print(f"   Analistas com 100% aprovação: {len(df_analistas[df_analistas['taxa_aprovacao'] == 100])}")
+            print(f"   Analistas com <100% aprovação: {len(df_analistas[df_analistas['taxa_aprovacao'] < 100])}")
+            
+            # Mostrar analistas com taxas diferentes de 100%
+            analistas_variados = df_analistas[df_analistas['taxa_aprovacao'] < 100].sort_values('taxa_aprovacao')
+            if not analistas_variados.empty:
+                print(f"\n📊 Analistas com taxas variadas:")
+                for _, row in analistas_variados.iterrows():
+                    print(f"   - Analista {row['analista_id']}: {row['taxa_aprovacao']:.1f}% ({row['total_analisados']} projetos)")
         
         return self.resultados_analise
     
@@ -280,11 +331,15 @@ class AnalisadorClusterAvancado:
         """Cria visualizações dos clusters e padrões"""
         print("📈 Criando visualizações...")
         
+        # Criar pasta para imagens do relatório
+        pasta_imagens = Path("imagens_relatorio")
+        pasta_imagens.mkdir(exist_ok=True)
+        
         # Configurar estilo
         plt.style.use('seaborn-v0_8-darkgrid')
         fig_paths = []
         
-        # 1. Visualização do método do cotovelo
+        # 1. Visualização do método do cotovelo e silhouette
         fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(15, 6))
         
         k_values = self.resultados_analise['kmeans']['k_values']
@@ -293,18 +348,15 @@ class AnalisadorClusterAvancado:
         
         # Cotovelo
         ax1.plot(k_values, inertias, 'b-o', linewidth=2, markersize=8)
-        ax1.axvline(x=self.resultados_analise['kmeans']['k_optimal'], color='r', linestyle='--', 
-                   label=f'K ótimo = {self.resultados_analise["kmeans"]["k_optimal"]}')
         ax1.set_xlabel('Número de Clusters (K)', fontsize=12)
         ax1.set_ylabel('Inércia', fontsize=12)
         ax1.set_title('Método do Cotovelo', fontsize=14, fontweight='bold')
-        ax1.legend()
         ax1.grid(True, alpha=0.3)
         
         # Silhouette
         ax2.plot(k_values, silhouettes, 'g-o', linewidth=2, markersize=8)
-        ax2.axvline(x=self.resultados_analise['kmeans']['k_silhouette'], color='r', linestyle='--',
-                   label=f'K melhor silhouette = {self.resultados_analise["kmeans"]["k_silhouette"]}')
+        ax2.axvline(x=self.resultados_analise['kmeans']['k_optimal'], color='r', linestyle='--',
+                   label=f'K ótimo = {self.resultados_analise["kmeans"]["k_optimal"]}')
         ax2.set_xlabel('Número de Clusters (K)', fontsize=12)
         ax2.set_ylabel('Silhouette Score', fontsize=12)
         ax2.set_title('Análise de Silhouette', fontsize=14, fontweight='bold')
@@ -312,9 +364,9 @@ class AnalisadorClusterAvancado:
         ax2.grid(True, alpha=0.3)
         
         plt.tight_layout()
-        fig_path = 'kmeans_otimizacao.png'
+        fig_path = pasta_imagens / 'kmeans_otimizacao.png'
         plt.savefig(fig_path, dpi=300, bbox_inches='tight')
-        fig_paths.append(fig_path)
+        fig_paths.append(str(fig_path))
         plt.close()
         
         # 2. Distribuição dos clusters
@@ -338,9 +390,9 @@ class AnalisadorClusterAvancado:
         ax.grid(True, axis='y', alpha=0.3)
         
         plt.tight_layout()
-        fig_path = 'distribuicao_clusters.png'
+        fig_path = pasta_imagens / 'distribuicao_clusters.png'
         plt.savefig(fig_path, dpi=300, bbox_inches='tight')
-        fig_paths.append(fig_path)
+        fig_paths.append(str(fig_path))
         plt.close()
         
         # 3. PCA dos embeddings colorido por cluster
@@ -382,9 +434,9 @@ class AnalisadorClusterAvancado:
             ax.legend(handles[:1], ['Centroides'], loc='upper right')
         
         plt.tight_layout()
-        fig_path = 'pca_clusters.png'
+        fig_path = pasta_imagens / 'pca_clusters.png'
         plt.savefig(fig_path, dpi=300, bbox_inches='tight')
-        fig_paths.append(fig_path)
+        fig_paths.append(str(fig_path))
         plt.close()
         
         # 4. Heatmap de características por cluster
@@ -411,9 +463,9 @@ class AnalisadorClusterAvancado:
             ax.set_title('Características dos Clusters', fontsize=14, fontweight='bold')
             
             plt.tight_layout()
-            fig_path = 'heatmap_caracteristicas.png'
+            fig_path = pasta_imagens / 'heatmap_caracteristicas.png'
             plt.savefig(fig_path, dpi=300, bbox_inches='tight')
-            fig_paths.append(fig_path)
+            fig_paths.append(str(fig_path))
             plt.close()
         
         self.fig_paths = fig_paths
@@ -423,7 +475,14 @@ class AnalisadorClusterAvancado:
         """Gera relatório em PDF com análises e visualizações"""
         print("📄 Gerando relatório PDF...")
         
-        doc = SimpleDocTemplate(nome_arquivo, pagesize=A4)
+        # Criar pasta de análises se não existir
+        pasta_analises = Path("./Analises")
+        pasta_analises.mkdir(exist_ok=True)
+        
+        # Caminho completo do arquivo PDF
+        caminho_arquivo = pasta_analises / nome_arquivo
+        
+        doc = SimpleDocTemplate(str(caminho_arquivo), pagesize=A4)
         story = []
         styles = getSampleStyleSheet()
         
@@ -644,7 +703,7 @@ class AnalisadorClusterAvancado:
         
         # Construir PDF
         doc.build(story)
-        print(f"✅ Relatório PDF gerado: {nome_arquivo}")
+        print(f"✅ Relatório PDF gerado: {caminho_arquivo}")
     
     def _gerar_recomendacoes(self) -> list[dict[str, str]]:
         """Gera recomendações baseadas na análise"""
@@ -683,7 +742,7 @@ class AnalisadorClusterAvancado:
                 })
             
             # 4. Sistema de triagem
-            if self.resultados_analise['kmeans']['k_optimal'] > 15:
+            if self.resultados_analise['kmeans']['k_optimal'] > 20:
                 recomendacoes.append({
                     'titulo': 'Implementar Sistema de Triagem Automatizada',
                     'descricao': 'Com o grande número de clusters identificados, um sistema de '
@@ -704,32 +763,36 @@ class AnalisadorClusterAvancado:
         """Exporta todos os resultados detalhados"""
         print("💾 Exportando resultados detalhados...")
         
+        # Criar pasta de análises se não existir
+        pasta_analises = Path("./Analises")
+        pasta_analises.mkdir(exist_ok=True)
+        
         # 1. DataFrame com clusters
-        self.df.to_csv(f'{prefixo}_projetos_clusters.csv', index=False, sep=';', encoding='utf-8')
+        self.df.to_csv(pasta_analises / f'{prefixo}_projetos_clusters.csv', index=False, sep=';', encoding='utf-8')
         
         # 2. Análise de clusters
         if 'padroes_cluster' in self.resultados_analise:
             self.resultados_analise['padroes_cluster'].to_csv(
-                f'{prefixo}_analise_clusters.csv', index=False, sep=';', encoding='utf-8'
+                pasta_analises / f'{prefixo}_analise_clusters.csv', index=False, sep=';', encoding='utf-8'
             )
         
         # 3. Análise de analistas
         if 'padroes_analista' in self.resultados_analise:
             self.resultados_analise['padroes_analista'].to_csv(
-                f'{prefixo}_analise_analistas.csv', index=False, sep=';', encoding='utf-8'
+                pasta_analises / f'{prefixo}_analise_analistas.csv', index=False, sep=';', encoding='utf-8'
             )
         
         # 4. Métricas de otimização
         import json
         metricas = {
-            'k_optimal': self.resultados_analise['kmeans']['k_optimal'],
-            'k_elbow': self.resultados_analise['kmeans']['k_elbow'],
-            'k_silhouette': self.resultados_analise['kmeans']['k_silhouette'],
+            'k_optimal': int(self.resultados_analise['kmeans']['k_optimal']),
+            'best_silhouette': float(self.resultados_analise['kmeans']['best_silhouette']),
             'total_projetos': len(self.df),
-            'total_clusters': self.resultados_analise['kmeans']['k_optimal']
+            'total_clusters': int(self.resultados_analise['kmeans']['k_optimal']),
+            'k_range_tested': f"1-{max(self.resultados_analise['kmeans']['k_values'])}"
         }
         
-        with open(f'{prefixo}_metricas.json', 'w', encoding='utf-8') as f:
+        with open(pasta_analises / f'{prefixo}_metricas.json', 'w', encoding='utf-8') as f:
             json.dump(metricas, f, indent=2, ensure_ascii=False)
         
         print("✅ Todos os resultados exportados")
@@ -760,7 +823,7 @@ def main():
     # 2. Criar embeddings multimodais
     analisador.criar_embeddings_multimodais()
     
-    # 3. Aplicar K-Means otimizado
+    # 3. Aplicar K-Means otimizado (K entre 1-30, usando Silhouette)
     analisador.analisar_kmeans_otimizado(max_k=30)
     
     # 4. Analisar padrões de decisão
@@ -777,11 +840,11 @@ def main():
     
     print("\n✅ Análise completa!")
     print("📊 Arquivos gerados:")
-    print("   - relatorio_clusters_lei_bem.pdf (Relatório completo)")
-    print("   - lei_bem_projetos_clusters.csv (Projetos com clusters)")
-    print("   - lei_bem_analise_clusters.csv (Características dos clusters)")
-    print("   - lei_bem_analise_analistas.csv (Análise por analista)")
-    print("   - Visualizações em PNG")
+    print("   - ./Analises/relatorio_clusters_lei_bem.pdf (Relatório completo)")
+    print("   - ./Analises/lei_bem_projetos_clusters.csv (Projetos com clusters)")
+    print("   - ./Analises/lei_bem_analise_clusters.csv (Características dos clusters)")
+    print("   - ./Analises/lei_bem_analise_analistas.csv (Análise por analista)")
+    print("   - imagens_relatorio/ (Pasta com visualizações)")
     
     return analisador
 

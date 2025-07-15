@@ -630,7 +630,7 @@ def main():
         print(f"📋 Total de empresas encontradas: {len(empresas_unicas)}")
         print(f"📋 Amostra de empresas: {list(empresas_unicas[:5])}")
     
-    # 3. Salvar dados aglomerados
+    # 3. Salvar dados aglomerados apenas em tabelas_csv_xlsx
     print("\n💾 SALVANDO DADOS AGLOMERADOS...")
     
     # Criar diretório se não existir
@@ -664,8 +664,8 @@ def main():
             print(f"✅ Dados detalhados carregados: {len(df_detalhado)} registros")
             print(f"📊 Colunas disponíveis: {len(df_detalhado.columns)}")
             
-            # Salvar dados detalhados na pasta csv_longo
-            print("\n💾 SALVANDO DADOS DETALHADOS NA PASTA CSV_LONGO...")
+            # Salvar dados detalhados apenas na pasta csv_longo
+            print("\n💾 SALVANDO DADOS DETALHADOS...")
             
             # Criar diretório csv_longo se não existir
             import os
@@ -685,21 +685,13 @@ def main():
                 
             except Exception as e:
                 print(f"❌ Erro ao salvar dados detalhados na pasta csv_longo: {e}")
-            
-            # Também salvar usando o método da classe (pasta tabelas_csv_xlsx)
-            print("\n💾 SALVANDO DADOS DETALHADOS NA PASTA TABELAS_CSV_XLSX...")
-            if carregador_detalhado.salvar_dados_detalhados('csv'):
-                print("✅ Dados detalhados salvos em CSV (tabelas_csv_xlsx)")
-            
-            if carregador_detalhado.salvar_dados_detalhados('excel'):
-                print("✅ Dados detalhados salvos em Excel (tabelas_csv_xlsx)")
         else:
             print("❌ Falha ao carregar dados detalhados")
     
     print("\n🎉 Análise concluída!")
     print("=" * 60)
-    print("📁 Arquivos aglomerados salvos no diretório: tabelas_csv_xlsx/")
-    print("📁 Arquivos detalhados salvos no diretório: csv_longo/")
+    print("📁 Dados aglomerados salvos no diretório: tabelas_csv_xlsx/")
+    print("📁 Dados detalhados salvos no diretório: csv_longo/")
     print("📋 Verifique os arquivos gerados para análise posterior.")
 
 
