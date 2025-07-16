@@ -431,7 +431,7 @@ class CarregadorDadosLeiDoBem:
                     left join tbjustificativaanalise ra_japroj on ra_japroj.idjustificativaanalise = ra_aomprojj.idjustificativaanalise
                     left join tbtipojustificativaanalise ra_tjaproj on ra_tjaproj.cdtipojustificativaanalise = ra_japroj.cdtipojustificativaanalise
                     group by ra_aomprojj.idanaliseobjetomarcoprojeto ) ra_a_proj on ra_a_proj.idanaliseobjetomarcoprojeto = ra_aomproj.idanaliseobjetomarcoprojeto
-            where lst.nranobase = 2021
+            -- where lst.nranobase = 2021
             order by dem.idprenchimentosituacaoanalise, daproj.nritem
             """
             
