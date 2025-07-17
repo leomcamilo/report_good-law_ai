@@ -32,6 +32,7 @@ dependencies = [
     "nbconvert[webpdf]>=7.16.6",
     "notebook>=7.4.4",
     "pandoc>=2.4",
+    "weasyprint>=65.1",
 ]
 
 [tool.uv]
