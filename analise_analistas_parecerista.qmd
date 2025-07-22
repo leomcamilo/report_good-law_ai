@@ -1,17 +1,7 @@
----
-title: Analise
-author: Leonardo Camilo
-execute:
-    echo: false
-    warnings: false
-    message: false
-jupyter: python3
-
----
-
+# Analise
+Leonardo Camilo
 
 # Análise Detalhada: Analistas vs Pareceristas - Lei do Bem 2021
-
 
 Este notebook analisa a relação entre as decisões dos analistas (fase
 DO) e dos pareceristas (fase Parecer) nos projetos da Lei do Bem.
@@ -62,89 +52,11 @@ aprovação final dos projetos.
 
 ### Análise de Analistas vs Pareceristas - Lei do Bem 2021
 
-**Data de Análise:** 18/07/2025 **Ano Base dos Dados:** 2021  
+**Data de Análise:** 18/07/2025
+
+**Ano Base dos Dados:** 2021
+
 **Total de Projetos:** 13.198
-
-``` {python}
-#| echo: false
-# %% Imports e Configuração
-import pandas as pd
-import numpy as np
-import matplotlib.pyplot as plt
-import seaborn as sns
-from pathlib import Path
-import warnings
-from datetime import datetime
-from sklearn.feature_extraction.text import TfidfVectorizer
-from sklearn.ensemble import RandomForestClassifier
-from sklearn.model_selection import train_test_split, cross_val_score
-from sklearn.metrics import classification_report, confusion_matrix
-from sklearn.preprocessing import LabelEncoder
-import re
-from collections import Counter
-import nltk
-
-# Baixar recursos necessários do NLTK
-print("Verificando recursos do NLTK...")
-try:
-    nltk.data.find('tokenizers/punkt')
-except LookupError:
-    print("Baixando punkt...")
-    nltk.download('punkt')
-
-try:
-    nltk.data.find('corpora/stopwords')
-except LookupError:
-    print("Baixando stopwords...")
-    nltk.download('stopwords')
-
-print("✅ Recursos NLTK prontos!")
-
-from nltk.tokenize import word_tokenize
-from nltk.corpus import stopwords
-
-# Configurações
-warnings.filterwarnings('ignore')
-plt.style.use('seaborn-v0_8-whitegrid')
-pd.set_option('display.max_columns', None)
-pd.set_option('display.max_rows', 100)
-
-# Configurar fonte para melhor visualização em PDF
-plt.rcParams['font.size'] = 10
-plt.rcParams['axes.titlesize'] = 12
-plt.rcParams['axes.labelsize'] = 10
-plt.rcParams['xtick.labelsize'] = 9
-plt.rcParams['ytick.labelsize'] = 9
-plt.rcParams['legend.fontsize'] = 9
-plt.rcParams['figure.dpi'] = 300
-
-# %% Configuração de stopwords em português
-# Carregar stopwords padrão do NLTK em português
-stop_words_nltk = set(stopwords.words('portuguese'))
-
-# Adicionar stopwords específicas do domínio Lei do Bem
-stop_words_dominio = {
-    # Verbos comuns
-    'realizar', 'desenvolver', 'criar', 'implementar', 'utilizar', 'aplicar', 'melhorar',
-    'analisar', 'estudar', 'avaliar', 'testar', 'produzir', 'fabricar', 'construir', 'usar', 'uso'
-    
-    # Preposições e conectivos adicionais
-    'através', 'mediante', 'partir', 'base', 'forma', 'modo', 'tipo', 'fase', 'etapa',
-    'objetivo', 'objetivos', 'finalidade', 'propósito', 'meta', 'metas',
-    
-    # Termos muito genéricos
-    'novo', 'nova', 'novos', 'novas', 'área', 'áreas', 'setor', 'setores',
-    'atividade', 'atividades', 'trabalho', 'trabalhos', 'serviço', 'serviços'
-}
-
-# Combinar todas as stopwords
-todas_stopwords = stop_words_nltk.union(stop_words_dominio)
-
-print(f"📊 Total de stopwords:")
-print(f"   - NLTK português: {len(stop_words_nltk)}")
-print(f"   - Domínio específico: {len(stop_words_dominio)}")
-print(f"   - Total combinado: {len(todas_stopwords)}")
-```
 
     Verificando recursos do NLTK...
     ✅ Recursos NLTK prontos!
@@ -262,298 +174,420 @@ def processar_campos_texto(df, campos, stopwords_set):
 ## 1. Carregamento e Preparação dos Dados
 
 ``` {python}
-# %% Carregamento dos dados
-print("Carregando dados...")
+"""
+Capítulo 1: Carregamento e Preparação dos Dados
+Análise da Lei do Bem - Ano Base 2021
 
-# Carregar o arquivo principal com todos os dados
-df = pd.read_csv('csv_longo/projetos_lei_do_bem_2023_DETALHADO_LINHA_UNICA.csv', sep=';', encoding='utf-8')
+Este script realiza o carregamento inicial dos dados e prepara o dataset
+para análises posteriores, incluindo processamento de linguagem natural
+dos campos textuais.
+"""
 
-print(f"Total de projetos carregados: {len(df):,}")
-print(f"Total de colunas: {len(df.columns)}")
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+import seaborn as sns
+from collections import Counter
+import nltk
+from nltk.corpus import stopwords
 
-# Colunas relevantes para a análise
-colunas_analise = [
-    # Identificação
+# Configuração visual
+plt.style.use('seaborn-v0_8-darkgrid')
+sns.set_palette("husl")
+
+# =============================================================================
+# SEÇÃO 1.1: CARREGAMENTO DO DATASET
+# =============================================================================
+
+print("=" * 80)
+print("CAPÍTULO 1: CARREGAMENTO E PREPARAÇÃO DOS DADOS")
+print("=" * 80)
+print("\n1.1 Carregamento do Dataset Principal\n")
+
+# Carregar arquivo CSV principal
+arquivo_dados = 'csv_longo/projetos_lei_do_bem_2023_DETALHADO_LINHA_UNICA.csv'
+df = pd.read_csv(arquivo_dados, sep=';', encoding='utf-8')
+
+# Estatísticas iniciais
+total_projetos = len(df)
+total_colunas = len(df.columns)
+
+print(f"Dataset carregado com sucesso!")
+print(f"├── Total de projetos: {total_projetos:,}")
+print(f"└── Total de variáveis: {total_colunas}")
+
+# =============================================================================
+# SEÇÃO 1.2: SELEÇÃO DE VARIÁVEIS RELEVANTES
+# =============================================================================
+
+print("\n1.2 Seleção de Variáveis Relevantes\n")
+
+# Definir grupos de colunas por categoria
+colunas_identificacao = [
     'lst_idprenchimentosituacaoanalise', 'lst_norazaosocial', 'lst_nrcnpj',
-    'lst_noatividadeeconomica', 'daproj_nritem',
-    
-    # Projeto
+    'lst_noatividadeeconomica', 'daproj_nritem'
+]
+
+colunas_projeto = [
     'daproj_noprojeto', 'daproj_dsprojeto', 'daproj_dsareaprojeto',
     'daproj_dspalavrachave', 'daproj_dselementotecnologico',
-    'daproj_dsdesafiotecnologico', 'daproj_dsmetodologiautilizada',
-    
-    # Analista (DO)
-    'do_saat_idunicopessoaanalise', 'do_taaproj_notipoavaliacaoanalise',
-    
-    # Parecerista
-    'p_taaproj_notipoavaliacaoanalise',
-    
-    # Valores
+    'daproj_dsdesafiotecnologico', 'daproj_dsmetodologiautilizada'
+]
+
+colunas_analista = [
+    'do_saat_idunicopessoaanalise', 'do_taaproj_notipoavaliacaoanalise'
+]
+
+colunas_parecerista = [
+    'p_taaproj_notipoavaliacaoanalise'
+]
+
+colunas_valores = [
     'do_aat_vltotaldeclarado', 'do_aat_vltotalparecer'
 ]
 
-# Filtrar apenas colunas existentes
+# Combinar todas as colunas
+colunas_analise = (colunas_identificacao + colunas_projeto + 
+                   colunas_analista + colunas_parecerista + colunas_valores)
+
+# Filtrar apenas colunas existentes no dataset
 colunas_existentes = [col for col in colunas_analise if col in df.columns]
 df_analise = df[colunas_existentes].copy()
 
-print(f"\nColunas selecionadas para análise: {len(colunas_existentes)}")
+print(f"Variáveis selecionadas por categoria:")
+print(f"├── Identificação: {len([c for c in colunas_identificacao if c in colunas_existentes])}")
+print(f"├── Projeto: {len([c for c in colunas_projeto if c in colunas_existentes])}")
+print(f"├── Analista: {len([c for c in colunas_analista if c in colunas_existentes])}")
+print(f"├── Parecerista: {len([c for c in colunas_parecerista if c in colunas_existentes])}")
+print(f"└── Valores: {len([c for c in colunas_valores if c in colunas_existentes])}")
+print(f"\nTotal de variáveis selecionadas: {len(colunas_existentes)}")
 
-# Definir campos de texto para análise de stopwords
-campos_texto_analise = [
-    'daproj_dsprojeto',              # Descrição do projeto 
-    'daproj_dselementotecnologico',  # Elemento tecnológico
-    'daproj_dsdesafiotecnologico',   # Desafio tecnológico
-    'daproj_dsmetodologiautilizada'  # Metodologia utilizada
-]
+# =============================================================================
+# SEÇÃO 1.3: ANÁLISE TEXTUAL E PROCESSAMENTO DE LINGUAGEM NATURAL
+# =============================================================================
 
-# Filtrar apenas campos existentes
-campos_texto_existentes = [campo for campo in campos_texto_analise if campo in df_analise.columns]
-print(f"\nCampos de texto para análise: {len(campos_texto_existentes)}")
+print("\n1.3 Análise Textual e Processamento de Linguagem Natural\n")
 
-# %% Análise de stopwords
-print("\n🔍 ANÁLISE DE STOPWORDS EM PORTUGUÊS")
-print("=" * 60)
+# 1.3.1 Identificação de campos textuais
+campos_texto = {
+    'daproj_dsprojeto': 'Descrição do Projeto',
+    'daproj_dselementotecnologico': 'Elemento Tecnológico',
+    'daproj_dsdesafiotecnologico': 'Desafio Tecnológico',
+    'daproj_dsmetodologiautilizada': 'Metodologia Utilizada'
+}
 
-# Processar campos
-resultados_stopwords = processar_campos_texto(df_analise, campos_texto_existentes, todas_stopwords)
+campos_texto_existentes = {k: v for k, v in campos_texto.items() if k in df_analise.columns}
+print(f"Campos textuais identificados para análise: {len(campos_texto_existentes)}")
 
-# Mostrar estatísticas gerais
-print("\n📊 ESTATÍSTICAS DE REDUÇÃO POR CAMPO:")
-print("-" * 60)
-for campo, resultado in resultados_stopwords.items():
-    nome_campo = campo.replace('daproj_', '').replace('ds', '').replace('_', ' ').title()
-    print(f"\n{nome_campo}:")
-    print(f"  • Palavras médias (original): {resultado['palavras_media_original']:.1f}")
-    print(f"  • Palavras médias (filtrado): {resultado['palavras_media_filtrado']:.1f}")
-    print(f"  • Redução média: {resultado['reducao_media']:.1f}%")
+# 1.3.2 Configuração de stopwords
+print("\nConfigurando conjunto de stopwords...")
+
+# Baixar stopwords do NLTK se necessário
+try:
+    stopwords_pt = set(stopwords.words('portuguese'))
+except:
+    nltk.download('stopwords')
+    stopwords_pt = set(stopwords.words('portuguese'))
+
+# Stopwords específicas do domínio Lei do Bem
+stopwords_dominio = {
+    'ano', 'base', 'projeto', 'projetos', 'empresa', 'empresas',
+    'desenvolvimento', 'pesquisa', 'inovação', 'tecnológica',
+    'realizar', 'realizado', 'realizada', 'realizados', 'realizadas',
+    'objetivo', 'objetivos', 'processo', 'processos', 'atividade',
+    'atividades', 'trabalho', 'trabalhos', 'forma', 'formas',
+    'através', 'partir', 'sendo', 'foram', 'seja', 'sejam',
+    'pode', 'podem', 'deve', 'devem', 'está', 'estão',
+    'fazer', 'feito', 'feita', 'ter', 'tem', 'tinha',
+    'uso', 'usar', 'usado', 'usada', 'novo', 'nova',
+    'novos', 'novas', 'ainda', 'apenas', 'assim', 'então'
+}
+
+todas_stopwords = stopwords_pt.union(stopwords_dominio)
+print(f"├── Stopwords NLTK português: {len(stopwords_pt)}")
+print(f"├── Stopwords domínio específico: {len(stopwords_dominio)}")
+print(f"└── Total de stopwords: {len(todas_stopwords)}")
+
+# 1.3.3 Função para processar texto
+def processar_texto(texto, stopwords_set):
+    """
+    Processa um texto removendo stopwords e normalizando.
     
-    # Top 5 palavras relevantes
-    print(f"  • Top 5 palavras relevantes:")
-    for palavra, freq in resultado['top_palavras'][:5]:
-        print(f"    - {palavra}: {freq:,} ocorrências")
+    Args:
+        texto: String com o texto a ser processado
+        stopwords_set: Conjunto de stopwords a remover
+        
+    Returns:
+        dict: Dicionário com texto processado e estatísticas
+    """
+    if pd.isna(texto):
+        return {
+            'texto_original': '',
+            'texto_limpo': '',
+            'palavras_originais': 0,
+            'palavras_limpas': 0,
+            'reducao_percentual': 0
+        }
+    
+    # Converter para string e lowercase
+    texto_str = str(texto).lower()
+    
+    # Tokenização simples
+    palavras_originais = texto_str.split()
+    num_palavras_originais = len(palavras_originais)
+    
+    # Remover stopwords
+    palavras_limpas = [p for p in palavras_originais if p not in stopwords_set]
+    num_palavras_limpas = len(palavras_limpas)
+    
+    # Calcular redução
+    reducao = 0 if num_palavras_originais == 0 else (
+        (num_palavras_originais - num_palavras_limpas) / num_palavras_originais * 100
+    )
+    
+    return {
+        'texto_original': texto_str,
+        'texto_limpo': ' '.join(palavras_limpas),
+        'palavras_originais': num_palavras_originais,
+        'palavras_limpas': num_palavras_limpas,
+        'reducao_percentual': reducao
+    }
 
-# %% Visualização de stopwords
-# Criar visualização comparativa
-fig, axes = plt.subplots(2, 3, figsize=(18, 12))
+# 1.3.4 Processar todos os campos textuais
+print("\nProcessando campos textuais...")
+
+resultados_processamento = {}
+
+for campo, nome in campos_texto_existentes.items():
+    print(f"\nProcessando: {nome}")
+    
+    # Aplicar processamento
+    processados = df_analise[campo].apply(lambda x: processar_texto(x, todas_stopwords))
+    
+    # Extrair resultados
+    df_temp = pd.DataFrame(processados.tolist())
+    
+    # Calcular estatísticas
+    palavras_originais_media = df_temp['palavras_originais'].mean()
+    palavras_limpas_media = df_temp['palavras_limpas'].mean()
+    reducao_media = df_temp['reducao_percentual'].mean()
+    
+    # Contar palavras mais frequentes após limpeza
+    todas_palavras_limpas = ' '.join(df_temp['texto_limpo']).split()
+    contador_palavras = Counter(todas_palavras_limpas)
+    top_palavras = contador_palavras.most_common(20)
+    
+    # Armazenar resultados
+    resultados_processamento[campo] = {
+        'nome': nome,
+        'df_processado': df_temp,
+        'palavras_originais_media': palavras_originais_media,
+        'palavras_limpas_media': palavras_limpas_media,
+        'reducao_media': reducao_media,
+        'top_palavras': top_palavras
+    }
+    
+    # Adicionar colunas processadas ao dataframe principal
+    df_analise[f'{campo}_limpo'] = df_temp['texto_limpo']
+    df_analise[f'{campo}_num_palavras_limpo'] = df_temp['palavras_limpas']
+    
+    print(f"├── Palavras médias (original): {palavras_originais_media:.1f}")
+    print(f"├── Palavras médias (limpo): {palavras_limpas_media:.1f}")
+    print(f"└── Redução média: {reducao_media:.1f}%")
+
+# =============================================================================
+# SEÇÃO 1.4: VISUALIZAÇÕES
+# =============================================================================
+
+print("\n1.4 Gerando Visualizações\n")
+
+# Figura 1: Análise de Redução por Stopwords
+fig1, axes = plt.subplots(2, 2, figsize=(15, 10))
 axes = axes.flatten()
 
-for i, (campo, resultado) in enumerate(resultados_stopwords.items()):
-    if i < len(axes):
-        ax = axes[i]
-        
-        # Dados para o gráfico
-        df_vis = resultado['df_analise']
-        
-        # Histograma de redução percentual
-        df_vis['reducao_percentual'].hist(bins=30, ax=ax, color='skyblue', edgecolor='navy')
-        ax.set_title(f'Redução por Stopwords\n{campo.replace("daproj_", "")}')
-        ax.set_xlabel('Redução Percentual (%)')
-        ax.set_ylabel('Frequência')
-        ax.axvline(resultado['reducao_media'], color='red', linestyle='--', 
-                  label=f'Média: {resultado["reducao_media"]:.1f}%')
-        ax.legend()
-        ax.grid(True, alpha=0.3)
+for i, (campo, resultado) in enumerate(resultados_processamento.items()):
+    ax = axes[i]
+    
+    # Histograma de redução percentual
+    df_vis = resultado['df_processado']
+    df_vis['reducao_percentual'].hist(bins=30, ax=ax, color='skyblue', edgecolor='navy', alpha=0.7)
+    
+    # Adicionar linha de média
+    ax.axvline(resultado['reducao_media'], color='red', linestyle='--', linewidth=2,
+               label=f'Média: {resultado["reducao_media"]:.1f}%')
+    
+    # Configurar eixos e título
+    ax.set_title(f'Redução por Stopwords\n{resultado["nome"]}', fontsize=12, pad=10)
+    ax.set_xlabel('Redução Percentual (%)')
+    ax.set_ylabel('Frequência')
+    ax.legend()
+    ax.grid(True, alpha=0.3)
 
-# Remover subplots vazios
-for j in range(len(resultados_stopwords), len(axes)):
-    fig.delaxes(axes[j])
-
+plt.suptitle('Figura 1: Análise de Redução por Stopwords nos Campos de Texto', 
+             fontsize=16, y=0.98)
 plt.tight_layout()
-plt.suptitle('Análise de Redução por Stopwords nos Campos de Texto', y=1.02, fontsize=16)
 plt.show()
 
-# %% Top palavras mais relevantes (após remover stopwords)
-print("\n🏆 TOP 20 PALAVRAS MAIS RELEVANTES POR CAMPO")
-print("=" * 60)
-
-fig, axes = plt.subplots(2, 3, figsize=(18, 12))
+# Figura 2: Top Palavras Relevantes
+fig2, axes = plt.subplots(2, 2, figsize=(15, 10))
 axes = axes.flatten()
 
-for i, (campo, resultado) in enumerate(resultados_stopwords.items()):
-    if i < len(axes):
-        ax = axes[i]
-        
-        # Top 10 palavras para o gráfico
-        palavras = [p[0] for p in resultado['top_palavras'][:10]]
-        frequencias = [p[1] for p in resultado['top_palavras'][:10]]
-        
-        # Gráfico de barras horizontal
-        y_pos = np.arange(len(palavras))
-        ax.barh(y_pos, frequencias, color='green', alpha=0.7)
-        ax.set_yticks(y_pos)
-        ax.set_yticklabels(palavras)
-        ax.invert_yaxis()
-        ax.set_xlabel('Frequência')
-        ax.set_title(f'Top 10 Palavras Relevantes\n{campo.replace("daproj_", "")}')
-        ax.grid(axis='x', alpha=0.3)
-        
-        # Adicionar valores nas barras
-        for j, v in enumerate(frequencias):
-            ax.text(v + 10, j, str(v), va='center')
+for i, (campo, resultado) in enumerate(resultados_processamento.items()):
+    ax = axes[i]
+    
+    # Top 10 palavras
+    palavras = [p[0] for p in resultado['top_palavras'][:10]]
+    frequencias = [p[1] for p in resultado['top_palavras'][:10]]
+    
+    # Criar gráfico de barras horizontal
+    y_pos = np.arange(len(palavras))
+    bars = ax.barh(y_pos, frequencias, color='green', alpha=0.7)
+    
+    # Configurar eixos
+    ax.set_yticks(y_pos)
+    ax.set_yticklabels(palavras)
+    ax.invert_yaxis()
+    ax.set_xlabel('Frequência')
+    ax.set_title(f'Top 10 Palavras Relevantes\n{resultado["nome"]}', fontsize=12, pad=10)
+    ax.grid(axis='x', alpha=0.3)
+    
+    # Adicionar valores nas barras
+    for j, (bar, freq) in enumerate(zip(bars, frequencias)):
+        ax.text(bar.get_width() + 50, bar.get_y() + bar.get_height()/2, 
+                f'{freq:,}', va='center', fontsize=9)
 
-# Remover subplots vazios
-for j in range(len(resultados_stopwords), len(axes)):
-    fig.delaxes(axes[j])
-
+plt.suptitle('Figura 2: Top 10 Palavras Mais Relevantes por Campo', 
+             fontsize=16, y=0.98)
 plt.tight_layout()
 plt.show()
 
-# %% Preparar dados processados para análise posterior
-print("\n💾 Criando DataFrame com textos processados...")
+# =============================================================================
+# SEÇÃO 1.5: PREPARAÇÃO FINAL DO DATASET
+# =============================================================================
 
-# Criar novas colunas com textos limpos (sem stopwords)
-for campo, resultado in resultados_stopwords.items():
-    df_analise[f'{campo}_limpo'] = resultado['df_analise']['texto_sem_stopwords']
-    df_analise[f'{campo}_num_palavras_limpo'] = resultado['df_analise']['palavras_sem_stopwords']
+print("\n1.5 Preparação Final do Dataset\n")
 
-# Criar texto combinado limpo para análises posteriores
-textos_combinados_limpos = []
+# Criar campo de texto combinado
+print("Criando campo de texto combinado...")
+textos_combinados = []
+
 for idx in range(len(df_analise)):
-    texto_combinado = ' '.join([
-        str(df_analise[f'{campo}_limpo'].iloc[idx]) 
-        for campo in campos_texto_existentes 
-        if f'{campo}_limpo' in df_analise.columns
-    ])
-    textos_combinados_limpos.append(texto_combinado)
+    partes = []
+    for campo in campos_texto_existentes.keys():
+        campo_limpo = f'{campo}_limpo'
+        if campo_limpo in df_analise.columns:
+            texto = str(df_analise[campo_limpo].iloc[idx])
+            if texto and texto != 'nan':
+                partes.append(texto)
+    
+    texto_combinado = ' '.join(partes)
+    textos_combinados.append(texto_combinado)
 
-df_analise['texto_combinado_limpo'] = textos_combinados_limpos
+df_analise['texto_combinado_limpo'] = textos_combinados
 
-print(f"✅ DataFrame expandido com textos processados!")
-print(f"   Novas colunas criadas: {len([col for col in df_analise.columns if 'limpo' in col])}")
+# Estatísticas finais
+print(f"\nDataset preparado com sucesso!")
+print(f"├── Total de projetos: {len(df_analise):,}")
+print(f"├── Variáveis originais: {len(colunas_existentes)}")
+print(f"├── Variáveis criadas: {len([c for c in df_analise.columns if 'limpo' in c])}")
+print(f"└── Total de variáveis: {len(df_analise.columns)}")
 
-# Exemplo de texto processado
-print("\n📝 EXEMPLO DE PROCESSAMENTO:")
+# Exemplo de processamento
+print("\nExemplo de Processamento (Projeto #1):")
 print("-" * 60)
-idx_exemplo = 0
-for campo in ['daproj_dsprojeto']:
-    if campo in df_analise.columns and f'{campo}_limpo' in df_analise.columns:
-        print(f"\n{campo}:")
-        print(f"Original: {str(df_analise[campo].iloc[idx_exemplo])[:150]}...")
-        print(f"Limpo: {str(df_analise[f'{campo}_limpo'].iloc[idx_exemplo])[:150]}...")
-        print(f"Redução: {resultados_stopwords[campo]['df_analise']['reducao_percentual'].iloc[idx_exemplo]:.1f}%")
-print("Carregando dados...")
-
-# Carregar o arquivo principal com todos os dados
-df = pd.read_csv('csv_longo/projetos_lei_do_bem_2023_DETALHADO_LINHA_UNICA.csv', sep=';', encoding='utf-8')
-
-print(f"Total de projetos carregados: {len(df):,}")
-print(f"Total de colunas: {len(df.columns)}")
-
-# Colunas relevantes para a análise
-colunas_analise = [
-    # Identificação
-    'lst_idprenchimentosituacaoanalise', 'lst_norazaosocial', 'lst_nrcnpj',
-    'lst_noatividadeeconomica', 'daproj_nritem',
+campo_exemplo = 'daproj_dsprojeto'
+if campo_exemplo in df_analise.columns:
+    texto_original = str(df_analise[campo_exemplo].iloc[0])[:150]
+    texto_limpo = str(df_analise[f'{campo_exemplo}_limpo'].iloc[0])[:150]
+    reducao = resultados_processamento[campo_exemplo]['df_processado']['reducao_percentual'].iloc[0]
     
-    # Projeto
-    'daproj_noprojeto', 'daproj_dsprojeto', 'daproj_dsareaprojeto',
-    'daproj_dspalavrachave', 'daproj_dselementotecnologico',
-    'daproj_dsdesafiotecnologico', 'daproj_dsmetodologiautilizada',
-    
-    # Analista (DO)
-    'do_saat_idunicopessoaanalise', 'do_taaproj_notipoavaliacaoanalise',
-    
-    # Parecerista
-    'p_taaproj_notipoavaliacaoanalise',
-    
-    # Valores
-    'do_aat_vltotaldeclarado', 'do_aat_vltotalparecer'
-]
+    print(f"Original: {texto_original}...")
+    print(f"Limpo: {texto_limpo}...")
+    print(f"Redução: {reducao:.1f}%")
 
-# Filtrar apenas colunas existentes
-colunas_existentes = [col for col in colunas_analise if col in df.columns]
-df_analise = df[colunas_existentes].copy()
-
-print(f"\nColunas selecionadas para análise: {len(colunas_existentes)}")
+print("\n" + "=" * 80)
+print("CAPÍTULO 1 CONCLUÍDO - Dataset pronto para análise")
+print("=" * 80)
 ```
 
-    Carregando dados...
-    Total de projetos carregados: 13,198
-    Total de colunas: 229
+    ================================================================================
+    CAPÍTULO 1: CARREGAMENTO E PREPARAÇÃO DOS DADOS
+    ================================================================================
 
-    Colunas selecionadas para análise: 17
+    1.1 Carregamento do Dataset Principal
 
-    Campos de texto para análise: 4
+    Dataset carregado com sucesso!
+    ├── Total de projetos: 13,198
+    └── Total de variáveis: 229
 
-    🔍 ANÁLISE DE STOPWORDS EM PORTUGUÊS
-    ============================================================
-    📝 Processando daproj_dsprojeto...
-    📝 Processando daproj_dselementotecnologico...
-    📝 Processando daproj_dsdesafiotecnologico...
-    📝 Processando daproj_dsmetodologiautilizada...
+    1.2 Seleção de Variáveis Relevantes
 
-    📊 ESTATÍSTICAS DE REDUÇÃO POR CAMPO:
-    ------------------------------------------------------------
+    Variáveis selecionadas por categoria:
+    ├── Identificação: 5
+    ├── Projeto: 7
+    ├── Analista: 2
+    ├── Parecerista: 1
+    └── Valores: 2
 
-    Projeto:
-      • Palavras médias (original): 283.4
-      • Palavras médias (filtrado): 156.2
-      • Redução média: 44.4%
-      • Top 5 palavras relevantes:
-        - desenvolvimento: 5,167 ocorrências
-        - projeto: 4,678 ocorrências
-        - produtos: 2,479 ocorrências
-        - pesquisa: 2,008 ocorrências
-        - empresa: 1,950 ocorrências
+    Total de variáveis selecionadas: 17
 
-    Elementotecnologico:
-      • Palavras médias (original): 327.8
-      • Palavras médias (filtrado): 180.8
-      • Redução média: 44.4%
-      • Top 5 palavras relevantes:
-        - desenvolvimento: 6,026 ocorrências
-        - projeto: 4,779 ocorrências
-        - elemento: 2,189 ocorrências
-        - inovador: 2,112 ocorrências
-        - produtos: 1,982 ocorrências
+    1.3 Análise Textual e Processamento de Linguagem Natural
 
-    Desafiotecnologico:
-      • Palavras médias (original): 308.7
-      • Palavras médias (filtrado): 170.0
-      • Redução média: 44.4%
-      • Top 5 palavras relevantes:
-        - desenvolvimento: 5,397 ocorrências
-        - projeto: 4,824 ocorrências
-        - desafios: 3,999 ocorrências
-        - desafio: 2,696 ocorrências
-        - barreiras: 2,330 ocorrências
+    Campos textuais identificados para análise: 4
 
-    Metodologiautilizada:
-      • Palavras médias (original): 296.8
-      • Palavras médias (filtrado): 163.8
-      • Redução média: 43.5%
-      • Top 5 palavras relevantes:
-        - desenvolvimento: 7,652 ocorrências
-        - projeto: 6,284 ocorrências
-        - metodologia: 3,997 ocorrências
-        - pesquisa: 2,910 ocorrências
-        - estudo: 2,296 ocorrências
+    Configurando conjunto de stopwords...
+    ├── Stopwords NLTK português: 207
+    ├── Stopwords domínio específico: 55
+    └── Total de stopwords: 255
+
+    Processando campos textuais...
+
+    Processando: Descrição do Projeto
+    ├── Palavras médias (original): 282.5
+    ├── Palavras médias (limpo): 154.8
+    └── Redução média: 44.8%
+
+    Processando: Elemento Tecnológico
+    ├── Palavras médias (original): 326.2
+    ├── Palavras médias (limpo): 179.0
+    └── Redução média: 44.9%
+
+    Processando: Desafio Tecnológico
+    ├── Palavras médias (original): 307.0
+    ├── Palavras médias (limpo): 168.5
+    └── Redução média: 44.8%
+
+    Processando: Metodologia Utilizada
+    ├── Palavras médias (original): 297.4
+    ├── Palavras médias (limpo): 165.2
+    └── Redução média: 43.5%
+
+    1.4 Gerando Visualizações
 
 ![](analise_analistas_parecerista_files/figure-markdown_strict/cell-4-output-2.png)
 
-
-    🏆 TOP 20 PALAVRAS MAIS RELEVANTES POR CAMPO
-    ============================================================
-
-![](analise_analistas_parecerista_files/figure-markdown_strict/cell-4-output-4.png)
+![](analise_analistas_parecerista_files/figure-markdown_strict/cell-4-output-3.png)
 
 
-    💾 Criando DataFrame com textos processados...
-    ✅ DataFrame expandido com textos processados!
-       Novas colunas criadas: 9
+    1.5 Preparação Final do Dataset
 
-    📝 EXEMPLO DE PROCESSAMENTO:
+    Criando campo de texto combinado...
+
+    Dataset preparado com sucesso!
+    ├── Total de projetos: 13,198
+    ├── Variáveis originais: 17
+    ├── Variáveis criadas: 9
+    └── Total de variáveis: 26
+
+    Exemplo de Processamento (Projeto #1):
     ------------------------------------------------------------
-
-    daproj_dsprojeto:
     Original: No ano-base de 2021, a Jardinox investiu em pesquisa, desenvolvimento e inovação tecnológica na procura de novas soluções para o setor de transporte, ...
-    Limpo: ano jardinox investiu pesquisa desenvolvimento inovação tecnológica procura soluções transporte aplicado principalmente produtos viabilizassem fluxo l...
-    Redução: 45.3%
-    Carregando dados...
-    Total de projetos carregados: 13,198
-    Total de colunas: 229
+    Limpo: ano-base 2021, jardinox investiu pesquisa, procura soluções setor transporte, aplicado principalmente produtos viabilizassem fluxo logístico abastecim...
+    Redução: 45.7%
 
-    Colunas selecionadas para análise: 17
+    ================================================================================
+    CAPÍTULO 1 CONCLUÍDO - Dataset pronto para análise
+    ================================================================================
 
 ## 2. Análise Exploratória Inicial
 
