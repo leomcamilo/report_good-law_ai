@@ -493,7 +493,7 @@ def main():
     
     try:
         # Salvar arquivo CSV na pasta csv_longo
-        arquivo_csv_longo = os.path.join(diretorio_csv_longo, "projetos_lei_do_bem_2023_DETALHADO_LINHA_UNICA.csv")
+        arquivo_csv_longo = os.path.join(diretorio_csv_longo, "projetos_lei_do_bem_DETALHADO_LINHA_UNICA.csv")
         df_detalhado.to_csv(arquivo_csv_longo, index=False, encoding='utf-8', sep=';')
         print(f"✅ Dados detalhados salvos em: {arquivo_csv_longo}")
         
