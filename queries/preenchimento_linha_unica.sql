@@ -725,4 +725,4 @@ left join tblote ra_lote on ra_lote.idlote = ra_lotema.idlote
 left join tbtipolote ra_tlote on ra_tlote.cdtipolote = ra_lote.cdtipolote
 
 
-where dem.idprenchimentosituacaoanalise =753
+where lst.nranobase = 2022
