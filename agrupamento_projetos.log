@@ -1,0 +1,93 @@
+2025-08-11 17:04:11,387 - INFO - 📊 Dados iniciais limpos: 74466 registros
+2025-08-11 17:04:12,092 - INFO - 📊 Dados extraídos:
+2025-08-11 17:04:12,098 - INFO -    📋 CNPJs únicos: 5717
+2025-08-11 17:04:12,101 - INFO -    🏢 Razões sociais únicas: 0
+2025-08-11 17:04:12,151 - INFO -    📄 Projetos multianuais: 54529
+2025-08-11 17:04:12,166 - INFO - ℹ️ Nenhum projeto multianual encontrado
+2025-08-11 17:04:12,290 - INFO - ✅ Ligação automática aplicada:
+2025-08-11 17:04:12,291 - INFO -    🔗 Projetos ligados automaticamente: 0
+2025-08-11 17:04:12,292 - INFO -    📊 Grupos multianuais criados: 0
+2025-08-11 17:04:12,462 - INFO - 📋 Resumo da preparação:
+2025-08-11 17:04:12,464 - INFO -    📊 Total de registros processados: 74466
+2025-08-11 17:04:12,466 - INFO -    🔗 Registros multianuais (já ligados): 0
+2025-08-11 17:04:12,467 - INFO -    🤖 Registros para LLM analisar: 74466
+2025-08-11 17:04:12,468 - INFO -    🏷️ Categorias para LLM processar: 63
+2025-08-11 17:04:12,469 - INFO -    📊 Maior categoria para LLM: 8172 projetos
+2025-08-11 17:04:12,470 - INFO -    📊 Média de projetos por categoria: 1182.0
+2025-08-11 17:05:05,510 - INFO - ✅ API Deepseek configurada com sucesso
+2025-08-11 17:05:06,412 - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-08-11 17:05:09,549 - INFO - ✅ Teste de conexão com API bem-sucedido
+2025-08-11 17:05:09,551 - INFO - 📱 Resposta do teste: OK...
+2025-08-11 17:05:09,553 - INFO - 💰 Estimativa de custo:
+2025-08-11 17:05:09,553 - INFO -    📊 Total de combinações: 63
+2025-08-11 17:05:09,555 - INFO -    📋 Total de projetos: 74466
+2025-08-11 17:05:09,555 - INFO -    🔤 Tokens estimados: 22,339,800
+2025-08-11 17:05:09,556 - INFO -    💵 Custo estimado: $31.28 USD
+2025-08-11 17:14:39,544 - INFO - 📊 Dados iniciais limpos: 74466 registros
+2025-08-11 17:14:40,213 - INFO - 📊 Dados extraídos:
+2025-08-11 17:14:40,220 - INFO -    📋 CNPJs únicos: 5717
+2025-08-11 17:14:40,222 - INFO -    🏢 Razões sociais únicas: 0
+2025-08-11 17:14:40,269 - INFO -    📄 Projetos multianuais: 54529
+2025-08-11 17:14:40,284 - INFO - ℹ️ Nenhum projeto multianual encontrado
+2025-08-11 17:14:40,380 - INFO - ✅ Ligação automática aplicada:
+2025-08-11 17:14:40,381 - INFO -    🔗 Projetos ligados automaticamente: 0
+2025-08-11 17:14:40,382 - INFO -    📊 Grupos multianuais criados: 0
+2025-08-11 17:14:40,548 - INFO - 🧪 FILTRO TESTE aplicado:
+2025-08-11 17:14:40,550 - INFO -    🎯 Categoria selecionada: 'Química e Farmácia'
+2025-08-11 17:14:40,550 - INFO -    📊 Combinações antes do filtro: 63
+2025-08-11 17:14:40,551 - INFO -    📊 Combinações após filtro: 9
+2025-08-11 17:14:40,552 - INFO - 📋 Resumo da preparação:
+2025-08-11 17:14:40,552 - INFO -    📊 Total de registros processados: 74466
+2025-08-11 17:14:40,554 - INFO -    🔗 Registros multianuais (já ligados): 0
+2025-08-11 17:14:40,555 - INFO -    🤖 Registros para LLM analisar: 74466
+2025-08-11 17:14:40,555 - INFO -    🏷️ Categorias para LLM processar: 9
+2025-08-11 17:14:40,556 - INFO -    📊 Maior categoria para LLM: 8172 projetos
+2025-08-11 17:14:40,557 - INFO -    📊 Média de projetos por categoria: 1182.0
+2025-08-11 17:15:01,953 - INFO - ✅ API Deepseek configurada com sucesso
+2025-08-11 17:15:02,528 - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-08-11 17:15:05,273 - INFO - ✅ Teste de conexão com API bem-sucedido
+2025-08-11 17:15:05,274 - INFO - 📱 Resposta do teste: OK...
+2025-08-11 17:15:05,275 - INFO - 💰 Estimativa de custo:
+2025-08-11 17:15:05,276 - INFO -    📊 Total de combinações: 9
+2025-08-11 17:15:05,277 - INFO -    📋 Total de projetos: 14229
+2025-08-11 17:15:05,278 - INFO -    🔤 Tokens estimados: 4,268,700
+2025-08-11 17:15:05,279 - INFO -    💵 Custo estimado: $5.98 USD
+2025-08-11 17:15:22,135 - INFO - ✅ Tamanho do prompt OK: 1186 tokens estimados
+2025-08-11 17:25:41,959 - INFO - 📋 Formatados 3 projetos para análise
+2025-08-11 17:25:41,961 - INFO - ✅ Tamanho do prompt OK: 1180 tokens estimados
+2025-08-11 17:26:00,263 - INFO - 🔍 Categoria filtrada: 1887 projetos
+2025-08-11 17:26:00,264 - INFO - 📅 Anos encontrados: [np.float64(2018.0), np.float64(2019.0), np.float64(2020.0), np.float64(2021.0), np.float64(2022.0), np.float64(2023.0)]
+2025-08-11 17:26:00,266 - INFO - 📦 Categoria dividida: 1887 projetos → 27 sub-lotes
+2025-08-11 17:26:00,266 - INFO -    🔗 Sobreposição: 10 projetos entre sub-lotes
+2025-08-11 17:26:00,304 - INFO - 🔍 Categoria filtrada: 8172 projetos
+2025-08-11 17:26:00,305 - INFO - 📅 Anos encontrados: [np.float64(2018.0), np.float64(2019.0), np.float64(2020.0), np.float64(2021.0), np.float64(2022.0), np.float64(2023.0)]
+2025-08-11 17:26:00,308 - INFO - 📦 Categoria dividida: 8172 projetos → 116 sub-lotes
+2025-08-11 17:26:00,308 - INFO -    🔗 Sobreposição: 10 projetos entre sub-lotes
+2025-08-11 17:26:00,326 - INFO - 🔍 Categoria filtrada: 165 projetos
+2025-08-11 17:26:00,327 - INFO - 📅 Anos encontrados: [np.float64(2018.0), np.float64(2019.0), np.float64(2020.0), np.float64(2021.0), np.float64(2022.0), np.float64(2023.0)]
+2025-08-11 17:26:00,328 - INFO - 📦 Categoria dividida: 165 projetos → 3 sub-lotes
+2025-08-11 17:26:00,329 - INFO -    🔗 Sobreposição: 10 projetos entre sub-lotes
+2025-08-11 17:26:00,346 - INFO - 🔍 Categoria filtrada: 797 projetos
+2025-08-11 17:26:00,347 - INFO - 📅 Anos encontrados: [np.float64(2018.0), np.float64(2019.0), np.float64(2020.0), np.float64(2021.0), np.float64(2022.0), np.float64(2023.0)]
+2025-08-11 17:26:00,348 - INFO - 📦 Categoria dividida: 797 projetos → 12 sub-lotes
+2025-08-11 17:26:00,348 - INFO -    🔗 Sobreposição: 10 projetos entre sub-lotes
+2025-08-11 17:26:00,369 - INFO - 🔍 Categoria filtrada: 2449 projetos
+2025-08-11 17:26:00,370 - INFO - 📅 Anos encontrados: [np.float64(2018.0), np.float64(2019.0), np.float64(2020.0), np.float64(2021.0), np.float64(2022.0), np.float64(2023.0)]
+2025-08-11 17:26:00,371 - INFO - 📦 Categoria dividida: 2449 projetos → 35 sub-lotes
+2025-08-11 17:26:00,371 - INFO -    🔗 Sobreposição: 10 projetos entre sub-lotes
+2025-08-11 17:26:00,388 - INFO - 🔍 Categoria filtrada: 61 projetos
+2025-08-11 17:26:00,389 - INFO - 📅 Anos encontrados: [np.float64(2018.0), np.float64(2019.0), np.float64(2020.0), np.float64(2021.0), np.float64(2022.0), np.float64(2023.0)]
+2025-08-11 17:26:00,406 - INFO - 🔍 Categoria filtrada: 81 projetos
+2025-08-11 17:26:00,406 - INFO - 📅 Anos encontrados: [np.float64(2018.0), np.float64(2019.0), np.float64(2020.0), np.float64(2021.0), np.float64(2022.0), np.float64(2023.0)]
+2025-08-11 17:26:00,407 - INFO - 📦 Categoria dividida: 81 projetos → 2 sub-lotes
+2025-08-11 17:26:00,407 - INFO -    🔗 Sobreposição: 10 projetos entre sub-lotes
+2025-08-11 17:26:00,425 - INFO - 🔍 Categoria filtrada: 575 projetos
+2025-08-11 17:26:00,426 - INFO - 📅 Anos encontrados: [np.float64(2018.0), np.float64(2019.0), np.float64(2020.0), np.float64(2021.0), np.float64(2022.0), np.float64(2023.0)]
+2025-08-11 17:26:00,427 - INFO - 📦 Categoria dividida: 575 projetos → 9 sub-lotes
+2025-08-11 17:26:00,427 - INFO -    🔗 Sobreposição: 10 projetos entre sub-lotes
+2025-08-11 17:26:00,444 - INFO - 🔍 Categoria filtrada: 42 projetos
+2025-08-11 17:26:00,444 - INFO - 📅 Anos encontrados: [np.float64(2018.0), np.float64(2019.0), np.float64(2020.0), np.float64(2023.0)]
+2025-08-11 17:26:00,445 - INFO - 📋 Plano por categoria criado: 206 itens
+2025-08-11 17:26:00,446 - INFO -    🟢 Categorias processadas completas: 2
+2025-08-11 17:26:00,446 - INFO -    🟡 Sub-lotes para merge posterior: 204
+2025-08-11 17:26:00,450 - ERROR - ❌ Erro ao salvar plano categoria: Cannot save file into a non-existent directory: 'resultados_agrupamento'

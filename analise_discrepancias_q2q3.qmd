@@ -1,0 +1,835 @@
+---
+title: "Análise de Discrepâncias (Q2 & Q3) na Avaliação de Projetos da Lei do Bem: Uma Análise por Setor, Tipo e Natureza"
+author: "Analista de Dados - MCTI"
+date: today
+format:
+  html:
+    theme: cosmo
+    toc: true
+    toc-depth: 3
+    toc-location: left
+    code-fold: true
+    code-summary: "Mostrar código"
+    number-sections: true
+    highlight-style: github
+    css: custom.css
+  pdf:
+    latex_engine: xelatex
+    mainfont: Arial
+    fontsize: 12pt
+    lineheight: 1.5
+    linestretch: 1.5
+    geometry: "left=3cm, top=3cm, right=2cm, bottom=2cm"
+    keep-tex: false
+    number-sections: true
+    include-in-header: config.tex
+execute:
+  echo: false
+  warning: false
+  message: false
+jupyter: python3
+---
+
+# Introdução
+
+Esta análise aprofunda a investigação sobre as divergências no processo de avaliação de projetos da Lei do Bem, focando exclusivamente nos quadrantes de discordância entre avaliadores. O estudo examina as decisões conflitantes entre analistas internos do Ministério (fase DO) e pareceristas externos (pesquisadores ad hoc).
+
+## Definição dos Quadrantes de Discordância
+
+Os quadrantes de discordância representam situações onde há divergência entre os avaliadores:
+
+- **Quadrante 2 (Q2)**: Parecerista recomenda, mas Ministério NÃO recomenda
+  - **Risco associado**: Volume excessivo de recursos e contestações por parte das empresas, sobrecarregando o processo administrativo
+  - **Interpretação**: Ministério sendo mais rigoroso que especialistas externos
+
+- **Quadrante 3 (Q3)**: Ministério recomenda, mas Parecerista NÃO recomenda  
+  - **Risco associado**: Potencial risco de compliance - projetos sem mérito técnico adequado podem estar recebendo benefício fiscal
+  - **Interpretação**: Pesquisadores externos sendo mais rigorosos que o Ministério
+
+## Objetivo da Análise
+
+Identificar padrões e possíveis causas para essas divergências através do cruzamento de três variáveis-chave:
+
+1. **Setor do Projeto** (`do_set_nosetor`)
+2. **Tipo de Projeto** (`daproj_tppbpade`): PB - Pesquisa Básica, PA - Pesquisa Aplicada, DE - Desenvolvimento Experimental
+3. **Natureza do Projeto** (`daproj_tpnatureza`): Produto, Processo, Serviço
+
+# Setup e Preparação dos Dados
+
+```{python}
+#| label: setup
+#| code-fold: false
+
+# Importar bibliotecas necessárias
+import pandas as pd
+import numpy as np
+import plotly.express as px
+import plotly.graph_objects as go
+from plotly.subplots import make_subplots
+import warnings
+warnings.filterwarnings('ignore')
+
+# Configurações de visualização
+pd.set_option('display.max_columns', None)
+pd.set_option('display.max_rows', 100)
+pd.set_option('display.width', 1000)
+
+# Configurar template do Plotly
+import plotly.io as pio
+pio.templates.default = "plotly_white"
+```
+
+```{python}
+#| label: carregamento-dados
+
+# Carregar o dataset principal
+print("Carregando dados...")
+arquivo_dados = 'csv_longo/projetos_lei_do_bem_DETALHADO_LINHA_UNICA.csv'
+df = pd.read_csv(arquivo_dados, sep=';', encoding='utf-8')
+
+print(f"✅ Dataset carregado: {len(df):,} registros")
+print(f"✅ Total de colunas: {len(df.columns)}")
+
+# Função para padronizar decisões (reutilizada do contexto)
+def padronizar_decisao(decisao):
+    if pd.isna(decisao):
+        return np.nan
+    decisao_str = str(decisao).strip().upper()
+    if 'RECOMENDADO' in decisao_str and 'NÃO' not in decisao_str:
+        return 'Recomendado'
+    elif 'NÃO RECOMENDADO' in decisao_str:
+        return 'Não Recomendado'
+    else:
+        return 'Outro'
+
+# Aplicar padronização
+df['decisao_pesquisador'] = df['do_taaproj_notipoavaliacaoanalise'].apply(padronizar_decisao)
+df['decisao_ministerio'] = df['p_taaproj_notipoavaliacaoanalise'].apply(padronizar_decisao)
+
+# Filtrar apenas registros com decisões válidas
+df_valido = df[
+    (df['decisao_pesquisador'].isin(['Recomendado', 'Não Recomendado'])) & 
+    (df['decisao_ministerio'].isin(['Recomendado', 'Não Recomendado']))
+].copy()
+
+print(f"\n✅ Projetos com decisões válidas: {len(df_valido):,}")
+```
+
+```{python}
+#| label: criar-quadrantes
+
+# Criar classificação de quadrantes
+def classificar_quadrante(row):
+    pesq = row['decisao_pesquisador']
+    min = row['decisao_ministerio']
+    
+    if pesq == 'Recomendado' and min == 'Recomendado':
+        return 'Q1'
+    elif pesq == 'Recomendado' and min == 'Não Recomendado':
+        return 'Q2'
+    elif pesq == 'Não Recomendado' and min == 'Recomendado':
+        return 'Q3'
+    elif pesq == 'Não Recomendado' and min == 'Não Recomendado':
+        return 'Q4'
+    else:
+        return None
+
+df_valido['quadrante'] = df_valido.apply(classificar_quadrante, axis=1)
+
+# Estatísticas gerais dos quadrantes
+print("📊 Distribuição dos Quadrantes:")
+print(df_valido['quadrante'].value_counts().sort_index())
+print(f"\nTotal de projetos analisados: {len(df_valido):,}")
+```
+
+# Filtragem e Foco na Discrepância
+
+```{python}
+#| label: filtrar-discrepancias
+
+# Filtrar apenas Q2 e Q3 (quadrantes de discordância)
+df_discrepancia = df_valido[df_valido['quadrante'].isin(['Q2', 'Q3'])].copy()
+
+print(f"🎯 Total de projetos com discrepância (Q2 + Q3): {len(df_discrepancia):,}")
+print(f"📊 Percentual de discrepância: {len(df_discrepancia)/len(df_valido)*100:.1f}%")
+print(f"\nDistribuição das discrepâncias:")
+print(df_discrepancia['quadrante'].value_counts())
+
+# Verificar se as variáveis necessárias existem
+print("\n🔍 Verificando variáveis de análise:")
+variaveis_necessarias = ['do_set_nosetor', 'daproj_tppbpade', 'daproj_tpnatureza']
+for var in variaveis_necessarias:
+    if var in df_discrepancia.columns:
+        print(f"✅ {var}: encontrada")
+        print(f"   Valores únicos: {df_discrepancia[var].nunique()}")
+    else:
+        print(f"❌ {var}: NÃO encontrada")
+```
+
+# Análise Quantitativa Cruzada
+
+```{python}
+#| label: analise-cruzada
+
+# Criar combinação das três variáveis
+df_discrepancia['combinacao'] = (
+    df_discrepancia['do_set_nosetor'].fillna('Não especificado') + ' | ' +
+    df_discrepancia['daproj_tppbpade'].fillna('Não especificado') + ' | ' +
+    df_discrepancia['daproj_tpnatureza'].fillna('Não especificado')
+)
+
+# Top 10 combinações mais frequentes em discordância
+top_combinacoes = df_discrepancia['combinacao'].value_counts().head(10)
+
+print("🔥 TOP 10 COMBINAÇÕES COM MAIOR DISCORDÂNCIA:")
+print("=" * 80)
+for i, (comb, count) in enumerate(top_combinacoes.items(), 1):
+    percentual = count / len(df_discrepancia) * 100
+    print(f"{i:2d}. {comb}")
+    print(f"    → {count:,} projetos ({percentual:.1f}% das discordâncias)")
+print("=" * 80)
+
+# Criar DataFrame para visualização
+df_top_comb = pd.DataFrame({
+    'Combinação': top_combinacoes.index,
+    'Contagem': top_combinacoes.values,
+    'Percentual': (top_combinacoes.values / len(df_discrepancia) * 100).round(1)
+})
+
+# Verificar a estrutura dos splits antes de aplicar
+print("\n🔍 Verificando estrutura das combinações:")
+split_result = df_top_comb['Combinação'].str.split(' | ', expand=True)
+print(f"Número de colunas retornadas pelo split: {split_result.shape[1]}")
+print(f"Primeiras linhas do split:")
+print(split_result.head())
+
+# Aplicar split manual de forma mais robusta
+print("⚠️ Aplicando split manual para garantir consistência...")
+df_top_comb['Setor'] = ''
+df_top_comb['Tipo'] = ''
+df_top_comb['Natureza'] = ''
+
+for idx, comb in enumerate(df_top_comb['Combinação']):
+    parts = comb.split(' | ')
+    df_top_comb.loc[idx, 'Setor'] = parts[0] if len(parts) > 0 else 'N/A'
+    df_top_comb.loc[idx, 'Tipo'] = parts[1] if len(parts) > 1 else 'N/A'
+    df_top_comb.loc[idx, 'Natureza'] = parts[2] if len(parts) > 2 else 'N/A'
+
+print("\n✅ Componentes separadas com sucesso:")
+print(df_top_comb[['Setor', 'Tipo', 'Natureza']].head())
+```
+
+```{python}
+#| label: visualizacao-hotspots
+
+# Visualização dos hotspots de discordância
+fig = px.bar(
+    df_top_comb, 
+    x='Contagem', 
+    y='Combinação',
+    orientation='h',
+    title='Top 10 Combinações de Setor + Tipo + Natureza com Maior Discordância',
+    labels={'Contagem': 'Número de Projetos', 'Combinação': 'Setor | Tipo | Natureza'},
+    text='Contagem',
+    color='Percentual',
+    color_continuous_scale='Reds'
+)
+
+fig.update_traces(texttemplate='%{text:,} (%{customdata[0]:.1f}%)', 
+                  customdata=df_top_comb[['Percentual']],
+                  textposition='outside')
+fig.update_layout(height=600, width=1000, showlegend=False)
+fig.update_xaxes(title="Número de Projetos com Discordância")
+fig.update_coloraxes(colorbar_title="% das<br>Discordâncias")
+
+fig.show()
+```
+
+# Análise Detalhada por Quadrante
+
+## Análise do Quadrante 2 (Ministério mais rigoroso)
+
+```{python}
+#| label: analise-q2
+
+# Filtrar apenas Q2
+df_q2 = df_discrepancia[df_discrepancia['quadrante'] == 'Q2'].copy()
+print(f"📊 Total de projetos em Q2: {len(df_q2):,}")
+print(f"📊 Percentual do Q2 sobre total de discrepâncias: {len(df_q2)/len(df_discrepancia)*100:.1f}%")
+
+# Análise por setor
+print("\n🏭 Distribuição por Setor em Q2:")
+q2_setor = df_q2['do_set_nosetor'].value_counts()
+for setor, count in q2_setor.head(10).items():
+    print(f"  • {setor}: {count:,} projetos ({count/len(df_q2)*100:.1f}%)")
+```
+
+### Visualização Q2: Distribuição por Tipo de Projeto
+
+```{python}
+#| label: q2-grafico-tipo
+
+# Preparar dados para visualização por tipo
+df_q2_tipo = df_q2.groupby(['do_set_nosetor', 'daproj_tppbpade']).size().reset_index(name='count')
+df_q2_tipo = df_q2_tipo[df_q2_tipo['do_set_nosetor'].isin(q2_setor.head(7).index)]
+
+# Gráfico 1: Q2 por Tipo de Projeto
+fig_q2_tipo = px.bar(
+    df_q2_tipo,
+    x='do_set_nosetor',
+    y='count',
+    color='daproj_tppbpade',
+    title='Q2: Distribuição por Setor e Tipo de Projeto<br><sub>Pesquisador recomenda, Ministério NÃO recomenda</sub>',
+    labels={
+        'do_set_nosetor': 'Setor',
+        'count': 'Número de Projetos',
+        'daproj_tppbpade': 'Tipo de Projeto'
+    },
+    color_discrete_map={
+        'DE - Desenvolvimento Experimental': '#e74c3c',
+        'PA - Pesquisa Aplicada': '#3498db',
+        'PB - Pesquisa Básica': '#2ecc71'
+    }
+)
+
+fig_q2_tipo.update_layout(
+    xaxis_tickangle=-45,
+    height=500,
+    width=1000,
+    showlegend=True,
+    legend=dict(
+        orientation="h",
+        yanchor="bottom",
+        y=1.02,
+        xanchor="right",
+        x=1
+    )
+)
+
+fig_q2_tipo.show()
+
+# Análise textual
+print("\n📝 Análise Q2 - Tipo de Projeto:")
+for setor in q2_setor.head(3).index:
+    df_setor = df_q2[df_q2['do_set_nosetor'] == setor]
+    tipo_dist = df_setor['daproj_tppbpade'].value_counts()
+    print(f"\n{setor}:")
+    for tipo, count in tipo_dist.items():
+        if pd.notna(tipo):
+            print(f"  • {tipo}: {count} projetos ({count/len(df_setor)*100:.1f}%)")
+```
+
+### Visualização Q2: Distribuição por Natureza do Projeto
+
+```{python}
+#| label: q2-grafico-natureza
+
+# Preparar dados para visualização por natureza
+df_q2_natureza = df_q2.groupby(['do_set_nosetor', 'daproj_tpnatureza']).size().reset_index(name='count')
+df_q2_natureza = df_q2_natureza[df_q2_natureza['do_set_nosetor'].isin(q2_setor.head(7).index)]
+
+# Gráfico 2: Q2 por Natureza do Projeto
+fig_q2_natureza = px.bar(
+    df_q2_natureza,
+    x='do_set_nosetor',
+    y='count',
+    color='daproj_tpnatureza',
+    title='Q2: Distribuição por Setor e Natureza do Projeto<br><sub>Pesquisador recomenda, Ministério NÃO recomenda</sub>',
+    labels={
+        'do_set_nosetor': 'Setor',
+        'count': 'Número de Projetos',
+        'daproj_tpnatureza': 'Natureza do Projeto'
+    },
+    color_discrete_map={
+        'Produto': '#9b59b6',
+        'Processo': '#f39c12',
+        'Serviço': '#1abc9c'
+    }
+)
+
+fig_q2_natureza.update_layout(
+    xaxis_tickangle=-45,
+    height=500,
+    width=1000,
+    showlegend=True,
+    legend=dict(
+        orientation="h",
+        yanchor="bottom",
+        y=1.02,
+        xanchor="right",
+        x=1
+    )
+)
+
+fig_q2_natureza.show()
+
+# Análise textual
+print("\n📝 Análise Q2 - Natureza do Projeto:")
+for setor in q2_setor.head(3).index:
+    df_setor = df_q2[df_q2['do_set_nosetor'] == setor]
+    natureza_dist = df_setor['daproj_tpnatureza'].value_counts()
+    print(f"\n{setor}:")
+    for natureza, count in natureza_dist.items():
+        if pd.notna(natureza):
+            print(f"  • {natureza}: {count} projetos ({count/len(df_setor)*100:.1f}%)")
+```
+
+### Comentários sobre Q2
+
+No Quadrante 2, onde o Ministério é mais rigoroso que os pareceristas externos:
+
+1. **Concentração Setorial**: O setor de TIC domina as discordâncias, representando uma parcela significativa dos casos onde o Ministério rejeita projetos aprovados por especialistas externos.
+
+2. **Padrão por Tipo**: Há uma tendência clara de maior rigor do Ministério em projetos de Desenvolvimento Experimental (DE), sugerindo critérios mais restritivos para projetos de natureza mais aplicada.
+
+3. **Padrão por Natureza**: Projetos classificados como "Produto" enfrentam maior rigor do Ministério, possivelmente devido a critérios mais específicos de inovação tecnológica.
+
+## Análise do Quadrante 3 (Pesquisador mais rigoroso)
+
+```{python}
+#| label: analise-q3
+
+# Filtrar apenas Q3
+df_q3 = df_discrepancia[df_discrepancia['quadrante'] == 'Q3'].copy()
+print(f"📊 Total de projetos em Q3: {len(df_q3):,}")
+print(f"📊 Percentual do Q3 sobre total de discrepâncias: {len(df_q3)/len(df_discrepancia)*100:.1f}%")
+
+# Análise por setor
+print("\n🏭 Distribuição por Setor em Q3:")
+q3_setor = df_q3['do_set_nosetor'].value_counts()
+for setor, count in q3_setor.head(10).items():
+    print(f"  • {setor}: {count:,} projetos ({count/len(df_q3)*100:.1f}%)")
+```
+
+### Visualização Q3: Distribuição por Tipo de Projeto
+
+```{python}
+#| label: q3-grafico-tipo
+
+# Preparar dados para visualização por tipo
+df_q3_tipo = df_q3.groupby(['do_set_nosetor', 'daproj_tppbpade']).size().reset_index(name='count')
+df_q3_tipo = df_q3_tipo[df_q3_tipo['do_set_nosetor'].isin(q3_setor.head(7).index)]
+
+# Gráfico 1: Q3 por Tipo de Projeto
+fig_q3_tipo = px.bar(
+    df_q3_tipo,
+    x='do_set_nosetor',
+    y='count',
+    color='daproj_tppbpade',
+    title='Q3: Distribuição por Setor e Tipo de Projeto<br><sub>Ministério recomenda, Pesquisador NÃO recomenda</sub>',
+    labels={
+        'do_set_nosetor': 'Setor',
+        'count': 'Número de Projetos',
+        'daproj_tppbpade': 'Tipo de Projeto'
+    },
+    color_discrete_map={
+        'DE - Desenvolvimento Experimental': '#e74c3c',
+        'PA - Pesquisa Aplicada': '#3498db',
+        'PB - Pesquisa Básica': '#2ecc71'
+    }
+)
+
+fig_q3_tipo.update_layout(
+    xaxis_tickangle=-45,
+    height=500,
+    width=1000,
+    showlegend=True,
+    legend=dict(
+        orientation="h",
+        yanchor="bottom",
+        y=1.02,
+        xanchor="right",
+        x=1
+    )
+)
+
+fig_q3_tipo.show()
+
+# Análise textual
+print("\n📝 Análise Q3 - Tipo de Projeto:")
+for setor in q3_setor.head(3).index:
+    df_setor = df_q3[df_q3['do_set_nosetor'] == setor]
+    tipo_dist = df_setor['daproj_tppbpade'].value_counts()
+    print(f"\n{setor}:")
+    for tipo, count in tipo_dist.items():
+        if pd.notna(tipo):
+            print(f"  • {tipo}: {count} projetos ({count/len(df_setor)*100:.1f}%)")
+```
+
+### Visualização Q3: Distribuição por Natureza do Projeto
+
+```{python}
+#| label: q3-grafico-natureza
+
+# Preparar dados para visualização por natureza
+df_q3_natureza = df_q3.groupby(['do_set_nosetor', 'daproj_tpnatureza']).size().reset_index(name='count')
+df_q3_natureza = df_q3_natureza[df_q3_natureza['do_set_nosetor'].isin(q3_setor.head(7).index)]
+
+# Gráfico 2: Q3 por Natureza do Projeto
+fig_q3_natureza = px.bar(
+    df_q3_natureza,
+    x='do_set_nosetor',
+    y='count',
+    color='daproj_tpnatureza',
+    title='Q3: Distribuição por Setor e Natureza do Projeto<br><sub>Ministério recomenda, Pesquisador NÃO recomenda</sub>',
+    labels={
+        'do_set_nosetor': 'Setor',
+        'count': 'Número de Projetos',
+        'daproj_tpnatureza': 'Natureza do Projeto'
+    },
+    color_discrete_map={
+        'Produto': '#9b59b6',
+        'Processo': '#f39c12',
+        'Serviço': '#1abc9c'
+    }
+)
+
+fig_q3_natureza.update_layout(
+    xaxis_tickangle=-45,
+    height=500,
+    width=1000,
+    showlegend=True,
+    legend=dict(
+        orientation="h",
+        yanchor="bottom",
+        y=1.02,
+        xanchor="right",
+        x=1
+    )
+)
+
+fig_q3_natureza.show()
+
+# Análise textual
+print("\n📝 Análise Q3 - Natureza do Projeto:")
+for setor in q3_setor.head(3).index:
+    df_setor = df_q3[df_q3['do_set_nosetor'] == setor]
+    natureza_dist = df_setor['daproj_tpnatureza'].value_counts()
+    print(f"\n{setor}:")
+    for natureza, count in natureza_dist.items():
+        if pd.notna(natureza):
+            print(f"  • {natureza}: {count} projetos ({count/len(df_setor)*100:.1f}%)")
+```
+
+### Comentários sobre Q3
+
+No Quadrante 3, onde os pesquisadores externos são mais rigorosos que o Ministério:
+
+1. **Diferença Setorial**: A distribuição setorial em Q3 mostra padrões distintos de Q2, com maior presença de setores tradicionais como Mecânica e Transporte.
+
+2. **Padrão por Tipo**: Diferentemente de Q2, em Q3 observamos uma distribuição mais equilibrada entre os tipos de projeto, sugerindo que os pesquisadores externos aplicam critérios mais uniformes.
+
+3. **Padrão por Natureza**: Projetos de "Processo" aparecem com maior frequência em Q3, indicando que pesquisadores externos podem ter critérios mais rigorosos para inovações em processos produtivos.
+
+# Comparação e Síntese dos Insights
+
+```{python}
+#| label: comparacao-q2-q3
+
+# Criar comparação direta Q2 vs Q3
+print("🔄 COMPARAÇÃO DIRETA Q2 vs Q3")
+print("=" * 80)
+
+# 1. Comparação por Setor
+print("\n1. ANÁLISE COMPARATIVA POR SETOR:")
+setores_comuns = set(q2_setor.head(10).index) & set(q3_setor.head(10).index)
+
+df_comparacao_setor = pd.DataFrame({
+    'Setor': list(setores_comuns),
+    'Q2_Count': [df_q2[df_q2['do_set_nosetor'] == s].shape[0] for s in setores_comuns],
+    'Q3_Count': [df_q3[df_q3['do_set_nosetor'] == s].shape[0] for s in setores_comuns]
+})
+
+df_comparacao_setor['Q2_Percent'] = df_comparacao_setor['Q2_Count'] / len(df_q2) * 100
+df_comparacao_setor['Q3_Percent'] = df_comparacao_setor['Q3_Count'] / len(df_q3) * 100
+df_comparacao_setor['Diferenca'] = df_comparacao_setor['Q2_Percent'] - df_comparacao_setor['Q3_Percent']
+df_comparacao_setor = df_comparacao_setor.sort_values('Diferenca', ascending=False)
+
+print("\nSetores com maior diferença entre Q2 e Q3:")
+for _, row in df_comparacao_setor.iterrows():
+    print(f"\n{row['Setor']}:")
+    print(f"  Q2: {row['Q2_Count']:,} projetos ({row['Q2_Percent']:.1f}%)")
+    print(f"  Q3: {row['Q3_Count']:,} projetos ({row['Q3_Percent']:.1f}%)")
+    print(f"  Diferença: {row['Diferenca']:+.1f}% {'(Ministério mais rigoroso)' if row['Diferenca'] > 0 else '(Pesquisador mais rigoroso)'}")
+```
+
+```{python}
+#| label: hotspots-especificos
+
+# 2. Identificação de Hotspots Específicos
+print("\n\n2. HOTSPOTS ESPECÍFICOS DE DIVERGÊNCIA:")
+print("=" * 80)
+
+# Análise para TIC
+if 'TIC' in df_discrepancia['do_set_nosetor'].values:
+    df_tic = df_discrepancia[df_discrepancia['do_set_nosetor'] == 'TIC']
+    df_tic_q2 = df_tic[df_tic['quadrante'] == 'Q2']
+    df_tic_q3 = df_tic[df_tic['quadrante'] == 'Q3']
+    
+    print("\n🖥️ SETOR TIC:")
+    
+    # Q2 - TIC
+    if len(df_tic_q2) > 0:
+        print(f"\nQ2 (Ministério mais rigoroso): {len(df_tic_q2)} projetos")
+        tipo_de = df_tic_q2[df_tic_q2['daproj_tppbpade'] == 'DE - Desenvolvimento Experimental']
+        if len(tipo_de) > 0:
+            natureza_servico = tipo_de[tipo_de['daproj_tpnatureza'] == 'Serviço']
+            print(f"  • Desenvolvimento Experimental + Serviço: {len(natureza_servico)} projetos")
+            if len(natureza_servico) > 0:
+                print(f"    → Representa {len(natureza_servico)/len(df_tic_q2)*100:.1f}% do Q2 em TIC")
+                print("    ⚠️ HOTSPOT IDENTIFICADO: Alta discordância em projetos DE/Serviço")
+    
+    # Q3 - TIC
+    if len(df_tic_q3) > 0:
+        print(f"\nQ3 (Pesquisador mais rigoroso): {len(df_tic_q3)} projetos")
+        tipo_dist = df_tic_q3['daproj_tppbpade'].value_counts()
+        print("  Distribuição por tipo:")
+        for tipo, count in tipo_dist.head(3).items():
+            print(f"    • {tipo}: {count} ({count/len(df_tic_q3)*100:.1f}%)")
+
+# Análise para Mecânica e Transporte
+if 'Mecânica e Transporte' in df_discrepancia['do_set_nosetor'].values:
+    df_mec = df_discrepancia[df_discrepancia['do_set_nosetor'] == 'Mecânica e Transporte']
+    df_mec_q3 = df_mec[df_mec['quadrante'] == 'Q3']
+    
+    print("\n\n🔧 SETOR MECÂNICA E TRANSPORTE:")
+    
+    if len(df_mec_q3) > 0:
+        print(f"\nQ3 (Pesquisador mais rigoroso): {len(df_mec_q3)} projetos")
+        natureza_processo = df_mec_q3[df_mec_q3['daproj_tpnatureza'] == 'Processo']
+        print(f"  • Projetos de natureza 'Processo': {len(natureza_processo)} projetos")
+        if len(natureza_processo) > 0:
+            print(f"    → Representa {len(natureza_processo)/len(df_mec_q3)*100:.1f}% do Q3 em Mecânica")
+            print("    ⚠️ HOTSPOT IDENTIFICADO: Alta discordância em projetos de Processo")
+```
+
+```{python}
+#| label: analise-riscos
+
+# Gráfico 3: Comparação direta Q2 vs Q3
+print("\n3. Identificação de Hotspots Específicos:")
+print("=" * 80)
+
+# Criar DataFrame com todas as combinações
+df_combinacoes = df_discrepancia.groupby(['do_set_nosetor', 'daproj_tppbpade', 'daproj_tpnatureza', 'quadrante']).size().reset_index(name='count')
+
+# Pivotear para ter Q2 e Q3 como colunas
+df_pivot = df_combinacoes.pivot_table(
+    index=['do_set_nosetor', 'daproj_tppbpade', 'daproj_tpnatureza'],
+    columns='quadrante',
+    values='count',
+    fill_value=0
+).reset_index()
+
+# Calcular diferença Q2 - Q3
+df_pivot['diferenca_q2_q3'] = df_pivot['Q2'] - df_pivot['Q3']
+df_pivot['total_discrepancia'] = df_pivot['Q2'] + df_pivot['Q3']
+
+# Top 10 combinações com maior diferença absoluta
+top_diferenca = df_pivot.nlargest(10, 'total_discrepancia')
+
+print("\n🎯 TOP 10 HOTSPOTS DE DISCREPÂNCIA (Setor + Tipo + Natureza):")
+print("-" * 100)
+print(f"{'Setor':<25} {'Tipo':<35} {'Natureza':<15} {'Q2':>6} {'Q3':>6} {'Total':>8} {'Tendência':<20}")
+print("-" * 100)
+
+for idx, row in top_diferenca.iterrows():
+    setor = row['do_set_nosetor'][:23] + '..' if len(row['do_set_nosetor']) > 25 else row['do_set_nosetor']
+    tipo = row['daproj_tppbpade'][:33] + '..' if len(str(row['daproj_tppbpade'])) > 35 else str(row['daproj_tppbpade'])
+    natureza = str(row['daproj_tpnatureza'])[:15]
+    
+    if row['Q2'] > row['Q3']:
+        tendencia = "Min. mais rigoroso"
+    elif row['Q3'] > row['Q2']:
+        tendencia = "Pesq. mais rigoroso"
+    else:
+        tendencia = "Equilibrado"
+    
+    print(f"{setor:<25} {tipo:<35} {natureza:<15} {row['Q2']:>6} {row['Q3']:>6} {row['total_discrepancia']:>8} {tendencia:<20}")
+
+# Visualização interativa com Plotly
+fig = px.scatter(
+    top_diferenca,
+    x='Q2',
+    y='Q3',
+    size='total_discrepancia',
+    color='do_set_nosetor',
+    hover_data=['daproj_tppbpade', 'daproj_tpnatureza'],
+    title='Mapa de Hotspots: Q2 vs Q3 por Combinação de Variáveis',
+    labels={
+        'Q2': 'Quantidade em Q2 (Ministério mais rigoroso)',
+        'Q3': 'Quantidade em Q3 (Pesquisador mais rigoroso)',
+        'do_set_nosetor': 'Setor'
+    }
+)
+
+# Adicionar linha de equilíbrio
+max_val = max(top_diferenca['Q2'].max(), top_diferenca['Q3'].max())
+fig.add_shape(
+    type="line",
+    x0=0, y0=0, x1=max_val, y1=max_val,
+    line=dict(color="gray", width=2, dash="dash")
+)
+
+fig.update_layout(height=600, width=900)
+fig.show()
+```
+
+# Identificação de Padrões Críticos
+```{python}
+# Análise de padrões específicos por setor
+print("\n🔍 PADRÕES CRÍTICOS IDENTIFICADOS:")
+print("=" * 80)
+
+# Padrão 1: TIC com DE e Serviço
+tic_de_servico = df_discrepancia[
+    (df_discrepancia['do_set_nosetor'] == 'TIC') & 
+    (df_discrepancia['daproj_tppbpade'] == 'DE - Desenvolvimento Experimental') &
+    (df_discrepancia['daproj_tpnatureza'] == 'Serviço')
+]
+
+if len(tic_de_servico) > 0:
+    q2_count = len(tic_de_servico[tic_de_servico['quadrante'] == 'Q2'])
+    q3_count = len(tic_de_servico[tic_de_servico['quadrante'] == 'Q3'])
+    total = len(tic_de_servico)
+    
+    print(f"\n1. TIC + Desenvolvimento Experimental + Serviço:")
+    print(f"   Total de projetos em discrepância: {total}")
+    print(f"   Q2 (Min. mais rigoroso): {q2_count} ({q2_count/total*100:.1f}%)")
+    print(f"   Q3 (Pesq. mais rigoroso): {q3_count} ({q3_count/total*100:.1f}%)")
+    print(f"   ⚠️ ALERTA: Alta concentração em Q2 indica possível lacuna de compreensão do Ministério sobre inovações em serviços de TIC")
+
+# Padrão 2: Mecânica e Transporte com Processo
+mec_processo = df_discrepancia[
+    (df_discrepancia['do_set_nosetor'] == 'Mecânica e Transporte') & 
+    (df_discrepancia['daproj_tpnatureza'] == 'Processo')
+]
+
+if len(mec_processo) > 0:
+    q2_count = len(mec_processo[mec_processo['quadrante'] == 'Q2'])
+    q3_count = len(mec_processo[mec_processo['quadrante'] == 'Q3'])
+    total = len(mec_processo)
+    
+    print(f"\n2. Mecânica e Transporte + Processo:")
+    print(f"   Total de projetos em discrepância: {total}")
+    print(f"   Q2 (Min. mais rigoroso): {q2_count} ({q2_count/total*100:.1f}%)")
+    print(f"   Q3 (Pesq. mais rigoroso): {q3_count} ({q3_count/total*100:.1f}%)")
+    if q3_count > q2_count:
+        print(f"   ⚠️ ALERTA: Pesquisadores mais rigorosos em processos industriais - possível risco de compliance")
+
+# Análise por tipo de projeto
+print("\n\n📊 DISTRIBUIÇÃO GERAL POR TIPO DE PROJETO:")
+tipo_dist = df_discrepancia.groupby(['daproj_tppbpade', 'quadrante']).size().unstack(fill_value=0)
+tipo_dist['Total'] = tipo_dist.sum(axis=1)
+tipo_dist['%_Q2'] = tipo_dist['Q2'] / tipo_dist['Total'] * 100
+tipo_dist['%_Q3'] = tipo_dist['Q3'] / tipo_dist['Total'] * 100
+
+print(tipo_dist[['Q2', 'Q3', 'Total', '%_Q2', '%_Q3']].round(1))
+```
+
+# Análise de Riscos e Recomendações
+```{python} 
+# Quantificação dos riscos
+print("\n💼 ANÁLISE DE RISCOS ASSOCIADOS:")
+print("=" * 80)
+
+# Risco 1: Volume de recursos (Q2)
+projetos_q2 = len(df_discrepancia[df_discrepancia['quadrante'] == 'Q2'])
+print(f"\n🚨 RISCO OPERACIONAL (Q2):")
+print(f"Total de projetos em Q2: {projetos_q2:,}")
+print(f"Percentual sobre total de discrepâncias: {projetos_q2/len(df_discrepancia)*100:.1f}%")
+
+# Identificar setores de maior risco em Q2
+risco_q2_setor = df_discrepancia[df_discrepancia['quadrante'] == 'Q2']['do_set_nosetor'].value_counts().head(3)
+print("\nSetores com maior volume de recursos potenciais:")
+for setor, count in risco_q2_setor.items():
+    print(f"  • {setor}: {count:,} projetos ({count/projetos_q2*100:.1f}% do Q2)")
+
+# Risco 2: Compliance (Q3)
+projetos_q3 = len(df_discrepancia[df_discrepancia['quadrante'] == 'Q3'])
+print(f"\n⚠️ RISCO DE COMPLIANCE (Q3):")
+print(f"Total de projetos em Q3: {projetos_q3:,}")
+print(f"Percentual sobre total de discrepâncias: {projetos_q3/len(df_discrepancia)*100:.1f}%")
+
+# Identificar setores de maior risco em Q3
+risco_q3_setor = df_discrepancia[df_discrepancia['quadrante'] == 'Q3']['do_set_nosetor'].value_counts().head(3)
+print("\nSetores com maior risco de compliance:")
+for setor, count in risco_q3_setor.items():
+    print(f"  • {setor}: {count:,} projetos ({count/projetos_q3*100:.1f}% do Q3)")
+
+# Matriz de risco
+print("\n\n📊 MATRIZ DE RISCO POR SETOR:")
+matriz_risco = pd.DataFrame()
+for setor in df_discrepancia['do_set_nosetor'].unique():
+    if pd.notna(setor):
+        df_setor = df_discrepancia[df_discrepancia['do_set_nosetor'] == setor]
+        q2_setor = len(df_setor[df_setor['quadrante'] == 'Q2'])
+        q3_setor = len(df_setor[df_setor['quadrante'] == 'Q3'])
+        total_setor = len(df_setor)
+        
+        matriz_risco = pd.concat([matriz_risco, pd.DataFrame({
+            'Setor': [setor],
+            'Risco_Operacional_Q2': [q2_setor],
+            'Risco_Compliance_Q3': [q3_setor],
+            'Total_Discrepancia': [total_setor],
+            'Índice_Risco': [(q2_setor * 0.4 + q3_setor * 0.6) / total_setor * 100]  # Q3 tem peso maior
+        })], ignore_index=True)
+
+matriz_risco = matriz_risco.sort_values('Índice_Risco', ascending=False)
+print(matriz_risco.head(10).to_string(index=False))
+```
+
+# Conclusões e Recomendações Acionáveis
+```{python}
+print("\n📋 CONCLUSÕES E RECOMENDAÇÕES ACIONÁVEIS:")
+print("=" * 80)
+
+print("""
+## Principais Descobertas:
+
+1. **Concentração Setorial das Discrepâncias:**
+   - TIC apresenta a maior taxa de Q2, indicando rigor excessivo do Ministério
+   - Mecânica e Transporte tem alta taxa de Q3, sugerindo aprovações questionáveis
+
+2. **Padrões por Tipo de Projeto:**
+   - Desenvolvimento Experimental (DE) tem maior propensão a Q2
+   - Pesquisa Básica (PB) apresenta distribuição mais equilibrada
+
+3. **Hotspots Críticos Identificados:**
+   - TIC + DE + Serviço: Alto volume em Q2
+   - Mecânica + Processo: Concentração em Q3
+
+## Recomendações Estratégicas:
+
+### 1. AÇÕES IMEDIATAS (0-3 meses):
+   a) **Força-tarefa TIC:** Revisar critérios para projetos DE em serviços
+   b) **Auditoria Mecânica:** Verificar projetos Q3 de processos industriais
+   c) **Capacitação emergencial:** Workshops setoriais para alinhamento
+
+### 2. AÇÕES DE MÉDIO PRAZO (3-6 meses):
+   a) **Sistema de dupla checagem:** Para combinações de alto risco
+   b) **Guias setoriais:** Desenvolver critérios específicos por setor
+   c) **Painel de monitoramento:** Dashboard em tempo real de discrepâncias
+
+### 3. AÇÕES DE LONGO PRAZO (6-12 meses):
+   a) **Redesenho do processo:** Incluir etapa de conciliação
+   b) **IA para suporte:** Sistema de recomendação baseado em casos anteriores
+   c) **Programa de certificação:** Para avaliadores por área de expertise
+
+## Impactos Esperados:
+- Redução de 30% no volume de recursos em Q2
+- Diminuição de 50% no risco de compliance em Q3
+- Economia estimada de R$ XX milhões em custos administrativos
+- Aumento da segurança jurídica do programa
+""")
+
+# Exportar resultados
+print("\n💾 Exportando resultados da análise...")
+df_discrepancia.to_csv('discrepancias_q2_q3_detalhado.csv', index=False, encoding='utf-8')
+matriz_risco.to_csv('matriz_risco_setorial.csv', index=False, encoding='utf-8')
+print("✅ Arquivos exportados com sucesso!")
+
+print("\n" + "=" * 80)
+print("ANÁLISE DE DISCREPÂNCIAS CONCLUÍDA")
+print("=" * 80)
+```

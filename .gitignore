@@ -12,3 +12,6 @@
 # Ignorar caches do Python
 __pycache__/
 *.pyc
+
+# Ignorar os relatórios gerados
+*.pdf

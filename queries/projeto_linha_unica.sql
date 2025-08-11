@@ -1,4 +1,3 @@
--- Active: 1750170051954@@127.0.0.1@5432@dbs_mctic2@public
 select daproj.nritem
 , lst.nranobase as lst_nranobase
 , lst.nrcnpj as lst_nrcnpj
@@ -7,30 +6,30 @@ select daproj.nritem
 , lst.noatividadeeconomica as lst_noatividadeeconomica
 , lst.cdatividadeeconomicaibge as lst_cdatividadeeconomicaibge
 , lst.notipoportepessoajuridica as lst_notipoportepessoajuridica
-, dem.idprenchimentosituacaoanalise as dem_idprenchimentosituacaoanalise
-, dem.idmarcoanalisedo as dem_idmarcoanalisedo
-, dem.nrmarcoanalisedo as dem_nrmarcoanalisedo
-, dem.dtmarcoanalisedo as dem_dtmarcoanalisedo
-, dem.idmarcoanaliseparecer as dem_idmarcoanaliseparecer
-, dem.nrmarcoanaliseparecer as dem_nrmarcoanaliseparecer
-, dem.dtmarcoanaliseparecer as dem_dtmarcoanaliseparecer
-, dem.idmarcoanalisecontestacao as dem_idmarcoanalisecontestacao
-, dem.nrmarcoanalisecontestacao as dem_nrmarcoanalisecontestacao
-, dem.dtmarcoanalisecontestacao as dem_dtmarcoanalisecontestacao
-, dem.idmarcoanalisedocontestacao as dem_idmarcoanalisedocontestacao
-, dem.nrmarcoanalisedocontestacao as dem_nrmarcoanalisedocontestacao
-, dem.dtmarcoanalisedocontestacao as dem_dtmarcoanalisedocontestacao
-, dem.idmarcoanaliseparecercontestacao as dem_idmarcoanaliseparecercontestacao
-, dem.dtmarcoanaliseparecercontestacao as dem_dtmarcoanaliseparecercontestacao
-, dem.nrmarcoanaliseparecercontestacao as dem_nrmarcoanaliseparecercontestacao
-, dem.idmarcoanaliserecurso as dem_idmarcoanaliserecurso
-, dem.dtmarcoanaliserecurso as dem_dtmarcoanaliserecurso
-, dem.nrmarcoanaliserecurso as dem_nrmarcoanaliserecurso
-, dem.idmarcoanaliseparecerrecurso as dem_idmarcoanaliseparecerrecurso
-, dem.nrmarcoanaliseparecerrecurso as dem_nrmarcoanaliseparecerrecurso
-, dem.dtmarcoanaliseparecerrecurso as dem_dtmarcoanaliseparecerrecurso
-, dem.nrmarcoanalisecontestacaocodigoautencidade as dem_nrmarcoanalisecontestacaocodigoautencidade
-, dem.nrmarcoanaliserecursocodigoautencidade as dem_nrmarcoanaliserecursocodigoautencidade
+-- , dem.idprenchimentosituacaoanalise as dem_idprenchimentosituacaoanalise
+-- , dem.idmarcoanalisedo as dem_idmarcoanalisedo
+-- , dem.nrmarcoanalisedo as dem_nrmarcoanalisedo
+-- , dem.dtmarcoanalisedo as dem_dtmarcoanalisedo
+-- , dem.idmarcoanaliseparecer as dem_idmarcoanaliseparecer
+-- , dem.nrmarcoanaliseparecer as dem_nrmarcoanaliseparecer
+-- , dem.dtmarcoanaliseparecer as dem_dtmarcoanaliseparecer
+-- , dem.idmarcoanalisecontestacao as dem_idmarcoanalisecontestacao
+-- , dem.nrmarcoanalisecontestacao as dem_nrmarcoanalisecontestacao
+-- , dem.dtmarcoanalisecontestacao as dem_dtmarcoanalisecontestacao
+-- , dem.idmarcoanalisedocontestacao as dem_idmarcoanalisedocontestacao
+-- , dem.nrmarcoanalisedocontestacao as dem_nrmarcoanalisedocontestacao
+-- , dem.dtmarcoanalisedocontestacao as dem_dtmarcoanalisedocontestacao
+-- , dem.idmarcoanaliseparecercontestacao as dem_idmarcoanaliseparecercontestacao
+-- , dem.dtmarcoanaliseparecercontestacao as dem_dtmarcoanaliseparecercontestacao
+-- , dem.nrmarcoanaliseparecercontestacao as dem_nrmarcoanaliseparecercontestacao
+-- , dem.idmarcoanaliserecurso as dem_idmarcoanaliserecurso
+-- , dem.dtmarcoanaliserecurso as dem_dtmarcoanaliserecurso
+-- , dem.nrmarcoanaliserecurso as dem_nrmarcoanaliserecurso
+-- , dem.idmarcoanaliseparecerrecurso as dem_idmarcoanaliseparecerrecurso
+-- , dem.nrmarcoanaliseparecerrecurso as dem_nrmarcoanaliseparecerrecurso
+-- , dem.dtmarcoanaliseparecerrecurso as dem_dtmarcoanaliseparecerrecurso
+-- , dem.nrmarcoanalisecontestacaocodigoautencidade as dem_nrmarcoanalisecontestacaocodigoautencidade
+-- , dem.nrmarcoanaliserecursocodigoautencidade as dem_nrmarcoanaliserecursocodigoautencidade
 , daproj.nritem as daproj_nritem
 , daproj.noprojeto as daproj_noprojeto
 , daproj.dsprojeto as daproj_dsprojeto
@@ -45,55 +44,65 @@ select daproj.nritem
 , daproj.dsinicioatividade as daproj_dsinicioatividade
 , daproj.dsprevisaotermino as daproj_dsprevisaotermino
 , daproj.dsinformacaocomplementar as daproj_dsinformacaocomplementar
-, daproj.dsresultadoeconomico as daproj_dsresultadoeconomico
-, daproj.dsresultadoinovacao as daproj_dsresultadoinovacao
-, daproj.dsrecursoshumanos as daproj_dsrecursoshumanos
-, daproj.dsrecursosmateriais as daproj_dsrecursosmateriais
-, daproj.dsatividadepdicontinuadaanobase as daproj_dsatividadepdicontinuadaanobase
-, dapempcoop.nritem as dapempcoop_nritem
-, dapempcoop.nrcnpj as dapempcoop_nrcnpj
-, dapempcoop.dsrazaosocial as dapempcoop_dsrazaosocial
-, dapempcoop.dsdescricao as dapempcoop_dsdescricao
+-- , daproj.dsresultadoeconomico as daproj_dsresultadoeconomico
+-- , daproj.dsresultadoinovacao as daproj_dsresultadoinovacao
+-- , daproj.dsrecursoshumanos as daproj_dsrecursoshumanos
+-- , daproj.dsrecursosmateriais as daproj_dsrecursosmateriais
+-- , daproj.dsatividadepdicontinuadaanobase as daproj_dsatividadepdicontinuadaanobase
+-- , dapempcoop.nritem as dapempcoop_nritem
+-- , dapempcoop.nrcnpj as dapempcoop_nrcnpj
+-- , dapempcoop.dsrazaosocial as dapempcoop_dsrazaosocial
+-- , dapempcoop.dsdescricao as dapempcoop_dsdescricao
 --, do_aat.idanaliseat as do_aat_idanaliseat
---, do_aat.idmarcoanalise as do_aat_idmarcoanalise
-, do_taat.notipoanaliseat as do_taat_notipoanaliseat
---, do_aat.iddadoanaliseprojeto as do_aat_iddadoanaliseprojeto
-, do_aat.dscaminhoarquivoanalise as do_aat_dscaminhoarquivoanalise
-, do_aat.vltotaldeclarado as do_aat_vltotaldeclarado
-, do_aat.vltotalparecer as do_aat_vltotalparecer
-, do_aat.vltotalcontestacao as do_aat_vltotalcontestacao
-, do_traat.notiporesultadoanalise as do_traat_notiporesultadoanalise
-, do_traat.dstiporesultadoanalise as do_traat_dstiporesultadoanalise
---, do_saat.idsituacaoanaliseat as do_saat_idsituacaoanaliseat
---, do_saat.idanaliseat as do_saat_idanaliseat
-, do_tsa.notiposituacaoanalise as do_tsa_notiposituacaoanalise
-, do_set.nosetor as do_set_nosetor
+-- , do_aat.idmarcoanalise as do_aat_idmarcoanalise
+-- , do_taat.notipoanaliseat as do_taat_notipoanaliseat
+-- , do_aat.iddadoanaliseprojeto as do_aat_iddadoanaliseprojeto
+-- , do_aat.dscaminhoarquivoanalise as do_aat_dscaminhoarquivoanalise
+-- , do_aat.vltotaldeclarado as do_aat_vltotaldeclarado
+-- , do_aat.vltotalparecer as do_aat_vltotalparecer
+-- , do_aat.vltotalcontestacao as do_aat_vltotalcontestacao
+-- , do_traat.notiporesultadoanalise as do_traat_notiporesultadoanalise
+-- , do_traat.dstiporesultadoanalise as do_traat_dstiporesultadoanalise
+-- --, do_saat.idsituacaoanaliseat as do_saat_idsituacaoanaliseat
+-- --, do_saat.idanaliseat as do_saat_idanaliseat
+-- , do_tsa.notiposituacaoanalise as do_tsa_notiposituacaoanalise
+-- , do_set.nosetor as do_set_nosetor
 , do_saat.idmomentopessoaanalise as do_saat_idmomentopessoaanalise
 , do_saat.idunicopessoaanalise as do_saat_idunicopessoaanalise
 , do_saat.dtiniciosituacaoanalise as do_saat_dtiniciosituacaoanalise
 , do_saat.dtfimsituacaoanalise as do_saat_dtfimsituacaoanalise
 , do_saat.icativo as do_saat_icativo
 , do_saat.idapoiotecnico as do_saat_idapoiotecnico
+, do_hsa.idhistoricosituacaoanalise as do_hsa_idhistoricosituacaoanalise
+, do_hsa.idprenchimentosituacaoanalise as do_hsa_idprenchimentosituacaoanalise
+, do_hsa.cdtiposituacaomarco as do_hsa_cdtiposituacaomarco
+, do_hsa.dtiniciosituacaoanalise as do_hsa_dtiniciosituacaoanalise
+, do_hsa.dtfimsituacao as do_hsa_dtfimsituacao
+, do_hsa.icativo as do_hsa_icativo
+, do_hsa.idtask as do_hsa_idtask
+, do_hsa.idmomentopessoa as do_hsa_idmomentopessoa
+, do_hsa.idunicopessoa as do_hsa_idunicopessoa
+, do_hsa.idmarcoanalise as do_hsa_idmarcoanalise
 --, do_anproj.idavaliacaonotaprojeto as do_anproj_idavaliacaonotaprojeto
-, do_anproj.icpdienvolveuparceriaict as do_anproj_icpdienvolveuparceriaict
-, do_anproj.icpdicontribuiupesquisabasica as do_anproj_icpdicontribuiupesquisabasica
-, do_anproj.icpditecnologiacamenteinovadordisruptivel as do_anproj_icpditecnologiacamenteinovadordisruptivel
-, do_anproj.icpdirelacionadaprojetos as do_anproj_icpdirelacionadaprojetos
-, do_anproj.icpdiaderenciaods as do_anproj_icpdiaderenciaods
-, do_anproj.cdfatorajustedimensaoinovacao as do_anproj_cdfatorajustedimensaoinovacao
-, do_anproj.icresultadogeraimpactoeconimicopositivo as do_anproj_icresultadogeraimpactoeconimicopositivo
-, do_anproj.icresultadoestimuladesenvolvimentoregional as do_anproj_icresultadoestimuladesenvolvimentoregional
-, do_anproj.icresultadogeraimpactosocialpositivo as do_anproj_icresultadogeraimpactosocialpositivo
-, do_anproj.icresultadoimpactaformacaoprofissionalpositivamente as do_anproj_icresultadoimpactaformacaoprofissionalpositivamente
-, do_anproj.icresultadoestimulaproducaonacional as do_anproj_icresultadoestimulaproducaonacional
-, do_anproj.cdfatorajustedimensaoresultado as do_anproj_cdfatorajustedimensaoresultado
-, do_nd1.dsnotadimensao as do_nd1_dsnotadimensao_invocao
-, do_nd2.dsnotadimensao as do_nd2_dsnotadimensao_resultado
-, do_nd3.dsnotadimensao as do_nd3_dsnotadimensao_final
---, do_aomproj.idanaliseobjetomarcoprojeto as do_aomproj_idanaliseobjetomarcoprojeto
---, do_aomproj.iddadoanaliseprojeto as do_aomproj_iddadoanaliseprojeto
---, do_aomproj.idmarcoanalise as do_aomproj_idmarcoanalise
-, do_aomproj.icjustificativapadraoalterada as do_aomproj_icjustificativapadraoalterada
+-- , do_anproj.icpdienvolveuparceriaict as do_anproj_icpdienvolveuparceriaict
+-- , do_anproj.icpdicontribuiupesquisabasica as do_anproj_icpdicontribuiupesquisabasica
+-- , do_anproj.icpditecnologiacamenteinovadordisruptivel as do_anproj_icpditecnologiacamenteinovadordisruptivel
+-- , do_anproj.icpdirelacionadaprojetos as do_anproj_icpdirelacionadaprojetos
+-- , do_anproj.icpdiaderenciaods as do_anproj_icpdiaderenciaods
+-- , do_anproj.cdfatorajustedimensaoinovacao as do_anproj_cdfatorajustedimensaoinovacao
+-- , do_anproj.icresultadogeraimpactoeconimicopositivo as do_anproj_icresultadogeraimpactoeconimicopositivo
+-- , do_anproj.icresultadoestimuladesenvolvimentoregional as do_anproj_icresultadoestimuladesenvolvimentoregional
+-- , do_anproj.icresultadogeraimpactosocialpositivo as do_anproj_icresultadogeraimpactosocialpositivo
+-- , do_anproj.icresultadoimpactaformacaoprofissionalpositivamente as do_anproj_icresultadoimpactaformacaoprofissionalpositivamente
+-- , do_anproj.icresultadoestimulaproducaonacional as do_anproj_icresultadoestimulaproducaonacional
+-- , do_anproj.cdfatorajustedimensaoresultado as do_anproj_cdfatorajustedimensaoresultado
+-- , do_nd1.dsnotadimensao as do_nd1_dsnotadimensao_invocao
+-- , do_nd2.dsnotadimensao as do_nd2_dsnotadimensao_resultado
+-- , do_nd3.dsnotadimensao as do_nd3_dsnotadimensao_final
+-- --, do_aomproj.idanaliseobjetomarcoprojeto as do_aomproj_idanaliseobjetomarcoprojeto
+-- --, do_aomproj.iddadoanaliseprojeto as do_aomproj_iddadoanaliseprojeto
+-- --, do_aomproj.idmarcoanalise as do_aomproj_idmarcoanalise
+-- , do_aomproj.icjustificativapadraoalterada as do_aomproj_icjustificativapadraoalterada
 , do_aomproj.dsjustificativapadrao as do_aomproj_dsjustificativapadrao
 , do_aomproj.dsobservacaogeral as do_aomproj_dsobservacaogeral
 , do_aomproj.icreanalisado as do_aomproj_icreanalisado
@@ -271,6 +280,8 @@ left join tbdadoanaliseprojetoempresacooperadora dapempcoop on dapempcoop.iddado
 --
 --DO
 --
+left join tbmarcoanalise do_ma on do_ma.idmarcoanalise = dem.idmarcoanalisedo
+left join tbhistoricosituacaoanalise do_hsa on do_hsa.idhistoricosituacaoanalise  = do_ma.idhistoricosituacaoanalise 
 left join tbanaliseobjetomarcoprojeto do_aomproj on do_aomproj.idmarcoanalise = dem.idmarcoanalisedo and do_aomproj.iddadoanaliseprojeto = daproj.iddadoanaliseprojeto 
 left join tbtipoavaliacaoanalise do_taaproj on do_taaproj.idtipoavaliacaoanalise = do_aomproj.idtipoavaliacaoanalise
 left join tbanaliseat do_aat on do_aat.iddadoanaliseprojeto = daproj.iddadoanaliseprojeto and do_aat.idmarcoanalise = dem.idmarcoanalisedo
@@ -379,6 +390,16 @@ left join(
 		left join tbjustificativaanalise ra_japroj on ra_japroj.idjustificativaanalise = ra_aomprojj.idjustificativaanalise
 		left join tbtipojustificativaanalise ra_tjaproj on ra_tjaproj.cdtipojustificativaanalise = ra_japroj.cdtipojustificativaanalise
 		group by ra_aomprojj.idanaliseobjetomarcoprojeto ) ra_a_proj on ra_a_proj.idanaliseobjetomarcoprojeto = ra_aomproj.idanaliseobjetomarcoprojeto
--- where lst.nranobase = 2021
-order by dem.idprenchimentosituacaoanalise, daproj.nritem;
+where do_aat.iddadoanaliseprojeto = '46257' OR do_aat.iddadoanaliseprojeto = '49621' --OR do_aat.iddadoanaliseprojeto = '54623'
+-- where do_taaproj.notipoavaliacaoanalise = 'Recomendado' AND p_taaproj.notipoavaliacaoanalise = 'Não Recomendado'
+order by dem.idprenchimentosituacaoanalise, daproj.nritem
 
+-- SELECT *
+-- from tbanaliseat do_aat
+-- where do_aat.vltotaldeclarado IS NOT NULL
+
+-- select *
+-- from tbdadoanaliseprojeto
+
+-- SELECT distinct lst.nranobase
+-- from listaempresasporanobasesituacaoanalise lst

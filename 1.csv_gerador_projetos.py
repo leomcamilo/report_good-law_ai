@@ -141,7 +141,9 @@ class CarregadorDadosLeiDoBem:
             , dapempcoop.nrcnpj as dapempcoop_nrcnpj
             , dapempcoop.dsrazaosocial as dapempcoop_dsrazaosocial
             , dapempcoop.dsdescricao as dapempcoop_dsdescricao
+            , do_aat.idmarcoanalise as do_aat_idmarcoanalise
             , do_taat.notipoanaliseat as do_taat_notipoanaliseat
+            , do_aat.iddadoanaliseprojeto as do_aat_iddadoanaliseprojeto
             , do_aat.dscaminhoarquivoanalise as do_aat_dscaminhoarquivoanalise
             , do_aat.vltotaldeclarado as do_aat_vltotaldeclarado
             , do_aat.vltotalparecer as do_aat_vltotalparecer

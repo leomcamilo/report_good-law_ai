@@ -516,7 +516,7 @@ class AnalisadorClusterAvancado:
         self.fig_paths = fig_paths
         return fig_paths
     
-    def gerar_relatorio_pdf(self, nome_arquivo='relatorio_clusters_lei_bem_por_area.pdf'):
+    def gerar_relatorio_pdf(self, nome_arquivo='2.relatorio_clusters_lei_bem_por_area.pdf'):
         """Gera relatório em PDF com análises por área"""
         print("📄 Gerando relatório PDF...")
         
@@ -780,7 +780,7 @@ class AnalisadorClusterAvancado:
         
         return recomendacoes
     
-    def exportar_resultados_detalhados(self, prefixo='lei_bem'):
+    def exportar_resultados_detalhados(self, prefixo='2.lei_bem'):
         """Exporta todos os resultados detalhados"""
         print("💾 Exportando resultados detalhados...")
         
