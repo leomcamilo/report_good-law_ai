@@ -1,0 +1,173 @@
+{
+  "metadata": {
+    "timestamp": "20250812_153556"
+  },
+  "qualidade": {
+    "distribuicao_grupos": {
+      "total_grupos": 20,
+      "tamanho_medio": 4.05,
+      "maior_grupo": "9"
+    }
+  },
+  "metricas": {
+    "cobertura": 0.004448349717172826,
+    "densidade_media": 4.05
+  },
+  "amostras": [
+    {
+      "grupo_id": 6,
+      "tamanho_grupo": 6,
+      "projetos": [
+        {
+          "projeto_id": 106666,
+          "ano_referencia": 2023.0,
+          "setor": "Química e Farmácia"
+        },
+        {
+          "projeto_id": 106660,
+          "ano_referencia": 2023.0,
+          "setor": "Química e Farmácia"
+        },
+        {
+          "projeto_id": 101987,
+          "ano_referencia": 2023.0,
+          "setor": "Química e Farmácia"
+        },
+        {
+          "projeto_id": 101399,
+          "ano_referencia": 2023.0,
+          "setor": "Química e Farmácia"
+        },
+        {
+          "projeto_id": 111943,
+          "ano_referencia": 2023.0,
+          "setor": "Química e Farmácia"
+        },
+        {
+          "projeto_id": 105243,
+          "ano_referencia": 2023.0,
+          "setor": "Química e Farmácia"
+        }
+      ]
+    },
+    {
+      "grupo_id": 20,
+      "tamanho_grupo": 2,
+      "projetos": [
+        {
+          "projeto_id": 102130,
+          "ano_referencia": 2023.0,
+          "setor": "Química e Farmácia"
+        },
+        {
+          "projeto_id": 109306,
+          "ano_referencia": 2023.0,
+          "setor": "Química e Farmácia"
+        }
+      ]
+    },
+    {
+      "grupo_id": 4,
+      "tamanho_grupo": 6,
+      "projetos": [
+        {
+          "projeto_id": 106888,
+          "ano_referencia": 2023.0,
+          "setor": "Química e Farmácia"
+        },
+        {
+          "projeto_id": 102270,
+          "ano_referencia": 2023.0,
+          "setor": "Química e Farmácia"
+        },
+        {
+          "projeto_id": 105045,
+          "ano_referencia": 2023.0,
+          "setor": "Química e Farmácia"
+        },
+        {
+          "projeto_id": 106232,
+          "ano_referencia": 2023.0,
+          "setor": "Química e Farmácia"
+        },
+        {
+          "projeto_id": 105771,
+          "ano_referencia": 2023.0,
+          "setor": "Química e Farmácia"
+        },
+        {
+          "projeto_id": 100633,
+          "ano_referencia": 2023.0,
+          "setor": "Química e Farmácia"
+        }
+      ]
+    },
+    {
+      "grupo_id": 16,
+      "tamanho_grupo": 2,
+      "projetos": [
+        {
+          "projeto_id": 106130,
+          "ano_referencia": 2023.0,
+          "setor": "Química e Farmácia"
+        },
+        {
+          "projeto_id": 101739,
+          "ano_referencia": 2023.0,
+          "setor": "Química e Farmácia"
+        }
+      ]
+    },
+    {
+      "grupo_id": 1,
+      "tamanho_grupo": 9,
+      "projetos": [
+        {
+          "projeto_id": 101853,
+          "ano_referencia": 2023.0,
+          "setor": "Química e Farmácia"
+        },
+        {
+          "projeto_id": 106393,
+          "ano_referencia": 2023.0,
+          "setor": "Química e Farmácia"
+        },
+        {
+          "projeto_id": 107820,
+          "ano_referencia": 2023.0,
+          "setor": "Química e Farmácia"
+        },
+        {
+          "projeto_id": 101765,
+          "ano_referencia": 2023.0,
+          "setor": "Química e Farmácia"
+        },
+        {
+          "projeto_id": 101892,
+          "ano_referencia": 2023.0,
+          "setor": "Química e Farmácia"
+        },
+        {
+          "projeto_id": 110624,
+          "ano_referencia": 2023.0,
+          "setor": "Química e Farmácia"
+        },
+        {
+          "projeto_id": 110039,
+          "ano_referencia": 2023.0,
+          "setor": "Química e Farmácia"
+        },
+        {
+          "projeto_id": 107175,
+          "ano_referencia": 2023.0,
+          "setor": "Química e Farmácia"
+        },
+        {
+          "projeto_id": 110056,
+          "ano_referencia": 2023.0,
+          "setor": "Química e Farmácia"
+        }
+      ]
+    }
+  ]
+}

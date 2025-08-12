@@ -91,3 +91,814 @@
 2025-08-11 17:26:00,446 - INFO -    🟢 Categorias processadas completas: 2
 2025-08-11 17:26:00,446 - INFO -    🟡 Sub-lotes para merge posterior: 204
 2025-08-11 17:26:00,450 - ERROR - ❌ Erro ao salvar plano categoria: Cannot save file into a non-existent directory: 'resultados_agrupamento'
+2025-08-12 10:47:20,178 - INFO - 📊 Dados iniciais limpos: 74466 registros
+2025-08-12 10:47:21,022 - INFO - 📊 Dados extraídos:
+2025-08-12 10:47:21,028 - INFO -    📋 CNPJs únicos: 5717
+2025-08-12 10:47:21,036 - INFO -    🏢 Razões sociais únicas: 5669
+2025-08-12 10:47:21,082 - INFO -    📄 Projetos multianuais: 54529
+2025-08-12 10:47:22,090 - INFO - 🔗 Projetos multianuais identificados:
+2025-08-12 10:47:22,091 - INFO -    📊 Grupos multianuais: 7434
+2025-08-12 10:47:22,093 - INFO -    📋 Total de registros multianuais: 17979
+2025-08-12 10:47:22,105 - INFO -    📄 Exemplo 1: Desenvolvimento de novas soluções voltadas ao aten... (3 anos: [np.float64(2020.0), np.float64(2021.0), np.float64(2023.0)])
+2025-08-12 10:47:22,106 - INFO -    📄 Exemplo 2: Desenvolvimento de soluções de atendimento integra... (5 anos: [np.float64(2019.0), np.float64(2020.0), np.float64(2021.0), np.float64(2022.0), np.float64(2023.0)])
+2025-08-12 10:47:22,106 - INFO -    📄 Exemplo 3: Desenvolvimento de soluções para atendimento de cl... (3 anos: [np.float64(2020.0), np.float64(2021.0), np.float64(2022.0)])
+2025-08-12 10:47:25,682 - INFO - ✅ Ligação automática aplicada:
+2025-08-12 10:47:25,684 - INFO -    🔗 Projetos ligados automaticamente: 17979
+2025-08-12 10:47:25,685 - INFO -    📊 Grupos multianuais criados: 7434
+2025-08-12 10:47:25,829 - INFO - 🧪 FILTRO TESTE aplicado:
+2025-08-12 10:47:25,831 - INFO -    🎯 Categoria selecionada: 'Química e Farmácia'
+2025-08-12 10:47:25,831 - INFO -    📊 Combinações antes do filtro: 63
+2025-08-12 10:47:25,832 - INFO -    📊 Combinações após filtro: 9
+2025-08-12 10:47:25,833 - INFO - 📋 Resumo da preparação:
+2025-08-12 10:47:25,833 - INFO -    📊 Total de registros processados: 74466
+2025-08-12 10:47:25,851 - INFO -    🔗 Registros multianuais (já ligados): 17979
+2025-08-12 10:47:25,852 - INFO -    🤖 Registros para LLM analisar: 56487
+2025-08-12 10:47:25,853 - INFO -    🏷️ Categorias para LLM processar: 9
+2025-08-12 10:47:25,853 - INFO -    📊 Maior categoria para LLM: 5734 projetos
+2025-08-12 10:47:25,855 - INFO -    📊 Média de projetos por categoria: 896.6
+2025-08-12 10:47:25,912 - ERROR - ❌ Erro ao salvar relatório de multianuais: Cannot save file into a non-existent directory: 'resultados_agrupamento'
+2025-08-12 10:48:08,087 - INFO - ✅ API Deepseek configurada com sucesso
+2025-08-12 10:48:08,932 - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-08-12 10:48:11,952 - INFO - ✅ Teste de conexão com API bem-sucedido
+2025-08-12 10:48:11,954 - INFO - 📱 Resposta do teste: OK...
+2025-08-12 10:48:11,955 - INFO - 💰 Estimativa de custo:
+2025-08-12 10:48:11,956 - INFO -    📊 Total de combinações: 9
+2025-08-12 10:48:11,957 - INFO -    📋 Total de projetos: 9517
+2025-08-12 10:48:11,957 - INFO -    🔤 Tokens estimados: 2,855,100
+2025-08-12 10:48:11,958 - INFO -    💵 Custo estimado: $4.00 USD
+2025-08-12 10:48:19,829 - INFO - 📋 Formatados 3 projetos para análise
+2025-08-12 10:48:19,832 - INFO - ✅ Tamanho do prompt OK: 1184 tokens estimados
+2025-08-12 10:48:28,405 - INFO - 📋 Formatados 3 projetos para análise
+2025-08-12 10:48:28,407 - INFO - ✅ Tamanho do prompt OK: 1184 tokens estimados
+2025-08-12 10:48:30,128 - INFO - 🔍 Categoria filtrada: 1504 projetos
+2025-08-12 10:48:30,129 - INFO - 📅 Anos encontrados: [np.float64(2018.0), np.float64(2019.0), np.float64(2020.0), np.float64(2021.0), np.float64(2022.0), np.float64(2023.0)]
+2025-08-12 10:48:30,131 - INFO - 📦 Categoria dividida: 1504 projetos → 22 sub-lotes
+2025-08-12 10:48:30,132 - INFO -    🔗 Sobreposição: 10 projetos entre sub-lotes
+2025-08-12 10:48:30,170 - INFO - 🔍 Categoria filtrada: 5470 projetos
+2025-08-12 10:48:30,171 - INFO - 📅 Anos encontrados: [np.float64(2018.0), np.float64(2019.0), np.float64(2020.0), np.float64(2021.0), np.float64(2022.0), np.float64(2023.0)]
+2025-08-12 10:48:30,173 - INFO - 📦 Categoria dividida: 5470 projetos → 78 sub-lotes
+2025-08-12 10:48:30,174 - INFO -    🔗 Sobreposição: 10 projetos entre sub-lotes
+2025-08-12 10:48:30,189 - INFO - 🔍 Categoria filtrada: 135 projetos
+2025-08-12 10:48:30,189 - INFO - 📅 Anos encontrados: [np.float64(2018.0), np.float64(2019.0), np.float64(2020.0), np.float64(2021.0), np.float64(2022.0), np.float64(2023.0)]
+2025-08-12 10:48:30,190 - INFO - 📦 Categoria dividida: 135 projetos → 2 sub-lotes
+2025-08-12 10:48:30,190 - INFO -    🔗 Sobreposição: 10 projetos entre sub-lotes
+2025-08-12 10:48:30,204 - INFO - 🔍 Categoria filtrada: 518 projetos
+2025-08-12 10:48:30,204 - INFO - 📅 Anos encontrados: [np.float64(2018.0), np.float64(2019.0), np.float64(2020.0), np.float64(2021.0), np.float64(2022.0), np.float64(2023.0)]
+2025-08-12 10:48:30,205 - INFO - 📦 Categoria dividida: 518 projetos → 8 sub-lotes
+2025-08-12 10:48:30,206 - INFO -    🔗 Sobreposição: 10 projetos entre sub-lotes
+2025-08-12 10:48:30,222 - INFO - 🔍 Categoria filtrada: 1449 projetos
+2025-08-12 10:48:30,223 - INFO - 📅 Anos encontrados: [np.float64(2018.0), np.float64(2019.0), np.float64(2020.0), np.float64(2021.0), np.float64(2022.0), np.float64(2023.0)]
+2025-08-12 10:48:30,224 - INFO - 📦 Categoria dividida: 1449 projetos → 21 sub-lotes
+2025-08-12 10:48:30,225 - INFO -    🔗 Sobreposição: 10 projetos entre sub-lotes
+2025-08-12 10:48:30,239 - INFO - 🔍 Categoria filtrada: 43 projetos
+2025-08-12 10:48:30,239 - INFO - 📅 Anos encontrados: [np.float64(2018.0), np.float64(2019.0), np.float64(2020.0), np.float64(2021.0), np.float64(2022.0), np.float64(2023.0)]
+2025-08-12 10:48:30,252 - INFO - 🔍 Categoria filtrada: 50 projetos
+2025-08-12 10:48:30,253 - INFO - 📅 Anos encontrados: [np.float64(2018.0), np.float64(2019.0), np.float64(2020.0), np.float64(2021.0), np.float64(2022.0), np.float64(2023.0)]
+2025-08-12 10:48:30,267 - INFO - 🔍 Categoria filtrada: 308 projetos
+2025-08-12 10:48:30,268 - INFO - 📅 Anos encontrados: [np.float64(2018.0), np.float64(2019.0), np.float64(2020.0), np.float64(2021.0), np.float64(2022.0), np.float64(2023.0)]
+2025-08-12 10:48:30,268 - INFO - 📦 Categoria dividida: 308 projetos → 5 sub-lotes
+2025-08-12 10:48:30,269 - INFO -    🔗 Sobreposição: 10 projetos entre sub-lotes
+2025-08-12 10:48:30,283 - INFO - 🔍 Categoria filtrada: 40 projetos
+2025-08-12 10:48:30,283 - INFO - 📅 Anos encontrados: [np.float64(2018.0), np.float64(2019.0), np.float64(2020.0), np.float64(2023.0)]
+2025-08-12 10:48:30,284 - INFO - 📋 Plano por categoria criado: 139 itens
+2025-08-12 10:48:30,284 - INFO -    🟢 Categorias processadas completas: 3
+2025-08-12 10:48:30,285 - INFO -    🟡 Sub-lotes para merge posterior: 136
+2025-08-12 10:48:30,287 - ERROR - ❌ Erro ao salvar plano categoria: Cannot save file into a non-existent directory: 'resultados_agrupamento'
+2025-08-12 10:49:48,068 - INFO - 🔍 Categoria filtrada: 1504 projetos
+2025-08-12 10:49:48,069 - INFO - 📅 Anos encontrados: [np.float64(2018.0), np.float64(2019.0), np.float64(2020.0), np.float64(2021.0), np.float64(2022.0), np.float64(2023.0)]
+2025-08-12 10:49:48,071 - INFO - 📦 Categoria dividida: 1504 projetos → 22 sub-lotes
+2025-08-12 10:49:48,071 - INFO -    🔗 Sobreposição: 10 projetos entre sub-lotes
+2025-08-12 10:49:48,094 - INFO - 🔍 Categoria filtrada: 5470 projetos
+2025-08-12 10:49:48,095 - INFO - 📅 Anos encontrados: [np.float64(2018.0), np.float64(2019.0), np.float64(2020.0), np.float64(2021.0), np.float64(2022.0), np.float64(2023.0)]
+2025-08-12 10:49:48,097 - INFO - 📦 Categoria dividida: 5470 projetos → 78 sub-lotes
+2025-08-12 10:49:48,098 - INFO -    🔗 Sobreposição: 10 projetos entre sub-lotes
+2025-08-12 10:49:48,112 - INFO - 🔍 Categoria filtrada: 135 projetos
+2025-08-12 10:49:48,112 - INFO - 📅 Anos encontrados: [np.float64(2018.0), np.float64(2019.0), np.float64(2020.0), np.float64(2021.0), np.float64(2022.0), np.float64(2023.0)]
+2025-08-12 10:49:48,113 - INFO - 📦 Categoria dividida: 135 projetos → 2 sub-lotes
+2025-08-12 10:49:48,114 - INFO -    🔗 Sobreposição: 10 projetos entre sub-lotes
+2025-08-12 10:49:48,128 - INFO - 🔍 Categoria filtrada: 518 projetos
+2025-08-12 10:49:48,129 - INFO - 📅 Anos encontrados: [np.float64(2018.0), np.float64(2019.0), np.float64(2020.0), np.float64(2021.0), np.float64(2022.0), np.float64(2023.0)]
+2025-08-12 10:49:48,129 - INFO - 📦 Categoria dividida: 518 projetos → 8 sub-lotes
+2025-08-12 10:49:48,130 - INFO -    🔗 Sobreposição: 10 projetos entre sub-lotes
+2025-08-12 10:49:48,146 - INFO - 🔍 Categoria filtrada: 1449 projetos
+2025-08-12 10:49:48,147 - INFO - 📅 Anos encontrados: [np.float64(2018.0), np.float64(2019.0), np.float64(2020.0), np.float64(2021.0), np.float64(2022.0), np.float64(2023.0)]
+2025-08-12 10:49:48,148 - INFO - 📦 Categoria dividida: 1449 projetos → 21 sub-lotes
+2025-08-12 10:49:48,149 - INFO -    🔗 Sobreposição: 10 projetos entre sub-lotes
+2025-08-12 10:49:48,162 - INFO - 🔍 Categoria filtrada: 43 projetos
+2025-08-12 10:49:48,163 - INFO - 📅 Anos encontrados: [np.float64(2018.0), np.float64(2019.0), np.float64(2020.0), np.float64(2021.0), np.float64(2022.0), np.float64(2023.0)]
+2025-08-12 10:49:48,176 - INFO - 🔍 Categoria filtrada: 50 projetos
+2025-08-12 10:49:48,177 - INFO - 📅 Anos encontrados: [np.float64(2018.0), np.float64(2019.0), np.float64(2020.0), np.float64(2021.0), np.float64(2022.0), np.float64(2023.0)]
+2025-08-12 10:49:48,190 - INFO - 🔍 Categoria filtrada: 308 projetos
+2025-08-12 10:49:48,191 - INFO - 📅 Anos encontrados: [np.float64(2018.0), np.float64(2019.0), np.float64(2020.0), np.float64(2021.0), np.float64(2022.0), np.float64(2023.0)]
+2025-08-12 10:49:48,192 - INFO - 📦 Categoria dividida: 308 projetos → 5 sub-lotes
+2025-08-12 10:49:48,193 - INFO -    🔗 Sobreposição: 10 projetos entre sub-lotes
+2025-08-12 10:49:48,206 - INFO - 🔍 Categoria filtrada: 40 projetos
+2025-08-12 10:49:48,207 - INFO - 📅 Anos encontrados: [np.float64(2018.0), np.float64(2019.0), np.float64(2020.0), np.float64(2023.0)]
+2025-08-12 10:49:48,207 - INFO - 📋 Plano por categoria criado: 139 itens
+2025-08-12 10:49:48,208 - INFO -    🟢 Categorias processadas completas: 3
+2025-08-12 10:49:48,209 - INFO -    🟡 Sub-lotes para merge posterior: 136
+2025-08-12 10:49:48,215 - INFO - 📄 Plano por categoria salvo: resultados_agrupamento/plano_processamento_categoria.csv
+2025-08-12 11:26:31,291 - INFO - 📊 Dados iniciais limpos: 74466 registros
+2025-08-12 11:26:32,103 - INFO - 📊 Dados extraídos:
+2025-08-12 11:26:32,109 - INFO -    📋 CNPJs únicos: 5717
+2025-08-12 11:26:32,116 - INFO -    🏢 Razões sociais únicas: 5669
+2025-08-12 11:26:32,162 - INFO -    📄 Projetos multianuais: 54529
+2025-08-12 11:26:33,138 - INFO - 🔗 Projetos multianuais identificados:
+2025-08-12 11:26:33,139 - INFO -    📊 Grupos multianuais: 7434
+2025-08-12 11:26:33,141 - INFO -    📋 Total de registros multianuais: 17979
+2025-08-12 11:26:33,153 - INFO -    📄 Exemplo 1: Desenvolvimento de novas soluções voltadas ao aten... (3 anos: [np.float64(2020.0), np.float64(2021.0), np.float64(2023.0)])
+2025-08-12 11:26:33,154 - INFO -    📄 Exemplo 2: Desenvolvimento de soluções de atendimento integra... (5 anos: [np.float64(2019.0), np.float64(2020.0), np.float64(2021.0), np.float64(2022.0), np.float64(2023.0)])
+2025-08-12 11:26:33,154 - INFO -    📄 Exemplo 3: Desenvolvimento de soluções para atendimento de cl... (3 anos: [np.float64(2020.0), np.float64(2021.0), np.float64(2022.0)])
+2025-08-12 11:26:36,687 - INFO - ✅ Ligação automática aplicada:
+2025-08-12 11:26:36,690 - INFO -    🔗 Projetos ligados automaticamente: 17979
+2025-08-12 11:26:36,690 - INFO -    📊 Grupos multianuais criados: 7434
+2025-08-12 11:26:36,847 - INFO - 🧪 FILTRO TESTE aplicado:
+2025-08-12 11:26:36,848 - INFO -    🎯 Categoria selecionada: 'Química e Farmácia'
+2025-08-12 11:26:36,849 - INFO -    📊 Combinações antes do filtro: 63
+2025-08-12 11:26:36,850 - INFO -    📊 Combinações após filtro: 9
+2025-08-12 11:26:36,850 - INFO - 📋 Resumo da preparação:
+2025-08-12 11:26:36,851 - INFO -    📊 Total de registros processados: 74466
+2025-08-12 11:26:36,870 - INFO -    🔗 Registros multianuais (já ligados): 17979
+2025-08-12 11:26:36,871 - INFO -    🤖 Registros para LLM analisar: 56487
+2025-08-12 11:26:36,872 - INFO -    🏷️ Categorias para LLM processar: 9
+2025-08-12 11:26:36,873 - INFO -    📊 Maior categoria para LLM: 5734 projetos
+2025-08-12 11:26:36,874 - INFO -    📊 Média de projetos por categoria: 896.6
+2025-08-12 11:26:36,941 - INFO - 📄 Relatório de multianuais salvo: resultados_agrupamento/projetos_multianuais_identificados_20250812_112631.csv
+2025-08-12 11:26:42,301 - INFO - ✅ API Deepseek configurada com sucesso
+2025-08-12 11:26:43,120 - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-08-12 11:26:46,442 - INFO - ✅ Teste de conexão com API bem-sucedido
+2025-08-12 11:26:46,444 - INFO - 📱 Resposta do teste: OK...
+2025-08-12 11:26:46,445 - INFO - 💰 Estimativa de custo:
+2025-08-12 11:26:46,446 - INFO -    📊 Total de combinações: 9
+2025-08-12 11:26:46,447 - INFO -    📋 Total de projetos: 9517
+2025-08-12 11:26:46,448 - INFO -    🔤 Tokens estimados: 2,855,100
+2025-08-12 11:26:46,449 - INFO -    💵 Custo estimado: $4.00 USD
+2025-08-12 11:26:52,503 - INFO - 📋 Formatados 3 projetos para análise
+2025-08-12 11:26:52,506 - INFO - ✅ Tamanho do prompt OK: 1184 tokens estimados
+2025-08-12 11:30:14,140 - INFO - 📊 Dados iniciais limpos: 74466 registros
+2025-08-12 11:30:14,996 - INFO - 📊 Dados extraídos:
+2025-08-12 11:30:15,002 - INFO -    📋 CNPJs únicos: 5717
+2025-08-12 11:30:15,010 - INFO -    🏢 Razões sociais únicas: 5669
+2025-08-12 11:30:15,067 - INFO -    📄 Projetos multianuais: 54529
+2025-08-12 11:30:15,984 - INFO - 🔗 Projetos multianuais identificados:
+2025-08-12 11:30:15,985 - INFO -    📊 Grupos multianuais: 7434
+2025-08-12 11:30:15,986 - INFO -    📋 Total de registros multianuais: 17979
+2025-08-12 11:30:15,998 - INFO -    📄 Exemplo 1: Desenvolvimento de novas soluções voltadas ao aten... (3 anos: [np.float64(2020.0), np.float64(2021.0), np.float64(2023.0)])
+2025-08-12 11:30:16,000 - INFO -    📄 Exemplo 2: Desenvolvimento de soluções de atendimento integra... (5 anos: [np.float64(2019.0), np.float64(2020.0), np.float64(2021.0), np.float64(2022.0), np.float64(2023.0)])
+2025-08-12 11:30:16,000 - INFO -    📄 Exemplo 3: Desenvolvimento de soluções para atendimento de cl... (3 anos: [np.float64(2020.0), np.float64(2021.0), np.float64(2022.0)])
+2025-08-12 11:30:19,456 - INFO - ✅ Ligação automática aplicada:
+2025-08-12 11:30:19,457 - INFO -    🔗 Projetos ligados automaticamente: 17979
+2025-08-12 11:30:19,458 - INFO -    📊 Grupos multianuais criados: 7434
+2025-08-12 11:30:19,615 - INFO - 🧪 FILTRO TESTE aplicado:
+2025-08-12 11:30:19,616 - INFO -    🎯 Categoria selecionada: 'Química e Farmácia'
+2025-08-12 11:30:19,617 - INFO -    📊 Combinações antes do filtro: 63
+2025-08-12 11:30:19,618 - INFO -    📊 Combinações após filtro: 9
+2025-08-12 11:30:19,618 - INFO - 📋 Resumo da preparação:
+2025-08-12 11:30:19,619 - INFO -    📊 Total de registros processados: 74466
+2025-08-12 11:30:19,642 - INFO -    🔗 Registros multianuais (já ligados): 17979
+2025-08-12 11:30:19,643 - INFO -    🤖 Registros para LLM analisar: 56487
+2025-08-12 11:30:19,644 - INFO -    🏷️ Categorias para LLM processar: 9
+2025-08-12 11:30:19,645 - INFO -    📊 Maior categoria para LLM: 5734 projetos
+2025-08-12 11:30:19,645 - INFO -    📊 Média de projetos por categoria: 896.6
+2025-08-12 11:30:19,730 - INFO - 📄 Relatório de multianuais salvo: resultados_agrupamento/projetos_multianuais_identificados_20250812_113014.csv
+2025-08-12 11:30:23,296 - INFO - ✅ API Deepseek configurada com sucesso
+2025-08-12 11:30:23,798 - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-08-12 11:30:27,505 - INFO - ✅ Teste de conexão com API bem-sucedido
+2025-08-12 11:30:27,506 - INFO - 📱 Resposta do teste: OK...
+2025-08-12 11:30:27,508 - INFO - 💰 Estimativa de custo:
+2025-08-12 11:30:27,509 - INFO -    📊 Total de combinações: 9
+2025-08-12 11:30:27,509 - INFO -    📋 Total de projetos: 9517
+2025-08-12 11:30:27,510 - INFO -    🔤 Tokens estimados: 2,855,100
+2025-08-12 11:30:27,511 - INFO -    💵 Custo estimado: $4.00 USD
+2025-08-12 11:30:32,523 - INFO - 📋 Formatados 3 projetos para análise
+2025-08-12 11:30:32,525 - INFO - ✅ Tamanho do prompt OK: 1184 tokens estimados
+2025-08-12 11:30:43,551 - INFO - 🔍 Categoria filtrada: 1504 projetos
+2025-08-12 11:30:43,552 - INFO - 📅 Anos encontrados: [np.float64(2018.0), np.float64(2019.0), np.float64(2020.0), np.float64(2021.0), np.float64(2022.0), np.float64(2023.0)]
+2025-08-12 11:30:43,553 - INFO - 📦 Categoria dividida: 1504 projetos → 22 sub-lotes
+2025-08-12 11:30:43,554 - INFO -    🔗 Sobreposição: 10 projetos entre sub-lotes
+2025-08-12 11:30:43,584 - INFO - 🔍 Categoria filtrada: 5470 projetos
+2025-08-12 11:30:43,585 - INFO - 📅 Anos encontrados: [np.float64(2018.0), np.float64(2019.0), np.float64(2020.0), np.float64(2021.0), np.float64(2022.0), np.float64(2023.0)]
+2025-08-12 11:30:43,587 - INFO - 📦 Categoria dividida: 5470 projetos → 78 sub-lotes
+2025-08-12 11:30:43,588 - INFO -    🔗 Sobreposição: 10 projetos entre sub-lotes
+2025-08-12 11:30:43,605 - INFO - 🔍 Categoria filtrada: 135 projetos
+2025-08-12 11:30:43,606 - INFO - 📅 Anos encontrados: [np.float64(2018.0), np.float64(2019.0), np.float64(2020.0), np.float64(2021.0), np.float64(2022.0), np.float64(2023.0)]
+2025-08-12 11:30:43,607 - INFO - 📦 Categoria dividida: 135 projetos → 2 sub-lotes
+2025-08-12 11:30:43,608 - INFO -    🔗 Sobreposição: 10 projetos entre sub-lotes
+2025-08-12 11:30:43,623 - INFO - 🔍 Categoria filtrada: 518 projetos
+2025-08-12 11:30:43,624 - INFO - 📅 Anos encontrados: [np.float64(2018.0), np.float64(2019.0), np.float64(2020.0), np.float64(2021.0), np.float64(2022.0), np.float64(2023.0)]
+2025-08-12 11:30:43,625 - INFO - 📦 Categoria dividida: 518 projetos → 8 sub-lotes
+2025-08-12 11:30:43,625 - INFO -    🔗 Sobreposição: 10 projetos entre sub-lotes
+2025-08-12 11:30:43,641 - INFO - 🔍 Categoria filtrada: 1449 projetos
+2025-08-12 11:30:43,642 - INFO - 📅 Anos encontrados: [np.float64(2018.0), np.float64(2019.0), np.float64(2020.0), np.float64(2021.0), np.float64(2022.0), np.float64(2023.0)]
+2025-08-12 11:30:43,643 - INFO - 📦 Categoria dividida: 1449 projetos → 21 sub-lotes
+2025-08-12 11:30:43,644 - INFO -    🔗 Sobreposição: 10 projetos entre sub-lotes
+2025-08-12 11:30:43,659 - INFO - 🔍 Categoria filtrada: 43 projetos
+2025-08-12 11:30:43,660 - INFO - 📅 Anos encontrados: [np.float64(2018.0), np.float64(2019.0), np.float64(2020.0), np.float64(2021.0), np.float64(2022.0), np.float64(2023.0)]
+2025-08-12 11:30:43,672 - INFO - 🔍 Categoria filtrada: 50 projetos
+2025-08-12 11:30:43,673 - INFO - 📅 Anos encontrados: [np.float64(2018.0), np.float64(2019.0), np.float64(2020.0), np.float64(2021.0), np.float64(2022.0), np.float64(2023.0)]
+2025-08-12 11:30:43,686 - INFO - 🔍 Categoria filtrada: 308 projetos
+2025-08-12 11:30:43,687 - INFO - 📅 Anos encontrados: [np.float64(2018.0), np.float64(2019.0), np.float64(2020.0), np.float64(2021.0), np.float64(2022.0), np.float64(2023.0)]
+2025-08-12 11:30:43,687 - INFO - 📦 Categoria dividida: 308 projetos → 5 sub-lotes
+2025-08-12 11:30:43,688 - INFO -    🔗 Sobreposição: 10 projetos entre sub-lotes
+2025-08-12 11:30:43,701 - INFO - 🔍 Categoria filtrada: 40 projetos
+2025-08-12 11:30:43,702 - INFO - 📅 Anos encontrados: [np.float64(2018.0), np.float64(2019.0), np.float64(2020.0), np.float64(2023.0)]
+2025-08-12 11:30:43,702 - INFO - 📋 Plano por categoria criado: 139 itens
+2025-08-12 11:30:43,703 - INFO -    🟢 Categorias processadas completas: 3
+2025-08-12 11:30:43,704 - INFO -    🟡 Sub-lotes para merge posterior: 136
+2025-08-12 11:30:43,707 - INFO - 📄 Plano por categoria salvo: resultados_agrupamento/plano_processamento_categoria.csv
+2025-08-12 12:21:18,508 - INFO - ✅ API Deepseek configurada para uso assíncrono
+2025-08-12 12:21:18,510 - INFO - 📡 Loop de eventos já ativo, usando nest_asyncio
+2025-08-12 12:21:18,513 - INFO - 🧪 Modo teste ativado: processando apenas 3 itens
+2025-08-12 12:21:18,514 - INFO - 🚀 Iniciando processamento assíncrono de 3 itens...
+2025-08-12 12:21:18,514 - INFO - ⚡ Configuração: 3 requisições simultâneas, lotes de 5
+2025-08-12 12:21:18,516 - INFO - 📦 Divisão para processamento assíncrono: 3 itens → 1 lotes
+2025-08-12 12:21:18,516 - INFO - 
+============================================================
+2025-08-12 12:21:18,517 - INFO - 📦 Processando lote 1/1 (3 itens)
+2025-08-12 12:21:18,518 - INFO - 🔄 Processando async: Química e Farmácia - 71 projetos
+2025-08-12 12:21:18,521 - INFO - 📋 Formatados 71 projetos para análise
+2025-08-12 12:21:18,522 - ERROR - ❌ Erro ao criar human message: 'ano_referencia'
+2025-08-12 12:21:18,523 - ERROR - ❌ Falha ao criar human message
+2025-08-12 12:21:18,523 - INFO - 🔄 Processando async: Química e Farmácia - 81 projetos
+2025-08-12 12:21:18,527 - INFO - 📋 Formatados 81 projetos para análise
+2025-08-12 12:21:18,528 - ERROR - ❌ Erro ao criar human message: 'ano_referencia'
+2025-08-12 12:21:18,529 - ERROR - ❌ Falha ao criar human message
+2025-08-12 12:21:18,529 - INFO - 🔄 Processando async: Química e Farmácia - 81 projetos
+2025-08-12 12:21:18,532 - INFO - 📋 Formatados 81 projetos para análise
+2025-08-12 12:21:18,533 - ERROR - ❌ Erro ao criar human message: 'ano_referencia'
+2025-08-12 12:21:18,534 - ERROR - ❌ Falha ao criar human message
+2025-08-12 12:21:18,534 - INFO - ✅ Lote assíncrono concluído: 0/3 sucessos
+2025-08-12 12:21:18,535 - INFO - ✅ Lote 1 concluído: 0 sucessos
+2025-08-12 12:21:18,536 - INFO - 
+🎉 Processamento assíncrono concluído!
+2025-08-12 12:21:18,536 - INFO - ✅ Sucessos: 0/139
+2025-08-12 13:13:14,094 - INFO - 📋 Formatados 3 projetos para análise
+2025-08-12 13:15:13,163 - INFO - 📋 Formatados 3 projetos para análise
+2025-08-12 13:15:13,167 - INFO - ✅ Tamanho do prompt OK: 1187 tokens estimados
+2025-08-12 13:16:39,565 - INFO - 🔍 Categoria filtrada: 1504 projetos
+2025-08-12 13:16:39,566 - INFO - 📅 Anos encontrados: [np.float64(2018.0), np.float64(2019.0), np.float64(2020.0), np.float64(2021.0), np.float64(2022.0), np.float64(2023.0)]
+2025-08-12 13:16:39,568 - INFO - 📦 Categoria dividida: 1504 projetos → 22 sub-lotes
+2025-08-12 13:16:39,568 - INFO -    🔗 Sobreposição: 10 projetos entre sub-lotes
+2025-08-12 13:16:39,600 - INFO - 🔍 Categoria filtrada: 5470 projetos
+2025-08-12 13:16:39,601 - INFO - 📅 Anos encontrados: [np.float64(2018.0), np.float64(2019.0), np.float64(2020.0), np.float64(2021.0), np.float64(2022.0), np.float64(2023.0)]
+2025-08-12 13:16:39,603 - INFO - 📦 Categoria dividida: 5470 projetos → 78 sub-lotes
+2025-08-12 13:16:39,604 - INFO -    🔗 Sobreposição: 10 projetos entre sub-lotes
+2025-08-12 13:16:39,620 - INFO - 🔍 Categoria filtrada: 135 projetos
+2025-08-12 13:16:39,621 - INFO - 📅 Anos encontrados: [np.float64(2018.0), np.float64(2019.0), np.float64(2020.0), np.float64(2021.0), np.float64(2022.0), np.float64(2023.0)]
+2025-08-12 13:16:39,622 - INFO - 📦 Categoria dividida: 135 projetos → 2 sub-lotes
+2025-08-12 13:16:39,623 - INFO -    🔗 Sobreposição: 10 projetos entre sub-lotes
+2025-08-12 13:16:39,638 - INFO - 🔍 Categoria filtrada: 518 projetos
+2025-08-12 13:16:39,639 - INFO - 📅 Anos encontrados: [np.float64(2018.0), np.float64(2019.0), np.float64(2020.0), np.float64(2021.0), np.float64(2022.0), np.float64(2023.0)]
+2025-08-12 13:16:39,639 - INFO - 📦 Categoria dividida: 518 projetos → 8 sub-lotes
+2025-08-12 13:16:39,640 - INFO -    🔗 Sobreposição: 10 projetos entre sub-lotes
+2025-08-12 13:16:39,656 - INFO - 🔍 Categoria filtrada: 1449 projetos
+2025-08-12 13:16:39,657 - INFO - 📅 Anos encontrados: [np.float64(2018.0), np.float64(2019.0), np.float64(2020.0), np.float64(2021.0), np.float64(2022.0), np.float64(2023.0)]
+2025-08-12 13:16:39,658 - INFO - 📦 Categoria dividida: 1449 projetos → 21 sub-lotes
+2025-08-12 13:16:39,658 - INFO -    🔗 Sobreposição: 10 projetos entre sub-lotes
+2025-08-12 13:16:39,672 - INFO - 🔍 Categoria filtrada: 43 projetos
+2025-08-12 13:16:39,672 - INFO - 📅 Anos encontrados: [np.float64(2018.0), np.float64(2019.0), np.float64(2020.0), np.float64(2021.0), np.float64(2022.0), np.float64(2023.0)]
+2025-08-12 13:16:39,685 - INFO - 🔍 Categoria filtrada: 50 projetos
+2025-08-12 13:16:39,686 - INFO - 📅 Anos encontrados: [np.float64(2018.0), np.float64(2019.0), np.float64(2020.0), np.float64(2021.0), np.float64(2022.0), np.float64(2023.0)]
+2025-08-12 13:16:39,699 - INFO - 🔍 Categoria filtrada: 308 projetos
+2025-08-12 13:16:39,700 - INFO - 📅 Anos encontrados: [np.float64(2018.0), np.float64(2019.0), np.float64(2020.0), np.float64(2021.0), np.float64(2022.0), np.float64(2023.0)]
+2025-08-12 13:16:39,701 - INFO - 📦 Categoria dividida: 308 projetos → 5 sub-lotes
+2025-08-12 13:16:39,701 - INFO -    🔗 Sobreposição: 10 projetos entre sub-lotes
+2025-08-12 13:16:39,714 - INFO - 🔍 Categoria filtrada: 40 projetos
+2025-08-12 13:16:39,715 - INFO - 📅 Anos encontrados: [np.float64(2018.0), np.float64(2019.0), np.float64(2020.0), np.float64(2023.0)]
+2025-08-12 13:16:39,716 - INFO - 📋 Plano por categoria criado: 139 itens
+2025-08-12 13:16:39,716 - INFO -    🟢 Categorias processadas completas: 3
+2025-08-12 13:16:39,717 - INFO -    🟡 Sub-lotes para merge posterior: 136
+2025-08-12 13:16:39,723 - INFO - 📄 Plano por categoria salvo: resultados_agrupamento/plano_processamento_categoria.csv
+2025-08-12 13:16:45,998 - INFO - ✅ API Deepseek configurada para uso assíncrono
+2025-08-12 13:16:45,999 - INFO - 📡 Loop de eventos já ativo, usando nest_asyncio
+2025-08-12 13:16:46,001 - INFO - 🧪 Modo teste ativado: processando apenas 3 itens
+2025-08-12 13:16:46,002 - INFO - 🚀 Iniciando processamento assíncrono de 3 itens...
+2025-08-12 13:16:46,003 - INFO - ⚡ Configuração: 3 requisições simultâneas, lotes de 5
+2025-08-12 13:16:46,004 - INFO - 📦 Divisão para processamento assíncrono: 3 itens → 1 lotes
+2025-08-12 13:16:46,004 - INFO - 
+============================================================
+2025-08-12 13:16:46,005 - INFO - 📦 Processando lote 1/1 (3 itens)
+2025-08-12 13:16:46,006 - INFO - 🔄 Processando async: Química e Farmácia - 71 projetos
+2025-08-12 13:16:46,012 - INFO - 📋 Formatados 71 projetos para análise
+2025-08-12 13:16:46,013 - ERROR - ❌ Erro ao processar item async: criar_human_message() missing 1 required positional argument: 'df_subset'
+2025-08-12 13:16:46,014 - INFO - 🔄 Processando async: Química e Farmácia - 81 projetos
+2025-08-12 13:16:46,020 - INFO - 📋 Formatados 81 projetos para análise
+2025-08-12 13:16:46,021 - ERROR - ❌ Erro ao processar item async: criar_human_message() missing 1 required positional argument: 'df_subset'
+2025-08-12 13:16:46,022 - INFO - 🔄 Processando async: Química e Farmácia - 81 projetos
+2025-08-12 13:16:46,028 - INFO - 📋 Formatados 81 projetos para análise
+2025-08-12 13:16:46,028 - ERROR - ❌ Erro ao processar item async: criar_human_message() missing 1 required positional argument: 'df_subset'
+2025-08-12 13:16:46,029 - INFO - ✅ Lote assíncrono concluído: 0/3 sucessos
+2025-08-12 13:16:46,030 - INFO - ✅ Lote 1 concluído: 0 sucessos
+2025-08-12 13:16:46,031 - INFO - 
+🎉 Processamento assíncrono concluído!
+2025-08-12 13:16:46,032 - INFO - ✅ Sucessos: 0/139
+2025-08-12 13:20:03,423 - INFO - ✅ API Deepseek configurada para uso assíncrono
+2025-08-12 13:20:03,424 - INFO - 📡 Loop de eventos já ativo, usando nest_asyncio
+2025-08-12 13:20:03,426 - INFO - 🧪 Modo teste ativado: processando apenas 3 itens
+2025-08-12 13:20:03,427 - INFO - 🚀 Iniciando processamento assíncrono de 3 itens...
+2025-08-12 13:20:03,428 - INFO - ⚡ Configuração: 3 requisições simultâneas, lotes de 5
+2025-08-12 13:20:03,428 - INFO - 📦 Divisão para processamento assíncrono: 3 itens → 1 lotes
+2025-08-12 13:20:03,429 - INFO - 
+============================================================
+2025-08-12 13:20:03,430 - INFO - 📦 Processando lote 1/1 (3 itens)
+2025-08-12 13:20:03,431 - INFO - 🔄 Processando async: Química e Farmácia - 71 projetos
+2025-08-12 13:20:03,439 - INFO - 📋 Formatados 71 projetos para análise
+2025-08-12 13:20:03,441 - INFO - ✅ Tamanho do prompt OK: 15908 tokens estimados
+2025-08-12 13:20:03,442 - INFO - 📤 Enviando para API Deepseek (async via thread)...
+2025-08-12 13:20:03,447 - INFO - 🔄 Processando async: Química e Farmácia - 81 projetos
+2025-08-12 13:20:03,455 - INFO - 📋 Formatados 81 projetos para análise
+2025-08-12 13:20:03,456 - INFO - ✅ Tamanho do prompt OK: 18357 tokens estimados
+2025-08-12 13:20:03,457 - INFO - 📤 Enviando para API Deepseek (async via thread)...
+2025-08-12 13:20:03,461 - INFO - 🔄 Processando async: Química e Farmácia - 81 projetos
+2025-08-12 13:20:03,469 - INFO - 📋 Formatados 81 projetos para análise
+2025-08-12 13:20:03,470 - INFO - ✅ Tamanho do prompt OK: 15304 tokens estimados
+2025-08-12 13:20:03,471 - INFO - 📤 Enviando para API Deepseek (async via thread)...
+2025-08-12 13:20:04,595 - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-08-12 13:20:04,603 - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-08-12 13:20:04,632 - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-08-12 13:21:35,829 - INFO - ✅ Resposta assíncrona recebida para Química e Farmácia
+2025-08-12 13:21:40,838 - INFO - ✅ Resposta assíncrona recebida para Química e Farmácia
+2025-08-12 13:21:50,900 - INFO - ✅ Resposta assíncrona recebida para Química e Farmácia
+2025-08-12 13:21:50,902 - INFO - ✅ Lote assíncrono concluído: 3/3 sucessos
+2025-08-12 13:21:50,903 - INFO - ✅ Lote 1 concluído: 3 sucessos
+2025-08-12 13:21:50,905 - INFO - 
+🎉 Processamento assíncrono concluído!
+2025-08-12 13:21:50,906 - INFO - ✅ Sucessos: 3/139
+2025-08-12 13:21:50,908 - INFO - 💾 Progresso salvo: resultados_agrupamento/progresso_20250812_132003.json
+2025-08-12 13:33:56,727 - WARNING - ⚠️ Resposta inválida: Cabeçalho CSV não reconhecido
+2025-08-12 13:33:56,729 - WARNING - ⚠️ Resposta inválida: Cabeçalho CSV não reconhecido
+2025-08-12 13:33:56,730 - WARNING - ⚠️ Resposta inválida: Cabeçalho CSV não reconhecido
+2025-08-12 13:37:04,123 - INFO - 🧹 CSV limpo: 67 linhas
+2025-08-12 13:37:04,124 - INFO - ✅ Resposta validada: 67 linhas encontradas
+2025-08-12 13:37:04,131 - INFO - 🧹 CSV limpo: 80 linhas
+2025-08-12 13:37:04,132 - INFO - ✅ Resposta validada: 80 linhas encontradas
+2025-08-12 13:37:04,133 - INFO - 🧹 CSV limpo: 71 linhas
+2025-08-12 13:37:04,134 - INFO - ✅ Resposta validada: 71 linhas encontradas
+2025-08-12 13:37:04,136 - INFO - ✅ Arquivo CSV salvo: resultados_agrupamento/grupos_categoria_Química_e_Farmácia_DE_-_Desenvolvimento_Expe_Processo_sublote1.csv
+2025-08-12 13:37:04,137 - INFO - ✅ Arquivo CSV salvo: resultados_agrupamento/grupos_categoria_Química_e_Farmácia_DE_-_Desenvolvimento_Expe_Processo_sublote2.csv
+2025-08-12 13:37:04,138 - INFO - ✅ Arquivo CSV salvo: resultados_agrupamento/grupos_categoria_Química_e_Farmácia_DE_-_Desenvolvimento_Expe_Processo_sublote3.csv
+2025-08-12 13:37:04,139 - INFO - 💰 Uso da API monitorado: 3 requests, ~$0.10
+2025-08-12 13:58:30,001 - INFO - 📊 Dados iniciais limpos: 74466 registros
+2025-08-12 13:58:31,043 - INFO - 📊 Dados extraídos:
+2025-08-12 13:58:31,049 - INFO -    📋 CNPJs únicos: 5717
+2025-08-12 13:58:31,057 - INFO -    🏢 Razões sociais únicas: 5669
+2025-08-12 13:58:31,108 - INFO -    📄 Projetos multianuais: 54529
+2025-08-12 13:58:31,965 - INFO - 🔗 Projetos multianuais identificados:
+2025-08-12 13:58:31,967 - INFO -    📊 Grupos multianuais: 7434
+2025-08-12 13:58:31,968 - INFO -    📋 Total de registros multianuais: 17979
+2025-08-12 13:58:31,980 - INFO -    📄 Exemplo 1: Desenvolvimento de novas soluções voltadas ao aten... (3 anos: [np.float64(2020.0), np.float64(2021.0), np.float64(2023.0)])
+2025-08-12 13:58:31,982 - INFO -    📄 Exemplo 2: Desenvolvimento de soluções de atendimento integra... (5 anos: [np.float64(2019.0), np.float64(2020.0), np.float64(2021.0), np.float64(2022.0), np.float64(2023.0)])
+2025-08-12 13:58:31,982 - INFO -    📄 Exemplo 3: Desenvolvimento de soluções para atendimento de cl... (3 anos: [np.float64(2020.0), np.float64(2021.0), np.float64(2022.0)])
+2025-08-12 13:58:35,472 - INFO - ✅ Ligação automática aplicada:
+2025-08-12 13:58:35,473 - INFO -    🔗 Projetos ligados automaticamente: 17979
+2025-08-12 13:58:35,474 - INFO -    📊 Grupos multianuais criados: 7434
+2025-08-12 13:58:35,619 - INFO - 🧪 FILTRO TESTE aplicado:
+2025-08-12 13:58:35,619 - INFO -    🎯 Categoria selecionada: 'Química e Farmácia'
+2025-08-12 13:58:35,620 - INFO -    📊 Combinações antes do filtro: 63
+2025-08-12 13:58:35,621 - INFO -    📊 Combinações após filtro: 9
+2025-08-12 13:58:35,621 - INFO - 📋 Resumo da preparação:
+2025-08-12 13:58:35,622 - INFO -    📊 Total de registros processados: 74466
+2025-08-12 13:58:35,641 - INFO -    🔗 Registros multianuais (já ligados): 17979
+2025-08-12 13:58:35,641 - INFO -    🤖 Registros para LLM analisar: 56487
+2025-08-12 13:58:35,642 - INFO -    🏷️ Categorias para LLM processar: 9
+2025-08-12 13:58:35,643 - INFO -    📊 Maior categoria para LLM: 5734 projetos
+2025-08-12 13:58:35,644 - INFO -    📊 Média de projetos por categoria: 896.6
+2025-08-12 13:58:35,788 - INFO - 📄 Relatório de multianuais salvo: resultados_agrupamento/projetos_multianuais_identificados_20250812_135829.csv
+2025-08-12 13:58:44,616 - INFO - ✅ API Deepseek configurada com sucesso
+2025-08-12 13:58:44,619 - INFO - 💰 Estimativa de custo:
+2025-08-12 13:58:44,620 - INFO -    📊 Total de combinações: 9
+2025-08-12 13:58:44,621 - INFO -    📋 Total de projetos: 9517
+2025-08-12 13:58:44,621 - INFO -    🔤 Tokens estimados: 2,855,100
+2025-08-12 13:58:44,623 - INFO -    💵 Custo estimado: $4.00 USD
+2025-08-12 13:58:51,534 - INFO - 📋 Formatados 3 projetos para análise
+2025-08-12 13:58:51,545 - INFO - ✅ Tamanho do prompt OK: 1187 tokens estimados
+2025-08-12 13:58:57,246 - INFO - 🔍 Categoria filtrada: 1504 projetos
+2025-08-12 13:58:57,247 - INFO - 📅 Anos encontrados: [np.float64(2018.0), np.float64(2019.0), np.float64(2020.0), np.float64(2021.0), np.float64(2022.0), np.float64(2023.0)]
+2025-08-12 13:58:57,249 - INFO - 📦 Categoria dividida: 1504 projetos → 22 sub-lotes
+2025-08-12 13:58:57,250 - INFO -    🔗 Sobreposição: 10 projetos entre sub-lotes
+2025-08-12 13:58:57,275 - INFO - 🔍 Categoria filtrada: 5470 projetos
+2025-08-12 13:58:57,276 - INFO - 📅 Anos encontrados: [np.float64(2018.0), np.float64(2019.0), np.float64(2020.0), np.float64(2021.0), np.float64(2022.0), np.float64(2023.0)]
+2025-08-12 13:58:57,278 - INFO - 📦 Categoria dividida: 5470 projetos → 78 sub-lotes
+2025-08-12 13:58:57,280 - INFO -    🔗 Sobreposição: 10 projetos entre sub-lotes
+2025-08-12 13:58:57,293 - INFO - 🔍 Categoria filtrada: 135 projetos
+2025-08-12 13:58:57,294 - INFO - 📅 Anos encontrados: [np.float64(2018.0), np.float64(2019.0), np.float64(2020.0), np.float64(2021.0), np.float64(2022.0), np.float64(2023.0)]
+2025-08-12 13:58:57,295 - INFO - 📦 Categoria dividida: 135 projetos → 2 sub-lotes
+2025-08-12 13:58:57,295 - INFO -    🔗 Sobreposição: 10 projetos entre sub-lotes
+2025-08-12 13:58:57,310 - INFO - 🔍 Categoria filtrada: 518 projetos
+2025-08-12 13:58:57,311 - INFO - 📅 Anos encontrados: [np.float64(2018.0), np.float64(2019.0), np.float64(2020.0), np.float64(2021.0), np.float64(2022.0), np.float64(2023.0)]
+2025-08-12 13:58:57,312 - INFO - 📦 Categoria dividida: 518 projetos → 8 sub-lotes
+2025-08-12 13:58:57,312 - INFO -    🔗 Sobreposição: 10 projetos entre sub-lotes
+2025-08-12 13:58:57,329 - INFO - 🔍 Categoria filtrada: 1449 projetos
+2025-08-12 13:58:57,330 - INFO - 📅 Anos encontrados: [np.float64(2018.0), np.float64(2019.0), np.float64(2020.0), np.float64(2021.0), np.float64(2022.0), np.float64(2023.0)]
+2025-08-12 13:58:57,331 - INFO - 📦 Categoria dividida: 1449 projetos → 21 sub-lotes
+2025-08-12 13:58:57,332 - INFO -    🔗 Sobreposição: 10 projetos entre sub-lotes
+2025-08-12 13:58:57,346 - INFO - 🔍 Categoria filtrada: 43 projetos
+2025-08-12 13:58:57,346 - INFO - 📅 Anos encontrados: [np.float64(2018.0), np.float64(2019.0), np.float64(2020.0), np.float64(2021.0), np.float64(2022.0), np.float64(2023.0)]
+2025-08-12 13:58:57,361 - INFO - 🔍 Categoria filtrada: 50 projetos
+2025-08-12 13:58:57,362 - INFO - 📅 Anos encontrados: [np.float64(2018.0), np.float64(2019.0), np.float64(2020.0), np.float64(2021.0), np.float64(2022.0), np.float64(2023.0)]
+2025-08-12 13:58:57,376 - INFO - 🔍 Categoria filtrada: 308 projetos
+2025-08-12 13:58:57,376 - INFO - 📅 Anos encontrados: [np.float64(2018.0), np.float64(2019.0), np.float64(2020.0), np.float64(2021.0), np.float64(2022.0), np.float64(2023.0)]
+2025-08-12 13:58:57,377 - INFO - 📦 Categoria dividida: 308 projetos → 5 sub-lotes
+2025-08-12 13:58:57,378 - INFO -    🔗 Sobreposição: 10 projetos entre sub-lotes
+2025-08-12 13:58:57,391 - INFO - 🔍 Categoria filtrada: 40 projetos
+2025-08-12 13:58:57,392 - INFO - 📅 Anos encontrados: [np.float64(2018.0), np.float64(2019.0), np.float64(2020.0), np.float64(2023.0)]
+2025-08-12 13:58:57,392 - INFO - 📋 Plano por categoria criado: 139 itens
+2025-08-12 13:58:57,393 - INFO -    🟢 Categorias processadas completas: 3
+2025-08-12 13:58:57,394 - INFO -    🟡 Sub-lotes para merge posterior: 136
+2025-08-12 13:58:57,504 - INFO - 📄 Plano por categoria salvo: resultados_agrupamento/plano_processamento_categoria.csv
+2025-08-12 14:03:00,018 - INFO - ✅ API Deepseek configurada para uso assíncrono
+2025-08-12 14:03:00,019 - INFO - 📡 Loop de eventos já ativo, usando nest_asyncio
+2025-08-12 14:03:00,021 - INFO - 🧪 Modo teste ativado: processando apenas 5 itens
+2025-08-12 14:03:00,022 - INFO - 🚀 Iniciando processamento assíncrono de 5 itens...
+2025-08-12 14:03:00,023 - INFO - ⚡ Configuração: 3 requisições simultâneas, lotes de 5
+2025-08-12 14:03:00,024 - INFO - 📦 Divisão para processamento assíncrono: 5 itens → 1 lotes
+2025-08-12 14:03:00,025 - INFO - 
+============================================================
+2025-08-12 14:03:00,025 - INFO - 📦 Processando lote 1/1 (5 itens)
+2025-08-12 14:03:00,027 - INFO - 🔄 Processando async: Química e Farmácia - 71 projetos
+2025-08-12 14:03:00,034 - INFO - 📋 Formatados 71 projetos para análise
+2025-08-12 14:03:00,036 - INFO - ✅ Tamanho do prompt OK: 15908 tokens estimados
+2025-08-12 14:03:00,037 - INFO - 📤 Enviando para API Deepseek (async via thread)...
+2025-08-12 14:03:00,041 - INFO - 🔄 Processando async: Química e Farmácia - 81 projetos
+2025-08-12 14:03:00,049 - INFO - 📋 Formatados 81 projetos para análise
+2025-08-12 14:03:00,050 - INFO - ✅ Tamanho do prompt OK: 18357 tokens estimados
+2025-08-12 14:03:00,051 - INFO - 📤 Enviando para API Deepseek (async via thread)...
+2025-08-12 14:03:00,055 - INFO - 🔄 Processando async: Química e Farmácia - 81 projetos
+2025-08-12 14:03:00,063 - INFO - 📋 Formatados 81 projetos para análise
+2025-08-12 14:03:00,065 - INFO - ✅ Tamanho do prompt OK: 15304 tokens estimados
+2025-08-12 14:03:00,066 - INFO - 📤 Enviando para API Deepseek (async via thread)...
+2025-08-12 14:03:01,160 - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-08-12 14:03:01,210 - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-08-12 14:03:01,991 - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-08-12 14:04:24,518 - INFO - ✅ Resposta assíncrona recebida para Química e Farmácia
+2025-08-12 14:04:24,520 - INFO - 🔄 Processando async: Química e Farmácia - 81 projetos
+2025-08-12 14:04:24,531 - INFO - 📋 Formatados 81 projetos para análise
+2025-08-12 14:04:24,533 - INFO - ✅ Tamanho do prompt OK: 15375 tokens estimados
+2025-08-12 14:04:24,534 - INFO - 📤 Enviando para API Deepseek (async via thread)...
+2025-08-12 14:04:25,107 - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-08-12 14:04:44,092 - INFO - ✅ Resposta assíncrona recebida para Química e Farmácia
+2025-08-12 14:04:44,093 - INFO - 🔄 Processando async: Química e Farmácia - 81 projetos
+2025-08-12 14:04:44,105 - INFO - 📋 Formatados 81 projetos para análise
+2025-08-12 14:04:44,107 - INFO - ✅ Tamanho do prompt OK: 14454 tokens estimados
+2025-08-12 14:04:44,108 - INFO - 📤 Enviando para API Deepseek (async via thread)...
+2025-08-12 14:04:44,897 - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-08-12 14:05:01,427 - INFO - ✅ Resposta assíncrona recebida para Química e Farmácia
+2025-08-12 14:06:06,371 - INFO - ✅ Resposta assíncrona recebida para Química e Farmácia
+2025-08-12 14:06:24,855 - INFO - ✅ Resposta assíncrona recebida para Química e Farmácia
+2025-08-12 14:06:24,857 - INFO - ✅ Lote assíncrono concluído: 5/5 sucessos
+2025-08-12 14:06:24,858 - INFO - ✅ Lote 1 concluído: 5 sucessos
+2025-08-12 14:06:24,860 - INFO - 
+🎉 Processamento assíncrono concluído!
+2025-08-12 14:06:24,861 - INFO - ✅ Sucessos: 5/139
+2025-08-12 14:06:24,863 - INFO - 💾 Progresso salvo: resultados_agrupamento/progresso_20250812_140300.json
+2025-08-12 14:07:23,679 - INFO - 🧹 CSV limpo: 68 linhas
+2025-08-12 14:07:23,680 - INFO - ✅ Resposta validada: 68 linhas encontradas
+2025-08-12 14:07:23,681 - INFO - 🧹 CSV limpo: 80 linhas
+2025-08-12 14:07:23,682 - INFO - ✅ Resposta validada: 80 linhas encontradas
+2025-08-12 14:07:23,683 - INFO - 🧹 CSV limpo: 73 linhas
+2025-08-12 14:07:23,684 - INFO - ✅ Resposta validada: 73 linhas encontradas
+2025-08-12 14:07:23,686 - INFO - 🧹 CSV limpo: 73 linhas
+2025-08-12 14:07:23,687 - INFO - ✅ Resposta validada: 73 linhas encontradas
+2025-08-12 14:07:23,688 - INFO - 🧹 CSV limpo: 81 linhas
+2025-08-12 14:07:23,688 - INFO - ✅ Resposta validada: 81 linhas encontradas
+2025-08-12 14:07:23,690 - INFO - ✅ Arquivo CSV salvo: resultados_agrupamento/grupos_categoria_Química_e_Farmácia_DE_-_Desenvolvimento_Expe_Processo_sublote1.csv
+2025-08-12 14:07:23,691 - INFO - ✅ Arquivo CSV salvo: resultados_agrupamento/grupos_categoria_Química_e_Farmácia_DE_-_Desenvolvimento_Expe_Processo_sublote2.csv
+2025-08-12 14:07:23,692 - INFO - ✅ Arquivo CSV salvo: resultados_agrupamento/grupos_categoria_Química_e_Farmácia_DE_-_Desenvolvimento_Expe_Processo_sublote3.csv
+2025-08-12 14:07:23,694 - INFO - ✅ Arquivo CSV salvo: resultados_agrupamento/grupos_categoria_Química_e_Farmácia_DE_-_Desenvolvimento_Expe_Processo_sublote4.csv
+2025-08-12 14:07:23,695 - INFO - ✅ Arquivo CSV salvo: resultados_agrupamento/grupos_categoria_Química_e_Farmácia_DE_-_Desenvolvimento_Expe_Processo_sublote5.csv
+2025-08-12 14:07:23,696 - INFO - 💰 Uso da API monitorado: 5 requests, ~$0.17
+2025-08-12 14:20:06,961 - INFO - 🔗 Categorias que precisam de merge: 1
+2025-08-12 14:20:06,962 - INFO - 🔗 Fazendo merge da categoria: Química e Farmácia_DE - Desenvolvimento Experimental_Processo
+2025-08-12 14:20:06,972 - INFO - ✅ Merge concluído para Química e Farmácia_DE - Desenvolvimento Experimental_Processo: 331 projetos únicos.
+2025-08-12 14:20:06,973 - INFO - 🔗 Merge completo finalizado. Total de categorias processadas: 1
+2025-08-12 14:20:06,974 - INFO - 🔄 Iniciando consolidação completa...
+2025-08-12 14:20:07,100 - INFO - 📊 Consolidação finalizada: 18310 registros no total.
+2025-08-12 14:20:19,576 - ERROR - ❌ Erro na análise de qualidade: '>' not supported between instances of 'str' and 'int'
+2025-08-12 14:20:19,578 - ERROR - ❌ Erro ao calcular métricas: '>' not supported between instances of 'str' and 'int'
+2025-08-12 14:20:19,579 - ERROR - ❌ Erro ao gerar amostras: '>' not supported between instances of 'str' and 'int'
+2025-08-12 14:20:19,580 - INFO - 📋 Relatório de validação salvo: resultados_agrupamento/relatorio_validacao_20250812_142006.json
+2025-08-12 14:20:19,581 - INFO - 📄 Resumo salvo: resultados_agrupamento/resumo_validacao_20250812_142006.txt
+2025-08-12 14:22:54,016 - INFO - 📊 Qualidade analisada: 7500 grupos válidos
+2025-08-12 14:22:54,080 - INFO - 📊 Métricas calculadas:
+2025-08-12 14:22:54,082 - INFO -    📈 Cobertura: 100.00%
+2025-08-12 14:22:54,082 - INFO -    🎯 Densidade média: 2.4 projetos/grupo
+2025-08-12 14:22:54,117 - INFO - 📋 Geradas 5 amostras para validação
+2025-08-12 14:22:54,124 - INFO - 📋 Relatório de validação salvo: resultados_agrupamento/relatorio_validacao_20250812_142006.json
+2025-08-12 14:40:26,572 - INFO - 🚀 INICIANDO PIPELINE COMPLETO (Timestamp: 20250812_144026)
+2025-08-12 14:40:26,692 - INFO - 📊 Dados iniciais limpos: 74466 registros
+2025-08-12 14:40:27,653 - INFO - 📊 Dados extraídos:
+2025-08-12 14:40:27,661 - INFO -    📋 CNPJs únicos: 5717
+2025-08-12 14:40:27,670 - INFO -    🏢 Razões sociais únicas: 5669
+2025-08-12 14:40:27,721 - INFO -    📄 Projetos multianuais: 54529
+2025-08-12 14:40:28,695 - INFO - 🔗 Projetos multianuais identificados:
+2025-08-12 14:40:28,696 - INFO -    📊 Grupos multianuais: 7434
+2025-08-12 14:40:28,698 - INFO -    📋 Total de registros multianuais: 17979
+2025-08-12 14:40:28,711 - INFO -    📄 Exemplo 1: Desenvolvimento de novas soluções voltadas ao aten... (3 anos: [np.float64(2020.0), np.float64(2021.0), np.float64(2023.0)])
+2025-08-12 14:40:28,711 - INFO -    📄 Exemplo 2: Desenvolvimento de soluções de atendimento integra... (5 anos: [np.float64(2019.0), np.float64(2020.0), np.float64(2021.0), np.float64(2022.0), np.float64(2023.0)])
+2025-08-12 14:40:28,712 - INFO -    📄 Exemplo 3: Desenvolvimento de soluções para atendimento de cl... (3 anos: [np.float64(2020.0), np.float64(2021.0), np.float64(2022.0)])
+2025-08-12 14:40:32,169 - INFO - ✅ Ligação automática aplicada:
+2025-08-12 14:40:32,171 - INFO -    🔗 Projetos ligados automaticamente: 17979
+2025-08-12 14:40:32,172 - INFO -    📊 Grupos multianuais criados: 7434
+2025-08-12 14:40:32,303 - INFO - 🧪 FILTRO TESTE aplicado:
+2025-08-12 14:40:32,304 - INFO -    🎯 Categoria selecionada: 'Química e Farmácia'
+2025-08-12 14:40:32,305 - INFO -    📊 Combinações antes do filtro: 63
+2025-08-12 14:40:32,305 - INFO -    📊 Combinações após filtro: 9
+2025-08-12 14:40:32,306 - INFO - 📋 Resumo da preparação:
+2025-08-12 14:40:32,306 - INFO -    📊 Total de registros processados: 74466
+2025-08-12 14:40:32,325 - INFO -    🔗 Registros multianuais (já ligados): 17979
+2025-08-12 14:40:32,327 - INFO -    🤖 Registros para LLM analisar: 56487
+2025-08-12 14:40:32,327 - INFO -    🏷️ Categorias para LLM processar: 9
+2025-08-12 14:40:32,328 - INFO -    📊 Maior categoria para LLM: 5734 projetos
+2025-08-12 14:40:32,329 - INFO -    📊 Média de projetos por categoria: 896.6
+2025-08-12 14:40:32,372 - INFO - 🔍 Categoria filtrada: 1504 projetos
+2025-08-12 14:40:32,373 - INFO - 📅 Anos encontrados: [np.float64(2018.0), np.float64(2019.0), np.float64(2020.0), np.float64(2021.0), np.float64(2022.0), np.float64(2023.0)]
+2025-08-12 14:40:32,374 - INFO - 📦 Categoria dividida: 1504 projetos → 22 sub-lotes
+2025-08-12 14:40:32,375 - INFO -    🔗 Sobreposição: 10 projetos entre sub-lotes
+2025-08-12 14:40:32,396 - INFO - 🔍 Categoria filtrada: 5470 projetos
+2025-08-12 14:40:32,397 - INFO - 📅 Anos encontrados: [np.float64(2018.0), np.float64(2019.0), np.float64(2020.0), np.float64(2021.0), np.float64(2022.0), np.float64(2023.0)]
+2025-08-12 14:40:32,399 - INFO - 📦 Categoria dividida: 5470 projetos → 78 sub-lotes
+2025-08-12 14:40:32,401 - INFO -    🔗 Sobreposição: 10 projetos entre sub-lotes
+2025-08-12 14:40:32,414 - INFO - 🔍 Categoria filtrada: 135 projetos
+2025-08-12 14:40:32,415 - INFO - 📅 Anos encontrados: [np.float64(2018.0), np.float64(2019.0), np.float64(2020.0), np.float64(2021.0), np.float64(2022.0), np.float64(2023.0)]
+2025-08-12 14:40:32,416 - INFO - 📦 Categoria dividida: 135 projetos → 2 sub-lotes
+2025-08-12 14:40:32,416 - INFO -    🔗 Sobreposição: 10 projetos entre sub-lotes
+2025-08-12 14:40:32,432 - INFO - 🔍 Categoria filtrada: 518 projetos
+2025-08-12 14:40:32,432 - INFO - 📅 Anos encontrados: [np.float64(2018.0), np.float64(2019.0), np.float64(2020.0), np.float64(2021.0), np.float64(2022.0), np.float64(2023.0)]
+2025-08-12 14:40:32,433 - INFO - 📦 Categoria dividida: 518 projetos → 8 sub-lotes
+2025-08-12 14:40:32,434 - INFO -    🔗 Sobreposição: 10 projetos entre sub-lotes
+2025-08-12 14:40:32,450 - INFO - 🔍 Categoria filtrada: 1449 projetos
+2025-08-12 14:40:32,451 - INFO - 📅 Anos encontrados: [np.float64(2018.0), np.float64(2019.0), np.float64(2020.0), np.float64(2021.0), np.float64(2022.0), np.float64(2023.0)]
+2025-08-12 14:40:32,452 - INFO - 📦 Categoria dividida: 1449 projetos → 21 sub-lotes
+2025-08-12 14:40:32,452 - INFO -    🔗 Sobreposição: 10 projetos entre sub-lotes
+2025-08-12 14:40:32,466 - INFO - 🔍 Categoria filtrada: 43 projetos
+2025-08-12 14:40:32,467 - INFO - 📅 Anos encontrados: [np.float64(2018.0), np.float64(2019.0), np.float64(2020.0), np.float64(2021.0), np.float64(2022.0), np.float64(2023.0)]
+2025-08-12 14:40:32,480 - INFO - 🔍 Categoria filtrada: 50 projetos
+2025-08-12 14:40:32,481 - INFO - 📅 Anos encontrados: [np.float64(2018.0), np.float64(2019.0), np.float64(2020.0), np.float64(2021.0), np.float64(2022.0), np.float64(2023.0)]
+2025-08-12 14:40:32,494 - INFO - 🔍 Categoria filtrada: 308 projetos
+2025-08-12 14:40:32,495 - INFO - 📅 Anos encontrados: [np.float64(2018.0), np.float64(2019.0), np.float64(2020.0), np.float64(2021.0), np.float64(2022.0), np.float64(2023.0)]
+2025-08-12 14:40:32,496 - INFO - 📦 Categoria dividida: 308 projetos → 5 sub-lotes
+2025-08-12 14:40:32,496 - INFO -    🔗 Sobreposição: 10 projetos entre sub-lotes
+2025-08-12 14:40:32,510 - INFO - 🔍 Categoria filtrada: 40 projetos
+2025-08-12 14:40:32,510 - INFO - 📅 Anos encontrados: [np.float64(2018.0), np.float64(2019.0), np.float64(2020.0), np.float64(2023.0)]
+2025-08-12 14:40:32,511 - INFO - 📋 Plano por categoria criado: 139 itens
+2025-08-12 14:40:32,512 - INFO -    🟢 Categorias processadas completas: 3
+2025-08-12 14:40:32,512 - INFO -    🟡 Sub-lotes para merge posterior: 136
+2025-08-12 14:40:32,513 - INFO - ✅ API Deepseek configurada para uso assíncrono
+2025-08-12 14:40:32,514 - INFO - 📡 Loop de eventos já ativo, usando nest_asyncio
+2025-08-12 14:40:32,516 - INFO - 🧪 Modo teste ativado: processando apenas 3 itens
+2025-08-12 14:40:32,516 - INFO - 🚀 Iniciando processamento assíncrono de 3 itens...
+2025-08-12 14:40:32,517 - INFO - ⚡ Configuração: 3 requisições simultâneas, lotes de 5
+2025-08-12 14:40:32,518 - INFO - 📦 Divisão para processamento assíncrono: 3 itens → 1 lotes
+2025-08-12 14:40:32,518 - INFO - 
+============================================================
+2025-08-12 14:40:32,519 - INFO - 📦 Processando lote 1/1 (3 itens)
+2025-08-12 14:40:32,521 - INFO - 🔄 Processando async: Química e Farmácia - 71 projetos
+2025-08-12 14:40:32,524 - INFO - 📋 Formatados 71 projetos para análise
+2025-08-12 14:40:32,525 - INFO - ✅ Tamanho do prompt OK: 15908 tokens estimados
+2025-08-12 14:40:32,526 - INFO - 📤 Enviando para API Deepseek (async via thread)...
+2025-08-12 14:40:32,528 - INFO - 🔄 Processando async: Química e Farmácia - 81 projetos
+2025-08-12 14:40:32,533 - INFO - 📋 Formatados 81 projetos para análise
+2025-08-12 14:40:32,535 - INFO - ✅ Tamanho do prompt OK: 18357 tokens estimados
+2025-08-12 14:40:32,536 - INFO - 📤 Enviando para API Deepseek (async via thread)...
+2025-08-12 14:40:32,538 - INFO - 🔄 Processando async: Química e Farmácia - 81 projetos
+2025-08-12 14:40:32,543 - INFO - 📋 Formatados 81 projetos para análise
+2025-08-12 14:40:32,544 - INFO - ✅ Tamanho do prompt OK: 15304 tokens estimados
+2025-08-12 14:40:32,545 - INFO - 📤 Enviando para API Deepseek (async via thread)...
+2025-08-12 14:40:33,523 - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-08-12 14:40:33,664 - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-08-12 14:40:33,757 - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-08-12 14:41:52,604 - INFO - ✅ Resposta assíncrona recebida para Química e Farmácia
+2025-08-12 14:41:56,997 - INFO - ✅ Resposta assíncrona recebida para Química e Farmácia
+2025-08-12 14:42:03,739 - INFO - ✅ Resposta assíncrona recebida para Química e Farmácia
+2025-08-12 14:42:03,741 - INFO - ✅ Lote assíncrono concluído: 3/3 sucessos
+2025-08-12 14:42:03,742 - INFO - ✅ Lote 1 concluído: 3 sucessos
+2025-08-12 14:42:03,744 - INFO - 
+🎉 Processamento assíncrono concluído!
+2025-08-12 14:42:03,745 - INFO - ✅ Sucessos: 3/139
+2025-08-12 14:42:03,746 - INFO - 🧹 CSV limpo: 71 linhas
+2025-08-12 14:42:03,746 - INFO - ✅ Resposta validada: 71 linhas encontradas
+2025-08-12 14:42:03,747 - INFO - 🧹 CSV limpo: 74 linhas
+2025-08-12 14:42:03,748 - INFO - ✅ Resposta validada: 74 linhas encontradas
+2025-08-12 14:42:03,749 - INFO - 🧹 CSV limpo: 83 linhas
+2025-08-12 14:42:03,750 - INFO - ✅ Resposta validada: 83 linhas encontradas
+2025-08-12 14:42:03,752 - INFO - ✅ Arquivo CSV salvo: resultados_agrupamento/grupos_categoria_Química_e_Farmácia_DE_-_Desenvolvimento_Expe_Processo_sublote1.csv
+2025-08-12 14:42:03,753 - INFO - ✅ Arquivo CSV salvo: resultados_agrupamento/grupos_categoria_Química_e_Farmácia_DE_-_Desenvolvimento_Expe_Processo_sublote2.csv
+2025-08-12 14:42:03,755 - INFO - ✅ Arquivo CSV salvo: resultados_agrupamento/grupos_categoria_Química_e_Farmácia_DE_-_Desenvolvimento_Expe_Processo_sublote3.csv
+2025-08-12 14:42:03,765 - INFO - 🔗 Categorias que precisam de merge: 1
+2025-08-12 14:42:03,766 - INFO - 🔗 Fazendo merge da categoria: Química e Farmácia_DE - Desenvolvimento Experimental_Processo
+2025-08-12 14:42:03,778 - INFO - ✅ Merge concluído para Química e Farmácia_DE - Desenvolvimento Experimental_Processo: 204 projetos únicos.
+2025-08-12 14:42:03,779 - INFO - 🔗 Merge completo finalizado. Total de categorias processadas: 1
+2025-08-12 14:42:03,780 - INFO - 🔄 Iniciando consolidação completa...
+2025-08-12 14:42:03,910 - INFO - 📊 Consolidação finalizada: 18183 registros no total.
+2025-08-12 14:42:09,886 - INFO - 📊 Métricas calculadas:
+2025-08-12 14:42:09,888 - INFO -    📈 Cobertura: 100.00%
+2025-08-12 14:42:09,889 - INFO -    🎯 Densidade média: 2.4 projetos/grupo
+2025-08-12 14:42:10,042 - INFO - 📊 Qualidade analisada: 7475 grupos válidos
+2025-08-12 14:42:10,081 - INFO - 📋 Geradas 5 amostras para validação
+2025-08-12 14:42:10,087 - INFO - 📋 Relatório de validação salvo: resultados_agrupamento/relatorio_validacao_20250812_144026.json
+2025-08-12 15:09:59,017 - INFO - 🔗 Fazendo merge da categoria: Química e Farmácia
+2025-08-12 15:09:59,019 - INFO - 🔄 Iniciando consolidação e enriquecimento de dados...
+2025-08-12 15:11:03,207 - INFO - 🚀 INICIANDO PIPELINE COMPLETO (Timestamp: 20250812_151103)
+2025-08-12 15:11:03,355 - INFO - 📊 Dados iniciais limpos: 74466 registros
+2025-08-12 15:11:04,325 - INFO - 📊 Dados extraídos:
+2025-08-12 15:11:04,334 - INFO -    📋 CNPJs únicos: 5717
+2025-08-12 15:11:04,343 - INFO -    🏢 Razões sociais únicas: 5669
+2025-08-12 15:11:04,394 - INFO -    📄 Projetos multianuais: 54529
+2025-08-12 15:11:05,376 - INFO - 🔗 Projetos multianuais identificados:
+2025-08-12 15:11:05,377 - INFO -    📊 Grupos multianuais: 7434
+2025-08-12 15:11:05,379 - INFO -    📋 Total de registros multianuais: 17979
+2025-08-12 15:11:05,416 - INFO -    📄 Exemplo 1: Desenvolvimento de novas soluções voltadas ao aten... (3 anos: [np.float64(2020.0), np.float64(2021.0), np.float64(2023.0)])
+2025-08-12 15:11:05,417 - INFO -    📄 Exemplo 2: Desenvolvimento de soluções de atendimento integra... (5 anos: [np.float64(2019.0), np.float64(2020.0), np.float64(2021.0), np.float64(2022.0), np.float64(2023.0)])
+2025-08-12 15:11:05,417 - INFO -    📄 Exemplo 3: Desenvolvimento de soluções para atendimento de cl... (3 anos: [np.float64(2020.0), np.float64(2021.0), np.float64(2022.0)])
+2025-08-12 15:11:08,880 - INFO - ✅ Ligação automática aplicada:
+2025-08-12 15:11:08,881 - INFO -    🔗 Projetos ligados automaticamente: 17979
+2025-08-12 15:11:08,882 - INFO -    📊 Grupos multianuais criados: 7434
+2025-08-12 15:11:09,094 - INFO - 🧪 FILTRO TESTE aplicado:
+2025-08-12 15:11:09,095 - INFO -    🎯 Categoria selecionada: 'Química e Farmácia'
+2025-08-12 15:11:09,095 - INFO -    📊 Combinações antes do filtro: 63
+2025-08-12 15:11:09,096 - INFO -    📊 Combinações após filtro: 9
+2025-08-12 15:11:09,097 - INFO - 📋 Resumo da preparação:
+2025-08-12 15:11:09,097 - INFO -    📊 Total de registros processados: 74466
+2025-08-12 15:11:09,136 - INFO -    🔗 Registros multianuais (já ligados): 17979
+2025-08-12 15:11:09,137 - INFO -    🤖 Registros para LLM analisar: 56487
+2025-08-12 15:11:09,138 - INFO -    🏷️ Categorias para LLM processar: 9
+2025-08-12 15:11:09,139 - INFO -    📊 Maior categoria para LLM: 5734 projetos
+2025-08-12 15:11:09,140 - INFO -    📊 Média de projetos por categoria: 896.6
+2025-08-12 15:11:09,180 - INFO - 🔍 Categoria filtrada: 1504 projetos
+2025-08-12 15:11:09,181 - INFO - 📅 Anos encontrados: [np.float64(2018.0), np.float64(2019.0), np.float64(2020.0), np.float64(2021.0), np.float64(2022.0), np.float64(2023.0)]
+2025-08-12 15:11:09,182 - INFO - 📦 Categoria dividida: 1504 projetos → 22 sub-lotes
+2025-08-12 15:11:09,182 - INFO -    🔗 Sobreposição: 10 projetos entre sub-lotes
+2025-08-12 15:11:09,204 - INFO - 🔍 Categoria filtrada: 5470 projetos
+2025-08-12 15:11:09,205 - INFO - 📅 Anos encontrados: [np.float64(2018.0), np.float64(2019.0), np.float64(2020.0), np.float64(2021.0), np.float64(2022.0), np.float64(2023.0)]
+2025-08-12 15:11:09,207 - INFO - 📦 Categoria dividida: 5470 projetos → 78 sub-lotes
+2025-08-12 15:11:09,208 - INFO -    🔗 Sobreposição: 10 projetos entre sub-lotes
+2025-08-12 15:11:09,222 - INFO - 🔍 Categoria filtrada: 135 projetos
+2025-08-12 15:11:09,222 - INFO - 📅 Anos encontrados: [np.float64(2018.0), np.float64(2019.0), np.float64(2020.0), np.float64(2021.0), np.float64(2022.0), np.float64(2023.0)]
+2025-08-12 15:11:09,223 - INFO - 📦 Categoria dividida: 135 projetos → 2 sub-lotes
+2025-08-12 15:11:09,224 - INFO -    🔗 Sobreposição: 10 projetos entre sub-lotes
+2025-08-12 15:11:09,239 - INFO - 🔍 Categoria filtrada: 518 projetos
+2025-08-12 15:11:09,240 - INFO - 📅 Anos encontrados: [np.float64(2018.0), np.float64(2019.0), np.float64(2020.0), np.float64(2021.0), np.float64(2022.0), np.float64(2023.0)]
+2025-08-12 15:11:09,241 - INFO - 📦 Categoria dividida: 518 projetos → 8 sub-lotes
+2025-08-12 15:11:09,241 - INFO -    🔗 Sobreposição: 10 projetos entre sub-lotes
+2025-08-12 15:11:09,257 - INFO - 🔍 Categoria filtrada: 1449 projetos
+2025-08-12 15:11:09,258 - INFO - 📅 Anos encontrados: [np.float64(2018.0), np.float64(2019.0), np.float64(2020.0), np.float64(2021.0), np.float64(2022.0), np.float64(2023.0)]
+2025-08-12 15:11:09,259 - INFO - 📦 Categoria dividida: 1449 projetos → 21 sub-lotes
+2025-08-12 15:11:09,259 - INFO -    🔗 Sobreposição: 10 projetos entre sub-lotes
+2025-08-12 15:11:09,273 - INFO - 🔍 Categoria filtrada: 43 projetos
+2025-08-12 15:11:09,274 - INFO - 📅 Anos encontrados: [np.float64(2018.0), np.float64(2019.0), np.float64(2020.0), np.float64(2021.0), np.float64(2022.0), np.float64(2023.0)]
+2025-08-12 15:11:09,287 - INFO - 🔍 Categoria filtrada: 50 projetos
+2025-08-12 15:11:09,288 - INFO - 📅 Anos encontrados: [np.float64(2018.0), np.float64(2019.0), np.float64(2020.0), np.float64(2021.0), np.float64(2022.0), np.float64(2023.0)]
+2025-08-12 15:11:09,302 - INFO - 🔍 Categoria filtrada: 308 projetos
+2025-08-12 15:11:09,303 - INFO - 📅 Anos encontrados: [np.float64(2018.0), np.float64(2019.0), np.float64(2020.0), np.float64(2021.0), np.float64(2022.0), np.float64(2023.0)]
+2025-08-12 15:11:09,304 - INFO - 📦 Categoria dividida: 308 projetos → 5 sub-lotes
+2025-08-12 15:11:09,305 - INFO -    🔗 Sobreposição: 10 projetos entre sub-lotes
+2025-08-12 15:11:09,318 - INFO - 🔍 Categoria filtrada: 40 projetos
+2025-08-12 15:11:09,319 - INFO - 📅 Anos encontrados: [np.float64(2018.0), np.float64(2019.0), np.float64(2020.0), np.float64(2023.0)]
+2025-08-12 15:11:09,319 - INFO - 📋 Plano por categoria criado: 139 itens
+2025-08-12 15:11:09,320 - INFO -    🟢 Categorias processadas completas: 3
+2025-08-12 15:11:09,321 - INFO -    🟡 Sub-lotes para merge posterior: 136
+2025-08-12 15:11:09,322 - INFO - ✅ API Deepseek configurada para uso assíncrono
+2025-08-12 15:11:09,323 - INFO - 📡 Loop de eventos já ativo, usando nest_asyncio
+2025-08-12 15:11:09,324 - INFO - 🧪 Modo teste ativado: processando apenas 3 itens
+2025-08-12 15:11:09,325 - INFO - 🚀 Iniciando processamento assíncrono de 3 itens...
+2025-08-12 15:11:09,325 - INFO - ⚡ Configuração: 3 requisições simultâneas, lotes de 5
+2025-08-12 15:11:09,326 - INFO - 📦 Divisão para processamento assíncrono: 3 itens → 1 lotes
+2025-08-12 15:11:09,327 - INFO - 
+============================================================
+2025-08-12 15:11:09,327 - INFO - 📦 Processando lote 1/1 (3 itens)
+2025-08-12 15:11:09,329 - INFO - 🔄 Processando async: Química e Farmácia - 71 projetos
+2025-08-12 15:11:09,332 - INFO - 📋 Formatados 71 projetos para análise
+2025-08-12 15:11:09,333 - INFO - ✅ Tamanho do prompt OK: 15908 tokens estimados
+2025-08-12 15:11:09,334 - INFO - 📤 Enviando para API Deepseek (async via thread)...
+2025-08-12 15:11:09,336 - INFO - 🔄 Processando async: Química e Farmácia - 81 projetos
+2025-08-12 15:11:09,341 - INFO - 📋 Formatados 81 projetos para análise
+2025-08-12 15:11:09,343 - INFO - ✅ Tamanho do prompt OK: 18357 tokens estimados
+2025-08-12 15:11:09,343 - INFO - 📤 Enviando para API Deepseek (async via thread)...
+2025-08-12 15:11:09,346 - INFO - 🔄 Processando async: Química e Farmácia - 81 projetos
+2025-08-12 15:11:09,351 - INFO - 📋 Formatados 81 projetos para análise
+2025-08-12 15:11:09,352 - INFO - ✅ Tamanho do prompt OK: 15304 tokens estimados
+2025-08-12 15:11:09,353 - INFO - 📤 Enviando para API Deepseek (async via thread)...
+2025-08-12 15:11:10,547 - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-08-12 15:11:10,553 - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-08-12 15:11:10,581 - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-08-12 15:12:18,609 - INFO - ✅ Resposta assíncrona recebida para Química e Farmácia
+2025-08-12 15:12:36,362 - INFO - ✅ Resposta assíncrona recebida para Química e Farmácia
+2025-08-12 15:12:40,964 - INFO - ✅ Resposta assíncrona recebida para Química e Farmácia
+2025-08-12 15:12:40,973 - INFO - ✅ Lote assíncrono concluído: 3/3 sucessos
+2025-08-12 15:12:40,974 - INFO - ✅ Lote 1 concluído: 3 sucessos
+2025-08-12 15:12:40,976 - INFO - 
+🎉 Processamento assíncrono concluído!
+2025-08-12 15:12:40,977 - INFO - ✅ Sucessos: 3/139
+2025-08-12 15:12:40,978 - INFO - 🧹 CSV limpo: 66 linhas
+2025-08-12 15:12:40,979 - INFO - ✅ Resposta validada: 66 linhas encontradas
+2025-08-12 15:12:40,980 - INFO - 🧹 CSV limpo: 79 linhas
+2025-08-12 15:12:40,981 - INFO - ✅ Resposta validada: 79 linhas encontradas
+2025-08-12 15:12:40,983 - INFO - 🧹 CSV limpo: 80 linhas
+2025-08-12 15:12:40,983 - INFO - ✅ Resposta validada: 80 linhas encontradas
+2025-08-12 15:12:40,985 - INFO - ✅ Arquivo CSV salvo: resultados_agrupamento/grupos_categoria_Química_e_Farmácia_DE_-_Desenvolvimento_Expe_Processo_sublote1.csv
+2025-08-12 15:12:40,986 - INFO - ✅ Arquivo CSV salvo: resultados_agrupamento/grupos_categoria_Química_e_Farmácia_DE_-_Desenvolvimento_Expe_Processo_sublote2.csv
+2025-08-12 15:12:40,987 - INFO - ✅ Arquivo CSV salvo: resultados_agrupamento/grupos_categoria_Química_e_Farmácia_DE_-_Desenvolvimento_Expe_Processo_sublote3.csv
+2025-08-12 15:12:40,998 - INFO - 🔗 Fazendo merge da categoria: Química e Farmácia
+2025-08-12 15:12:41,000 - INFO - 🔄 Iniciando consolidação e enriquecimento de dados...
+2025-08-12 15:35:56,299 - INFO - 🚀 INICIANDO PIPELINE COMPLETO (Timestamp: 20250812_153556)
+2025-08-12 15:35:56,429 - INFO - 📊 Dados iniciais limpos: 74466 registros
+2025-08-12 15:35:57,405 - INFO - 📊 Dados extraídos:
+2025-08-12 15:35:57,413 - INFO -    📋 CNPJs únicos: 5717
+2025-08-12 15:35:57,422 - INFO -    🏢 Razões sociais únicas: 5669
+2025-08-12 15:35:57,475 - INFO -    📄 Projetos multianuais: 54529
+2025-08-12 15:35:58,452 - INFO - 🔗 Projetos multianuais identificados:
+2025-08-12 15:35:58,454 - INFO -    📊 Grupos multianuais: 7434
+2025-08-12 15:35:58,455 - INFO -    📋 Total de registros multianuais: 17979
+2025-08-12 15:35:58,508 - INFO -    📄 Exemplo 1: Desenvolvimento de novas soluções voltadas ao aten... (3 anos: [np.float64(2020.0), np.float64(2021.0), np.float64(2023.0)])
+2025-08-12 15:35:58,509 - INFO -    📄 Exemplo 2: Desenvolvimento de soluções de atendimento integra... (5 anos: [np.float64(2019.0), np.float64(2020.0), np.float64(2021.0), np.float64(2022.0), np.float64(2023.0)])
+2025-08-12 15:35:58,510 - INFO -    📄 Exemplo 3: Desenvolvimento de soluções para atendimento de cl... (3 anos: [np.float64(2020.0), np.float64(2021.0), np.float64(2022.0)])
+2025-08-12 15:36:02,007 - INFO - ✅ Ligação automática aplicada:
+2025-08-12 15:36:02,008 - INFO -    🔗 Projetos ligados automaticamente: 17979
+2025-08-12 15:36:02,009 - INFO -    📊 Grupos multianuais criados: 7434
+2025-08-12 15:36:02,202 - INFO - 🧪 FILTRO TESTE aplicado:
+2025-08-12 15:36:02,203 - INFO -    🎯 Categoria selecionada: 'Química e Farmácia'
+2025-08-12 15:36:02,204 - INFO -    📊 Combinações antes do filtro: 63
+2025-08-12 15:36:02,204 - INFO -    📊 Combinações após filtro: 9
+2025-08-12 15:36:02,205 - INFO - 📋 Resumo da preparação:
+2025-08-12 15:36:02,206 - INFO -    📊 Total de registros processados: 74466
+2025-08-12 15:36:02,234 - INFO -    🔗 Registros multianuais (já ligados): 17979
+2025-08-12 15:36:02,236 - INFO -    🤖 Registros para LLM analisar: 56487
+2025-08-12 15:36:02,237 - INFO -    🏷️ Categorias para LLM processar: 9
+2025-08-12 15:36:02,237 - INFO -    📊 Maior categoria para LLM: 5734 projetos
+2025-08-12 15:36:02,238 - INFO -    📊 Média de projetos por categoria: 896.6
+2025-08-12 15:36:02,280 - INFO - 🔍 Categoria filtrada: 1504 projetos
+2025-08-12 15:36:02,281 - INFO - 📅 Anos encontrados: [np.float64(2018.0), np.float64(2019.0), np.float64(2020.0), np.float64(2021.0), np.float64(2022.0), np.float64(2023.0)]
+2025-08-12 15:36:02,282 - INFO - 📦 Categoria dividida: 1504 projetos → 22 sub-lotes
+2025-08-12 15:36:02,283 - INFO -    🔗 Sobreposição: 10 projetos entre sub-lotes
+2025-08-12 15:36:02,305 - INFO - 🔍 Categoria filtrada: 5470 projetos
+2025-08-12 15:36:02,306 - INFO - 📅 Anos encontrados: [np.float64(2018.0), np.float64(2019.0), np.float64(2020.0), np.float64(2021.0), np.float64(2022.0), np.float64(2023.0)]
+2025-08-12 15:36:02,308 - INFO - 📦 Categoria dividida: 5470 projetos → 78 sub-lotes
+2025-08-12 15:36:02,309 - INFO -    🔗 Sobreposição: 10 projetos entre sub-lotes
+2025-08-12 15:36:02,323 - INFO - 🔍 Categoria filtrada: 135 projetos
+2025-08-12 15:36:02,324 - INFO - 📅 Anos encontrados: [np.float64(2018.0), np.float64(2019.0), np.float64(2020.0), np.float64(2021.0), np.float64(2022.0), np.float64(2023.0)]
+2025-08-12 15:36:02,324 - INFO - 📦 Categoria dividida: 135 projetos → 2 sub-lotes
+2025-08-12 15:36:02,325 - INFO -    🔗 Sobreposição: 10 projetos entre sub-lotes
+2025-08-12 15:36:02,341 - INFO - 🔍 Categoria filtrada: 518 projetos
+2025-08-12 15:36:02,342 - INFO - 📅 Anos encontrados: [np.float64(2018.0), np.float64(2019.0), np.float64(2020.0), np.float64(2021.0), np.float64(2022.0), np.float64(2023.0)]
+2025-08-12 15:36:02,342 - INFO - 📦 Categoria dividida: 518 projetos → 8 sub-lotes
+2025-08-12 15:36:02,344 - INFO -    🔗 Sobreposição: 10 projetos entre sub-lotes
+2025-08-12 15:36:02,360 - INFO - 🔍 Categoria filtrada: 1449 projetos
+2025-08-12 15:36:02,360 - INFO - 📅 Anos encontrados: [np.float64(2018.0), np.float64(2019.0), np.float64(2020.0), np.float64(2021.0), np.float64(2022.0), np.float64(2023.0)]
+2025-08-12 15:36:02,362 - INFO - 📦 Categoria dividida: 1449 projetos → 21 sub-lotes
+2025-08-12 15:36:02,362 - INFO -    🔗 Sobreposição: 10 projetos entre sub-lotes
+2025-08-12 15:36:02,376 - INFO - 🔍 Categoria filtrada: 43 projetos
+2025-08-12 15:36:02,377 - INFO - 📅 Anos encontrados: [np.float64(2018.0), np.float64(2019.0), np.float64(2020.0), np.float64(2021.0), np.float64(2022.0), np.float64(2023.0)]
+2025-08-12 15:36:02,390 - INFO - 🔍 Categoria filtrada: 50 projetos
+2025-08-12 15:36:02,390 - INFO - 📅 Anos encontrados: [np.float64(2018.0), np.float64(2019.0), np.float64(2020.0), np.float64(2021.0), np.float64(2022.0), np.float64(2023.0)]
+2025-08-12 15:36:02,404 - INFO - 🔍 Categoria filtrada: 308 projetos
+2025-08-12 15:36:02,405 - INFO - 📅 Anos encontrados: [np.float64(2018.0), np.float64(2019.0), np.float64(2020.0), np.float64(2021.0), np.float64(2022.0), np.float64(2023.0)]
+2025-08-12 15:36:02,406 - INFO - 📦 Categoria dividida: 308 projetos → 5 sub-lotes
+2025-08-12 15:36:02,407 - INFO -    🔗 Sobreposição: 10 projetos entre sub-lotes
+2025-08-12 15:36:02,420 - INFO - 🔍 Categoria filtrada: 40 projetos
+2025-08-12 15:36:02,420 - INFO - 📅 Anos encontrados: [np.float64(2018.0), np.float64(2019.0), np.float64(2020.0), np.float64(2023.0)]
+2025-08-12 15:36:02,421 - INFO - 📋 Plano por categoria criado: 139 itens
+2025-08-12 15:36:02,422 - INFO -    🟢 Categorias processadas completas: 3
+2025-08-12 15:36:02,423 - INFO -    🟡 Sub-lotes para merge posterior: 136
+2025-08-12 15:36:02,424 - INFO - ✅ API Deepseek configurada para uso assíncrono
+2025-08-12 15:36:02,425 - INFO - 📡 Loop de eventos já ativo, usando nest_asyncio
+2025-08-12 15:36:02,426 - INFO - 🧪 Modo teste ativado: processando apenas 3 itens
+2025-08-12 15:36:02,427 - INFO - 🚀 Iniciando processamento assíncrono de 3 itens...
+2025-08-12 15:36:02,427 - INFO - ⚡ Configuração: 3 requisições simultâneas, lotes de 5
+2025-08-12 15:36:02,428 - INFO - 📦 Divisão para processamento assíncrono: 3 itens → 1 lotes
+2025-08-12 15:36:02,428 - INFO - 
+============================================================
+2025-08-12 15:36:02,429 - INFO - 📦 Processando lote 1/1 (3 itens)
+2025-08-12 15:36:02,431 - INFO - 🔄 Processando async: Química e Farmácia - 71 projetos
+2025-08-12 15:36:02,434 - INFO - 📋 Formatados 71 projetos para análise
+2025-08-12 15:36:02,435 - INFO - ✅ Tamanho do prompt OK: 15908 tokens estimados
+2025-08-12 15:36:02,436 - INFO - 📤 Enviando para API Deepseek (async via thread)...
+2025-08-12 15:36:02,438 - INFO - 🔄 Processando async: Química e Farmácia - 81 projetos
+2025-08-12 15:36:02,444 - INFO - 📋 Formatados 81 projetos para análise
+2025-08-12 15:36:02,445 - INFO - ✅ Tamanho do prompt OK: 18357 tokens estimados
+2025-08-12 15:36:02,446 - INFO - 📤 Enviando para API Deepseek (async via thread)...
+2025-08-12 15:36:02,450 - INFO - 🔄 Processando async: Química e Farmácia - 81 projetos
+2025-08-12 15:36:02,454 - INFO - 📋 Formatados 81 projetos para análise
+2025-08-12 15:36:02,455 - INFO - ✅ Tamanho do prompt OK: 15304 tokens estimados
+2025-08-12 15:36:02,456 - INFO - 📤 Enviando para API Deepseek (async via thread)...
+2025-08-12 15:36:03,708 - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-08-12 15:36:03,789 - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-08-12 15:36:03,970 - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-08-12 15:37:25,786 - INFO - ✅ Resposta assíncrona recebida para Química e Farmácia
+2025-08-12 15:37:31,726 - INFO - ✅ Resposta assíncrona recebida para Química e Farmácia
+2025-08-12 15:37:37,190 - INFO - ✅ Resposta assíncrona recebida para Química e Farmácia
+2025-08-12 15:37:37,191 - INFO - ✅ Lote assíncrono concluído: 3/3 sucessos
+2025-08-12 15:37:37,192 - INFO - ✅ Lote 1 concluído: 3 sucessos
+2025-08-12 15:37:37,194 - INFO - 
+🎉 Processamento assíncrono concluído!
+2025-08-12 15:37:37,195 - INFO - ✅ Sucessos: 3/139
+2025-08-12 15:37:37,196 - INFO - 🧹 CSV limpo: 70 linhas
+2025-08-12 15:37:37,197 - INFO - ✅ Resposta validada: 70 linhas encontradas
+2025-08-12 15:37:37,199 - INFO - 🧹 CSV limpo: 80 linhas
+2025-08-12 15:37:37,200 - INFO - ✅ Resposta validada: 80 linhas encontradas
+2025-08-12 15:37:37,200 - INFO - 🧹 CSV limpo: 83 linhas
+2025-08-12 15:37:37,202 - INFO - ✅ Resposta validada: 83 linhas encontradas
+2025-08-12 15:37:37,203 - INFO - ✅ Arquivo CSV salvo: resultados_agrupamento/grupos_categoria_Química_e_Farmácia_DE_-_Desenvolvimento_Expe_Processo_sublote1.csv
+2025-08-12 15:37:37,204 - INFO - ✅ Arquivo CSV salvo: resultados_agrupamento/grupos_categoria_Química_e_Farmácia_DE_-_Desenvolvimento_Expe_Processo_sublote2.csv
+2025-08-12 15:37:37,206 - INFO - ✅ Arquivo CSV salvo: resultados_agrupamento/grupos_categoria_Química_e_Farmácia_DE_-_Desenvolvimento_Expe_Processo_sublote3.csv
+2025-08-12 15:37:37,220 - INFO - 🔗 Fazendo merge da categoria: Química e Farmácia
+2025-08-12 15:37:37,223 - INFO - 🔄 Iniciando consolidação e enriquecimento de dados...

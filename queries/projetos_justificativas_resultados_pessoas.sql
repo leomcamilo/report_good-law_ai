@@ -210,5 +210,5 @@ left join(
 			where hsa2.cdtiposituacaomarco = 36
 			group by hsa2.idmarcoanalise )		
 		) ra_hsa on ra_hsa.idmarcoanalise = ra_ma.idmarcoanalise 
-where lst.nranobase = 2020
+where daproj.iddadoanaliseprojeto = '101892' OR daproj.iddadoanaliseprojeto = '110624' OR daproj.iddadoanaliseprojeto = '100723';
 --where do_setor.nosetor = 'Remediation'
