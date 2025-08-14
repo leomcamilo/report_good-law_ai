@@ -1,0 +1,574 @@
+[
+  {
+    "combinacao": {
+      "setor": "Metalurgia e Mineração",
+      "tipo_pesquisa": "DE - Desenvolvimento Experimental",
+      "natureza": "Processo",
+      "count": 1868
+    },
+    "arquivo_saida": "grupos_categoria_Metalurgia_e_Mineração_DE_-_Desenvolvimento_Expe_Processo_sublote1.csv",
+    "total_projetos": 142,
+    "resposta_length": 8869,
+    "requer_merge": true,
+    "timestamp": "2025-08-14T16:47:38.138820"
+  },
+  {
+    "combinacao": {
+      "setor": "Metalurgia e Mineração",
+      "tipo_pesquisa": "DE - Desenvolvimento Experimental",
+      "natureza": "Processo",
+      "count": 1868
+    },
+    "arquivo_saida": "grupos_categoria_Metalurgia_e_Mineração_DE_-_Desenvolvimento_Expe_Processo_sublote2.csv",
+    "total_projetos": 162,
+    "resposta_length": 9805,
+    "requer_merge": true,
+    "timestamp": "2025-08-14T16:47:38.138849"
+  },
+  {
+    "combinacao": {
+      "setor": "Metalurgia e Mineração",
+      "tipo_pesquisa": "DE - Desenvolvimento Experimental",
+      "natureza": "Processo",
+      "count": 1868
+    },
+    "arquivo_saida": "grupos_categoria_Metalurgia_e_Mineração_DE_-_Desenvolvimento_Expe_Processo_sublote3.csv",
+    "total_projetos": 162,
+    "resposta_length": 6742,
+    "requer_merge": true,
+    "timestamp": "2025-08-14T16:47:38.138860"
+  },
+  {
+    "combinacao": {
+      "setor": "Metalurgia e Mineração",
+      "tipo_pesquisa": "DE - Desenvolvimento Experimental",
+      "natureza": "Processo",
+      "count": 1868
+    },
+    "arquivo_saida": "grupos_categoria_Metalurgia_e_Mineração_DE_-_Desenvolvimento_Expe_Processo_sublote4.csv",
+    "total_projetos": 162,
+    "resposta_length": 12709,
+    "requer_merge": true,
+    "timestamp": "2025-08-14T16:47:38.138867"
+  },
+  {
+    "combinacao": {
+      "setor": "Metalurgia e Mineração",
+      "tipo_pesquisa": "DE - Desenvolvimento Experimental",
+      "natureza": "Processo",
+      "count": 1868
+    },
+    "arquivo_saida": "grupos_categoria_Metalurgia_e_Mineração_DE_-_Desenvolvimento_Expe_Processo_sublote5.csv",
+    "total_projetos": 162,
+    "resposta_length": 4436,
+    "requer_merge": true,
+    "timestamp": "2025-08-14T16:47:38.138874"
+  },
+  {
+    "combinacao": {
+      "setor": "Metalurgia e Mineração",
+      "tipo_pesquisa": "DE - Desenvolvimento Experimental",
+      "natureza": "Processo",
+      "count": 1868
+    },
+    "arquivo_saida": "grupos_categoria_Metalurgia_e_Mineração_DE_-_Desenvolvimento_Expe_Processo_sublote6.csv",
+    "total_projetos": 162,
+    "resposta_length": 4077,
+    "requer_merge": true,
+    "timestamp": "2025-08-14T16:47:38.138882"
+  },
+  {
+    "combinacao": {
+      "setor": "Metalurgia e Mineração",
+      "tipo_pesquisa": "DE - Desenvolvimento Experimental",
+      "natureza": "Processo",
+      "count": 1868
+    },
+    "arquivo_saida": "grupos_categoria_Metalurgia_e_Mineração_DE_-_Desenvolvimento_Expe_Processo_sublote7.csv",
+    "total_projetos": 162,
+    "resposta_length": 4043,
+    "requer_merge": true,
+    "timestamp": "2025-08-14T16:47:38.138888"
+  },
+  {
+    "combinacao": {
+      "setor": "Metalurgia e Mineração",
+      "tipo_pesquisa": "DE - Desenvolvimento Experimental",
+      "natureza": "Processo",
+      "count": 1868
+    },
+    "arquivo_saida": "grupos_categoria_Metalurgia_e_Mineração_DE_-_Desenvolvimento_Expe_Processo_sublote8.csv",
+    "total_projetos": 162,
+    "resposta_length": 11341,
+    "requer_merge": true,
+    "timestamp": "2025-08-14T16:47:38.138894"
+  },
+  {
+    "combinacao": {
+      "setor": "Metalurgia e Mineração",
+      "tipo_pesquisa": "DE - Desenvolvimento Experimental",
+      "natureza": "Processo",
+      "count": 1868
+    },
+    "arquivo_saida": "grupos_categoria_Metalurgia_e_Mineração_DE_-_Desenvolvimento_Expe_Processo_sublote9.csv",
+    "total_projetos": 162,
+    "resposta_length": 8304,
+    "requer_merge": true,
+    "timestamp": "2025-08-14T16:47:38.138900"
+  },
+  {
+    "combinacao": {
+      "setor": "Metalurgia e Mineração",
+      "tipo_pesquisa": "DE - Desenvolvimento Experimental",
+      "natureza": "Processo",
+      "count": 1868
+    },
+    "arquivo_saida": "grupos_categoria_Metalurgia_e_Mineração_DE_-_Desenvolvimento_Expe_Processo_sublote10.csv",
+    "total_projetos": 162,
+    "resposta_length": 10232,
+    "requer_merge": true,
+    "timestamp": "2025-08-14T16:47:38.138906"
+  },
+  {
+    "combinacao": {
+      "setor": "Metalurgia e Mineração",
+      "tipo_pesquisa": "DE - Desenvolvimento Experimental",
+      "natureza": "Processo",
+      "count": 1868
+    },
+    "arquivo_saida": "grupos_categoria_Metalurgia_e_Mineração_DE_-_Desenvolvimento_Expe_Processo_sublote11.csv",
+    "total_projetos": 162,
+    "resposta_length": 8735,
+    "requer_merge": true,
+    "timestamp": "2025-08-14T16:47:38.138912"
+  },
+  {
+    "combinacao": {
+      "setor": "Metalurgia e Mineração",
+      "tipo_pesquisa": "DE - Desenvolvimento Experimental",
+      "natureza": "Processo",
+      "count": 1868
+    },
+    "arquivo_saida": "grupos_categoria_Metalurgia_e_Mineração_DE_-_Desenvolvimento_Expe_Processo_sublote12.csv",
+    "total_projetos": 162,
+    "resposta_length": 12069,
+    "requer_merge": true,
+    "timestamp": "2025-08-14T16:47:38.138918"
+  },
+  {
+    "combinacao": {
+      "setor": "Metalurgia e Mineração",
+      "tipo_pesquisa": "DE - Desenvolvimento Experimental",
+      "natureza": "Processo",
+      "count": 1868
+    },
+    "arquivo_saida": "grupos_categoria_Metalurgia_e_Mineração_DE_-_Desenvolvimento_Expe_Processo_sublote13.csv",
+    "total_projetos": 162,
+    "resposta_length": 7833,
+    "requer_merge": true,
+    "timestamp": "2025-08-14T16:47:38.138923"
+  },
+  {
+    "combinacao": {
+      "setor": "Metalurgia e Mineração",
+      "tipo_pesquisa": "DE - Desenvolvimento Experimental",
+      "natureza": "Processo",
+      "count": 1868
+    },
+    "arquivo_saida": "grupos_categoria_Metalurgia_e_Mineração_DE_-_Desenvolvimento_Expe_Processo_sublote14.csv",
+    "total_projetos": 42,
+    "resposta_length": 3217,
+    "requer_merge": true,
+    "timestamp": "2025-08-14T16:47:38.138930"
+  },
+  {
+    "combinacao": {
+      "setor": "Metalurgia e Mineração",
+      "tipo_pesquisa": "DE - Desenvolvimento Experimental",
+      "natureza": "Produto",
+      "count": 2165
+    },
+    "arquivo_saida": "grupos_categoria_Metalurgia_e_Mineração_DE_-_Desenvolvimento_Expe_Produto_sublote1.csv",
+    "total_projetos": 142,
+    "resposta_length": 5112,
+    "requer_merge": true,
+    "timestamp": "2025-08-14T16:47:38.138936"
+  },
+  {
+    "combinacao": {
+      "setor": "Metalurgia e Mineração",
+      "tipo_pesquisa": "DE - Desenvolvimento Experimental",
+      "natureza": "Produto",
+      "count": 2165
+    },
+    "arquivo_saida": "grupos_categoria_Metalurgia_e_Mineração_DE_-_Desenvolvimento_Expe_Produto_sublote2.csv",
+    "total_projetos": 162,
+    "resposta_length": 14772,
+    "requer_merge": true,
+    "timestamp": "2025-08-14T16:47:38.138941"
+  },
+  {
+    "combinacao": {
+      "setor": "Metalurgia e Mineração",
+      "tipo_pesquisa": "DE - Desenvolvimento Experimental",
+      "natureza": "Produto",
+      "count": 2165
+    },
+    "arquivo_saida": "grupos_categoria_Metalurgia_e_Mineração_DE_-_Desenvolvimento_Expe_Produto_sublote3.csv",
+    "total_projetos": 162,
+    "resposta_length": 8891,
+    "requer_merge": true,
+    "timestamp": "2025-08-14T16:47:38.138947"
+  },
+  {
+    "combinacao": {
+      "setor": "Metalurgia e Mineração",
+      "tipo_pesquisa": "DE - Desenvolvimento Experimental",
+      "natureza": "Produto",
+      "count": 2165
+    },
+    "arquivo_saida": "grupos_categoria_Metalurgia_e_Mineração_DE_-_Desenvolvimento_Expe_Produto_sublote4.csv",
+    "total_projetos": 162,
+    "resposta_length": 7497,
+    "requer_merge": true,
+    "timestamp": "2025-08-14T16:47:38.138953"
+  },
+  {
+    "combinacao": {
+      "setor": "Metalurgia e Mineração",
+      "tipo_pesquisa": "DE - Desenvolvimento Experimental",
+      "natureza": "Produto",
+      "count": 2165
+    },
+    "arquivo_saida": "grupos_categoria_Metalurgia_e_Mineração_DE_-_Desenvolvimento_Expe_Produto_sublote5.csv",
+    "total_projetos": 162,
+    "resposta_length": 8727,
+    "requer_merge": true,
+    "timestamp": "2025-08-14T16:47:38.138959"
+  },
+  {
+    "combinacao": {
+      "setor": "Metalurgia e Mineração",
+      "tipo_pesquisa": "DE - Desenvolvimento Experimental",
+      "natureza": "Produto",
+      "count": 2165
+    },
+    "arquivo_saida": "grupos_categoria_Metalurgia_e_Mineração_DE_-_Desenvolvimento_Expe_Produto_sublote6.csv",
+    "total_projetos": 162,
+    "resposta_length": 7649,
+    "requer_merge": true,
+    "timestamp": "2025-08-14T16:47:38.138965"
+  },
+  {
+    "combinacao": {
+      "setor": "Metalurgia e Mineração",
+      "tipo_pesquisa": "DE - Desenvolvimento Experimental",
+      "natureza": "Produto",
+      "count": 2165
+    },
+    "arquivo_saida": "grupos_categoria_Metalurgia_e_Mineração_DE_-_Desenvolvimento_Expe_Produto_sublote7.csv",
+    "total_projetos": 162,
+    "resposta_length": 7590,
+    "requer_merge": true,
+    "timestamp": "2025-08-14T16:47:38.138971"
+  },
+  {
+    "combinacao": {
+      "setor": "Metalurgia e Mineração",
+      "tipo_pesquisa": "DE - Desenvolvimento Experimental",
+      "natureza": "Produto",
+      "count": 2165
+    },
+    "arquivo_saida": "grupos_categoria_Metalurgia_e_Mineração_DE_-_Desenvolvimento_Expe_Produto_sublote8.csv",
+    "total_projetos": 162,
+    "resposta_length": 8140,
+    "requer_merge": true,
+    "timestamp": "2025-08-14T16:47:38.138976"
+  },
+  {
+    "combinacao": {
+      "setor": "Metalurgia e Mineração",
+      "tipo_pesquisa": "DE - Desenvolvimento Experimental",
+      "natureza": "Produto",
+      "count": 2165
+    },
+    "arquivo_saida": "grupos_categoria_Metalurgia_e_Mineração_DE_-_Desenvolvimento_Expe_Produto_sublote9.csv",
+    "total_projetos": 162,
+    "resposta_length": 6678,
+    "requer_merge": true,
+    "timestamp": "2025-08-14T16:47:38.138982"
+  },
+  {
+    "combinacao": {
+      "setor": "Metalurgia e Mineração",
+      "tipo_pesquisa": "DE - Desenvolvimento Experimental",
+      "natureza": "Produto",
+      "count": 2165
+    },
+    "arquivo_saida": "grupos_categoria_Metalurgia_e_Mineração_DE_-_Desenvolvimento_Expe_Produto_sublote10.csv",
+    "total_projetos": 162,
+    "resposta_length": 12050,
+    "requer_merge": true,
+    "timestamp": "2025-08-14T16:47:38.138987"
+  },
+  {
+    "combinacao": {
+      "setor": "Metalurgia e Mineração",
+      "tipo_pesquisa": "DE - Desenvolvimento Experimental",
+      "natureza": "Produto",
+      "count": 2165
+    },
+    "arquivo_saida": "grupos_categoria_Metalurgia_e_Mineração_DE_-_Desenvolvimento_Expe_Produto_sublote11.csv",
+    "total_projetos": 162,
+    "resposta_length": 7060,
+    "requer_merge": true,
+    "timestamp": "2025-08-14T16:47:38.138993"
+  },
+  {
+    "combinacao": {
+      "setor": "Metalurgia e Mineração",
+      "tipo_pesquisa": "DE - Desenvolvimento Experimental",
+      "natureza": "Produto",
+      "count": 2165
+    },
+    "arquivo_saida": "grupos_categoria_Metalurgia_e_Mineração_DE_-_Desenvolvimento_Expe_Produto_sublote12.csv",
+    "total_projetos": 162,
+    "resposta_length": 10374,
+    "requer_merge": true,
+    "timestamp": "2025-08-14T16:47:38.138999"
+  },
+  {
+    "combinacao": {
+      "setor": "Metalurgia e Mineração",
+      "tipo_pesquisa": "DE - Desenvolvimento Experimental",
+      "natureza": "Produto",
+      "count": 2165
+    },
+    "arquivo_saida": "grupos_categoria_Metalurgia_e_Mineração_DE_-_Desenvolvimento_Expe_Produto_sublote13.csv",
+    "total_projetos": 162,
+    "resposta_length": 8889,
+    "requer_merge": true,
+    "timestamp": "2025-08-14T16:47:38.139005"
+  },
+  {
+    "combinacao": {
+      "setor": "Metalurgia e Mineração",
+      "tipo_pesquisa": "DE - Desenvolvimento Experimental",
+      "natureza": "Produto",
+      "count": 2165
+    },
+    "arquivo_saida": "grupos_categoria_Metalurgia_e_Mineração_DE_-_Desenvolvimento_Expe_Produto_sublote14.csv",
+    "total_projetos": 162,
+    "resposta_length": 8226,
+    "requer_merge": true,
+    "timestamp": "2025-08-14T16:47:38.139011"
+  },
+  {
+    "combinacao": {
+      "setor": "Metalurgia e Mineração",
+      "tipo_pesquisa": "DE - Desenvolvimento Experimental",
+      "natureza": "Produto",
+      "count": 2165
+    },
+    "arquivo_saida": "grupos_categoria_Metalurgia_e_Mineração_DE_-_Desenvolvimento_Expe_Produto_sublote15.csv",
+    "total_projetos": 162,
+    "resposta_length": 9778,
+    "requer_merge": true,
+    "timestamp": "2025-08-14T16:47:38.139017"
+  },
+  {
+    "combinacao": {
+      "setor": "Metalurgia e Mineração",
+      "tipo_pesquisa": "DE - Desenvolvimento Experimental",
+      "natureza": "Produto",
+      "count": 2165
+    },
+    "arquivo_saida": "grupos_categoria_Metalurgia_e_Mineração_DE_-_Desenvolvimento_Expe_Produto_sublote16.csv",
+    "total_projetos": 55,
+    "resposta_length": 3925,
+    "requer_merge": true,
+    "timestamp": "2025-08-14T16:47:38.139022"
+  },
+  {
+    "combinacao": {
+      "setor": "Metalurgia e Mineração",
+      "tipo_pesquisa": "DE - Desenvolvimento Experimental",
+      "natureza": "Serviço",
+      "count": 51
+    },
+    "arquivo_saida": "grupos_categoria_Metalurgia_e_Mineração_DE_-_Desenvolvimento_Expe_Serviço_completa.csv",
+    "total_projetos": 51,
+    "resposta_length": 2099,
+    "requer_merge": false,
+    "timestamp": "2025-08-14T16:47:38.139028"
+  },
+  {
+    "combinacao": {
+      "setor": "Metalurgia e Mineração",
+      "tipo_pesquisa": "PA - Pesquisa Aplicada",
+      "natureza": "Processo",
+      "count": 597
+    },
+    "arquivo_saida": "grupos_categoria_Metalurgia_e_Mineração_PA_-_Pesquisa_Aplicada_Processo_sublote1.csv",
+    "total_projetos": 142,
+    "resposta_length": 3305,
+    "requer_merge": true,
+    "timestamp": "2025-08-14T16:47:38.139033"
+  },
+  {
+    "combinacao": {
+      "setor": "Metalurgia e Mineração",
+      "tipo_pesquisa": "PA - Pesquisa Aplicada",
+      "natureza": "Processo",
+      "count": 597
+    },
+    "arquivo_saida": "grupos_categoria_Metalurgia_e_Mineração_PA_-_Pesquisa_Aplicada_Processo_sublote2.csv",
+    "total_projetos": 162,
+    "resposta_length": 10430,
+    "requer_merge": true,
+    "timestamp": "2025-08-14T16:47:38.139038"
+  },
+  {
+    "combinacao": {
+      "setor": "Metalurgia e Mineração",
+      "tipo_pesquisa": "PA - Pesquisa Aplicada",
+      "natureza": "Processo",
+      "count": 597
+    },
+    "arquivo_saida": "grupos_categoria_Metalurgia_e_Mineração_PA_-_Pesquisa_Aplicada_Processo_sublote3.csv",
+    "total_projetos": 162,
+    "resposta_length": 3313,
+    "requer_merge": true,
+    "timestamp": "2025-08-14T16:47:38.139045"
+  },
+  {
+    "combinacao": {
+      "setor": "Metalurgia e Mineração",
+      "tipo_pesquisa": "PA - Pesquisa Aplicada",
+      "natureza": "Processo",
+      "count": 597
+    },
+    "arquivo_saida": "grupos_categoria_Metalurgia_e_Mineração_PA_-_Pesquisa_Aplicada_Processo_sublote4.csv",
+    "total_projetos": 162,
+    "resposta_length": 7387,
+    "requer_merge": true,
+    "timestamp": "2025-08-14T16:47:38.139050"
+  },
+  {
+    "combinacao": {
+      "setor": "Metalurgia e Mineração",
+      "tipo_pesquisa": "PA - Pesquisa Aplicada",
+      "natureza": "Processo",
+      "count": 597
+    },
+    "arquivo_saida": "grupos_categoria_Metalurgia_e_Mineração_PA_-_Pesquisa_Aplicada_Processo_sublote5.csv",
+    "total_projetos": 49,
+    "resposta_length": 4128,
+    "requer_merge": true,
+    "timestamp": "2025-08-14T16:47:38.139056"
+  },
+  {
+    "combinacao": {
+      "setor": "Metalurgia e Mineração",
+      "tipo_pesquisa": "PA - Pesquisa Aplicada",
+      "natureza": "Produto",
+      "count": 505
+    },
+    "arquivo_saida": "grupos_categoria_Metalurgia_e_Mineração_PA_-_Pesquisa_Aplicada_Produto_sublote1.csv",
+    "total_projetos": 142,
+    "resposta_length": 7655,
+    "requer_merge": true,
+    "timestamp": "2025-08-14T16:47:38.139062"
+  },
+  {
+    "combinacao": {
+      "setor": "Metalurgia e Mineração",
+      "tipo_pesquisa": "PA - Pesquisa Aplicada",
+      "natureza": "Produto",
+      "count": 505
+    },
+    "arquivo_saida": "grupos_categoria_Metalurgia_e_Mineração_PA_-_Pesquisa_Aplicada_Produto_sublote2.csv",
+    "total_projetos": 162,
+    "resposta_length": 8077,
+    "requer_merge": true,
+    "timestamp": "2025-08-14T16:47:38.139067"
+  },
+  {
+    "combinacao": {
+      "setor": "Metalurgia e Mineração",
+      "tipo_pesquisa": "PA - Pesquisa Aplicada",
+      "natureza": "Produto",
+      "count": 505
+    },
+    "arquivo_saida": "grupos_categoria_Metalurgia_e_Mineração_PA_-_Pesquisa_Aplicada_Produto_sublote3.csv",
+    "total_projetos": 162,
+    "resposta_length": 13272,
+    "requer_merge": true,
+    "timestamp": "2025-08-14T16:47:38.139073"
+  },
+  {
+    "combinacao": {
+      "setor": "Metalurgia e Mineração",
+      "tipo_pesquisa": "PA - Pesquisa Aplicada",
+      "natureza": "Produto",
+      "count": 505
+    },
+    "arquivo_saida": "grupos_categoria_Metalurgia_e_Mineração_PA_-_Pesquisa_Aplicada_Produto_sublote4.csv",
+    "total_projetos": 99,
+    "resposta_length": 5656,
+    "requer_merge": true,
+    "timestamp": "2025-08-14T16:47:38.139078"
+  },
+  {
+    "combinacao": {
+      "setor": "Metalurgia e Mineração",
+      "tipo_pesquisa": "PA - Pesquisa Aplicada",
+      "natureza": "Serviço",
+      "count": 10
+    },
+    "arquivo_saida": "grupos_categoria_Metalurgia_e_Mineração_PA_-_Pesquisa_Aplicada_Serviço_completa.csv",
+    "total_projetos": 10,
+    "resposta_length": 1151,
+    "requer_merge": false,
+    "timestamp": "2025-08-14T16:47:38.139084"
+  },
+  {
+    "combinacao": {
+      "setor": "Metalurgia e Mineração",
+      "tipo_pesquisa": "PB - Pesquisa Básica",
+      "natureza": "Processo",
+      "count": 68
+    },
+    "arquivo_saida": "grupos_categoria_Metalurgia_e_Mineração_PB_-_Pesquisa_Básica_Processo_completa.csv",
+    "total_projetos": 68,
+    "resposta_length": 4387,
+    "requer_merge": false,
+    "timestamp": "2025-08-14T16:47:38.139090"
+  },
+  {
+    "combinacao": {
+      "setor": "Metalurgia e Mineração",
+      "tipo_pesquisa": "PB - Pesquisa Básica",
+      "natureza": "Produto",
+      "count": 91
+    },
+    "arquivo_saida": "grupos_categoria_Metalurgia_e_Mineração_PB_-_Pesquisa_Básica_Produto_completa.csv",
+    "total_projetos": 91,
+    "resposta_length": 3606,
+    "requer_merge": false,
+    "timestamp": "2025-08-14T16:47:38.139096"
+  },
+  {
+    "combinacao": {
+      "setor": "Metalurgia e Mineração",
+      "tipo_pesquisa": "PB - Pesquisa Básica",
+      "natureza": "Serviço",
+      "count": 3
+    },
+    "arquivo_saida": "grupos_categoria_Metalurgia_e_Mineração_PB_-_Pesquisa_Básica_Serviço_completa.csv",
+    "total_projetos": 3,
+    "resposta_length": 438,
+    "requer_merge": false,
+    "timestamp": "2025-08-14T16:47:38.139102"
+  }
+]
