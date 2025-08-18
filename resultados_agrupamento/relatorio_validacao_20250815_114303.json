@@ -1,0 +1,113 @@
+{
+  "metadata": {
+    "timestamp": "20250815_114303"
+  },
+  "qualidade": {
+    "distribuicao_grupos": {
+      "total_grupos": 7472,
+      "tamanho_medio": 2.613891862955032,
+      "maior_grupo": "138"
+    }
+  },
+  "metricas": {
+    "cobertura": 1.0,
+    "densidade_media": 2.613891862955032
+  },
+  "amostras": [
+    {
+      "grupo_id": 3145,
+      "tamanho_grupo": 4,
+      "projetos": [
+        {
+          "projeto_id": 60591,
+          "ano_referencia": 2021.0,
+          "setor": "Eletroeletrônica"
+        },
+        {
+          "projeto_id": 44827,
+          "ano_referencia": 2020.0,
+          "setor": "Eletroeletrônica"
+        },
+        {
+          "projeto_id": 1528,
+          "ano_referencia": 2018.0,
+          "setor": "Eletroeletrônica"
+        },
+        {
+          "projeto_id": 29881,
+          "ano_referencia": 2019.0,
+          "setor": "Transversal"
+        }
+      ]
+    },
+    {
+      "grupo_id": 842,
+      "tamanho_grupo": 3,
+      "projetos": [
+        {
+          "projeto_id": 110437,
+          "ano_referencia": 2023.0,
+          "setor": "Mecânica e Transporte"
+        },
+        {
+          "projeto_id": 85834,
+          "ano_referencia": 2022.0,
+          "setor": "Mecânica e Transporte"
+        },
+        {
+          "projeto_id": 61431,
+          "ano_referencia": 2021.0,
+          "setor": "Mecânica e Transporte"
+        }
+      ]
+    },
+    {
+      "grupo_id": 6943,
+      "tamanho_grupo": 2,
+      "projetos": [
+        {
+          "projeto_id": 45157,
+          "ano_referencia": 2020.0,
+          "setor": "Eletroeletrônica"
+        },
+        {
+          "projeto_id": 63136,
+          "ano_referencia": 2021.0,
+          "setor": "Eletroeletrônica"
+        }
+      ]
+    },
+    {
+      "grupo_id": 4932,
+      "tamanho_grupo": 2,
+      "projetos": [
+        {
+          "projeto_id": 76162,
+          "ano_referencia": 2022.0,
+          "setor": "Eletroeletrônica"
+        },
+        {
+          "projeto_id": 103865,
+          "ano_referencia": 2023.0,
+          "setor": "Eletroeletrônica"
+        }
+      ]
+    },
+    {
+      "grupo_id": 3383,
+      "tamanho_grupo": 2,
+      "projetos": [
+        {
+          "projeto_id": 25976,
+          "ano_referencia": 2019.0,
+          "setor": "TIC"
+        },
+        {
+          "projeto_id": 49124,
+          "ano_referencia": 2020.0,
+          "setor": "TIC"
+        }
+      ]
+    }
+  ]
+}

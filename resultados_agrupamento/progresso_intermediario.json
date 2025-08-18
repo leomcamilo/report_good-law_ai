@@ -1,574 +1,4565 @@
 [
   {
     "combinacao": {
-      "setor": "Metalurgia e Mineração",
+      "setor": "Agroindústria e Alimentos",
       "tipo_pesquisa": "DE - Desenvolvimento Experimental",
       "natureza": "Processo",
-      "count": 1868
+      "count": 1425
     },
-    "arquivo_saida": "grupos_categoria_Metalurgia_e_Mineração_DE_-_Desenvolvimento_Expe_Processo_sublote1.csv",
+    "arquivo_saida": "grupos_categoria_Agroindústria_e_Alimentos_DE_-_Desenvolvimento_Expe_Processo_sublote1.csv",
     "total_projetos": 142,
-    "resposta_length": 8869,
+    "resposta_length": 3262,
     "requer_merge": true,
-    "timestamp": "2025-08-14T16:47:38.138820"
+    "timestamp": "2025-08-18T13:14:33.038216"
   },
   {
     "combinacao": {
-      "setor": "Metalurgia e Mineração",
+      "setor": "Agroindústria e Alimentos",
       "tipo_pesquisa": "DE - Desenvolvimento Experimental",
       "natureza": "Processo",
-      "count": 1868
+      "count": 1425
     },
-    "arquivo_saida": "grupos_categoria_Metalurgia_e_Mineração_DE_-_Desenvolvimento_Expe_Processo_sublote2.csv",
+    "arquivo_saida": "grupos_categoria_Agroindústria_e_Alimentos_DE_-_Desenvolvimento_Expe_Processo_sublote2.csv",
     "total_projetos": 162,
-    "resposta_length": 9805,
+    "resposta_length": 3873,
     "requer_merge": true,
-    "timestamp": "2025-08-14T16:47:38.138849"
+    "timestamp": "2025-08-18T13:14:33.038264"
   },
   {
     "combinacao": {
-      "setor": "Metalurgia e Mineração",
+      "setor": "Agroindústria e Alimentos",
       "tipo_pesquisa": "DE - Desenvolvimento Experimental",
       "natureza": "Processo",
-      "count": 1868
+      "count": 1425
     },
-    "arquivo_saida": "grupos_categoria_Metalurgia_e_Mineração_DE_-_Desenvolvimento_Expe_Processo_sublote3.csv",
+    "arquivo_saida": "grupos_categoria_Agroindústria_e_Alimentos_DE_-_Desenvolvimento_Expe_Processo_sublote3.csv",
     "total_projetos": 162,
-    "resposta_length": 6742,
+    "resposta_length": 11199,
     "requer_merge": true,
-    "timestamp": "2025-08-14T16:47:38.138860"
+    "timestamp": "2025-08-18T13:14:33.038276"
   },
   {
     "combinacao": {
-      "setor": "Metalurgia e Mineração",
+      "setor": "Agroindústria e Alimentos",
       "tipo_pesquisa": "DE - Desenvolvimento Experimental",
       "natureza": "Processo",
-      "count": 1868
+      "count": 1425
     },
-    "arquivo_saida": "grupos_categoria_Metalurgia_e_Mineração_DE_-_Desenvolvimento_Expe_Processo_sublote4.csv",
+    "arquivo_saida": "grupos_categoria_Agroindústria_e_Alimentos_DE_-_Desenvolvimento_Expe_Processo_sublote4.csv",
     "total_projetos": 162,
-    "resposta_length": 12709,
+    "resposta_length": 5025,
     "requer_merge": true,
-    "timestamp": "2025-08-14T16:47:38.138867"
+    "timestamp": "2025-08-18T13:14:33.038283"
   },
   {
     "combinacao": {
-      "setor": "Metalurgia e Mineração",
+      "setor": "Agroindústria e Alimentos",
       "tipo_pesquisa": "DE - Desenvolvimento Experimental",
       "natureza": "Processo",
-      "count": 1868
+      "count": 1425
     },
-    "arquivo_saida": "grupos_categoria_Metalurgia_e_Mineração_DE_-_Desenvolvimento_Expe_Processo_sublote5.csv",
+    "arquivo_saida": "grupos_categoria_Agroindústria_e_Alimentos_DE_-_Desenvolvimento_Expe_Processo_sublote5.csv",
     "total_projetos": 162,
-    "resposta_length": 4436,
+    "resposta_length": 4343,
     "requer_merge": true,
-    "timestamp": "2025-08-14T16:47:38.138874"
+    "timestamp": "2025-08-18T13:14:33.038290"
   },
   {
     "combinacao": {
-      "setor": "Metalurgia e Mineração",
+      "setor": "Agroindústria e Alimentos",
       "tipo_pesquisa": "DE - Desenvolvimento Experimental",
       "natureza": "Processo",
-      "count": 1868
+      "count": 1425
     },
-    "arquivo_saida": "grupos_categoria_Metalurgia_e_Mineração_DE_-_Desenvolvimento_Expe_Processo_sublote6.csv",
+    "arquivo_saida": "grupos_categoria_Agroindústria_e_Alimentos_DE_-_Desenvolvimento_Expe_Processo_sublote6.csv",
     "total_projetos": 162,
-    "resposta_length": 4077,
+    "resposta_length": 10455,
     "requer_merge": true,
-    "timestamp": "2025-08-14T16:47:38.138882"
+    "timestamp": "2025-08-18T13:14:33.038305"
   },
   {
     "combinacao": {
-      "setor": "Metalurgia e Mineração",
+      "setor": "Agroindústria e Alimentos",
       "tipo_pesquisa": "DE - Desenvolvimento Experimental",
       "natureza": "Processo",
-      "count": 1868
+      "count": 1425
     },
-    "arquivo_saida": "grupos_categoria_Metalurgia_e_Mineração_DE_-_Desenvolvimento_Expe_Processo_sublote7.csv",
+    "arquivo_saida": "grupos_categoria_Agroindústria_e_Alimentos_DE_-_Desenvolvimento_Expe_Processo_sublote7.csv",
     "total_projetos": 162,
-    "resposta_length": 4043,
+    "resposta_length": 4704,
     "requer_merge": true,
-    "timestamp": "2025-08-14T16:47:38.138888"
+    "timestamp": "2025-08-18T13:14:33.038313"
   },
   {
     "combinacao": {
-      "setor": "Metalurgia e Mineração",
+      "setor": "Agroindústria e Alimentos",
       "tipo_pesquisa": "DE - Desenvolvimento Experimental",
       "natureza": "Processo",
-      "count": 1868
+      "count": 1425
     },
-    "arquivo_saida": "grupos_categoria_Metalurgia_e_Mineração_DE_-_Desenvolvimento_Expe_Processo_sublote8.csv",
+    "arquivo_saida": "grupos_categoria_Agroindústria_e_Alimentos_DE_-_Desenvolvimento_Expe_Processo_sublote8.csv",
     "total_projetos": 162,
-    "resposta_length": 11341,
+    "resposta_length": 10785,
     "requer_merge": true,
-    "timestamp": "2025-08-14T16:47:38.138894"
+    "timestamp": "2025-08-18T13:14:33.038320"
   },
   {
     "combinacao": {
-      "setor": "Metalurgia e Mineração",
+      "setor": "Agroindústria e Alimentos",
       "tipo_pesquisa": "DE - Desenvolvimento Experimental",
       "natureza": "Processo",
-      "count": 1868
+      "count": 1425
     },
-    "arquivo_saida": "grupos_categoria_Metalurgia_e_Mineração_DE_-_Desenvolvimento_Expe_Processo_sublote9.csv",
+    "arquivo_saida": "grupos_categoria_Agroindústria_e_Alimentos_DE_-_Desenvolvimento_Expe_Processo_sublote9.csv",
     "total_projetos": 162,
-    "resposta_length": 8304,
+    "resposta_length": 11591,
     "requer_merge": true,
-    "timestamp": "2025-08-14T16:47:38.138900"
+    "timestamp": "2025-08-18T13:14:33.038330"
   },
   {
     "combinacao": {
-      "setor": "Metalurgia e Mineração",
+      "setor": "Agroindústria e Alimentos",
       "tipo_pesquisa": "DE - Desenvolvimento Experimental",
       "natureza": "Processo",
-      "count": 1868
+      "count": 1425
     },
-    "arquivo_saida": "grupos_categoria_Metalurgia_e_Mineração_DE_-_Desenvolvimento_Expe_Processo_sublote10.csv",
+    "arquivo_saida": "grupos_categoria_Agroindústria_e_Alimentos_DE_-_Desenvolvimento_Expe_Processo_sublote10.csv",
     "total_projetos": 162,
-    "resposta_length": 10232,
+    "resposta_length": 4592,
     "requer_merge": true,
-    "timestamp": "2025-08-14T16:47:38.138906"
+    "timestamp": "2025-08-18T13:14:33.038337"
   },
   {
     "combinacao": {
-      "setor": "Metalurgia e Mineração",
+      "setor": "Agroindústria e Alimentos",
       "tipo_pesquisa": "DE - Desenvolvimento Experimental",
       "natureza": "Processo",
-      "count": 1868
+      "count": 1425
     },
-    "arquivo_saida": "grupos_categoria_Metalurgia_e_Mineração_DE_-_Desenvolvimento_Expe_Processo_sublote11.csv",
-    "total_projetos": 162,
-    "resposta_length": 8735,
+    "arquivo_saida": "grupos_categoria_Agroindústria_e_Alimentos_DE_-_Desenvolvimento_Expe_Processo_sublote11.csv",
+    "total_projetos": 25,
+    "resposta_length": 2906,
     "requer_merge": true,
-    "timestamp": "2025-08-14T16:47:38.138912"
+    "timestamp": "2025-08-18T13:14:33.038343"
   },
   {
     "combinacao": {
-      "setor": "Metalurgia e Mineração",
-      "tipo_pesquisa": "DE - Desenvolvimento Experimental",
-      "natureza": "Processo",
-      "count": 1868
-    },
-    "arquivo_saida": "grupos_categoria_Metalurgia_e_Mineração_DE_-_Desenvolvimento_Expe_Processo_sublote12.csv",
-    "total_projetos": 162,
-    "resposta_length": 12069,
-    "requer_merge": true,
-    "timestamp": "2025-08-14T16:47:38.138918"
-  },
-  {
-    "combinacao": {
-      "setor": "Metalurgia e Mineração",
-      "tipo_pesquisa": "DE - Desenvolvimento Experimental",
-      "natureza": "Processo",
-      "count": 1868
-    },
-    "arquivo_saida": "grupos_categoria_Metalurgia_e_Mineração_DE_-_Desenvolvimento_Expe_Processo_sublote13.csv",
-    "total_projetos": 162,
-    "resposta_length": 7833,
-    "requer_merge": true,
-    "timestamp": "2025-08-14T16:47:38.138923"
-  },
-  {
-    "combinacao": {
-      "setor": "Metalurgia e Mineração",
-      "tipo_pesquisa": "DE - Desenvolvimento Experimental",
-      "natureza": "Processo",
-      "count": 1868
-    },
-    "arquivo_saida": "grupos_categoria_Metalurgia_e_Mineração_DE_-_Desenvolvimento_Expe_Processo_sublote14.csv",
-    "total_projetos": 42,
-    "resposta_length": 3217,
-    "requer_merge": true,
-    "timestamp": "2025-08-14T16:47:38.138930"
-  },
-  {
-    "combinacao": {
-      "setor": "Metalurgia e Mineração",
+      "setor": "Agroindústria e Alimentos",
       "tipo_pesquisa": "DE - Desenvolvimento Experimental",
       "natureza": "Produto",
-      "count": 2165
+      "count": 2595
     },
-    "arquivo_saida": "grupos_categoria_Metalurgia_e_Mineração_DE_-_Desenvolvimento_Expe_Produto_sublote1.csv",
+    "arquivo_saida": "grupos_categoria_Agroindústria_e_Alimentos_DE_-_Desenvolvimento_Expe_Produto_sublote1.csv",
     "total_projetos": 142,
-    "resposta_length": 5112,
+    "resposta_length": 6188,
     "requer_merge": true,
-    "timestamp": "2025-08-14T16:47:38.138936"
+    "timestamp": "2025-08-18T13:14:33.038349"
   },
   {
     "combinacao": {
-      "setor": "Metalurgia e Mineração",
+      "setor": "Agroindústria e Alimentos",
       "tipo_pesquisa": "DE - Desenvolvimento Experimental",
       "natureza": "Produto",
-      "count": 2165
+      "count": 2595
     },
-    "arquivo_saida": "grupos_categoria_Metalurgia_e_Mineração_DE_-_Desenvolvimento_Expe_Produto_sublote2.csv",
+    "arquivo_saida": "grupos_categoria_Agroindústria_e_Alimentos_DE_-_Desenvolvimento_Expe_Produto_sublote2.csv",
     "total_projetos": 162,
-    "resposta_length": 14772,
+    "resposta_length": 5150,
     "requer_merge": true,
-    "timestamp": "2025-08-14T16:47:38.138941"
+    "timestamp": "2025-08-18T13:14:33.038355"
   },
   {
     "combinacao": {
-      "setor": "Metalurgia e Mineração",
+      "setor": "Agroindústria e Alimentos",
       "tipo_pesquisa": "DE - Desenvolvimento Experimental",
       "natureza": "Produto",
-      "count": 2165
+      "count": 2595
     },
-    "arquivo_saida": "grupos_categoria_Metalurgia_e_Mineração_DE_-_Desenvolvimento_Expe_Produto_sublote3.csv",
+    "arquivo_saida": "grupos_categoria_Agroindústria_e_Alimentos_DE_-_Desenvolvimento_Expe_Produto_sublote3.csv",
     "total_projetos": 162,
-    "resposta_length": 8891,
+    "resposta_length": 10753,
     "requer_merge": true,
-    "timestamp": "2025-08-14T16:47:38.138947"
+    "timestamp": "2025-08-18T13:14:33.038361"
   },
   {
     "combinacao": {
-      "setor": "Metalurgia e Mineração",
+      "setor": "Agroindústria e Alimentos",
       "tipo_pesquisa": "DE - Desenvolvimento Experimental",
       "natureza": "Produto",
-      "count": 2165
+      "count": 2595
     },
-    "arquivo_saida": "grupos_categoria_Metalurgia_e_Mineração_DE_-_Desenvolvimento_Expe_Produto_sublote4.csv",
+    "arquivo_saida": "grupos_categoria_Agroindústria_e_Alimentos_DE_-_Desenvolvimento_Expe_Produto_sublote4.csv",
     "total_projetos": 162,
-    "resposta_length": 7497,
+    "resposta_length": 11178,
     "requer_merge": true,
-    "timestamp": "2025-08-14T16:47:38.138953"
+    "timestamp": "2025-08-18T13:14:33.038367"
   },
   {
     "combinacao": {
-      "setor": "Metalurgia e Mineração",
+      "setor": "Agroindústria e Alimentos",
       "tipo_pesquisa": "DE - Desenvolvimento Experimental",
       "natureza": "Produto",
-      "count": 2165
+      "count": 2595
     },
-    "arquivo_saida": "grupos_categoria_Metalurgia_e_Mineração_DE_-_Desenvolvimento_Expe_Produto_sublote5.csv",
+    "arquivo_saida": "grupos_categoria_Agroindústria_e_Alimentos_DE_-_Desenvolvimento_Expe_Produto_sublote5.csv",
     "total_projetos": 162,
-    "resposta_length": 8727,
+    "resposta_length": 10246,
     "requer_merge": true,
-    "timestamp": "2025-08-14T16:47:38.138959"
+    "timestamp": "2025-08-18T13:14:33.038373"
   },
   {
     "combinacao": {
-      "setor": "Metalurgia e Mineração",
+      "setor": "Agroindústria e Alimentos",
       "tipo_pesquisa": "DE - Desenvolvimento Experimental",
       "natureza": "Produto",
-      "count": 2165
+      "count": 2595
     },
-    "arquivo_saida": "grupos_categoria_Metalurgia_e_Mineração_DE_-_Desenvolvimento_Expe_Produto_sublote6.csv",
+    "arquivo_saida": "grupos_categoria_Agroindústria_e_Alimentos_DE_-_Desenvolvimento_Expe_Produto_sublote6.csv",
     "total_projetos": 162,
-    "resposta_length": 7649,
+    "resposta_length": 8399,
     "requer_merge": true,
-    "timestamp": "2025-08-14T16:47:38.138965"
+    "timestamp": "2025-08-18T13:14:33.038379"
   },
   {
     "combinacao": {
-      "setor": "Metalurgia e Mineração",
+      "setor": "Agroindústria e Alimentos",
       "tipo_pesquisa": "DE - Desenvolvimento Experimental",
       "natureza": "Produto",
-      "count": 2165
+      "count": 2595
     },
-    "arquivo_saida": "grupos_categoria_Metalurgia_e_Mineração_DE_-_Desenvolvimento_Expe_Produto_sublote7.csv",
+    "arquivo_saida": "grupos_categoria_Agroindústria_e_Alimentos_DE_-_Desenvolvimento_Expe_Produto_sublote7.csv",
     "total_projetos": 162,
-    "resposta_length": 7590,
+    "resposta_length": 6256,
     "requer_merge": true,
-    "timestamp": "2025-08-14T16:47:38.138971"
+    "timestamp": "2025-08-18T13:14:33.038389"
   },
   {
     "combinacao": {
-      "setor": "Metalurgia e Mineração",
+      "setor": "Agroindústria e Alimentos",
       "tipo_pesquisa": "DE - Desenvolvimento Experimental",
       "natureza": "Produto",
-      "count": 2165
+      "count": 2595
     },
-    "arquivo_saida": "grupos_categoria_Metalurgia_e_Mineração_DE_-_Desenvolvimento_Expe_Produto_sublote8.csv",
+    "arquivo_saida": "grupos_categoria_Agroindústria_e_Alimentos_DE_-_Desenvolvimento_Expe_Produto_sublote8.csv",
     "total_projetos": 162,
-    "resposta_length": 8140,
+    "resposta_length": 8595,
     "requer_merge": true,
-    "timestamp": "2025-08-14T16:47:38.138976"
+    "timestamp": "2025-08-18T13:14:33.038395"
   },
   {
     "combinacao": {
-      "setor": "Metalurgia e Mineração",
+      "setor": "Agroindústria e Alimentos",
       "tipo_pesquisa": "DE - Desenvolvimento Experimental",
       "natureza": "Produto",
-      "count": 2165
+      "count": 2595
     },
-    "arquivo_saida": "grupos_categoria_Metalurgia_e_Mineração_DE_-_Desenvolvimento_Expe_Produto_sublote9.csv",
+    "arquivo_saida": "grupos_categoria_Agroindústria_e_Alimentos_DE_-_Desenvolvimento_Expe_Produto_sublote9.csv",
     "total_projetos": 162,
-    "resposta_length": 6678,
+    "resposta_length": 6657,
     "requer_merge": true,
-    "timestamp": "2025-08-14T16:47:38.138982"
+    "timestamp": "2025-08-18T13:14:33.038401"
   },
   {
     "combinacao": {
-      "setor": "Metalurgia e Mineração",
+      "setor": "Agroindústria e Alimentos",
       "tipo_pesquisa": "DE - Desenvolvimento Experimental",
       "natureza": "Produto",
-      "count": 2165
+      "count": 2595
     },
-    "arquivo_saida": "grupos_categoria_Metalurgia_e_Mineração_DE_-_Desenvolvimento_Expe_Produto_sublote10.csv",
+    "arquivo_saida": "grupos_categoria_Agroindústria_e_Alimentos_DE_-_Desenvolvimento_Expe_Produto_sublote10.csv",
     "total_projetos": 162,
-    "resposta_length": 12050,
+    "resposta_length": 4933,
     "requer_merge": true,
-    "timestamp": "2025-08-14T16:47:38.138987"
+    "timestamp": "2025-08-18T13:14:33.038407"
   },
   {
     "combinacao": {
-      "setor": "Metalurgia e Mineração",
+      "setor": "Agroindústria e Alimentos",
       "tipo_pesquisa": "DE - Desenvolvimento Experimental",
       "natureza": "Produto",
-      "count": 2165
+      "count": 2595
     },
-    "arquivo_saida": "grupos_categoria_Metalurgia_e_Mineração_DE_-_Desenvolvimento_Expe_Produto_sublote11.csv",
+    "arquivo_saida": "grupos_categoria_Agroindústria_e_Alimentos_DE_-_Desenvolvimento_Expe_Produto_sublote11.csv",
     "total_projetos": 162,
-    "resposta_length": 7060,
+    "resposta_length": 7243,
     "requer_merge": true,
-    "timestamp": "2025-08-14T16:47:38.138993"
+    "timestamp": "2025-08-18T13:14:33.038413"
   },
   {
     "combinacao": {
-      "setor": "Metalurgia e Mineração",
+      "setor": "Agroindústria e Alimentos",
       "tipo_pesquisa": "DE - Desenvolvimento Experimental",
       "natureza": "Produto",
-      "count": 2165
+      "count": 2595
     },
-    "arquivo_saida": "grupos_categoria_Metalurgia_e_Mineração_DE_-_Desenvolvimento_Expe_Produto_sublote12.csv",
+    "arquivo_saida": "grupos_categoria_Agroindústria_e_Alimentos_DE_-_Desenvolvimento_Expe_Produto_sublote12.csv",
     "total_projetos": 162,
-    "resposta_length": 10374,
+    "resposta_length": 8250,
     "requer_merge": true,
-    "timestamp": "2025-08-14T16:47:38.138999"
+    "timestamp": "2025-08-18T13:14:33.038419"
   },
   {
     "combinacao": {
-      "setor": "Metalurgia e Mineração",
+      "setor": "Agroindústria e Alimentos",
       "tipo_pesquisa": "DE - Desenvolvimento Experimental",
       "natureza": "Produto",
-      "count": 2165
+      "count": 2595
     },
-    "arquivo_saida": "grupos_categoria_Metalurgia_e_Mineração_DE_-_Desenvolvimento_Expe_Produto_sublote13.csv",
+    "arquivo_saida": "grupos_categoria_Agroindústria_e_Alimentos_DE_-_Desenvolvimento_Expe_Produto_sublote13.csv",
     "total_projetos": 162,
-    "resposta_length": 8889,
+    "resposta_length": 3421,
     "requer_merge": true,
-    "timestamp": "2025-08-14T16:47:38.139005"
+    "timestamp": "2025-08-18T13:14:33.038425"
   },
   {
     "combinacao": {
-      "setor": "Metalurgia e Mineração",
+      "setor": "Agroindústria e Alimentos",
       "tipo_pesquisa": "DE - Desenvolvimento Experimental",
       "natureza": "Produto",
-      "count": 2165
+      "count": 2595
     },
-    "arquivo_saida": "grupos_categoria_Metalurgia_e_Mineração_DE_-_Desenvolvimento_Expe_Produto_sublote14.csv",
+    "arquivo_saida": "grupos_categoria_Agroindústria_e_Alimentos_DE_-_Desenvolvimento_Expe_Produto_sublote14.csv",
     "total_projetos": 162,
-    "resposta_length": 8226,
+    "resposta_length": 6105,
     "requer_merge": true,
-    "timestamp": "2025-08-14T16:47:38.139011"
+    "timestamp": "2025-08-18T13:14:33.038434"
   },
   {
     "combinacao": {
-      "setor": "Metalurgia e Mineração",
+      "setor": "Agroindústria e Alimentos",
       "tipo_pesquisa": "DE - Desenvolvimento Experimental",
       "natureza": "Produto",
-      "count": 2165
+      "count": 2595
     },
-    "arquivo_saida": "grupos_categoria_Metalurgia_e_Mineração_DE_-_Desenvolvimento_Expe_Produto_sublote15.csv",
+    "arquivo_saida": "grupos_categoria_Agroindústria_e_Alimentos_DE_-_Desenvolvimento_Expe_Produto_sublote15.csv",
     "total_projetos": 162,
-    "resposta_length": 9778,
+    "resposta_length": 7452,
     "requer_merge": true,
-    "timestamp": "2025-08-14T16:47:38.139017"
+    "timestamp": "2025-08-18T13:14:33.038441"
   },
   {
     "combinacao": {
-      "setor": "Metalurgia e Mineração",
+      "setor": "Agroindústria e Alimentos",
       "tipo_pesquisa": "DE - Desenvolvimento Experimental",
       "natureza": "Produto",
-      "count": 2165
+      "count": 2595
     },
-    "arquivo_saida": "grupos_categoria_Metalurgia_e_Mineração_DE_-_Desenvolvimento_Expe_Produto_sublote16.csv",
+    "arquivo_saida": "grupos_categoria_Agroindústria_e_Alimentos_DE_-_Desenvolvimento_Expe_Produto_sublote16.csv",
+    "total_projetos": 162,
+    "resposta_length": 4557,
+    "requer_merge": true,
+    "timestamp": "2025-08-18T13:14:33.038448"
+  },
+  {
+    "combinacao": {
+      "setor": "Agroindústria e Alimentos",
+      "tipo_pesquisa": "DE - Desenvolvimento Experimental",
+      "natureza": "Produto",
+      "count": 2595
+    },
+    "arquivo_saida": "grupos_categoria_Agroindústria_e_Alimentos_DE_-_Desenvolvimento_Expe_Produto_sublote17.csv",
+    "total_projetos": 162,
+    "resposta_length": 5234,
+    "requer_merge": true,
+    "timestamp": "2025-08-18T13:14:33.038457"
+  },
+  {
+    "combinacao": {
+      "setor": "Agroindústria e Alimentos",
+      "tipo_pesquisa": "DE - Desenvolvimento Experimental",
+      "natureza": "Produto",
+      "count": 2595
+    },
+    "arquivo_saida": "grupos_categoria_Agroindústria_e_Alimentos_DE_-_Desenvolvimento_Expe_Produto_sublote18.csv",
+    "total_projetos": 162,
+    "resposta_length": 11344,
+    "requer_merge": true,
+    "timestamp": "2025-08-18T13:14:33.038464"
+  },
+  {
+    "combinacao": {
+      "setor": "Agroindústria e Alimentos",
+      "tipo_pesquisa": "DE - Desenvolvimento Experimental",
+      "natureza": "Produto",
+      "count": 2595
+    },
+    "arquivo_saida": "grupos_categoria_Agroindústria_e_Alimentos_DE_-_Desenvolvimento_Expe_Produto_sublote19.csv",
+    "total_projetos": 59,
+    "resposta_length": 4702,
+    "requer_merge": true,
+    "timestamp": "2025-08-18T13:14:33.038470"
+  },
+  {
+    "combinacao": {
+      "setor": "Agroindústria e Alimentos",
+      "tipo_pesquisa": "DE - Desenvolvimento Experimental",
+      "natureza": "Serviço",
+      "count": 113
+    },
+    "arquivo_saida": "grupos_categoria_Agroindústria_e_Alimentos_DE_-_Desenvolvimento_Expe_Serviço_completa.csv",
+    "total_projetos": 113,
+    "resposta_length": 5106,
+    "requer_merge": false,
+    "timestamp": "2025-08-18T13:14:33.038475"
+  },
+  {
+    "combinacao": {
+      "setor": "Agroindústria e Alimentos",
+      "tipo_pesquisa": "PA - Pesquisa Aplicada",
+      "natureza": "Processo",
+      "count": 319
+    },
+    "arquivo_saida": "grupos_categoria_Agroindústria_e_Alimentos_PA_-_Pesquisa_Aplicada_Processo_sublote1.csv",
+    "total_projetos": 142,
+    "resposta_length": 4103,
+    "requer_merge": true,
+    "timestamp": "2025-08-18T13:14:33.038499"
+  },
+  {
+    "combinacao": {
+      "setor": "Agroindústria e Alimentos",
+      "tipo_pesquisa": "PA - Pesquisa Aplicada",
+      "natureza": "Processo",
+      "count": 319
+    },
+    "arquivo_saida": "grupos_categoria_Agroindústria_e_Alimentos_PA_-_Pesquisa_Aplicada_Processo_sublote2.csv",
+    "total_projetos": 162,
+    "resposta_length": 6912,
+    "requer_merge": true,
+    "timestamp": "2025-08-18T13:14:33.038506"
+  },
+  {
+    "combinacao": {
+      "setor": "Agroindústria e Alimentos",
+      "tipo_pesquisa": "PA - Pesquisa Aplicada",
+      "natureza": "Processo",
+      "count": 319
+    },
+    "arquivo_saida": "grupos_categoria_Agroindústria_e_Alimentos_PA_-_Pesquisa_Aplicada_Processo_sublote3.csv",
     "total_projetos": 55,
-    "resposta_length": 3925,
+    "resposta_length": 4782,
     "requer_merge": true,
-    "timestamp": "2025-08-14T16:47:38.139022"
+    "timestamp": "2025-08-18T13:14:33.038513"
   },
   {
     "combinacao": {
-      "setor": "Metalurgia e Mineração",
+      "setor": "Agroindústria e Alimentos",
+      "tipo_pesquisa": "PA - Pesquisa Aplicada",
+      "natureza": "Produto",
+      "count": 705
+    },
+    "arquivo_saida": "grupos_categoria_Agroindústria_e_Alimentos_PA_-_Pesquisa_Aplicada_Produto_sublote1.csv",
+    "total_projetos": 142,
+    "resposta_length": 10506,
+    "requer_merge": true,
+    "timestamp": "2025-08-18T13:14:33.038519"
+  },
+  {
+    "combinacao": {
+      "setor": "Agroindústria e Alimentos",
+      "tipo_pesquisa": "PA - Pesquisa Aplicada",
+      "natureza": "Produto",
+      "count": 705
+    },
+    "arquivo_saida": "grupos_categoria_Agroindústria_e_Alimentos_PA_-_Pesquisa_Aplicada_Produto_sublote2.csv",
+    "total_projetos": 162,
+    "resposta_length": 7350,
+    "requer_merge": true,
+    "timestamp": "2025-08-18T13:14:33.038525"
+  },
+  {
+    "combinacao": {
+      "setor": "Agroindústria e Alimentos",
+      "tipo_pesquisa": "PA - Pesquisa Aplicada",
+      "natureza": "Produto",
+      "count": 705
+    },
+    "arquivo_saida": "grupos_categoria_Agroindústria_e_Alimentos_PA_-_Pesquisa_Aplicada_Produto_sublote3.csv",
+    "total_projetos": 162,
+    "resposta_length": 5276,
+    "requer_merge": true,
+    "timestamp": "2025-08-18T13:14:33.038531"
+  },
+  {
+    "combinacao": {
+      "setor": "Agroindústria e Alimentos",
+      "tipo_pesquisa": "PA - Pesquisa Aplicada",
+      "natureza": "Produto",
+      "count": 705
+    },
+    "arquivo_saida": "grupos_categoria_Agroindústria_e_Alimentos_PA_-_Pesquisa_Aplicada_Produto_sublote4.csv",
+    "total_projetos": 162,
+    "resposta_length": 10459,
+    "requer_merge": true,
+    "timestamp": "2025-08-18T13:14:33.038536"
+  },
+  {
+    "combinacao": {
+      "setor": "Agroindústria e Alimentos",
+      "tipo_pesquisa": "PA - Pesquisa Aplicada",
+      "natureza": "Produto",
+      "count": 705
+    },
+    "arquivo_saida": "grupos_categoria_Agroindústria_e_Alimentos_PA_-_Pesquisa_Aplicada_Produto_sublote5.csv",
+    "total_projetos": 157,
+    "resposta_length": 4386,
+    "requer_merge": true,
+    "timestamp": "2025-08-18T13:14:33.038542"
+  },
+  {
+    "combinacao": {
+      "setor": "Agroindústria e Alimentos",
+      "tipo_pesquisa": "PA - Pesquisa Aplicada",
+      "natureza": "Serviço",
+      "count": 18
+    },
+    "arquivo_saida": "grupos_categoria_Agroindústria_e_Alimentos_PA_-_Pesquisa_Aplicada_Serviço_completa.csv",
+    "total_projetos": 18,
+    "resposta_length": 1827,
+    "requer_merge": false,
+    "timestamp": "2025-08-18T13:14:33.038548"
+  },
+  {
+    "combinacao": {
+      "setor": "Agroindústria e Alimentos",
+      "tipo_pesquisa": "PB - Pesquisa Básica",
+      "natureza": "Processo",
+      "count": 23
+    },
+    "arquivo_saida": "grupos_categoria_Agroindústria_e_Alimentos_PB_-_Pesquisa_Básica_Processo_completa.csv",
+    "total_projetos": 23,
+    "resposta_length": 2275,
+    "requer_merge": false,
+    "timestamp": "2025-08-18T13:14:33.038558"
+  },
+  {
+    "combinacao": {
+      "setor": "Agroindústria e Alimentos",
+      "tipo_pesquisa": "PB - Pesquisa Básica",
+      "natureza": "Produto",
+      "count": 102
+    },
+    "arquivo_saida": "grupos_categoria_Agroindústria_e_Alimentos_PB_-_Pesquisa_Básica_Produto_completa.csv",
+    "total_projetos": 102,
+    "resposta_length": 3657,
+    "requer_merge": false,
+    "timestamp": "2025-08-18T13:14:33.038564"
+  },
+  {
+    "combinacao": {
+      "setor": "Agroindústria e Alimentos",
+      "tipo_pesquisa": "PB - Pesquisa Básica",
+      "natureza": "Serviço",
+      "count": 4
+    },
+    "arquivo_saida": "grupos_categoria_Agroindústria_e_Alimentos_PB_-_Pesquisa_Básica_Serviço_completa.csv",
+    "total_projetos": 4,
+    "resposta_length": 508,
+    "requer_merge": false,
+    "timestamp": "2025-08-18T13:14:33.038573"
+  },
+  {
+    "combinacao": {
+      "setor": "Eletroeletrônica",
+      "tipo_pesquisa": "DE - Desenvolvimento Experimental",
+      "natureza": "Processo",
+      "count": 844
+    },
+    "arquivo_saida": "grupos_categoria_Eletroeletrônica_DE_-_Desenvolvimento_Expe_Processo_sublote1.csv",
+    "total_projetos": 142,
+    "resposta_length": 3384,
+    "requer_merge": true,
+    "timestamp": "2025-08-18T13:14:33.038580"
+  },
+  {
+    "combinacao": {
+      "setor": "Eletroeletrônica",
+      "tipo_pesquisa": "DE - Desenvolvimento Experimental",
+      "natureza": "Processo",
+      "count": 844
+    },
+    "arquivo_saida": "grupos_categoria_Eletroeletrônica_DE_-_Desenvolvimento_Expe_Processo_sublote2.csv",
+    "total_projetos": 162,
+    "resposta_length": 3964,
+    "requer_merge": true,
+    "timestamp": "2025-08-18T13:14:33.038586"
+  },
+  {
+    "combinacao": {
+      "setor": "Eletroeletrônica",
+      "tipo_pesquisa": "DE - Desenvolvimento Experimental",
+      "natureza": "Processo",
+      "count": 844
+    },
+    "arquivo_saida": "grupos_categoria_Eletroeletrônica_DE_-_Desenvolvimento_Expe_Processo_sublote3.csv",
+    "total_projetos": 162,
+    "resposta_length": 11027,
+    "requer_merge": true,
+    "timestamp": "2025-08-18T13:14:33.038591"
+  },
+  {
+    "combinacao": {
+      "setor": "Eletroeletrônica",
+      "tipo_pesquisa": "DE - Desenvolvimento Experimental",
+      "natureza": "Processo",
+      "count": 844
+    },
+    "arquivo_saida": "grupos_categoria_Eletroeletrônica_DE_-_Desenvolvimento_Expe_Processo_sublote4.csv",
+    "total_projetos": 162,
+    "resposta_length": 8049,
+    "requer_merge": true,
+    "timestamp": "2025-08-18T13:14:33.038603"
+  },
+  {
+    "combinacao": {
+      "setor": "Eletroeletrônica",
+      "tipo_pesquisa": "DE - Desenvolvimento Experimental",
+      "natureza": "Processo",
+      "count": 844
+    },
+    "arquivo_saida": "grupos_categoria_Eletroeletrônica_DE_-_Desenvolvimento_Expe_Processo_sublote5.csv",
+    "total_projetos": 162,
+    "resposta_length": 4776,
+    "requer_merge": true,
+    "timestamp": "2025-08-18T13:14:33.038610"
+  },
+  {
+    "combinacao": {
+      "setor": "Eletroeletrônica",
+      "tipo_pesquisa": "DE - Desenvolvimento Experimental",
+      "natureza": "Processo",
+      "count": 844
+    },
+    "arquivo_saida": "grupos_categoria_Eletroeletrônica_DE_-_Desenvolvimento_Expe_Processo_sublote6.csv",
+    "total_projetos": 154,
+    "resposta_length": 10465,
+    "requer_merge": true,
+    "timestamp": "2025-08-18T13:14:33.038619"
+  },
+  {
+    "combinacao": {
+      "setor": "Eletroeletrônica",
+      "tipo_pesquisa": "DE - Desenvolvimento Experimental",
+      "natureza": "Produto",
+      "count": 2005
+    },
+    "arquivo_saida": "grupos_categoria_Eletroeletrônica_DE_-_Desenvolvimento_Expe_Produto_sublote1.csv",
+    "total_projetos": 142,
+    "resposta_length": 4339,
+    "requer_merge": true,
+    "timestamp": "2025-08-18T13:14:33.038626"
+  },
+  {
+    "combinacao": {
+      "setor": "Eletroeletrônica",
+      "tipo_pesquisa": "DE - Desenvolvimento Experimental",
+      "natureza": "Produto",
+      "count": 2005
+    },
+    "arquivo_saida": "grupos_categoria_Eletroeletrônica_DE_-_Desenvolvimento_Expe_Produto_sublote2.csv",
+    "total_projetos": 162,
+    "resposta_length": 9885,
+    "requer_merge": true,
+    "timestamp": "2025-08-18T13:14:33.038632"
+  },
+  {
+    "combinacao": {
+      "setor": "Eletroeletrônica",
+      "tipo_pesquisa": "DE - Desenvolvimento Experimental",
+      "natureza": "Produto",
+      "count": 2005
+    },
+    "arquivo_saida": "grupos_categoria_Eletroeletrônica_DE_-_Desenvolvimento_Expe_Produto_sublote3.csv",
+    "total_projetos": 162,
+    "resposta_length": 6090,
+    "requer_merge": true,
+    "timestamp": "2025-08-18T13:14:33.038638"
+  },
+  {
+    "combinacao": {
+      "setor": "Eletroeletrônica",
+      "tipo_pesquisa": "DE - Desenvolvimento Experimental",
+      "natureza": "Produto",
+      "count": 2005
+    },
+    "arquivo_saida": "grupos_categoria_Eletroeletrônica_DE_-_Desenvolvimento_Expe_Produto_sublote4.csv",
+    "total_projetos": 162,
+    "resposta_length": 10539,
+    "requer_merge": true,
+    "timestamp": "2025-08-18T13:14:33.038644"
+  },
+  {
+    "combinacao": {
+      "setor": "Eletroeletrônica",
+      "tipo_pesquisa": "DE - Desenvolvimento Experimental",
+      "natureza": "Produto",
+      "count": 2005
+    },
+    "arquivo_saida": "grupos_categoria_Eletroeletrônica_DE_-_Desenvolvimento_Expe_Produto_sublote5.csv",
+    "total_projetos": 162,
+    "resposta_length": 10533,
+    "requer_merge": true,
+    "timestamp": "2025-08-18T13:14:33.038651"
+  },
+  {
+    "combinacao": {
+      "setor": "Eletroeletrônica",
+      "tipo_pesquisa": "DE - Desenvolvimento Experimental",
+      "natureza": "Produto",
+      "count": 2005
+    },
+    "arquivo_saida": "grupos_categoria_Eletroeletrônica_DE_-_Desenvolvimento_Expe_Produto_sublote6.csv",
+    "total_projetos": 162,
+    "resposta_length": 4136,
+    "requer_merge": true,
+    "timestamp": "2025-08-18T13:14:33.038658"
+  },
+  {
+    "combinacao": {
+      "setor": "Eletroeletrônica",
+      "tipo_pesquisa": "DE - Desenvolvimento Experimental",
+      "natureza": "Produto",
+      "count": 2005
+    },
+    "arquivo_saida": "grupos_categoria_Eletroeletrônica_DE_-_Desenvolvimento_Expe_Produto_sublote7.csv",
+    "total_projetos": 162,
+    "resposta_length": 10375,
+    "requer_merge": true,
+    "timestamp": "2025-08-18T13:14:33.038664"
+  },
+  {
+    "combinacao": {
+      "setor": "Eletroeletrônica",
+      "tipo_pesquisa": "DE - Desenvolvimento Experimental",
+      "natureza": "Produto",
+      "count": 2005
+    },
+    "arquivo_saida": "grupos_categoria_Eletroeletrônica_DE_-_Desenvolvimento_Expe_Produto_sublote8.csv",
+    "total_projetos": 162,
+    "resposta_length": 10525,
+    "requer_merge": true,
+    "timestamp": "2025-08-18T13:14:33.038670"
+  },
+  {
+    "combinacao": {
+      "setor": "Eletroeletrônica",
+      "tipo_pesquisa": "DE - Desenvolvimento Experimental",
+      "natureza": "Produto",
+      "count": 2005
+    },
+    "arquivo_saida": "grupos_categoria_Eletroeletrônica_DE_-_Desenvolvimento_Expe_Produto_sublote9.csv",
+    "total_projetos": 162,
+    "resposta_length": 11854,
+    "requer_merge": true,
+    "timestamp": "2025-08-18T13:14:33.038676"
+  },
+  {
+    "combinacao": {
+      "setor": "Eletroeletrônica",
+      "tipo_pesquisa": "DE - Desenvolvimento Experimental",
+      "natureza": "Produto",
+      "count": 2005
+    },
+    "arquivo_saida": "grupos_categoria_Eletroeletrônica_DE_-_Desenvolvimento_Expe_Produto_sublote10.csv",
+    "total_projetos": 162,
+    "resposta_length": 10212,
+    "requer_merge": true,
+    "timestamp": "2025-08-18T13:14:33.038682"
+  },
+  {
+    "combinacao": {
+      "setor": "Eletroeletrônica",
+      "tipo_pesquisa": "DE - Desenvolvimento Experimental",
+      "natureza": "Produto",
+      "count": 2005
+    },
+    "arquivo_saida": "grupos_categoria_Eletroeletrônica_DE_-_Desenvolvimento_Expe_Produto_sublote11.csv",
+    "total_projetos": 162,
+    "resposta_length": 11657,
+    "requer_merge": true,
+    "timestamp": "2025-08-18T13:14:33.038688"
+  },
+  {
+    "combinacao": {
+      "setor": "Eletroeletrônica",
+      "tipo_pesquisa": "DE - Desenvolvimento Experimental",
+      "natureza": "Produto",
+      "count": 2005
+    },
+    "arquivo_saida": "grupos_categoria_Eletroeletrônica_DE_-_Desenvolvimento_Expe_Produto_sublote12.csv",
+    "total_projetos": 162,
+    "resposta_length": 9938,
+    "requer_merge": true,
+    "timestamp": "2025-08-18T13:14:33.038694"
+  },
+  {
+    "combinacao": {
+      "setor": "Eletroeletrônica",
+      "tipo_pesquisa": "DE - Desenvolvimento Experimental",
+      "natureza": "Produto",
+      "count": 2005
+    },
+    "arquivo_saida": "grupos_categoria_Eletroeletrônica_DE_-_Desenvolvimento_Expe_Produto_sublote13.csv",
+    "total_projetos": 162,
+    "resposta_length": 11294,
+    "requer_merge": true,
+    "timestamp": "2025-08-18T13:14:33.038700"
+  },
+  {
+    "combinacao": {
+      "setor": "Eletroeletrônica",
+      "tipo_pesquisa": "DE - Desenvolvimento Experimental",
+      "natureza": "Produto",
+      "count": 2005
+    },
+    "arquivo_saida": "grupos_categoria_Eletroeletrônica_DE_-_Desenvolvimento_Expe_Produto_sublote15.csv",
+    "total_projetos": 37,
+    "resposta_length": 3728,
+    "requer_merge": true,
+    "timestamp": "2025-08-18T13:14:33.038706"
+  },
+  {
+    "combinacao": {
+      "setor": "Eletroeletrônica",
       "tipo_pesquisa": "DE - Desenvolvimento Experimental",
       "natureza": "Serviço",
-      "count": 51
+      "count": 95
     },
-    "arquivo_saida": "grupos_categoria_Metalurgia_e_Mineração_DE_-_Desenvolvimento_Expe_Serviço_completa.csv",
-    "total_projetos": 51,
-    "resposta_length": 2099,
+    "arquivo_saida": "grupos_categoria_Eletroeletrônica_DE_-_Desenvolvimento_Expe_Serviço_completa.csv",
+    "total_projetos": 95,
+    "resposta_length": 9811,
     "requer_merge": false,
-    "timestamp": "2025-08-14T16:47:38.139028"
+    "timestamp": "2025-08-18T13:14:33.038712"
   },
   {
     "combinacao": {
-      "setor": "Metalurgia e Mineração",
+      "setor": "Eletroeletrônica",
       "tipo_pesquisa": "PA - Pesquisa Aplicada",
       "natureza": "Processo",
-      "count": 597
+      "count": 268
     },
-    "arquivo_saida": "grupos_categoria_Metalurgia_e_Mineração_PA_-_Pesquisa_Aplicada_Processo_sublote1.csv",
+    "arquivo_saida": "grupos_categoria_Eletroeletrônica_PA_-_Pesquisa_Aplicada_Processo_sublote1.csv",
     "total_projetos": 142,
-    "resposta_length": 3305,
+    "resposta_length": 10528,
     "requer_merge": true,
-    "timestamp": "2025-08-14T16:47:38.139033"
+    "timestamp": "2025-08-18T13:14:33.038718"
   },
   {
     "combinacao": {
-      "setor": "Metalurgia e Mineração",
+      "setor": "Eletroeletrônica",
       "tipo_pesquisa": "PA - Pesquisa Aplicada",
       "natureza": "Processo",
-      "count": 597
+      "count": 268
     },
-    "arquivo_saida": "grupos_categoria_Metalurgia_e_Mineração_PA_-_Pesquisa_Aplicada_Processo_sublote2.csv",
-    "total_projetos": 162,
-    "resposta_length": 10430,
+    "arquivo_saida": "grupos_categoria_Eletroeletrônica_PA_-_Pesquisa_Aplicada_Processo_sublote2.csv",
+    "total_projetos": 146,
+    "resposta_length": 11111,
     "requer_merge": true,
-    "timestamp": "2025-08-14T16:47:38.139038"
+    "timestamp": "2025-08-18T13:14:33.038727"
   },
   {
     "combinacao": {
-      "setor": "Metalurgia e Mineração",
-      "tipo_pesquisa": "PA - Pesquisa Aplicada",
-      "natureza": "Processo",
-      "count": 597
-    },
-    "arquivo_saida": "grupos_categoria_Metalurgia_e_Mineração_PA_-_Pesquisa_Aplicada_Processo_sublote3.csv",
-    "total_projetos": 162,
-    "resposta_length": 3313,
-    "requer_merge": true,
-    "timestamp": "2025-08-14T16:47:38.139045"
-  },
-  {
-    "combinacao": {
-      "setor": "Metalurgia e Mineração",
-      "tipo_pesquisa": "PA - Pesquisa Aplicada",
-      "natureza": "Processo",
-      "count": 597
-    },
-    "arquivo_saida": "grupos_categoria_Metalurgia_e_Mineração_PA_-_Pesquisa_Aplicada_Processo_sublote4.csv",
-    "total_projetos": 162,
-    "resposta_length": 7387,
-    "requer_merge": true,
-    "timestamp": "2025-08-14T16:47:38.139050"
-  },
-  {
-    "combinacao": {
-      "setor": "Metalurgia e Mineração",
-      "tipo_pesquisa": "PA - Pesquisa Aplicada",
-      "natureza": "Processo",
-      "count": 597
-    },
-    "arquivo_saida": "grupos_categoria_Metalurgia_e_Mineração_PA_-_Pesquisa_Aplicada_Processo_sublote5.csv",
-    "total_projetos": 49,
-    "resposta_length": 4128,
-    "requer_merge": true,
-    "timestamp": "2025-08-14T16:47:38.139056"
-  },
-  {
-    "combinacao": {
-      "setor": "Metalurgia e Mineração",
+      "setor": "Eletroeletrônica",
       "tipo_pesquisa": "PA - Pesquisa Aplicada",
       "natureza": "Produto",
-      "count": 505
+      "count": 748
     },
-    "arquivo_saida": "grupos_categoria_Metalurgia_e_Mineração_PA_-_Pesquisa_Aplicada_Produto_sublote1.csv",
+    "arquivo_saida": "grupos_categoria_Eletroeletrônica_PA_-_Pesquisa_Aplicada_Produto_sublote1.csv",
     "total_projetos": 142,
-    "resposta_length": 7655,
+    "resposta_length": 5519,
     "requer_merge": true,
-    "timestamp": "2025-08-14T16:47:38.139062"
+    "timestamp": "2025-08-18T13:14:33.038734"
   },
   {
     "combinacao": {
-      "setor": "Metalurgia e Mineração",
+      "setor": "Eletroeletrônica",
       "tipo_pesquisa": "PA - Pesquisa Aplicada",
       "natureza": "Produto",
-      "count": 505
+      "count": 748
     },
-    "arquivo_saida": "grupos_categoria_Metalurgia_e_Mineração_PA_-_Pesquisa_Aplicada_Produto_sublote2.csv",
+    "arquivo_saida": "grupos_categoria_Eletroeletrônica_PA_-_Pesquisa_Aplicada_Produto_sublote2.csv",
     "total_projetos": 162,
-    "resposta_length": 8077,
+    "resposta_length": 3416,
     "requer_merge": true,
-    "timestamp": "2025-08-14T16:47:38.139067"
+    "timestamp": "2025-08-18T13:14:33.038740"
   },
   {
     "combinacao": {
-      "setor": "Metalurgia e Mineração",
+      "setor": "Eletroeletrônica",
       "tipo_pesquisa": "PA - Pesquisa Aplicada",
       "natureza": "Produto",
-      "count": 505
+      "count": 748
     },
-    "arquivo_saida": "grupos_categoria_Metalurgia_e_Mineração_PA_-_Pesquisa_Aplicada_Produto_sublote3.csv",
+    "arquivo_saida": "grupos_categoria_Eletroeletrônica_PA_-_Pesquisa_Aplicada_Produto_sublote3.csv",
     "total_projetos": 162,
-    "resposta_length": 13272,
+    "resposta_length": 10358,
     "requer_merge": true,
-    "timestamp": "2025-08-14T16:47:38.139073"
+    "timestamp": "2025-08-18T13:14:33.038746"
   },
   {
     "combinacao": {
-      "setor": "Metalurgia e Mineração",
+      "setor": "Eletroeletrônica",
       "tipo_pesquisa": "PA - Pesquisa Aplicada",
       "natureza": "Produto",
-      "count": 505
+      "count": 748
     },
-    "arquivo_saida": "grupos_categoria_Metalurgia_e_Mineração_PA_-_Pesquisa_Aplicada_Produto_sublote4.csv",
-    "total_projetos": 99,
-    "resposta_length": 5656,
+    "arquivo_saida": "grupos_categoria_Eletroeletrônica_PA_-_Pesquisa_Aplicada_Produto_sublote4.csv",
+    "total_projetos": 162,
+    "resposta_length": 4064,
     "requer_merge": true,
-    "timestamp": "2025-08-14T16:47:38.139078"
+    "timestamp": "2025-08-18T13:14:33.038752"
   },
   {
     "combinacao": {
-      "setor": "Metalurgia e Mineração",
+      "setor": "Eletroeletrônica",
+      "tipo_pesquisa": "PA - Pesquisa Aplicada",
+      "natureza": "Produto",
+      "count": 748
+    },
+    "arquivo_saida": "grupos_categoria_Eletroeletrônica_PA_-_Pesquisa_Aplicada_Produto_sublote5.csv",
+    "total_projetos": 162,
+    "resposta_length": 10456,
+    "requer_merge": true,
+    "timestamp": "2025-08-18T13:14:33.038758"
+  },
+  {
+    "combinacao": {
+      "setor": "Eletroeletrônica",
+      "tipo_pesquisa": "PA - Pesquisa Aplicada",
+      "natureza": "Produto",
+      "count": 748
+    },
+    "arquivo_saida": "grupos_categoria_Eletroeletrônica_PA_-_Pesquisa_Aplicada_Produto_sublote6.csv",
+    "total_projetos": 58,
+    "resposta_length": 5090,
+    "requer_merge": true,
+    "timestamp": "2025-08-18T13:14:33.038764"
+  },
+  {
+    "combinacao": {
+      "setor": "Eletroeletrônica",
       "tipo_pesquisa": "PA - Pesquisa Aplicada",
       "natureza": "Serviço",
-      "count": 10
+      "count": 18
     },
-    "arquivo_saida": "grupos_categoria_Metalurgia_e_Mineração_PA_-_Pesquisa_Aplicada_Serviço_completa.csv",
-    "total_projetos": 10,
-    "resposta_length": 1151,
+    "arquivo_saida": "grupos_categoria_Eletroeletrônica_PA_-_Pesquisa_Aplicada_Serviço_completa.csv",
+    "total_projetos": 18,
+    "resposta_length": 2095,
     "requer_merge": false,
-    "timestamp": "2025-08-14T16:47:38.139084"
+    "timestamp": "2025-08-18T13:14:33.038772"
   },
   {
     "combinacao": {
-      "setor": "Metalurgia e Mineração",
+      "setor": "Eletroeletrônica",
       "tipo_pesquisa": "PB - Pesquisa Básica",
       "natureza": "Processo",
-      "count": 68
+      "count": 50
     },
-    "arquivo_saida": "grupos_categoria_Metalurgia_e_Mineração_PB_-_Pesquisa_Básica_Processo_completa.csv",
-    "total_projetos": 68,
-    "resposta_length": 4387,
+    "arquivo_saida": "grupos_categoria_Eletroeletrônica_PB_-_Pesquisa_Básica_Processo_completa.csv",
+    "total_projetos": 50,
+    "resposta_length": 4325,
     "requer_merge": false,
-    "timestamp": "2025-08-14T16:47:38.139090"
+    "timestamp": "2025-08-18T13:14:33.038778"
   },
   {
     "combinacao": {
-      "setor": "Metalurgia e Mineração",
+      "setor": "Eletroeletrônica",
       "tipo_pesquisa": "PB - Pesquisa Básica",
       "natureza": "Produto",
-      "count": 91
+      "count": 102
     },
-    "arquivo_saida": "grupos_categoria_Metalurgia_e_Mineração_PB_-_Pesquisa_Básica_Produto_completa.csv",
-    "total_projetos": 91,
-    "resposta_length": 3606,
+    "arquivo_saida": "grupos_categoria_Eletroeletrônica_PB_-_Pesquisa_Básica_Produto_completa.csv",
+    "total_projetos": 102,
+    "resposta_length": 5998,
     "requer_merge": false,
-    "timestamp": "2025-08-14T16:47:38.139096"
+    "timestamp": "2025-08-18T13:14:33.038784"
   },
   {
     "combinacao": {
-      "setor": "Metalurgia e Mineração",
+      "setor": "Eletroeletrônica",
+      "tipo_pesquisa": "PB - Pesquisa Básica",
+      "natureza": "Serviço",
+      "count": 24
+    },
+    "arquivo_saida": "grupos_categoria_Eletroeletrônica_PB_-_Pesquisa_Básica_Serviço_completa.csv",
+    "total_projetos": 24,
+    "resposta_length": 2740,
+    "requer_merge": false,
+    "timestamp": "2025-08-18T13:14:33.038790"
+  },
+  {
+    "combinacao": {
+      "setor": "Mecânica e Transporte",
+      "tipo_pesquisa": "DE - Desenvolvimento Experimental",
+      "natureza": "Processo",
+      "count": 1652
+    },
+    "arquivo_saida": "grupos_categoria_Mecânica_e_Transporte_DE_-_Desenvolvimento_Expe_Processo_sublote1.csv",
+    "total_projetos": 142,
+    "resposta_length": 3916,
+    "requer_merge": true,
+    "timestamp": "2025-08-18T13:14:33.038799"
+  },
+  {
+    "combinacao": {
+      "setor": "Mecânica e Transporte",
+      "tipo_pesquisa": "DE - Desenvolvimento Experimental",
+      "natureza": "Processo",
+      "count": 1652
+    },
+    "arquivo_saida": "grupos_categoria_Mecânica_e_Transporte_DE_-_Desenvolvimento_Expe_Processo_sublote2.csv",
+    "total_projetos": 162,
+    "resposta_length": 2978,
+    "requer_merge": true,
+    "timestamp": "2025-08-18T13:14:33.038806"
+  },
+  {
+    "combinacao": {
+      "setor": "Mecânica e Transporte",
+      "tipo_pesquisa": "DE - Desenvolvimento Experimental",
+      "natureza": "Processo",
+      "count": 1652
+    },
+    "arquivo_saida": "grupos_categoria_Mecânica_e_Transporte_DE_-_Desenvolvimento_Expe_Processo_sublote3.csv",
+    "total_projetos": 162,
+    "resposta_length": 5487,
+    "requer_merge": true,
+    "timestamp": "2025-08-18T13:14:33.038813"
+  },
+  {
+    "combinacao": {
+      "setor": "Mecânica e Transporte",
+      "tipo_pesquisa": "DE - Desenvolvimento Experimental",
+      "natureza": "Processo",
+      "count": 1652
+    },
+    "arquivo_saida": "grupos_categoria_Mecânica_e_Transporte_DE_-_Desenvolvimento_Expe_Processo_sublote4.csv",
+    "total_projetos": 162,
+    "resposta_length": 2781,
+    "requer_merge": true,
+    "timestamp": "2025-08-18T13:14:33.038819"
+  },
+  {
+    "combinacao": {
+      "setor": "Mecânica e Transporte",
+      "tipo_pesquisa": "DE - Desenvolvimento Experimental",
+      "natureza": "Processo",
+      "count": 1652
+    },
+    "arquivo_saida": "grupos_categoria_Mecânica_e_Transporte_DE_-_Desenvolvimento_Expe_Processo_sublote5.csv",
+    "total_projetos": 162,
+    "resposta_length": 11204,
+    "requer_merge": true,
+    "timestamp": "2025-08-18T13:14:33.038825"
+  },
+  {
+    "combinacao": {
+      "setor": "Mecânica e Transporte",
+      "tipo_pesquisa": "DE - Desenvolvimento Experimental",
+      "natureza": "Processo",
+      "count": 1652
+    },
+    "arquivo_saida": "grupos_categoria_Mecânica_e_Transporte_DE_-_Desenvolvimento_Expe_Processo_sublote6.csv",
+    "total_projetos": 162,
+    "resposta_length": 6409,
+    "requer_merge": true,
+    "timestamp": "2025-08-18T13:14:33.038831"
+  },
+  {
+    "combinacao": {
+      "setor": "Mecânica e Transporte",
+      "tipo_pesquisa": "DE - Desenvolvimento Experimental",
+      "natureza": "Processo",
+      "count": 1652
+    },
+    "arquivo_saida": "grupos_categoria_Mecânica_e_Transporte_DE_-_Desenvolvimento_Expe_Processo_sublote7.csv",
+    "total_projetos": 162,
+    "resposta_length": 2237,
+    "requer_merge": true,
+    "timestamp": "2025-08-18T13:14:33.038836"
+  },
+  {
+    "combinacao": {
+      "setor": "Mecânica e Transporte",
+      "tipo_pesquisa": "DE - Desenvolvimento Experimental",
+      "natureza": "Processo",
+      "count": 1652
+    },
+    "arquivo_saida": "grupos_categoria_Mecânica_e_Transporte_DE_-_Desenvolvimento_Expe_Processo_sublote8.csv",
+    "total_projetos": 162,
+    "resposta_length": 9589,
+    "requer_merge": true,
+    "timestamp": "2025-08-18T13:14:33.038842"
+  },
+  {
+    "combinacao": {
+      "setor": "Mecânica e Transporte",
+      "tipo_pesquisa": "DE - Desenvolvimento Experimental",
+      "natureza": "Processo",
+      "count": 1652
+    },
+    "arquivo_saida": "grupos_categoria_Mecânica_e_Transporte_DE_-_Desenvolvimento_Expe_Processo_sublote9.csv",
+    "total_projetos": 162,
+    "resposta_length": 10441,
+    "requer_merge": true,
+    "timestamp": "2025-08-18T13:14:33.038848"
+  },
+  {
+    "combinacao": {
+      "setor": "Mecânica e Transporte",
+      "tipo_pesquisa": "DE - Desenvolvimento Experimental",
+      "natureza": "Processo",
+      "count": 1652
+    },
+    "arquivo_saida": "grupos_categoria_Mecânica_e_Transporte_DE_-_Desenvolvimento_Expe_Processo_sublote10.csv",
+    "total_projetos": 162,
+    "resposta_length": 11783,
+    "requer_merge": true,
+    "timestamp": "2025-08-18T13:14:33.038854"
+  },
+  {
+    "combinacao": {
+      "setor": "Mecânica e Transporte",
+      "tipo_pesquisa": "DE - Desenvolvimento Experimental",
+      "natureza": "Processo",
+      "count": 1652
+    },
+    "arquivo_saida": "grupos_categoria_Mecânica_e_Transporte_DE_-_Desenvolvimento_Expe_Processo_sublote11.csv",
+    "total_projetos": 162,
+    "resposta_length": 2434,
+    "requer_merge": true,
+    "timestamp": "2025-08-18T13:14:33.038860"
+  },
+  {
+    "combinacao": {
+      "setor": "Mecânica e Transporte",
+      "tipo_pesquisa": "DE - Desenvolvimento Experimental",
+      "natureza": "Processo",
+      "count": 1652
+    },
+    "arquivo_saida": "grupos_categoria_Mecânica_e_Transporte_DE_-_Desenvolvimento_Expe_Processo_sublote12.csv",
+    "total_projetos": 110,
+    "resposta_length": 7980,
+    "requer_merge": true,
+    "timestamp": "2025-08-18T13:14:33.038865"
+  },
+  {
+    "combinacao": {
+      "setor": "Mecânica e Transporte",
+      "tipo_pesquisa": "DE - Desenvolvimento Experimental",
+      "natureza": "Produto",
+      "count": 2649
+    },
+    "arquivo_saida": "grupos_categoria_Mecânica_e_Transporte_DE_-_Desenvolvimento_Expe_Produto_sublote1.csv",
+    "total_projetos": 142,
+    "resposta_length": 7624,
+    "requer_merge": true,
+    "timestamp": "2025-08-18T13:14:33.038871"
+  },
+  {
+    "combinacao": {
+      "setor": "Mecânica e Transporte",
+      "tipo_pesquisa": "DE - Desenvolvimento Experimental",
+      "natureza": "Produto",
+      "count": 2649
+    },
+    "arquivo_saida": "grupos_categoria_Mecânica_e_Transporte_DE_-_Desenvolvimento_Expe_Produto_sublote2.csv",
+    "total_projetos": 162,
+    "resposta_length": 6896,
+    "requer_merge": true,
+    "timestamp": "2025-08-18T13:14:33.038876"
+  },
+  {
+    "combinacao": {
+      "setor": "Mecânica e Transporte",
+      "tipo_pesquisa": "DE - Desenvolvimento Experimental",
+      "natureza": "Produto",
+      "count": 2649
+    },
+    "arquivo_saida": "grupos_categoria_Mecânica_e_Transporte_DE_-_Desenvolvimento_Expe_Produto_sublote3.csv",
+    "total_projetos": 162,
+    "resposta_length": 11021,
+    "requer_merge": true,
+    "timestamp": "2025-08-18T13:14:33.038882"
+  },
+  {
+    "combinacao": {
+      "setor": "Mecânica e Transporte",
+      "tipo_pesquisa": "DE - Desenvolvimento Experimental",
+      "natureza": "Produto",
+      "count": 2649
+    },
+    "arquivo_saida": "grupos_categoria_Mecânica_e_Transporte_DE_-_Desenvolvimento_Expe_Produto_sublote4.csv",
+    "total_projetos": 162,
+    "resposta_length": 5790,
+    "requer_merge": true,
+    "timestamp": "2025-08-18T13:14:33.038888"
+  },
+  {
+    "combinacao": {
+      "setor": "Mecânica e Transporte",
+      "tipo_pesquisa": "DE - Desenvolvimento Experimental",
+      "natureza": "Produto",
+      "count": 2649
+    },
+    "arquivo_saida": "grupos_categoria_Mecânica_e_Transporte_DE_-_Desenvolvimento_Expe_Produto_sublote5.csv",
+    "total_projetos": 162,
+    "resposta_length": 10279,
+    "requer_merge": true,
+    "timestamp": "2025-08-18T13:14:33.038894"
+  },
+  {
+    "combinacao": {
+      "setor": "Mecânica e Transporte",
+      "tipo_pesquisa": "DE - Desenvolvimento Experimental",
+      "natureza": "Produto",
+      "count": 2649
+    },
+    "arquivo_saida": "grupos_categoria_Mecânica_e_Transporte_DE_-_Desenvolvimento_Expe_Produto_sublote6.csv",
+    "total_projetos": 162,
+    "resposta_length": 10160,
+    "requer_merge": true,
+    "timestamp": "2025-08-18T13:14:33.038903"
+  },
+  {
+    "combinacao": {
+      "setor": "Mecânica e Transporte",
+      "tipo_pesquisa": "DE - Desenvolvimento Experimental",
+      "natureza": "Produto",
+      "count": 2649
+    },
+    "arquivo_saida": "grupos_categoria_Mecânica_e_Transporte_DE_-_Desenvolvimento_Expe_Produto_sublote7.csv",
+    "total_projetos": 162,
+    "resposta_length": 10567,
+    "requer_merge": true,
+    "timestamp": "2025-08-18T13:14:33.038910"
+  },
+  {
+    "combinacao": {
+      "setor": "Mecânica e Transporte",
+      "tipo_pesquisa": "DE - Desenvolvimento Experimental",
+      "natureza": "Produto",
+      "count": 2649
+    },
+    "arquivo_saida": "grupos_categoria_Mecânica_e_Transporte_DE_-_Desenvolvimento_Expe_Produto_sublote8.csv",
+    "total_projetos": 162,
+    "resposta_length": 3602,
+    "requer_merge": true,
+    "timestamp": "2025-08-18T13:14:33.038916"
+  },
+  {
+    "combinacao": {
+      "setor": "Mecânica e Transporte",
+      "tipo_pesquisa": "DE - Desenvolvimento Experimental",
+      "natureza": "Produto",
+      "count": 2649
+    },
+    "arquivo_saida": "grupos_categoria_Mecânica_e_Transporte_DE_-_Desenvolvimento_Expe_Produto_sublote9.csv",
+    "total_projetos": 162,
+    "resposta_length": 3851,
+    "requer_merge": true,
+    "timestamp": "2025-08-18T13:14:33.038921"
+  },
+  {
+    "combinacao": {
+      "setor": "Mecânica e Transporte",
+      "tipo_pesquisa": "DE - Desenvolvimento Experimental",
+      "natureza": "Produto",
+      "count": 2649
+    },
+    "arquivo_saida": "grupos_categoria_Mecânica_e_Transporte_DE_-_Desenvolvimento_Expe_Produto_sublote10.csv",
+    "total_projetos": 162,
+    "resposta_length": 10735,
+    "requer_merge": true,
+    "timestamp": "2025-08-18T13:14:33.038927"
+  },
+  {
+    "combinacao": {
+      "setor": "Mecânica e Transporte",
+      "tipo_pesquisa": "DE - Desenvolvimento Experimental",
+      "natureza": "Produto",
+      "count": 2649
+    },
+    "arquivo_saida": "grupos_categoria_Mecânica_e_Transporte_DE_-_Desenvolvimento_Expe_Produto_sublote11.csv",
+    "total_projetos": 162,
+    "resposta_length": 5691,
+    "requer_merge": true,
+    "timestamp": "2025-08-18T13:14:33.038933"
+  },
+  {
+    "combinacao": {
+      "setor": "Mecânica e Transporte",
+      "tipo_pesquisa": "DE - Desenvolvimento Experimental",
+      "natureza": "Produto",
+      "count": 2649
+    },
+    "arquivo_saida": "grupos_categoria_Mecânica_e_Transporte_DE_-_Desenvolvimento_Expe_Produto_sublote12.csv",
+    "total_projetos": 162,
+    "resposta_length": 5044,
+    "requer_merge": true,
+    "timestamp": "2025-08-18T13:14:33.038938"
+  },
+  {
+    "combinacao": {
+      "setor": "Mecânica e Transporte",
+      "tipo_pesquisa": "DE - Desenvolvimento Experimental",
+      "natureza": "Produto",
+      "count": 2649
+    },
+    "arquivo_saida": "grupos_categoria_Mecânica_e_Transporte_DE_-_Desenvolvimento_Expe_Produto_sublote13.csv",
+    "total_projetos": 162,
+    "resposta_length": 6427,
+    "requer_merge": true,
+    "timestamp": "2025-08-18T13:14:33.038944"
+  },
+  {
+    "combinacao": {
+      "setor": "Mecânica e Transporte",
+      "tipo_pesquisa": "DE - Desenvolvimento Experimental",
+      "natureza": "Produto",
+      "count": 2649
+    },
+    "arquivo_saida": "grupos_categoria_Mecânica_e_Transporte_DE_-_Desenvolvimento_Expe_Produto_sublote14.csv",
+    "total_projetos": 162,
+    "resposta_length": 4980,
+    "requer_merge": true,
+    "timestamp": "2025-08-18T13:14:33.038950"
+  },
+  {
+    "combinacao": {
+      "setor": "Mecânica e Transporte",
+      "tipo_pesquisa": "DE - Desenvolvimento Experimental",
+      "natureza": "Produto",
+      "count": 2649
+    },
+    "arquivo_saida": "grupos_categoria_Mecânica_e_Transporte_DE_-_Desenvolvimento_Expe_Produto_sublote15.csv",
+    "total_projetos": 162,
+    "resposta_length": 6399,
+    "requer_merge": true,
+    "timestamp": "2025-08-18T13:14:33.038956"
+  },
+  {
+    "combinacao": {
+      "setor": "Mecânica e Transporte",
+      "tipo_pesquisa": "DE - Desenvolvimento Experimental",
+      "natureza": "Produto",
+      "count": 2649
+    },
+    "arquivo_saida": "grupos_categoria_Mecânica_e_Transporte_DE_-_Desenvolvimento_Expe_Produto_sublote16.csv",
+    "total_projetos": 162,
+    "resposta_length": 11830,
+    "requer_merge": true,
+    "timestamp": "2025-08-18T13:14:33.038961"
+  },
+  {
+    "combinacao": {
+      "setor": "Mecânica e Transporte",
+      "tipo_pesquisa": "DE - Desenvolvimento Experimental",
+      "natureza": "Produto",
+      "count": 2649
+    },
+    "arquivo_saida": "grupos_categoria_Mecânica_e_Transporte_DE_-_Desenvolvimento_Expe_Produto_sublote17.csv",
+    "total_projetos": 162,
+    "resposta_length": 10790,
+    "requer_merge": true,
+    "timestamp": "2025-08-18T13:14:33.038967"
+  },
+  {
+    "combinacao": {
+      "setor": "Mecânica e Transporte",
+      "tipo_pesquisa": "DE - Desenvolvimento Experimental",
+      "natureza": "Produto",
+      "count": 2649
+    },
+    "arquivo_saida": "grupos_categoria_Mecânica_e_Transporte_DE_-_Desenvolvimento_Expe_Produto_sublote18.csv",
+    "total_projetos": 162,
+    "resposta_length": 10644,
+    "requer_merge": true,
+    "timestamp": "2025-08-18T13:14:33.038973"
+  },
+  {
+    "combinacao": {
+      "setor": "Mecânica e Transporte",
+      "tipo_pesquisa": "DE - Desenvolvimento Experimental",
+      "natureza": "Produto",
+      "count": 2649
+    },
+    "arquivo_saida": "grupos_categoria_Mecânica_e_Transporte_DE_-_Desenvolvimento_Expe_Produto_sublote19.csv",
+    "total_projetos": 113,
+    "resposta_length": 11126,
+    "requer_merge": true,
+    "timestamp": "2025-08-18T13:14:33.038978"
+  },
+  {
+    "combinacao": {
+      "setor": "Mecânica e Transporte",
+      "tipo_pesquisa": "DE - Desenvolvimento Experimental",
+      "natureza": "Serviço",
+      "count": 88
+    },
+    "arquivo_saida": "grupos_categoria_Mecânica_e_Transporte_DE_-_Desenvolvimento_Expe_Serviço_completa.csv",
+    "total_projetos": 88,
+    "resposta_length": 4313,
+    "requer_merge": false,
+    "timestamp": "2025-08-18T13:14:33.038984"
+  },
+  {
+    "combinacao": {
+      "setor": "Mecânica e Transporte",
+      "tipo_pesquisa": "PA - Pesquisa Aplicada",
+      "natureza": "Processo",
+      "count": 258
+    },
+    "arquivo_saida": "grupos_categoria_Mecânica_e_Transporte_PA_-_Pesquisa_Aplicada_Processo_sublote1.csv",
+    "total_projetos": 142,
+    "resposta_length": 10947,
+    "requer_merge": true,
+    "timestamp": "2025-08-18T13:14:33.038990"
+  },
+  {
+    "combinacao": {
+      "setor": "Mecânica e Transporte",
+      "tipo_pesquisa": "PA - Pesquisa Aplicada",
+      "natureza": "Processo",
+      "count": 258
+    },
+    "arquivo_saida": "grupos_categoria_Mecânica_e_Transporte_PA_-_Pesquisa_Aplicada_Processo_sublote2.csv",
+    "total_projetos": 136,
+    "resposta_length": 11627,
+    "requer_merge": true,
+    "timestamp": "2025-08-18T13:14:33.039001"
+  },
+  {
+    "combinacao": {
+      "setor": "Mecânica e Transporte",
+      "tipo_pesquisa": "PA - Pesquisa Aplicada",
+      "natureza": "Produto",
+      "count": 724
+    },
+    "arquivo_saida": "grupos_categoria_Mecânica_e_Transporte_PA_-_Pesquisa_Aplicada_Produto_sublote1.csv",
+    "total_projetos": 142,
+    "resposta_length": 5725,
+    "requer_merge": true,
+    "timestamp": "2025-08-18T13:14:33.039007"
+  },
+  {
+    "combinacao": {
+      "setor": "Mecânica e Transporte",
+      "tipo_pesquisa": "PA - Pesquisa Aplicada",
+      "natureza": "Produto",
+      "count": 724
+    },
+    "arquivo_saida": "grupos_categoria_Mecânica_e_Transporte_PA_-_Pesquisa_Aplicada_Produto_sublote2.csv",
+    "total_projetos": 162,
+    "resposta_length": 7236,
+    "requer_merge": true,
+    "timestamp": "2025-08-18T13:14:33.039013"
+  },
+  {
+    "combinacao": {
+      "setor": "Mecânica e Transporte",
+      "tipo_pesquisa": "PA - Pesquisa Aplicada",
+      "natureza": "Produto",
+      "count": 724
+    },
+    "arquivo_saida": "grupos_categoria_Mecânica_e_Transporte_PA_-_Pesquisa_Aplicada_Produto_sublote3.csv",
+    "total_projetos": 162,
+    "resposta_length": 8715,
+    "requer_merge": true,
+    "timestamp": "2025-08-18T13:14:33.039019"
+  },
+  {
+    "combinacao": {
+      "setor": "Mecânica e Transporte",
+      "tipo_pesquisa": "PA - Pesquisa Aplicada",
+      "natureza": "Produto",
+      "count": 724
+    },
+    "arquivo_saida": "grupos_categoria_Mecânica_e_Transporte_PA_-_Pesquisa_Aplicada_Produto_sublote4.csv",
+    "total_projetos": 162,
+    "resposta_length": 10326,
+    "requer_merge": true,
+    "timestamp": "2025-08-18T13:14:33.039026"
+  },
+  {
+    "combinacao": {
+      "setor": "Mecânica e Transporte",
+      "tipo_pesquisa": "PA - Pesquisa Aplicada",
+      "natureza": "Produto",
+      "count": 724
+    },
+    "arquivo_saida": "grupos_categoria_Mecânica_e_Transporte_PA_-_Pesquisa_Aplicada_Produto_sublote5.csv",
+    "total_projetos": 162,
+    "resposta_length": 9528,
+    "requer_merge": true,
+    "timestamp": "2025-08-18T13:14:33.039032"
+  },
+  {
+    "combinacao": {
+      "setor": "Mecânica e Transporte",
+      "tipo_pesquisa": "PA - Pesquisa Aplicada",
+      "natureza": "Produto",
+      "count": 724
+    },
+    "arquivo_saida": "grupos_categoria_Mecânica_e_Transporte_PA_-_Pesquisa_Aplicada_Produto_sublote6.csv",
+    "total_projetos": 34,
+    "resposta_length": 4857,
+    "requer_merge": true,
+    "timestamp": "2025-08-18T13:14:33.039037"
+  },
+  {
+    "combinacao": {
+      "setor": "Mecânica e Transporte",
+      "tipo_pesquisa": "PA - Pesquisa Aplicada",
+      "natureza": "Serviço",
+      "count": 12
+    },
+    "arquivo_saida": "grupos_categoria_Mecânica_e_Transporte_PA_-_Pesquisa_Aplicada_Serviço_completa.csv",
+    "total_projetos": 12,
+    "resposta_length": 1445,
+    "requer_merge": false,
+    "timestamp": "2025-08-18T13:14:33.039043"
+  },
+  {
+    "combinacao": {
+      "setor": "Mecânica e Transporte",
+      "tipo_pesquisa": "PB - Pesquisa Básica",
+      "natureza": "Processo",
+      "count": 87
+    },
+    "arquivo_saida": "grupos_categoria_Mecânica_e_Transporte_PB_-_Pesquisa_Básica_Processo_completa.csv",
+    "total_projetos": 87,
+    "resposta_length": 4389,
+    "requer_merge": false,
+    "timestamp": "2025-08-18T13:14:33.039049"
+  },
+  {
+    "combinacao": {
+      "setor": "Mecânica e Transporte",
+      "tipo_pesquisa": "PB - Pesquisa Básica",
+      "natureza": "Produto",
+      "count": 66
+    },
+    "arquivo_saida": "grupos_categoria_Mecânica_e_Transporte_PB_-_Pesquisa_Básica_Produto_completa.csv",
+    "total_projetos": 66,
+    "resposta_length": 4776,
+    "requer_merge": false,
+    "timestamp": "2025-08-18T13:14:33.039055"
+  },
+  {
+    "combinacao": {
+      "setor": "Mecânica e Transporte",
       "tipo_pesquisa": "PB - Pesquisa Básica",
       "natureza": "Serviço",
       "count": 3
     },
-    "arquivo_saida": "grupos_categoria_Metalurgia_e_Mineração_PB_-_Pesquisa_Básica_Serviço_completa.csv",
+    "arquivo_saida": "grupos_categoria_Mecânica_e_Transporte_PB_-_Pesquisa_Básica_Serviço_completa.csv",
     "total_projetos": 3,
-    "resposta_length": 438,
+    "resposta_length": 487,
     "requer_merge": false,
-    "timestamp": "2025-08-14T16:47:38.139102"
+    "timestamp": "2025-08-18T13:14:33.039061"
+  },
+  {
+    "combinacao": {
+      "setor": "Metalurgia e Mineração",
+      "tipo_pesquisa": "DE - Desenvolvimento Experimental",
+      "natureza": "Processo",
+      "count": 1101
+    },
+    "arquivo_saida": "grupos_categoria_Metalurgia_e_Mineração_DE_-_Desenvolvimento_Expe_Processo_sublote1.csv",
+    "total_projetos": 142,
+    "resposta_length": 8863,
+    "requer_merge": true,
+    "timestamp": "2025-08-18T13:14:33.039067"
+  },
+  {
+    "combinacao": {
+      "setor": "Metalurgia e Mineração",
+      "tipo_pesquisa": "DE - Desenvolvimento Experimental",
+      "natureza": "Processo",
+      "count": 1101
+    },
+    "arquivo_saida": "grupos_categoria_Metalurgia_e_Mineração_DE_-_Desenvolvimento_Expe_Processo_sublote2.csv",
+    "total_projetos": 162,
+    "resposta_length": 7062,
+    "requer_merge": true,
+    "timestamp": "2025-08-18T13:14:33.039076"
+  },
+  {
+    "combinacao": {
+      "setor": "Metalurgia e Mineração",
+      "tipo_pesquisa": "DE - Desenvolvimento Experimental",
+      "natureza": "Processo",
+      "count": 1101
+    },
+    "arquivo_saida": "grupos_categoria_Metalurgia_e_Mineração_DE_-_Desenvolvimento_Expe_Processo_sublote3.csv",
+    "total_projetos": 162,
+    "resposta_length": 12005,
+    "requer_merge": true,
+    "timestamp": "2025-08-18T13:14:33.039083"
+  },
+  {
+    "combinacao": {
+      "setor": "Metalurgia e Mineração",
+      "tipo_pesquisa": "DE - Desenvolvimento Experimental",
+      "natureza": "Processo",
+      "count": 1101
+    },
+    "arquivo_saida": "grupos_categoria_Metalurgia_e_Mineração_DE_-_Desenvolvimento_Expe_Processo_sublote4.csv",
+    "total_projetos": 162,
+    "resposta_length": 6338,
+    "requer_merge": true,
+    "timestamp": "2025-08-18T13:14:33.039088"
+  },
+  {
+    "combinacao": {
+      "setor": "Metalurgia e Mineração",
+      "tipo_pesquisa": "DE - Desenvolvimento Experimental",
+      "natureza": "Processo",
+      "count": 1101
+    },
+    "arquivo_saida": "grupos_categoria_Metalurgia_e_Mineração_DE_-_Desenvolvimento_Expe_Processo_sublote5.csv",
+    "total_projetos": 162,
+    "resposta_length": 10482,
+    "requer_merge": true,
+    "timestamp": "2025-08-18T13:14:33.039094"
+  },
+  {
+    "combinacao": {
+      "setor": "Metalurgia e Mineração",
+      "tipo_pesquisa": "DE - Desenvolvimento Experimental",
+      "natureza": "Processo",
+      "count": 1101
+    },
+    "arquivo_saida": "grupos_categoria_Metalurgia_e_Mineração_DE_-_Desenvolvimento_Expe_Processo_sublote6.csv",
+    "total_projetos": 162,
+    "resposta_length": 11090,
+    "requer_merge": true,
+    "timestamp": "2025-08-18T13:14:33.039100"
+  },
+  {
+    "combinacao": {
+      "setor": "Metalurgia e Mineração",
+      "tipo_pesquisa": "DE - Desenvolvimento Experimental",
+      "natureza": "Processo",
+      "count": 1101
+    },
+    "arquivo_saida": "grupos_categoria_Metalurgia_e_Mineração_DE_-_Desenvolvimento_Expe_Processo_sublote7.csv",
+    "total_projetos": 162,
+    "resposta_length": 10713,
+    "requer_merge": true,
+    "timestamp": "2025-08-18T13:14:33.039106"
+  },
+  {
+    "combinacao": {
+      "setor": "Metalurgia e Mineração",
+      "tipo_pesquisa": "DE - Desenvolvimento Experimental",
+      "natureza": "Processo",
+      "count": 1101
+    },
+    "arquivo_saida": "grupos_categoria_Metalurgia_e_Mineração_DE_-_Desenvolvimento_Expe_Processo_sublote8.csv",
+    "total_projetos": 127,
+    "resposta_length": 12028,
+    "requer_merge": true,
+    "timestamp": "2025-08-18T13:14:33.039112"
+  },
+  {
+    "combinacao": {
+      "setor": "Metalurgia e Mineração",
+      "tipo_pesquisa": "DE - Desenvolvimento Experimental",
+      "natureza": "Produto",
+      "count": 1211
+    },
+    "arquivo_saida": "grupos_categoria_Metalurgia_e_Mineração_DE_-_Desenvolvimento_Expe_Produto_sublote1.csv",
+    "total_projetos": 142,
+    "resposta_length": 5643,
+    "requer_merge": true,
+    "timestamp": "2025-08-18T13:14:33.039118"
+  },
+  {
+    "combinacao": {
+      "setor": "Metalurgia e Mineração",
+      "tipo_pesquisa": "DE - Desenvolvimento Experimental",
+      "natureza": "Produto",
+      "count": 1211
+    },
+    "arquivo_saida": "grupos_categoria_Metalurgia_e_Mineração_DE_-_Desenvolvimento_Expe_Produto_sublote2.csv",
+    "total_projetos": 162,
+    "resposta_length": 10237,
+    "requer_merge": true,
+    "timestamp": "2025-08-18T13:14:33.039125"
+  },
+  {
+    "combinacao": {
+      "setor": "Metalurgia e Mineração",
+      "tipo_pesquisa": "DE - Desenvolvimento Experimental",
+      "natureza": "Produto",
+      "count": 1211
+    },
+    "arquivo_saida": "grupos_categoria_Metalurgia_e_Mineração_DE_-_Desenvolvimento_Expe_Produto_sublote3.csv",
+    "total_projetos": 162,
+    "resposta_length": 5171,
+    "requer_merge": true,
+    "timestamp": "2025-08-18T13:14:33.039131"
+  },
+  {
+    "combinacao": {
+      "setor": "Metalurgia e Mineração",
+      "tipo_pesquisa": "DE - Desenvolvimento Experimental",
+      "natureza": "Produto",
+      "count": 1211
+    },
+    "arquivo_saida": "grupos_categoria_Metalurgia_e_Mineração_DE_-_Desenvolvimento_Expe_Produto_sublote4.csv",
+    "total_projetos": 162,
+    "resposta_length": 4416,
+    "requer_merge": true,
+    "timestamp": "2025-08-18T13:14:33.039136"
+  },
+  {
+    "combinacao": {
+      "setor": "Metalurgia e Mineração",
+      "tipo_pesquisa": "DE - Desenvolvimento Experimental",
+      "natureza": "Produto",
+      "count": 1211
+    },
+    "arquivo_saida": "grupos_categoria_Metalurgia_e_Mineração_DE_-_Desenvolvimento_Expe_Produto_sublote5.csv",
+    "total_projetos": 162,
+    "resposta_length": 11264,
+    "requer_merge": true,
+    "timestamp": "2025-08-18T13:14:33.039142"
+  },
+  {
+    "combinacao": {
+      "setor": "Metalurgia e Mineração",
+      "tipo_pesquisa": "DE - Desenvolvimento Experimental",
+      "natureza": "Produto",
+      "count": 1211
+    },
+    "arquivo_saida": "grupos_categoria_Metalurgia_e_Mineração_DE_-_Desenvolvimento_Expe_Produto_sublote6.csv",
+    "total_projetos": 162,
+    "resposta_length": 10146,
+    "requer_merge": true,
+    "timestamp": "2025-08-18T13:14:33.039148"
+  },
+  {
+    "combinacao": {
+      "setor": "Metalurgia e Mineração",
+      "tipo_pesquisa": "DE - Desenvolvimento Experimental",
+      "natureza": "Produto",
+      "count": 1211
+    },
+    "arquivo_saida": "grupos_categoria_Metalurgia_e_Mineração_DE_-_Desenvolvimento_Expe_Produto_sublote7.csv",
+    "total_projetos": 162,
+    "resposta_length": 11040,
+    "requer_merge": true,
+    "timestamp": "2025-08-18T13:14:33.039154"
+  },
+  {
+    "combinacao": {
+      "setor": "Metalurgia e Mineração",
+      "tipo_pesquisa": "DE - Desenvolvimento Experimental",
+      "natureza": "Produto",
+      "count": 1211
+    },
+    "arquivo_saida": "grupos_categoria_Metalurgia_e_Mineração_DE_-_Desenvolvimento_Expe_Produto_sublote8.csv",
+    "total_projetos": 162,
+    "resposta_length": 7220,
+    "requer_merge": true,
+    "timestamp": "2025-08-18T13:14:33.039160"
+  },
+  {
+    "combinacao": {
+      "setor": "Metalurgia e Mineração",
+      "tipo_pesquisa": "DE - Desenvolvimento Experimental",
+      "natureza": "Produto",
+      "count": 1211
+    },
+    "arquivo_saida": "grupos_categoria_Metalurgia_e_Mineração_DE_-_Desenvolvimento_Expe_Produto_sublote9.csv",
+    "total_projetos": 95,
+    "resposta_length": 9365,
+    "requer_merge": true,
+    "timestamp": "2025-08-18T13:14:33.039165"
+  },
+  {
+    "combinacao": {
+      "setor": "Metalurgia e Mineração",
+      "tipo_pesquisa": "DE - Desenvolvimento Experimental",
+      "natureza": "Serviço",
+      "count": 42
+    },
+    "arquivo_saida": "grupos_categoria_Metalurgia_e_Mineração_DE_-_Desenvolvimento_Expe_Serviço_completa.csv",
+    "total_projetos": 42,
+    "resposta_length": 3673,
+    "requer_merge": false,
+    "timestamp": "2025-08-18T13:14:33.039171"
+  },
+  {
+    "combinacao": {
+      "setor": "Metalurgia e Mineração",
+      "tipo_pesquisa": "PA - Pesquisa Aplicada",
+      "natureza": "Processo",
+      "count": 363
+    },
+    "arquivo_saida": "grupos_categoria_Metalurgia_e_Mineração_PA_-_Pesquisa_Aplicada_Processo_sublote1.csv",
+    "total_projetos": 142,
+    "resposta_length": 8661,
+    "requer_merge": true,
+    "timestamp": "2025-08-18T13:14:33.039177"
+  },
+  {
+    "combinacao": {
+      "setor": "Metalurgia e Mineração",
+      "tipo_pesquisa": "PA - Pesquisa Aplicada",
+      "natureza": "Processo",
+      "count": 363
+    },
+    "arquivo_saida": "grupos_categoria_Metalurgia_e_Mineração_PA_-_Pesquisa_Aplicada_Processo_sublote2.csv",
+    "total_projetos": 162,
+    "resposta_length": 10699,
+    "requer_merge": true,
+    "timestamp": "2025-08-18T13:14:33.039183"
+  },
+  {
+    "combinacao": {
+      "setor": "Metalurgia e Mineração",
+      "tipo_pesquisa": "PA - Pesquisa Aplicada",
+      "natureza": "Processo",
+      "count": 363
+    },
+    "arquivo_saida": "grupos_categoria_Metalurgia_e_Mineração_PA_-_Pesquisa_Aplicada_Processo_sublote3.csv",
+    "total_projetos": 99,
+    "resposta_length": 6340,
+    "requer_merge": true,
+    "timestamp": "2025-08-18T13:14:33.039189"
+  },
+  {
+    "combinacao": {
+      "setor": "Metalurgia e Mineração",
+      "tipo_pesquisa": "PA - Pesquisa Aplicada",
+      "natureza": "Produto",
+      "count": 274
+    },
+    "arquivo_saida": "grupos_categoria_Metalurgia_e_Mineração_PA_-_Pesquisa_Aplicada_Produto_sublote1.csv",
+    "total_projetos": 142,
+    "resposta_length": 3454,
+    "requer_merge": true,
+    "timestamp": "2025-08-18T13:14:33.039195"
+  },
+  {
+    "combinacao": {
+      "setor": "Metalurgia e Mineração",
+      "tipo_pesquisa": "PA - Pesquisa Aplicada",
+      "natureza": "Produto",
+      "count": 274
+    },
+    "arquivo_saida": "grupos_categoria_Metalurgia_e_Mineração_PA_-_Pesquisa_Aplicada_Produto_sublote2.csv",
+    "total_projetos": 152,
+    "resposta_length": 7745,
+    "requer_merge": true,
+    "timestamp": "2025-08-18T13:14:33.039200"
+  },
+  {
+    "combinacao": {
+      "setor": "Metalurgia e Mineração",
+      "tipo_pesquisa": "PA - Pesquisa Aplicada",
+      "natureza": "Serviço",
+      "count": 8
+    },
+    "arquivo_saida": "grupos_categoria_Metalurgia_e_Mineração_PA_-_Pesquisa_Aplicada_Serviço_completa.csv",
+    "total_projetos": 8,
+    "resposta_length": 827,
+    "requer_merge": false,
+    "timestamp": "2025-08-18T13:14:33.039206"
+  },
+  {
+    "combinacao": {
+      "setor": "Metalurgia e Mineração",
+      "tipo_pesquisa": "PB - Pesquisa Básica",
+      "natureza": "Processo",
+      "count": 20
+    },
+    "arquivo_saida": "grupos_categoria_Metalurgia_e_Mineração_PB_-_Pesquisa_Básica_Processo_completa.csv",
+    "total_projetos": 20,
+    "resposta_length": 2120,
+    "requer_merge": false,
+    "timestamp": "2025-08-18T13:14:33.039212"
+  },
+  {
+    "combinacao": {
+      "setor": "Metalurgia e Mineração",
+      "tipo_pesquisa": "PB - Pesquisa Básica",
+      "natureza": "Produto",
+      "count": 48
+    },
+    "arquivo_saida": "grupos_categoria_Metalurgia_e_Mineração_PB_-_Pesquisa_Básica_Produto_completa.csv",
+    "total_projetos": 48,
+    "resposta_length": 4234,
+    "requer_merge": false,
+    "timestamp": "2025-08-18T13:14:33.039218"
+  },
+  {
+    "combinacao": {
+      "setor": "Metalurgia e Mineração",
+      "tipo_pesquisa": "PB - Pesquisa Básica",
+      "natureza": "Serviço",
+      "count": 2
+    },
+    "arquivo_saida": "grupos_categoria_Metalurgia_e_Mineração_PB_-_Pesquisa_Básica_Serviço_completa.csv",
+    "total_projetos": 2,
+    "resposta_length": 229,
+    "requer_merge": false,
+    "timestamp": "2025-08-18T13:14:33.039224"
+  },
+  {
+    "combinacao": {
+      "setor": "Química e Farmácia",
+      "tipo_pesquisa": "DE - Desenvolvimento Experimental",
+      "natureza": "Processo",
+      "count": 1068
+    },
+    "arquivo_saida": "grupos_categoria_Química_e_Farmácia_DE_-_Desenvolvimento_Expe_Processo_sublote1.csv",
+    "total_projetos": 142,
+    "resposta_length": 7789,
+    "requer_merge": true,
+    "timestamp": "2025-08-18T13:14:33.039230"
+  },
+  {
+    "combinacao": {
+      "setor": "Química e Farmácia",
+      "tipo_pesquisa": "DE - Desenvolvimento Experimental",
+      "natureza": "Processo",
+      "count": 1068
+    },
+    "arquivo_saida": "grupos_categoria_Química_e_Farmácia_DE_-_Desenvolvimento_Expe_Processo_sublote2.csv",
+    "total_projetos": 162,
+    "resposta_length": 10725,
+    "requer_merge": true,
+    "timestamp": "2025-08-18T13:14:33.039236"
+  },
+  {
+    "combinacao": {
+      "setor": "Química e Farmácia",
+      "tipo_pesquisa": "DE - Desenvolvimento Experimental",
+      "natureza": "Processo",
+      "count": 1068
+    },
+    "arquivo_saida": "grupos_categoria_Química_e_Farmácia_DE_-_Desenvolvimento_Expe_Processo_sublote3.csv",
+    "total_projetos": 162,
+    "resposta_length": 4267,
+    "requer_merge": true,
+    "timestamp": "2025-08-18T13:14:33.039246"
+  },
+  {
+    "combinacao": {
+      "setor": "Química e Farmácia",
+      "tipo_pesquisa": "DE - Desenvolvimento Experimental",
+      "natureza": "Processo",
+      "count": 1068
+    },
+    "arquivo_saida": "grupos_categoria_Química_e_Farmácia_DE_-_Desenvolvimento_Expe_Processo_sublote4.csv",
+    "total_projetos": 162,
+    "resposta_length": 3700,
+    "requer_merge": true,
+    "timestamp": "2025-08-18T13:14:33.039254"
+  },
+  {
+    "combinacao": {
+      "setor": "Química e Farmácia",
+      "tipo_pesquisa": "DE - Desenvolvimento Experimental",
+      "natureza": "Processo",
+      "count": 1068
+    },
+    "arquivo_saida": "grupos_categoria_Química_e_Farmácia_DE_-_Desenvolvimento_Expe_Processo_sublote5.csv",
+    "total_projetos": 162,
+    "resposta_length": 11124,
+    "requer_merge": true,
+    "timestamp": "2025-08-18T13:14:33.039260"
+  },
+  {
+    "combinacao": {
+      "setor": "Química e Farmácia",
+      "tipo_pesquisa": "DE - Desenvolvimento Experimental",
+      "natureza": "Processo",
+      "count": 1068
+    },
+    "arquivo_saida": "grupos_categoria_Química_e_Farmácia_DE_-_Desenvolvimento_Expe_Processo_sublote6.csv",
+    "total_projetos": 162,
+    "resposta_length": 11606,
+    "requer_merge": true,
+    "timestamp": "2025-08-18T13:14:33.039266"
+  },
+  {
+    "combinacao": {
+      "setor": "Química e Farmácia",
+      "tipo_pesquisa": "DE - Desenvolvimento Experimental",
+      "natureza": "Processo",
+      "count": 1068
+    },
+    "arquivo_saida": "grupos_categoria_Química_e_Farmácia_DE_-_Desenvolvimento_Expe_Processo_sublote7.csv",
+    "total_projetos": 162,
+    "resposta_length": 3723,
+    "requer_merge": true,
+    "timestamp": "2025-08-18T13:14:33.039272"
+  },
+  {
+    "combinacao": {
+      "setor": "Química e Farmácia",
+      "tipo_pesquisa": "DE - Desenvolvimento Experimental",
+      "natureza": "Processo",
+      "count": 1068
+    },
+    "arquivo_saida": "grupos_categoria_Química_e_Farmácia_DE_-_Desenvolvimento_Expe_Processo_sublote8.csv",
+    "total_projetos": 94,
+    "resposta_length": 7937,
+    "requer_merge": true,
+    "timestamp": "2025-08-18T13:14:33.039278"
+  },
+  {
+    "combinacao": {
+      "setor": "Química e Farmácia",
+      "tipo_pesquisa": "DE - Desenvolvimento Experimental",
+      "natureza": "Produto",
+      "count": 4784
+    },
+    "arquivo_saida": "grupos_categoria_Química_e_Farmácia_DE_-_Desenvolvimento_Expe_Produto_sublote1.csv",
+    "total_projetos": 142,
+    "resposta_length": 5958,
+    "requer_merge": true,
+    "timestamp": "2025-08-18T13:14:33.039284"
+  },
+  {
+    "combinacao": {
+      "setor": "Química e Farmácia",
+      "tipo_pesquisa": "DE - Desenvolvimento Experimental",
+      "natureza": "Produto",
+      "count": 4784
+    },
+    "arquivo_saida": "grupos_categoria_Química_e_Farmácia_DE_-_Desenvolvimento_Expe_Produto_sublote2.csv",
+    "total_projetos": 162,
+    "resposta_length": 9946,
+    "requer_merge": true,
+    "timestamp": "2025-08-18T13:14:33.039290"
+  },
+  {
+    "combinacao": {
+      "setor": "Química e Farmácia",
+      "tipo_pesquisa": "DE - Desenvolvimento Experimental",
+      "natureza": "Produto",
+      "count": 4784
+    },
+    "arquivo_saida": "grupos_categoria_Química_e_Farmácia_DE_-_Desenvolvimento_Expe_Produto_sublote3.csv",
+    "total_projetos": 162,
+    "resposta_length": 10967,
+    "requer_merge": true,
+    "timestamp": "2025-08-18T13:14:33.039296"
+  },
+  {
+    "combinacao": {
+      "setor": "Química e Farmácia",
+      "tipo_pesquisa": "DE - Desenvolvimento Experimental",
+      "natureza": "Produto",
+      "count": 4784
+    },
+    "arquivo_saida": "grupos_categoria_Química_e_Farmácia_DE_-_Desenvolvimento_Expe_Produto_sublote4.csv",
+    "total_projetos": 162,
+    "resposta_length": 6173,
+    "requer_merge": true,
+    "timestamp": "2025-08-18T13:14:33.039301"
+  },
+  {
+    "combinacao": {
+      "setor": "Química e Farmácia",
+      "tipo_pesquisa": "DE - Desenvolvimento Experimental",
+      "natureza": "Produto",
+      "count": 4784
+    },
+    "arquivo_saida": "grupos_categoria_Química_e_Farmácia_DE_-_Desenvolvimento_Expe_Produto_sublote5.csv",
+    "total_projetos": 162,
+    "resposta_length": 9197,
+    "requer_merge": true,
+    "timestamp": "2025-08-18T13:14:33.039307"
+  },
+  {
+    "combinacao": {
+      "setor": "Química e Farmácia",
+      "tipo_pesquisa": "DE - Desenvolvimento Experimental",
+      "natureza": "Produto",
+      "count": 4784
+    },
+    "arquivo_saida": "grupos_categoria_Química_e_Farmácia_DE_-_Desenvolvimento_Expe_Produto_sublote6.csv",
+    "total_projetos": 162,
+    "resposta_length": 8883,
+    "requer_merge": true,
+    "timestamp": "2025-08-18T13:14:33.039313"
+  },
+  {
+    "combinacao": {
+      "setor": "Química e Farmácia",
+      "tipo_pesquisa": "DE - Desenvolvimento Experimental",
+      "natureza": "Produto",
+      "count": 4784
+    },
+    "arquivo_saida": "grupos_categoria_Química_e_Farmácia_DE_-_Desenvolvimento_Expe_Produto_sublote7.csv",
+    "total_projetos": 162,
+    "resposta_length": 4522,
+    "requer_merge": true,
+    "timestamp": "2025-08-18T13:14:33.039318"
+  },
+  {
+    "combinacao": {
+      "setor": "Química e Farmácia",
+      "tipo_pesquisa": "DE - Desenvolvimento Experimental",
+      "natureza": "Produto",
+      "count": 4784
+    },
+    "arquivo_saida": "grupos_categoria_Química_e_Farmácia_DE_-_Desenvolvimento_Expe_Produto_sublote8.csv",
+    "total_projetos": 162,
+    "resposta_length": 4240,
+    "requer_merge": true,
+    "timestamp": "2025-08-18T13:14:33.039332"
+  },
+  {
+    "combinacao": {
+      "setor": "Química e Farmácia",
+      "tipo_pesquisa": "DE - Desenvolvimento Experimental",
+      "natureza": "Produto",
+      "count": 4784
+    },
+    "arquivo_saida": "grupos_categoria_Química_e_Farmácia_DE_-_Desenvolvimento_Expe_Produto_sublote9.csv",
+    "total_projetos": 162,
+    "resposta_length": 5348,
+    "requer_merge": true,
+    "timestamp": "2025-08-18T13:14:33.039339"
+  },
+  {
+    "combinacao": {
+      "setor": "Química e Farmácia",
+      "tipo_pesquisa": "DE - Desenvolvimento Experimental",
+      "natureza": "Produto",
+      "count": 4784
+    },
+    "arquivo_saida": "grupos_categoria_Química_e_Farmácia_DE_-_Desenvolvimento_Expe_Produto_sublote10.csv",
+    "total_projetos": 162,
+    "resposta_length": 10299,
+    "requer_merge": true,
+    "timestamp": "2025-08-18T13:14:33.039345"
+  },
+  {
+    "combinacao": {
+      "setor": "Química e Farmácia",
+      "tipo_pesquisa": "DE - Desenvolvimento Experimental",
+      "natureza": "Produto",
+      "count": 4784
+    },
+    "arquivo_saida": "grupos_categoria_Química_e_Farmácia_DE_-_Desenvolvimento_Expe_Produto_sublote11.csv",
+    "total_projetos": 162,
+    "resposta_length": 3798,
+    "requer_merge": true,
+    "timestamp": "2025-08-18T13:14:33.039351"
+  },
+  {
+    "combinacao": {
+      "setor": "Química e Farmácia",
+      "tipo_pesquisa": "DE - Desenvolvimento Experimental",
+      "natureza": "Produto",
+      "count": 4784
+    },
+    "arquivo_saida": "grupos_categoria_Química_e_Farmácia_DE_-_Desenvolvimento_Expe_Produto_sublote12.csv",
+    "total_projetos": 162,
+    "resposta_length": 3168,
+    "requer_merge": true,
+    "timestamp": "2025-08-18T13:14:33.039357"
+  },
+  {
+    "combinacao": {
+      "setor": "Química e Farmácia",
+      "tipo_pesquisa": "DE - Desenvolvimento Experimental",
+      "natureza": "Produto",
+      "count": 4784
+    },
+    "arquivo_saida": "grupos_categoria_Química_e_Farmácia_DE_-_Desenvolvimento_Expe_Produto_sublote13.csv",
+    "total_projetos": 162,
+    "resposta_length": 4148,
+    "requer_merge": true,
+    "timestamp": "2025-08-18T13:14:33.039363"
+  },
+  {
+    "combinacao": {
+      "setor": "Química e Farmácia",
+      "tipo_pesquisa": "DE - Desenvolvimento Experimental",
+      "natureza": "Produto",
+      "count": 4784
+    },
+    "arquivo_saida": "grupos_categoria_Química_e_Farmácia_DE_-_Desenvolvimento_Expe_Produto_sublote14.csv",
+    "total_projetos": 162,
+    "resposta_length": 10629,
+    "requer_merge": true,
+    "timestamp": "2025-08-18T13:14:33.039369"
+  },
+  {
+    "combinacao": {
+      "setor": "Química e Farmácia",
+      "tipo_pesquisa": "DE - Desenvolvimento Experimental",
+      "natureza": "Produto",
+      "count": 4784
+    },
+    "arquivo_saida": "grupos_categoria_Química_e_Farmácia_DE_-_Desenvolvimento_Expe_Produto_sublote15.csv",
+    "total_projetos": 162,
+    "resposta_length": 11171,
+    "requer_merge": true,
+    "timestamp": "2025-08-18T13:14:33.039375"
+  },
+  {
+    "combinacao": {
+      "setor": "Química e Farmácia",
+      "tipo_pesquisa": "DE - Desenvolvimento Experimental",
+      "natureza": "Produto",
+      "count": 4784
+    },
+    "arquivo_saida": "grupos_categoria_Química_e_Farmácia_DE_-_Desenvolvimento_Expe_Produto_sublote16.csv",
+    "total_projetos": 162,
+    "resposta_length": 5764,
+    "requer_merge": true,
+    "timestamp": "2025-08-18T13:14:33.039380"
+  },
+  {
+    "combinacao": {
+      "setor": "Química e Farmácia",
+      "tipo_pesquisa": "DE - Desenvolvimento Experimental",
+      "natureza": "Produto",
+      "count": 4784
+    },
+    "arquivo_saida": "grupos_categoria_Química_e_Farmácia_DE_-_Desenvolvimento_Expe_Produto_sublote17.csv",
+    "total_projetos": 162,
+    "resposta_length": 7539,
+    "requer_merge": true,
+    "timestamp": "2025-08-18T13:14:33.039386"
+  },
+  {
+    "combinacao": {
+      "setor": "Química e Farmácia",
+      "tipo_pesquisa": "DE - Desenvolvimento Experimental",
+      "natureza": "Produto",
+      "count": 4784
+    },
+    "arquivo_saida": "grupos_categoria_Química_e_Farmácia_DE_-_Desenvolvimento_Expe_Produto_sublote18.csv",
+    "total_projetos": 162,
+    "resposta_length": 10139,
+    "requer_merge": true,
+    "timestamp": "2025-08-18T13:14:33.039392"
+  },
+  {
+    "combinacao": {
+      "setor": "Química e Farmácia",
+      "tipo_pesquisa": "DE - Desenvolvimento Experimental",
+      "natureza": "Produto",
+      "count": 4784
+    },
+    "arquivo_saida": "grupos_categoria_Química_e_Farmácia_DE_-_Desenvolvimento_Expe_Produto_sublote19.csv",
+    "total_projetos": 162,
+    "resposta_length": 9817,
+    "requer_merge": true,
+    "timestamp": "2025-08-18T13:14:33.039399"
+  },
+  {
+    "combinacao": {
+      "setor": "Química e Farmácia",
+      "tipo_pesquisa": "DE - Desenvolvimento Experimental",
+      "natureza": "Produto",
+      "count": 4784
+    },
+    "arquivo_saida": "grupos_categoria_Química_e_Farmácia_DE_-_Desenvolvimento_Expe_Produto_sublote20.csv",
+    "total_projetos": 162,
+    "resposta_length": 4744,
+    "requer_merge": true,
+    "timestamp": "2025-08-18T13:14:33.039405"
+  },
+  {
+    "combinacao": {
+      "setor": "Química e Farmácia",
+      "tipo_pesquisa": "DE - Desenvolvimento Experimental",
+      "natureza": "Produto",
+      "count": 4784
+    },
+    "arquivo_saida": "grupos_categoria_Química_e_Farmácia_DE_-_Desenvolvimento_Expe_Produto_sublote21.csv",
+    "total_projetos": 162,
+    "resposta_length": 8637,
+    "requer_merge": true,
+    "timestamp": "2025-08-18T13:14:33.039411"
+  },
+  {
+    "combinacao": {
+      "setor": "Química e Farmácia",
+      "tipo_pesquisa": "DE - Desenvolvimento Experimental",
+      "natureza": "Produto",
+      "count": 4784
+    },
+    "arquivo_saida": "grupos_categoria_Química_e_Farmácia_DE_-_Desenvolvimento_Expe_Produto_sublote22.csv",
+    "total_projetos": 162,
+    "resposta_length": 3444,
+    "requer_merge": true,
+    "timestamp": "2025-08-18T13:14:33.039416"
+  },
+  {
+    "combinacao": {
+      "setor": "Química e Farmácia",
+      "tipo_pesquisa": "DE - Desenvolvimento Experimental",
+      "natureza": "Produto",
+      "count": 4784
+    },
+    "arquivo_saida": "grupos_categoria_Química_e_Farmácia_DE_-_Desenvolvimento_Expe_Produto_sublote23.csv",
+    "total_projetos": 162,
+    "resposta_length": 5299,
+    "requer_merge": true,
+    "timestamp": "2025-08-18T13:14:33.039422"
+  },
+  {
+    "combinacao": {
+      "setor": "Química e Farmácia",
+      "tipo_pesquisa": "DE - Desenvolvimento Experimental",
+      "natureza": "Produto",
+      "count": 4784
+    },
+    "arquivo_saida": "grupos_categoria_Química_e_Farmácia_DE_-_Desenvolvimento_Expe_Produto_sublote24.csv",
+    "total_projetos": 162,
+    "resposta_length": 7697,
+    "requer_merge": true,
+    "timestamp": "2025-08-18T13:14:33.039431"
+  },
+  {
+    "combinacao": {
+      "setor": "Química e Farmácia",
+      "tipo_pesquisa": "DE - Desenvolvimento Experimental",
+      "natureza": "Produto",
+      "count": 4784
+    },
+    "arquivo_saida": "grupos_categoria_Química_e_Farmácia_DE_-_Desenvolvimento_Expe_Produto_sublote25.csv",
+    "total_projetos": 162,
+    "resposta_length": 10980,
+    "requer_merge": true,
+    "timestamp": "2025-08-18T13:14:33.039438"
+  },
+  {
+    "combinacao": {
+      "setor": "Química e Farmácia",
+      "tipo_pesquisa": "DE - Desenvolvimento Experimental",
+      "natureza": "Produto",
+      "count": 4784
+    },
+    "arquivo_saida": "grupos_categoria_Química_e_Farmácia_DE_-_Desenvolvimento_Expe_Produto_sublote26.csv",
+    "total_projetos": 162,
+    "resposta_length": 10448,
+    "requer_merge": true,
+    "timestamp": "2025-08-18T13:14:33.039444"
+  },
+  {
+    "combinacao": {
+      "setor": "Química e Farmácia",
+      "tipo_pesquisa": "DE - Desenvolvimento Experimental",
+      "natureza": "Produto",
+      "count": 4784
+    },
+    "arquivo_saida": "grupos_categoria_Química_e_Farmácia_DE_-_Desenvolvimento_Expe_Produto_sublote27.csv",
+    "total_projetos": 162,
+    "resposta_length": 10436,
+    "requer_merge": true,
+    "timestamp": "2025-08-18T13:14:33.039450"
+  },
+  {
+    "combinacao": {
+      "setor": "Química e Farmácia",
+      "tipo_pesquisa": "DE - Desenvolvimento Experimental",
+      "natureza": "Produto",
+      "count": 4784
+    },
+    "arquivo_saida": "grupos_categoria_Química_e_Farmácia_DE_-_Desenvolvimento_Expe_Produto_sublote28.csv",
+    "total_projetos": 162,
+    "resposta_length": 8214,
+    "requer_merge": true,
+    "timestamp": "2025-08-18T13:14:33.039455"
+  },
+  {
+    "combinacao": {
+      "setor": "Química e Farmácia",
+      "tipo_pesquisa": "DE - Desenvolvimento Experimental",
+      "natureza": "Produto",
+      "count": 4784
+    },
+    "arquivo_saida": "grupos_categoria_Química_e_Farmácia_DE_-_Desenvolvimento_Expe_Produto_sublote29.csv",
+    "total_projetos": 162,
+    "resposta_length": 6126,
+    "requer_merge": true,
+    "timestamp": "2025-08-18T13:14:33.039461"
+  },
+  {
+    "combinacao": {
+      "setor": "Química e Farmácia",
+      "tipo_pesquisa": "DE - Desenvolvimento Experimental",
+      "natureza": "Produto",
+      "count": 4784
+    },
+    "arquivo_saida": "grupos_categoria_Química_e_Farmácia_DE_-_Desenvolvimento_Expe_Produto_sublote30.csv",
+    "total_projetos": 162,
+    "resposta_length": 10443,
+    "requer_merge": true,
+    "timestamp": "2025-08-18T13:14:33.039478"
+  },
+  {
+    "combinacao": {
+      "setor": "Química e Farmácia",
+      "tipo_pesquisa": "DE - Desenvolvimento Experimental",
+      "natureza": "Produto",
+      "count": 4784
+    },
+    "arquivo_saida": "grupos_categoria_Química_e_Farmácia_DE_-_Desenvolvimento_Expe_Produto_sublote31.csv",
+    "total_projetos": 162,
+    "resposta_length": 10837,
+    "requer_merge": true,
+    "timestamp": "2025-08-18T13:14:33.039496"
+  },
+  {
+    "combinacao": {
+      "setor": "Química e Farmácia",
+      "tipo_pesquisa": "DE - Desenvolvimento Experimental",
+      "natureza": "Produto",
+      "count": 4784
+    },
+    "arquivo_saida": "grupos_categoria_Química_e_Farmácia_DE_-_Desenvolvimento_Expe_Produto_sublote32.csv",
+    "total_projetos": 162,
+    "resposta_length": 10024,
+    "requer_merge": true,
+    "timestamp": "2025-08-18T13:14:33.039502"
+  },
+  {
+    "combinacao": {
+      "setor": "Química e Farmácia",
+      "tipo_pesquisa": "DE - Desenvolvimento Experimental",
+      "natureza": "Produto",
+      "count": 4784
+    },
+    "arquivo_saida": "grupos_categoria_Química_e_Farmácia_DE_-_Desenvolvimento_Expe_Produto_sublote33.csv",
+    "total_projetos": 162,
+    "resposta_length": 8592,
+    "requer_merge": true,
+    "timestamp": "2025-08-18T13:14:33.039508"
+  },
+  {
+    "combinacao": {
+      "setor": "Química e Farmácia",
+      "tipo_pesquisa": "DE - Desenvolvimento Experimental",
+      "natureza": "Produto",
+      "count": 4784
+    },
+    "arquivo_saida": "grupos_categoria_Química_e_Farmácia_DE_-_Desenvolvimento_Expe_Produto_sublote34.csv",
+    "total_projetos": 118,
+    "resposta_length": 10651,
+    "requer_merge": true,
+    "timestamp": "2025-08-18T13:14:33.039514"
+  },
+  {
+    "combinacao": {
+      "setor": "Química e Farmácia",
+      "tipo_pesquisa": "DE - Desenvolvimento Experimental",
+      "natureza": "Serviço",
+      "count": 84
+    },
+    "arquivo_saida": "grupos_categoria_Química_e_Farmácia_DE_-_Desenvolvimento_Expe_Serviço_completa.csv",
+    "total_projetos": 84,
+    "resposta_length": 6397,
+    "requer_merge": false,
+    "timestamp": "2025-08-18T13:14:33.039520"
+  },
+  {
+    "combinacao": {
+      "setor": "Química e Farmácia",
+      "tipo_pesquisa": "PA - Pesquisa Aplicada",
+      "natureza": "Processo",
+      "count": 406
+    },
+    "arquivo_saida": "grupos_categoria_Química_e_Farmácia_PA_-_Pesquisa_Aplicada_Processo_sublote1.csv",
+    "total_projetos": 142,
+    "resposta_length": 11012,
+    "requer_merge": true,
+    "timestamp": "2025-08-18T13:14:33.039527"
+  },
+  {
+    "combinacao": {
+      "setor": "Química e Farmácia",
+      "tipo_pesquisa": "PA - Pesquisa Aplicada",
+      "natureza": "Processo",
+      "count": 406
+    },
+    "arquivo_saida": "grupos_categoria_Química_e_Farmácia_PA_-_Pesquisa_Aplicada_Processo_sublote2.csv",
+    "total_projetos": 162,
+    "resposta_length": 10669,
+    "requer_merge": true,
+    "timestamp": "2025-08-18T13:14:33.039532"
+  },
+  {
+    "combinacao": {
+      "setor": "Química e Farmácia",
+      "tipo_pesquisa": "PA - Pesquisa Aplicada",
+      "natureza": "Processo",
+      "count": 406
+    },
+    "arquivo_saida": "grupos_categoria_Química_e_Farmácia_PA_-_Pesquisa_Aplicada_Processo_sublote3.csv",
+    "total_projetos": 142,
+    "resposta_length": 11178,
+    "requer_merge": true,
+    "timestamp": "2025-08-18T13:14:33.039538"
+  },
+  {
+    "combinacao": {
+      "setor": "Química e Farmácia",
+      "tipo_pesquisa": "PA - Pesquisa Aplicada",
+      "natureza": "Produto",
+      "count": 1188
+    },
+    "arquivo_saida": "grupos_categoria_Química_e_Farmácia_PA_-_Pesquisa_Aplicada_Produto_sublote1.csv",
+    "total_projetos": 142,
+    "resposta_length": 9655,
+    "requer_merge": true,
+    "timestamp": "2025-08-18T13:14:33.039544"
+  },
+  {
+    "combinacao": {
+      "setor": "Química e Farmácia",
+      "tipo_pesquisa": "PA - Pesquisa Aplicada",
+      "natureza": "Produto",
+      "count": 1188
+    },
+    "arquivo_saida": "grupos_categoria_Química_e_Farmácia_PA_-_Pesquisa_Aplicada_Produto_sublote2.csv",
+    "total_projetos": 162,
+    "resposta_length": 4693,
+    "requer_merge": true,
+    "timestamp": "2025-08-18T13:14:33.039550"
+  },
+  {
+    "combinacao": {
+      "setor": "Química e Farmácia",
+      "tipo_pesquisa": "PA - Pesquisa Aplicada",
+      "natureza": "Produto",
+      "count": 1188
+    },
+    "arquivo_saida": "grupos_categoria_Química_e_Farmácia_PA_-_Pesquisa_Aplicada_Produto_sublote3.csv",
+    "total_projetos": 162,
+    "resposta_length": 10672,
+    "requer_merge": true,
+    "timestamp": "2025-08-18T13:14:33.039557"
+  },
+  {
+    "combinacao": {
+      "setor": "Química e Farmácia",
+      "tipo_pesquisa": "PA - Pesquisa Aplicada",
+      "natureza": "Produto",
+      "count": 1188
+    },
+    "arquivo_saida": "grupos_categoria_Química_e_Farmácia_PA_-_Pesquisa_Aplicada_Produto_sublote4.csv",
+    "total_projetos": 162,
+    "resposta_length": 10369,
+    "requer_merge": true,
+    "timestamp": "2025-08-18T13:14:33.039563"
+  },
+  {
+    "combinacao": {
+      "setor": "Química e Farmácia",
+      "tipo_pesquisa": "PA - Pesquisa Aplicada",
+      "natureza": "Produto",
+      "count": 1188
+    },
+    "arquivo_saida": "grupos_categoria_Química_e_Farmácia_PA_-_Pesquisa_Aplicada_Produto_sublote5.csv",
+    "total_projetos": 162,
+    "resposta_length": 9299,
+    "requer_merge": true,
+    "timestamp": "2025-08-18T13:14:33.039569"
+  },
+  {
+    "combinacao": {
+      "setor": "Química e Farmácia",
+      "tipo_pesquisa": "PA - Pesquisa Aplicada",
+      "natureza": "Produto",
+      "count": 1188
+    },
+    "arquivo_saida": "grupos_categoria_Química_e_Farmácia_PA_-_Pesquisa_Aplicada_Produto_sublote6.csv",
+    "total_projetos": 162,
+    "resposta_length": 11141,
+    "requer_merge": true,
+    "timestamp": "2025-08-18T13:14:33.039574"
+  },
+  {
+    "combinacao": {
+      "setor": "Química e Farmácia",
+      "tipo_pesquisa": "PA - Pesquisa Aplicada",
+      "natureza": "Produto",
+      "count": 1188
+    },
+    "arquivo_saida": "grupos_categoria_Química_e_Farmácia_PA_-_Pesquisa_Aplicada_Produto_sublote7.csv",
+    "total_projetos": 162,
+    "resposta_length": 10414,
+    "requer_merge": true,
+    "timestamp": "2025-08-18T13:14:33.039580"
+  },
+  {
+    "combinacao": {
+      "setor": "Química e Farmácia",
+      "tipo_pesquisa": "PA - Pesquisa Aplicada",
+      "natureza": "Produto",
+      "count": 1188
+    },
+    "arquivo_saida": "grupos_categoria_Química_e_Farmácia_PA_-_Pesquisa_Aplicada_Produto_sublote8.csv",
+    "total_projetos": 162,
+    "resposta_length": 10205,
+    "requer_merge": true,
+    "timestamp": "2025-08-18T13:14:33.039586"
+  },
+  {
+    "combinacao": {
+      "setor": "Química e Farmácia",
+      "tipo_pesquisa": "PA - Pesquisa Aplicada",
+      "natureza": "Produto",
+      "count": 1188
+    },
+    "arquivo_saida": "grupos_categoria_Química_e_Farmácia_PA_-_Pesquisa_Aplicada_Produto_sublote9.csv",
+    "total_projetos": 72,
+    "resposta_length": 5514,
+    "requer_merge": true,
+    "timestamp": "2025-08-18T13:14:33.039593"
+  },
+  {
+    "combinacao": {
+      "setor": "Química e Farmácia",
+      "tipo_pesquisa": "PA - Pesquisa Aplicada",
+      "natureza": "Serviço",
+      "count": 36
+    },
+    "arquivo_saida": "grupos_categoria_Química_e_Farmácia_PA_-_Pesquisa_Aplicada_Serviço_completa.csv",
+    "total_projetos": 36,
+    "resposta_length": 3966,
+    "requer_merge": false,
+    "timestamp": "2025-08-18T13:14:33.039599"
+  },
+  {
+    "combinacao": {
+      "setor": "Química e Farmácia",
+      "tipo_pesquisa": "PB - Pesquisa Básica",
+      "natureza": "Processo",
+      "count": 40
+    },
+    "arquivo_saida": "grupos_categoria_Química_e_Farmácia_PB_-_Pesquisa_Básica_Processo_completa.csv",
+    "total_projetos": 40,
+    "resposta_length": 4130,
+    "requer_merge": false,
+    "timestamp": "2025-08-18T13:14:33.039605"
+  },
+  {
+    "combinacao": {
+      "setor": "Química e Farmácia",
+      "tipo_pesquisa": "PB - Pesquisa Básica",
+      "natureza": "Produto",
+      "count": 273
+    },
+    "arquivo_saida": "grupos_categoria_Química_e_Farmácia_PB_-_Pesquisa_Básica_Produto_sublote1.csv",
+    "total_projetos": 142,
+    "resposta_length": 3496,
+    "requer_merge": true,
+    "timestamp": "2025-08-18T13:14:33.039612"
+  },
+  {
+    "combinacao": {
+      "setor": "Química e Farmácia",
+      "tipo_pesquisa": "PB - Pesquisa Básica",
+      "natureza": "Produto",
+      "count": 273
+    },
+    "arquivo_saida": "grupos_categoria_Química_e_Farmácia_PB_-_Pesquisa_Básica_Produto_sublote2.csv",
+    "total_projetos": 151,
+    "resposta_length": 6495,
+    "requer_merge": true,
+    "timestamp": "2025-08-18T13:14:33.039617"
+  },
+  {
+    "combinacao": {
+      "setor": "Química e Farmácia",
+      "tipo_pesquisa": "PB - Pesquisa Básica",
+      "natureza": "Serviço",
+      "count": 6
+    },
+    "arquivo_saida": "grupos_categoria_Química_e_Farmácia_PB_-_Pesquisa_Básica_Serviço_completa.csv",
+    "total_projetos": 6,
+    "resposta_length": 811,
+    "requer_merge": false,
+    "timestamp": "2025-08-18T13:14:33.039623"
+  },
+  {
+    "combinacao": {
+      "setor": "TIC",
+      "tipo_pesquisa": "DE - Desenvolvimento Experimental",
+      "natureza": "Processo",
+      "count": 4823
+    },
+    "arquivo_saida": "grupos_categoria_TIC_DE_-_Desenvolvimento_Expe_Processo_sublote1.csv",
+    "total_projetos": 142,
+    "resposta_length": 11708,
+    "requer_merge": true,
+    "timestamp": "2025-08-18T13:14:33.039628"
+  },
+  {
+    "combinacao": {
+      "setor": "TIC",
+      "tipo_pesquisa": "DE - Desenvolvimento Experimental",
+      "natureza": "Processo",
+      "count": 4823
+    },
+    "arquivo_saida": "grupos_categoria_TIC_DE_-_Desenvolvimento_Expe_Processo_sublote2.csv",
+    "total_projetos": 162,
+    "resposta_length": 7240,
+    "requer_merge": true,
+    "timestamp": "2025-08-18T13:14:33.039634"
+  },
+  {
+    "combinacao": {
+      "setor": "TIC",
+      "tipo_pesquisa": "DE - Desenvolvimento Experimental",
+      "natureza": "Processo",
+      "count": 4823
+    },
+    "arquivo_saida": "grupos_categoria_TIC_DE_-_Desenvolvimento_Expe_Processo_sublote3.csv",
+    "total_projetos": 162,
+    "resposta_length": 5292,
+    "requer_merge": true,
+    "timestamp": "2025-08-18T13:14:33.039640"
+  },
+  {
+    "combinacao": {
+      "setor": "TIC",
+      "tipo_pesquisa": "DE - Desenvolvimento Experimental",
+      "natureza": "Processo",
+      "count": 4823
+    },
+    "arquivo_saida": "grupos_categoria_TIC_DE_-_Desenvolvimento_Expe_Processo_sublote4.csv",
+    "total_projetos": 162,
+    "resposta_length": 9185,
+    "requer_merge": true,
+    "timestamp": "2025-08-18T13:14:33.039646"
+  },
+  {
+    "combinacao": {
+      "setor": "TIC",
+      "tipo_pesquisa": "DE - Desenvolvimento Experimental",
+      "natureza": "Processo",
+      "count": 4823
+    },
+    "arquivo_saida": "grupos_categoria_TIC_DE_-_Desenvolvimento_Expe_Processo_sublote5.csv",
+    "total_projetos": 162,
+    "resposta_length": 4418,
+    "requer_merge": true,
+    "timestamp": "2025-08-18T13:14:33.039651"
+  },
+  {
+    "combinacao": {
+      "setor": "TIC",
+      "tipo_pesquisa": "DE - Desenvolvimento Experimental",
+      "natureza": "Processo",
+      "count": 4823
+    },
+    "arquivo_saida": "grupos_categoria_TIC_DE_-_Desenvolvimento_Expe_Processo_sublote6.csv",
+    "total_projetos": 162,
+    "resposta_length": 5235,
+    "requer_merge": true,
+    "timestamp": "2025-08-18T13:14:33.039657"
+  },
+  {
+    "combinacao": {
+      "setor": "TIC",
+      "tipo_pesquisa": "DE - Desenvolvimento Experimental",
+      "natureza": "Processo",
+      "count": 4823
+    },
+    "arquivo_saida": "grupos_categoria_TIC_DE_-_Desenvolvimento_Expe_Processo_sublote7.csv",
+    "total_projetos": 162,
+    "resposta_length": 5645,
+    "requer_merge": true,
+    "timestamp": "2025-08-18T13:14:33.039663"
+  },
+  {
+    "combinacao": {
+      "setor": "TIC",
+      "tipo_pesquisa": "DE - Desenvolvimento Experimental",
+      "natureza": "Processo",
+      "count": 4823
+    },
+    "arquivo_saida": "grupos_categoria_TIC_DE_-_Desenvolvimento_Expe_Processo_sublote8.csv",
+    "total_projetos": 162,
+    "resposta_length": 10626,
+    "requer_merge": true,
+    "timestamp": "2025-08-18T13:14:33.039668"
+  },
+  {
+    "combinacao": {
+      "setor": "TIC",
+      "tipo_pesquisa": "DE - Desenvolvimento Experimental",
+      "natureza": "Processo",
+      "count": 4823
+    },
+    "arquivo_saida": "grupos_categoria_TIC_DE_-_Desenvolvimento_Expe_Processo_sublote9.csv",
+    "total_projetos": 162,
+    "resposta_length": 12250,
+    "requer_merge": true,
+    "timestamp": "2025-08-18T13:14:33.039674"
+  },
+  {
+    "combinacao": {
+      "setor": "TIC",
+      "tipo_pesquisa": "DE - Desenvolvimento Experimental",
+      "natureza": "Processo",
+      "count": 4823
+    },
+    "arquivo_saida": "grupos_categoria_TIC_DE_-_Desenvolvimento_Expe_Processo_sublote10.csv",
+    "total_projetos": 162,
+    "resposta_length": 2872,
+    "requer_merge": true,
+    "timestamp": "2025-08-18T13:14:33.039679"
+  },
+  {
+    "combinacao": {
+      "setor": "TIC",
+      "tipo_pesquisa": "DE - Desenvolvimento Experimental",
+      "natureza": "Processo",
+      "count": 4823
+    },
+    "arquivo_saida": "grupos_categoria_TIC_DE_-_Desenvolvimento_Expe_Processo_sublote11.csv",
+    "total_projetos": 162,
+    "resposta_length": 11314,
+    "requer_merge": true,
+    "timestamp": "2025-08-18T13:14:33.039685"
+  },
+  {
+    "combinacao": {
+      "setor": "TIC",
+      "tipo_pesquisa": "DE - Desenvolvimento Experimental",
+      "natureza": "Processo",
+      "count": 4823
+    },
+    "arquivo_saida": "grupos_categoria_TIC_DE_-_Desenvolvimento_Expe_Processo_sublote12.csv",
+    "total_projetos": 162,
+    "resposta_length": 4013,
+    "requer_merge": true,
+    "timestamp": "2025-08-18T13:14:33.039691"
+  },
+  {
+    "combinacao": {
+      "setor": "TIC",
+      "tipo_pesquisa": "DE - Desenvolvimento Experimental",
+      "natureza": "Processo",
+      "count": 4823
+    },
+    "arquivo_saida": "grupos_categoria_TIC_DE_-_Desenvolvimento_Expe_Processo_sublote13.csv",
+    "total_projetos": 162,
+    "resposta_length": 3629,
+    "requer_merge": true,
+    "timestamp": "2025-08-18T13:14:33.039697"
+  },
+  {
+    "combinacao": {
+      "setor": "TIC",
+      "tipo_pesquisa": "DE - Desenvolvimento Experimental",
+      "natureza": "Processo",
+      "count": 4823
+    },
+    "arquivo_saida": "grupos_categoria_TIC_DE_-_Desenvolvimento_Expe_Processo_sublote14.csv",
+    "total_projetos": 162,
+    "resposta_length": 6498,
+    "requer_merge": true,
+    "timestamp": "2025-08-18T13:14:33.039702"
+  },
+  {
+    "combinacao": {
+      "setor": "TIC",
+      "tipo_pesquisa": "DE - Desenvolvimento Experimental",
+      "natureza": "Processo",
+      "count": 4823
+    },
+    "arquivo_saida": "grupos_categoria_TIC_DE_-_Desenvolvimento_Expe_Processo_sublote15.csv",
+    "total_projetos": 162,
+    "resposta_length": 11598,
+    "requer_merge": true,
+    "timestamp": "2025-08-18T13:14:33.039708"
+  },
+  {
+    "combinacao": {
+      "setor": "TIC",
+      "tipo_pesquisa": "DE - Desenvolvimento Experimental",
+      "natureza": "Processo",
+      "count": 4823
+    },
+    "arquivo_saida": "grupos_categoria_TIC_DE_-_Desenvolvimento_Expe_Processo_sublote16.csv",
+    "total_projetos": 162,
+    "resposta_length": 3041,
+    "requer_merge": true,
+    "timestamp": "2025-08-18T13:14:33.039713"
+  },
+  {
+    "combinacao": {
+      "setor": "TIC",
+      "tipo_pesquisa": "DE - Desenvolvimento Experimental",
+      "natureza": "Processo",
+      "count": 4823
+    },
+    "arquivo_saida": "grupos_categoria_TIC_DE_-_Desenvolvimento_Expe_Processo_sublote17.csv",
+    "total_projetos": 162,
+    "resposta_length": 2722,
+    "requer_merge": true,
+    "timestamp": "2025-08-18T13:14:33.039719"
+  },
+  {
+    "combinacao": {
+      "setor": "TIC",
+      "tipo_pesquisa": "DE - Desenvolvimento Experimental",
+      "natureza": "Processo",
+      "count": 4823
+    },
+    "arquivo_saida": "grupos_categoria_TIC_DE_-_Desenvolvimento_Expe_Processo_sublote18.csv",
+    "total_projetos": 162,
+    "resposta_length": 3475,
+    "requer_merge": true,
+    "timestamp": "2025-08-18T13:14:33.039725"
+  },
+  {
+    "combinacao": {
+      "setor": "TIC",
+      "tipo_pesquisa": "DE - Desenvolvimento Experimental",
+      "natureza": "Processo",
+      "count": 4823
+    },
+    "arquivo_saida": "grupos_categoria_TIC_DE_-_Desenvolvimento_Expe_Processo_sublote19.csv",
+    "total_projetos": 162,
+    "resposta_length": 9029,
+    "requer_merge": true,
+    "timestamp": "2025-08-18T13:14:33.039730"
+  },
+  {
+    "combinacao": {
+      "setor": "TIC",
+      "tipo_pesquisa": "DE - Desenvolvimento Experimental",
+      "natureza": "Processo",
+      "count": 4823
+    },
+    "arquivo_saida": "grupos_categoria_TIC_DE_-_Desenvolvimento_Expe_Processo_sublote20.csv",
+    "total_projetos": 162,
+    "resposta_length": 10505,
+    "requer_merge": true,
+    "timestamp": "2025-08-18T13:14:33.039736"
+  },
+  {
+    "combinacao": {
+      "setor": "TIC",
+      "tipo_pesquisa": "DE - Desenvolvimento Experimental",
+      "natureza": "Processo",
+      "count": 4823
+    },
+    "arquivo_saida": "grupos_categoria_TIC_DE_-_Desenvolvimento_Expe_Processo_sublote21.csv",
+    "total_projetos": 162,
+    "resposta_length": 3775,
+    "requer_merge": true,
+    "timestamp": "2025-08-18T13:14:33.039742"
+  },
+  {
+    "combinacao": {
+      "setor": "TIC",
+      "tipo_pesquisa": "DE - Desenvolvimento Experimental",
+      "natureza": "Processo",
+      "count": 4823
+    },
+    "arquivo_saida": "grupos_categoria_TIC_DE_-_Desenvolvimento_Expe_Processo_sublote22.csv",
+    "total_projetos": 162,
+    "resposta_length": 10420,
+    "requer_merge": true,
+    "timestamp": "2025-08-18T13:14:33.039747"
+  },
+  {
+    "combinacao": {
+      "setor": "TIC",
+      "tipo_pesquisa": "DE - Desenvolvimento Experimental",
+      "natureza": "Processo",
+      "count": 4823
+    },
+    "arquivo_saida": "grupos_categoria_TIC_DE_-_Desenvolvimento_Expe_Processo_sublote23.csv",
+    "total_projetos": 162,
+    "resposta_length": 5320,
+    "requer_merge": true,
+    "timestamp": "2025-08-18T13:14:33.039752"
+  },
+  {
+    "combinacao": {
+      "setor": "TIC",
+      "tipo_pesquisa": "DE - Desenvolvimento Experimental",
+      "natureza": "Processo",
+      "count": 4823
+    },
+    "arquivo_saida": "grupos_categoria_TIC_DE_-_Desenvolvimento_Expe_Processo_sublote24.csv",
+    "total_projetos": 162,
+    "resposta_length": 3767,
+    "requer_merge": true,
+    "timestamp": "2025-08-18T13:14:33.039758"
+  },
+  {
+    "combinacao": {
+      "setor": "TIC",
+      "tipo_pesquisa": "DE - Desenvolvimento Experimental",
+      "natureza": "Processo",
+      "count": 4823
+    },
+    "arquivo_saida": "grupos_categoria_TIC_DE_-_Desenvolvimento_Expe_Processo_sublote25.csv",
+    "total_projetos": 162,
+    "resposta_length": 5669,
+    "requer_merge": true,
+    "timestamp": "2025-08-18T13:14:33.039764"
+  },
+  {
+    "combinacao": {
+      "setor": "TIC",
+      "tipo_pesquisa": "DE - Desenvolvimento Experimental",
+      "natureza": "Processo",
+      "count": 4823
+    },
+    "arquivo_saida": "grupos_categoria_TIC_DE_-_Desenvolvimento_Expe_Processo_sublote26.csv",
+    "total_projetos": 162,
+    "resposta_length": 3934,
+    "requer_merge": true,
+    "timestamp": "2025-08-18T13:14:33.039769"
+  },
+  {
+    "combinacao": {
+      "setor": "TIC",
+      "tipo_pesquisa": "DE - Desenvolvimento Experimental",
+      "natureza": "Processo",
+      "count": 4823
+    },
+    "arquivo_saida": "grupos_categoria_TIC_DE_-_Desenvolvimento_Expe_Processo_sublote27.csv",
+    "total_projetos": 162,
+    "resposta_length": 11499,
+    "requer_merge": true,
+    "timestamp": "2025-08-18T13:14:33.039776"
+  },
+  {
+    "combinacao": {
+      "setor": "TIC",
+      "tipo_pesquisa": "DE - Desenvolvimento Experimental",
+      "natureza": "Processo",
+      "count": 4823
+    },
+    "arquivo_saida": "grupos_categoria_TIC_DE_-_Desenvolvimento_Expe_Processo_sublote28.csv",
+    "total_projetos": 162,
+    "resposta_length": 2921,
+    "requer_merge": true,
+    "timestamp": "2025-08-18T13:14:33.039782"
+  },
+  {
+    "combinacao": {
+      "setor": "TIC",
+      "tipo_pesquisa": "DE - Desenvolvimento Experimental",
+      "natureza": "Processo",
+      "count": 4823
+    },
+    "arquivo_saida": "grupos_categoria_TIC_DE_-_Desenvolvimento_Expe_Processo_sublote29.csv",
+    "total_projetos": 162,
+    "resposta_length": 4375,
+    "requer_merge": true,
+    "timestamp": "2025-08-18T13:14:33.039788"
+  },
+  {
+    "combinacao": {
+      "setor": "TIC",
+      "tipo_pesquisa": "DE - Desenvolvimento Experimental",
+      "natureza": "Processo",
+      "count": 4823
+    },
+    "arquivo_saida": "grupos_categoria_TIC_DE_-_Desenvolvimento_Expe_Processo_sublote30.csv",
+    "total_projetos": 162,
+    "resposta_length": 10559,
+    "requer_merge": true,
+    "timestamp": "2025-08-18T13:14:33.039794"
+  },
+  {
+    "combinacao": {
+      "setor": "TIC",
+      "tipo_pesquisa": "DE - Desenvolvimento Experimental",
+      "natureza": "Processo",
+      "count": 4823
+    },
+    "arquivo_saida": "grupos_categoria_TIC_DE_-_Desenvolvimento_Expe_Processo_sublote31.csv",
+    "total_projetos": 162,
+    "resposta_length": 2852,
+    "requer_merge": true,
+    "timestamp": "2025-08-18T13:14:33.039799"
+  },
+  {
+    "combinacao": {
+      "setor": "TIC",
+      "tipo_pesquisa": "DE - Desenvolvimento Experimental",
+      "natureza": "Processo",
+      "count": 4823
+    },
+    "arquivo_saida": "grupos_categoria_TIC_DE_-_Desenvolvimento_Expe_Processo_sublote32.csv",
+    "total_projetos": 162,
+    "resposta_length": 3580,
+    "requer_merge": true,
+    "timestamp": "2025-08-18T13:14:33.039805"
+  },
+  {
+    "combinacao": {
+      "setor": "TIC",
+      "tipo_pesquisa": "DE - Desenvolvimento Experimental",
+      "natureza": "Processo",
+      "count": 4823
+    },
+    "arquivo_saida": "grupos_categoria_TIC_DE_-_Desenvolvimento_Expe_Processo_sublote33.csv",
+    "total_projetos": 162,
+    "resposta_length": 4123,
+    "requer_merge": true,
+    "timestamp": "2025-08-18T13:14:33.039810"
+  },
+  {
+    "combinacao": {
+      "setor": "TIC",
+      "tipo_pesquisa": "DE - Desenvolvimento Experimental",
+      "natureza": "Processo",
+      "count": 4823
+    },
+    "arquivo_saida": "grupos_categoria_TIC_DE_-_Desenvolvimento_Expe_Processo_sublote34.csv",
+    "total_projetos": 157,
+    "resposta_length": 5798,
+    "requer_merge": true,
+    "timestamp": "2025-08-18T13:14:33.039817"
+  },
+  {
+    "combinacao": {
+      "setor": "TIC",
+      "tipo_pesquisa": "DE - Desenvolvimento Experimental",
+      "natureza": "Produto",
+      "count": 4493
+    },
+    "arquivo_saida": "grupos_categoria_TIC_DE_-_Desenvolvimento_Expe_Produto_sublote1.csv",
+    "total_projetos": 142,
+    "resposta_length": 3936,
+    "requer_merge": true,
+    "timestamp": "2025-08-18T13:14:33.039823"
+  },
+  {
+    "combinacao": {
+      "setor": "TIC",
+      "tipo_pesquisa": "DE - Desenvolvimento Experimental",
+      "natureza": "Produto",
+      "count": 4493
+    },
+    "arquivo_saida": "grupos_categoria_TIC_DE_-_Desenvolvimento_Expe_Produto_sublote2.csv",
+    "total_projetos": 162,
+    "resposta_length": 5304,
+    "requer_merge": true,
+    "timestamp": "2025-08-18T13:14:33.039829"
+  },
+  {
+    "combinacao": {
+      "setor": "TIC",
+      "tipo_pesquisa": "DE - Desenvolvimento Experimental",
+      "natureza": "Produto",
+      "count": 4493
+    },
+    "arquivo_saida": "grupos_categoria_TIC_DE_-_Desenvolvimento_Expe_Produto_sublote3.csv",
+    "total_projetos": 162,
+    "resposta_length": 10346,
+    "requer_merge": true,
+    "timestamp": "2025-08-18T13:14:33.039834"
+  },
+  {
+    "combinacao": {
+      "setor": "TIC",
+      "tipo_pesquisa": "DE - Desenvolvimento Experimental",
+      "natureza": "Produto",
+      "count": 4493
+    },
+    "arquivo_saida": "grupos_categoria_TIC_DE_-_Desenvolvimento_Expe_Produto_sublote4.csv",
+    "total_projetos": 162,
+    "resposta_length": 10276,
+    "requer_merge": true,
+    "timestamp": "2025-08-18T13:14:33.039840"
+  },
+  {
+    "combinacao": {
+      "setor": "TIC",
+      "tipo_pesquisa": "DE - Desenvolvimento Experimental",
+      "natureza": "Produto",
+      "count": 4493
+    },
+    "arquivo_saida": "grupos_categoria_TIC_DE_-_Desenvolvimento_Expe_Produto_sublote5.csv",
+    "total_projetos": 162,
+    "resposta_length": 4994,
+    "requer_merge": true,
+    "timestamp": "2025-08-18T13:14:33.039846"
+  },
+  {
+    "combinacao": {
+      "setor": "TIC",
+      "tipo_pesquisa": "DE - Desenvolvimento Experimental",
+      "natureza": "Produto",
+      "count": 4493
+    },
+    "arquivo_saida": "grupos_categoria_TIC_DE_-_Desenvolvimento_Expe_Produto_sublote6.csv",
+    "total_projetos": 162,
+    "resposta_length": 3786,
+    "requer_merge": true,
+    "timestamp": "2025-08-18T13:14:33.039851"
+  },
+  {
+    "combinacao": {
+      "setor": "TIC",
+      "tipo_pesquisa": "DE - Desenvolvimento Experimental",
+      "natureza": "Produto",
+      "count": 4493
+    },
+    "arquivo_saida": "grupos_categoria_TIC_DE_-_Desenvolvimento_Expe_Produto_sublote7.csv",
+    "total_projetos": 162,
+    "resposta_length": 9380,
+    "requer_merge": true,
+    "timestamp": "2025-08-18T13:14:33.039857"
+  },
+  {
+    "combinacao": {
+      "setor": "TIC",
+      "tipo_pesquisa": "DE - Desenvolvimento Experimental",
+      "natureza": "Produto",
+      "count": 4493
+    },
+    "arquivo_saida": "grupos_categoria_TIC_DE_-_Desenvolvimento_Expe_Produto_sublote8.csv",
+    "total_projetos": 162,
+    "resposta_length": 10878,
+    "requer_merge": true,
+    "timestamp": "2025-08-18T13:14:33.039863"
+  },
+  {
+    "combinacao": {
+      "setor": "TIC",
+      "tipo_pesquisa": "DE - Desenvolvimento Experimental",
+      "natureza": "Produto",
+      "count": 4493
+    },
+    "arquivo_saida": "grupos_categoria_TIC_DE_-_Desenvolvimento_Expe_Produto_sublote9.csv",
+    "total_projetos": 162,
+    "resposta_length": 5821,
+    "requer_merge": true,
+    "timestamp": "2025-08-18T13:14:33.039868"
+  },
+  {
+    "combinacao": {
+      "setor": "TIC",
+      "tipo_pesquisa": "DE - Desenvolvimento Experimental",
+      "natureza": "Produto",
+      "count": 4493
+    },
+    "arquivo_saida": "grupos_categoria_TIC_DE_-_Desenvolvimento_Expe_Produto_sublote10.csv",
+    "total_projetos": 162,
+    "resposta_length": 4601,
+    "requer_merge": true,
+    "timestamp": "2025-08-18T13:14:33.039874"
+  },
+  {
+    "combinacao": {
+      "setor": "TIC",
+      "tipo_pesquisa": "DE - Desenvolvimento Experimental",
+      "natureza": "Produto",
+      "count": 4493
+    },
+    "arquivo_saida": "grupos_categoria_TIC_DE_-_Desenvolvimento_Expe_Produto_sublote11.csv",
+    "total_projetos": 162,
+    "resposta_length": 9872,
+    "requer_merge": true,
+    "timestamp": "2025-08-18T13:14:33.039879"
+  },
+  {
+    "combinacao": {
+      "setor": "TIC",
+      "tipo_pesquisa": "DE - Desenvolvimento Experimental",
+      "natureza": "Produto",
+      "count": 4493
+    },
+    "arquivo_saida": "grupos_categoria_TIC_DE_-_Desenvolvimento_Expe_Produto_sublote12.csv",
+    "total_projetos": 162,
+    "resposta_length": 10474,
+    "requer_merge": true,
+    "timestamp": "2025-08-18T13:14:33.039885"
+  },
+  {
+    "combinacao": {
+      "setor": "TIC",
+      "tipo_pesquisa": "DE - Desenvolvimento Experimental",
+      "natureza": "Produto",
+      "count": 4493
+    },
+    "arquivo_saida": "grupos_categoria_TIC_DE_-_Desenvolvimento_Expe_Produto_sublote13.csv",
+    "total_projetos": 162,
+    "resposta_length": 11164,
+    "requer_merge": true,
+    "timestamp": "2025-08-18T13:14:33.039890"
+  },
+  {
+    "combinacao": {
+      "setor": "TIC",
+      "tipo_pesquisa": "DE - Desenvolvimento Experimental",
+      "natureza": "Produto",
+      "count": 4493
+    },
+    "arquivo_saida": "grupos_categoria_TIC_DE_-_Desenvolvimento_Expe_Produto_sublote14.csv",
+    "total_projetos": 162,
+    "resposta_length": 6288,
+    "requer_merge": true,
+    "timestamp": "2025-08-18T13:14:33.039896"
+  },
+  {
+    "combinacao": {
+      "setor": "TIC",
+      "tipo_pesquisa": "DE - Desenvolvimento Experimental",
+      "natureza": "Produto",
+      "count": 4493
+    },
+    "arquivo_saida": "grupos_categoria_TIC_DE_-_Desenvolvimento_Expe_Produto_sublote15.csv",
+    "total_projetos": 162,
+    "resposta_length": 7028,
+    "requer_merge": true,
+    "timestamp": "2025-08-18T13:14:33.039901"
+  },
+  {
+    "combinacao": {
+      "setor": "TIC",
+      "tipo_pesquisa": "DE - Desenvolvimento Experimental",
+      "natureza": "Produto",
+      "count": 4493
+    },
+    "arquivo_saida": "grupos_categoria_TIC_DE_-_Desenvolvimento_Expe_Produto_sublote16.csv",
+    "total_projetos": 162,
+    "resposta_length": 6289,
+    "requer_merge": true,
+    "timestamp": "2025-08-18T13:14:33.039907"
+  },
+  {
+    "combinacao": {
+      "setor": "TIC",
+      "tipo_pesquisa": "DE - Desenvolvimento Experimental",
+      "natureza": "Produto",
+      "count": 4493
+    },
+    "arquivo_saida": "grupos_categoria_TIC_DE_-_Desenvolvimento_Expe_Produto_sublote17.csv",
+    "total_projetos": 162,
+    "resposta_length": 3662,
+    "requer_merge": true,
+    "timestamp": "2025-08-18T13:14:33.039913"
+  },
+  {
+    "combinacao": {
+      "setor": "TIC",
+      "tipo_pesquisa": "DE - Desenvolvimento Experimental",
+      "natureza": "Produto",
+      "count": 4493
+    },
+    "arquivo_saida": "grupos_categoria_TIC_DE_-_Desenvolvimento_Expe_Produto_sublote18.csv",
+    "total_projetos": 162,
+    "resposta_length": 12023,
+    "requer_merge": true,
+    "timestamp": "2025-08-18T13:14:33.039918"
+  },
+  {
+    "combinacao": {
+      "setor": "TIC",
+      "tipo_pesquisa": "DE - Desenvolvimento Experimental",
+      "natureza": "Produto",
+      "count": 4493
+    },
+    "arquivo_saida": "grupos_categoria_TIC_DE_-_Desenvolvimento_Expe_Produto_sublote19.csv",
+    "total_projetos": 162,
+    "resposta_length": 10929,
+    "requer_merge": true,
+    "timestamp": "2025-08-18T13:14:33.039924"
+  },
+  {
+    "combinacao": {
+      "setor": "TIC",
+      "tipo_pesquisa": "DE - Desenvolvimento Experimental",
+      "natureza": "Produto",
+      "count": 4493
+    },
+    "arquivo_saida": "grupos_categoria_TIC_DE_-_Desenvolvimento_Expe_Produto_sublote20.csv",
+    "total_projetos": 162,
+    "resposta_length": 1914,
+    "requer_merge": true,
+    "timestamp": "2025-08-18T13:14:33.039931"
+  },
+  {
+    "combinacao": {
+      "setor": "TIC",
+      "tipo_pesquisa": "DE - Desenvolvimento Experimental",
+      "natureza": "Produto",
+      "count": 4493
+    },
+    "arquivo_saida": "grupos_categoria_TIC_DE_-_Desenvolvimento_Expe_Produto_sublote21.csv",
+    "total_projetos": 162,
+    "resposta_length": 7613,
+    "requer_merge": true,
+    "timestamp": "2025-08-18T13:14:33.039936"
+  },
+  {
+    "combinacao": {
+      "setor": "TIC",
+      "tipo_pesquisa": "DE - Desenvolvimento Experimental",
+      "natureza": "Produto",
+      "count": 4493
+    },
+    "arquivo_saida": "grupos_categoria_TIC_DE_-_Desenvolvimento_Expe_Produto_sublote22.csv",
+    "total_projetos": 162,
+    "resposta_length": 11286,
+    "requer_merge": true,
+    "timestamp": "2025-08-18T13:14:33.039947"
+  },
+  {
+    "combinacao": {
+      "setor": "TIC",
+      "tipo_pesquisa": "DE - Desenvolvimento Experimental",
+      "natureza": "Produto",
+      "count": 4493
+    },
+    "arquivo_saida": "grupos_categoria_TIC_DE_-_Desenvolvimento_Expe_Produto_sublote23.csv",
+    "total_projetos": 162,
+    "resposta_length": 10603,
+    "requer_merge": true,
+    "timestamp": "2025-08-18T13:14:33.039954"
+  },
+  {
+    "combinacao": {
+      "setor": "TIC",
+      "tipo_pesquisa": "DE - Desenvolvimento Experimental",
+      "natureza": "Produto",
+      "count": 4493
+    },
+    "arquivo_saida": "grupos_categoria_TIC_DE_-_Desenvolvimento_Expe_Produto_sublote24.csv",
+    "total_projetos": 162,
+    "resposta_length": 10816,
+    "requer_merge": true,
+    "timestamp": "2025-08-18T13:14:33.039960"
+  },
+  {
+    "combinacao": {
+      "setor": "TIC",
+      "tipo_pesquisa": "DE - Desenvolvimento Experimental",
+      "natureza": "Produto",
+      "count": 4493
+    },
+    "arquivo_saida": "grupos_categoria_TIC_DE_-_Desenvolvimento_Expe_Produto_sublote25.csv",
+    "total_projetos": 162,
+    "resposta_length": 10733,
+    "requer_merge": true,
+    "timestamp": "2025-08-18T13:14:33.039966"
+  },
+  {
+    "combinacao": {
+      "setor": "TIC",
+      "tipo_pesquisa": "DE - Desenvolvimento Experimental",
+      "natureza": "Produto",
+      "count": 4493
+    },
+    "arquivo_saida": "grupos_categoria_TIC_DE_-_Desenvolvimento_Expe_Produto_sublote26.csv",
+    "total_projetos": 162,
+    "resposta_length": 10638,
+    "requer_merge": true,
+    "timestamp": "2025-08-18T13:14:33.039972"
+  },
+  {
+    "combinacao": {
+      "setor": "TIC",
+      "tipo_pesquisa": "DE - Desenvolvimento Experimental",
+      "natureza": "Produto",
+      "count": 4493
+    },
+    "arquivo_saida": "grupos_categoria_TIC_DE_-_Desenvolvimento_Expe_Produto_sublote27.csv",
+    "total_projetos": 162,
+    "resposta_length": 10548,
+    "requer_merge": true,
+    "timestamp": "2025-08-18T13:14:33.039978"
+  },
+  {
+    "combinacao": {
+      "setor": "TIC",
+      "tipo_pesquisa": "DE - Desenvolvimento Experimental",
+      "natureza": "Produto",
+      "count": 4493
+    },
+    "arquivo_saida": "grupos_categoria_TIC_DE_-_Desenvolvimento_Expe_Produto_sublote28.csv",
+    "total_projetos": 162,
+    "resposta_length": 11357,
+    "requer_merge": true,
+    "timestamp": "2025-08-18T13:14:33.039984"
+  },
+  {
+    "combinacao": {
+      "setor": "TIC",
+      "tipo_pesquisa": "DE - Desenvolvimento Experimental",
+      "natureza": "Produto",
+      "count": 4493
+    },
+    "arquivo_saida": "grupos_categoria_TIC_DE_-_Desenvolvimento_Expe_Produto_sublote29.csv",
+    "total_projetos": 162,
+    "resposta_length": 6912,
+    "requer_merge": true,
+    "timestamp": "2025-08-18T13:14:33.039990"
+  },
+  {
+    "combinacao": {
+      "setor": "TIC",
+      "tipo_pesquisa": "DE - Desenvolvimento Experimental",
+      "natureza": "Produto",
+      "count": 4493
+    },
+    "arquivo_saida": "grupos_categoria_TIC_DE_-_Desenvolvimento_Expe_Produto_sublote30.csv",
+    "total_projetos": 162,
+    "resposta_length": 4917,
+    "requer_merge": true,
+    "timestamp": "2025-08-18T13:14:33.039996"
+  },
+  {
+    "combinacao": {
+      "setor": "TIC",
+      "tipo_pesquisa": "DE - Desenvolvimento Experimental",
+      "natureza": "Produto",
+      "count": 4493
+    },
+    "arquivo_saida": "grupos_categoria_TIC_DE_-_Desenvolvimento_Expe_Produto_sublote31.csv",
+    "total_projetos": 162,
+    "resposta_length": 4554,
+    "requer_merge": true,
+    "timestamp": "2025-08-18T13:14:33.040002"
+  },
+  {
+    "combinacao": {
+      "setor": "TIC",
+      "tipo_pesquisa": "DE - Desenvolvimento Experimental",
+      "natureza": "Produto",
+      "count": 4493
+    },
+    "arquivo_saida": "grupos_categoria_TIC_DE_-_Desenvolvimento_Expe_Produto_sublote32.csv",
+    "total_projetos": 111,
+    "resposta_length": 10851,
+    "requer_merge": true,
+    "timestamp": "2025-08-18T13:14:33.040008"
+  },
+  {
+    "combinacao": {
+      "setor": "TIC",
+      "tipo_pesquisa": "DE - Desenvolvimento Experimental",
+      "natureza": "Serviço",
+      "count": 3490
+    },
+    "arquivo_saida": "grupos_categoria_TIC_DE_-_Desenvolvimento_Expe_Serviço_sublote1.csv",
+    "total_projetos": 142,
+    "resposta_length": 8243,
+    "requer_merge": true,
+    "timestamp": "2025-08-18T13:14:33.040015"
+  },
+  {
+    "combinacao": {
+      "setor": "TIC",
+      "tipo_pesquisa": "DE - Desenvolvimento Experimental",
+      "natureza": "Serviço",
+      "count": 3490
+    },
+    "arquivo_saida": "grupos_categoria_TIC_DE_-_Desenvolvimento_Expe_Serviço_sublote2.csv",
+    "total_projetos": 162,
+    "resposta_length": 9418,
+    "requer_merge": true,
+    "timestamp": "2025-08-18T13:14:33.040020"
+  },
+  {
+    "combinacao": {
+      "setor": "TIC",
+      "tipo_pesquisa": "DE - Desenvolvimento Experimental",
+      "natureza": "Serviço",
+      "count": 3490
+    },
+    "arquivo_saida": "grupos_categoria_TIC_DE_-_Desenvolvimento_Expe_Serviço_sublote3.csv",
+    "total_projetos": 162,
+    "resposta_length": 4434,
+    "requer_merge": true,
+    "timestamp": "2025-08-18T13:14:33.040026"
+  },
+  {
+    "combinacao": {
+      "setor": "TIC",
+      "tipo_pesquisa": "DE - Desenvolvimento Experimental",
+      "natureza": "Serviço",
+      "count": 3490
+    },
+    "arquivo_saida": "grupos_categoria_TIC_DE_-_Desenvolvimento_Expe_Serviço_sublote4.csv",
+    "total_projetos": 162,
+    "resposta_length": 10002,
+    "requer_merge": true,
+    "timestamp": "2025-08-18T13:14:33.040031"
+  },
+  {
+    "combinacao": {
+      "setor": "TIC",
+      "tipo_pesquisa": "DE - Desenvolvimento Experimental",
+      "natureza": "Serviço",
+      "count": 3490
+    },
+    "arquivo_saida": "grupos_categoria_TIC_DE_-_Desenvolvimento_Expe_Serviço_sublote5.csv",
+    "total_projetos": 162,
+    "resposta_length": 10931,
+    "requer_merge": true,
+    "timestamp": "2025-08-18T13:14:33.040037"
+  },
+  {
+    "combinacao": {
+      "setor": "TIC",
+      "tipo_pesquisa": "DE - Desenvolvimento Experimental",
+      "natureza": "Serviço",
+      "count": 3490
+    },
+    "arquivo_saida": "grupos_categoria_TIC_DE_-_Desenvolvimento_Expe_Serviço_sublote6.csv",
+    "total_projetos": 162,
+    "resposta_length": 12028,
+    "requer_merge": true,
+    "timestamp": "2025-08-18T13:14:33.040043"
+  },
+  {
+    "combinacao": {
+      "setor": "TIC",
+      "tipo_pesquisa": "DE - Desenvolvimento Experimental",
+      "natureza": "Serviço",
+      "count": 3490
+    },
+    "arquivo_saida": "grupos_categoria_TIC_DE_-_Desenvolvimento_Expe_Serviço_sublote7.csv",
+    "total_projetos": 162,
+    "resposta_length": 3162,
+    "requer_merge": true,
+    "timestamp": "2025-08-18T13:14:33.040048"
+  },
+  {
+    "combinacao": {
+      "setor": "TIC",
+      "tipo_pesquisa": "DE - Desenvolvimento Experimental",
+      "natureza": "Serviço",
+      "count": 3490
+    },
+    "arquivo_saida": "grupos_categoria_TIC_DE_-_Desenvolvimento_Expe_Serviço_sublote8.csv",
+    "total_projetos": 162,
+    "resposta_length": 10603,
+    "requer_merge": true,
+    "timestamp": "2025-08-18T13:14:33.040054"
+  },
+  {
+    "combinacao": {
+      "setor": "TIC",
+      "tipo_pesquisa": "DE - Desenvolvimento Experimental",
+      "natureza": "Serviço",
+      "count": 3490
+    },
+    "arquivo_saida": "grupos_categoria_TIC_DE_-_Desenvolvimento_Expe_Serviço_sublote9.csv",
+    "total_projetos": 162,
+    "resposta_length": 9879,
+    "requer_merge": true,
+    "timestamp": "2025-08-18T13:14:33.040059"
+  },
+  {
+    "combinacao": {
+      "setor": "TIC",
+      "tipo_pesquisa": "DE - Desenvolvimento Experimental",
+      "natureza": "Serviço",
+      "count": 3490
+    },
+    "arquivo_saida": "grupos_categoria_TIC_DE_-_Desenvolvimento_Expe_Serviço_sublote10.csv",
+    "total_projetos": 162,
+    "resposta_length": 10608,
+    "requer_merge": true,
+    "timestamp": "2025-08-18T13:14:33.040065"
+  },
+  {
+    "combinacao": {
+      "setor": "TIC",
+      "tipo_pesquisa": "DE - Desenvolvimento Experimental",
+      "natureza": "Serviço",
+      "count": 3490
+    },
+    "arquivo_saida": "grupos_categoria_TIC_DE_-_Desenvolvimento_Expe_Serviço_sublote11.csv",
+    "total_projetos": 162,
+    "resposta_length": 3591,
+    "requer_merge": true,
+    "timestamp": "2025-08-18T13:14:33.040071"
+  },
+  {
+    "combinacao": {
+      "setor": "TIC",
+      "tipo_pesquisa": "DE - Desenvolvimento Experimental",
+      "natureza": "Serviço",
+      "count": 3490
+    },
+    "arquivo_saida": "grupos_categoria_TIC_DE_-_Desenvolvimento_Expe_Serviço_sublote12.csv",
+    "total_projetos": 162,
+    "resposta_length": 3673,
+    "requer_merge": true,
+    "timestamp": "2025-08-18T13:14:33.040077"
+  },
+  {
+    "combinacao": {
+      "setor": "TIC",
+      "tipo_pesquisa": "DE - Desenvolvimento Experimental",
+      "natureza": "Serviço",
+      "count": 3490
+    },
+    "arquivo_saida": "grupos_categoria_TIC_DE_-_Desenvolvimento_Expe_Serviço_sublote13.csv",
+    "total_projetos": 162,
+    "resposta_length": 10951,
+    "requer_merge": true,
+    "timestamp": "2025-08-18T13:14:33.040082"
+  },
+  {
+    "combinacao": {
+      "setor": "TIC",
+      "tipo_pesquisa": "DE - Desenvolvimento Experimental",
+      "natureza": "Serviço",
+      "count": 3490
+    },
+    "arquivo_saida": "grupos_categoria_TIC_DE_-_Desenvolvimento_Expe_Serviço_sublote14.csv",
+    "total_projetos": 162,
+    "resposta_length": 4720,
+    "requer_merge": true,
+    "timestamp": "2025-08-18T13:14:33.040088"
+  },
+  {
+    "combinacao": {
+      "setor": "TIC",
+      "tipo_pesquisa": "DE - Desenvolvimento Experimental",
+      "natureza": "Serviço",
+      "count": 3490
+    },
+    "arquivo_saida": "grupos_categoria_TIC_DE_-_Desenvolvimento_Expe_Serviço_sublote15.csv",
+    "total_projetos": 162,
+    "resposta_length": 3548,
+    "requer_merge": true,
+    "timestamp": "2025-08-18T13:14:33.040093"
+  },
+  {
+    "combinacao": {
+      "setor": "TIC",
+      "tipo_pesquisa": "DE - Desenvolvimento Experimental",
+      "natureza": "Serviço",
+      "count": 3490
+    },
+    "arquivo_saida": "grupos_categoria_TIC_DE_-_Desenvolvimento_Expe_Serviço_sublote16.csv",
+    "total_projetos": 162,
+    "resposta_length": 10878,
+    "requer_merge": true,
+    "timestamp": "2025-08-18T13:14:33.040099"
+  },
+  {
+    "combinacao": {
+      "setor": "TIC",
+      "tipo_pesquisa": "DE - Desenvolvimento Experimental",
+      "natureza": "Serviço",
+      "count": 3490
+    },
+    "arquivo_saida": "grupos_categoria_TIC_DE_-_Desenvolvimento_Expe_Serviço_sublote17.csv",
+    "total_projetos": 162,
+    "resposta_length": 3541,
+    "requer_merge": true,
+    "timestamp": "2025-08-18T13:14:33.040105"
+  },
+  {
+    "combinacao": {
+      "setor": "TIC",
+      "tipo_pesquisa": "DE - Desenvolvimento Experimental",
+      "natureza": "Serviço",
+      "count": 3490
+    },
+    "arquivo_saida": "grupos_categoria_TIC_DE_-_Desenvolvimento_Expe_Serviço_sublote18.csv",
+    "total_projetos": 162,
+    "resposta_length": 2804,
+    "requer_merge": true,
+    "timestamp": "2025-08-18T13:14:33.040110"
+  },
+  {
+    "combinacao": {
+      "setor": "TIC",
+      "tipo_pesquisa": "DE - Desenvolvimento Experimental",
+      "natureza": "Serviço",
+      "count": 3490
+    },
+    "arquivo_saida": "grupos_categoria_TIC_DE_-_Desenvolvimento_Expe_Serviço_sublote19.csv",
+    "total_projetos": 162,
+    "resposta_length": 4237,
+    "requer_merge": true,
+    "timestamp": "2025-08-18T13:14:33.040116"
+  },
+  {
+    "combinacao": {
+      "setor": "TIC",
+      "tipo_pesquisa": "DE - Desenvolvimento Experimental",
+      "natureza": "Serviço",
+      "count": 3490
+    },
+    "arquivo_saida": "grupos_categoria_TIC_DE_-_Desenvolvimento_Expe_Serviço_sublote20.csv",
+    "total_projetos": 162,
+    "resposta_length": 10553,
+    "requer_merge": true,
+    "timestamp": "2025-08-18T13:14:33.040122"
+  },
+  {
+    "combinacao": {
+      "setor": "TIC",
+      "tipo_pesquisa": "DE - Desenvolvimento Experimental",
+      "natureza": "Serviço",
+      "count": 3490
+    },
+    "arquivo_saida": "grupos_categoria_TIC_DE_-_Desenvolvimento_Expe_Serviço_sublote21.csv",
+    "total_projetos": 162,
+    "resposta_length": 5454,
+    "requer_merge": true,
+    "timestamp": "2025-08-18T13:14:33.040127"
+  },
+  {
+    "combinacao": {
+      "setor": "TIC",
+      "tipo_pesquisa": "DE - Desenvolvimento Experimental",
+      "natureza": "Serviço",
+      "count": 3490
+    },
+    "arquivo_saida": "grupos_categoria_TIC_DE_-_Desenvolvimento_Expe_Serviço_sublote22.csv",
+    "total_projetos": 162,
+    "resposta_length": 9821,
+    "requer_merge": true,
+    "timestamp": "2025-08-18T13:14:33.040133"
+  },
+  {
+    "combinacao": {
+      "setor": "TIC",
+      "tipo_pesquisa": "DE - Desenvolvimento Experimental",
+      "natureza": "Serviço",
+      "count": 3490
+    },
+    "arquivo_saida": "grupos_categoria_TIC_DE_-_Desenvolvimento_Expe_Serviço_sublote23.csv",
+    "total_projetos": 162,
+    "resposta_length": 5742,
+    "requer_merge": true,
+    "timestamp": "2025-08-18T13:14:33.040138"
+  },
+  {
+    "combinacao": {
+      "setor": "TIC",
+      "tipo_pesquisa": "DE - Desenvolvimento Experimental",
+      "natureza": "Serviço",
+      "count": 3490
+    },
+    "arquivo_saida": "grupos_categoria_TIC_DE_-_Desenvolvimento_Expe_Serviço_sublote24.csv",
+    "total_projetos": 162,
+    "resposta_length": 9904,
+    "requer_merge": true,
+    "timestamp": "2025-08-18T13:14:33.040144"
+  },
+  {
+    "combinacao": {
+      "setor": "TIC",
+      "tipo_pesquisa": "DE - Desenvolvimento Experimental",
+      "natureza": "Serviço",
+      "count": 3490
+    },
+    "arquivo_saida": "grupos_categoria_TIC_DE_-_Desenvolvimento_Expe_Serviço_sublote25.csv",
+    "total_projetos": 102,
+    "resposta_length": 8427,
+    "requer_merge": true,
+    "timestamp": "2025-08-18T13:14:33.040150"
+  },
+  {
+    "combinacao": {
+      "setor": "TIC",
+      "tipo_pesquisa": "PA - Pesquisa Aplicada",
+      "natureza": "Processo",
+      "count": 430
+    },
+    "arquivo_saida": "grupos_categoria_TIC_PA_-_Pesquisa_Aplicada_Processo_sublote1.csv",
+    "total_projetos": 142,
+    "resposta_length": 6567,
+    "requer_merge": true,
+    "timestamp": "2025-08-18T13:14:33.040155"
+  },
+  {
+    "combinacao": {
+      "setor": "TIC",
+      "tipo_pesquisa": "PA - Pesquisa Aplicada",
+      "natureza": "Processo",
+      "count": 430
+    },
+    "arquivo_saida": "grupos_categoria_TIC_PA_-_Pesquisa_Aplicada_Processo_sublote2.csv",
+    "total_projetos": 162,
+    "resposta_length": 4183,
+    "requer_merge": true,
+    "timestamp": "2025-08-18T13:14:33.040160"
+  },
+  {
+    "combinacao": {
+      "setor": "TIC",
+      "tipo_pesquisa": "PA - Pesquisa Aplicada",
+      "natureza": "Processo",
+      "count": 430
+    },
+    "arquivo_saida": "grupos_categoria_TIC_PA_-_Pesquisa_Aplicada_Processo_sublote3.csv",
+    "total_projetos": 162,
+    "resposta_length": 11406,
+    "requer_merge": true,
+    "timestamp": "2025-08-18T13:14:33.040166"
+  },
+  {
+    "combinacao": {
+      "setor": "TIC",
+      "tipo_pesquisa": "PA - Pesquisa Aplicada",
+      "natureza": "Processo",
+      "count": 430
+    },
+    "arquivo_saida": "grupos_categoria_TIC_PA_-_Pesquisa_Aplicada_Processo_sublote4.csv",
+    "total_projetos": 24,
+    "resposta_length": 3190,
+    "requer_merge": true,
+    "timestamp": "2025-08-18T13:14:33.040171"
+  },
+  {
+    "combinacao": {
+      "setor": "TIC",
+      "tipo_pesquisa": "PA - Pesquisa Aplicada",
+      "natureza": "Produto",
+      "count": 529
+    },
+    "arquivo_saida": "grupos_categoria_TIC_PA_-_Pesquisa_Aplicada_Produto_sublote1.csv",
+    "total_projetos": 142,
+    "resposta_length": 10675,
+    "requer_merge": true,
+    "timestamp": "2025-08-18T13:14:33.040177"
+  },
+  {
+    "combinacao": {
+      "setor": "TIC",
+      "tipo_pesquisa": "PA - Pesquisa Aplicada",
+      "natureza": "Produto",
+      "count": 529
+    },
+    "arquivo_saida": "grupos_categoria_TIC_PA_-_Pesquisa_Aplicada_Produto_sublote2.csv",
+    "total_projetos": 162,
+    "resposta_length": 10747,
+    "requer_merge": true,
+    "timestamp": "2025-08-18T13:14:33.040183"
+  },
+  {
+    "combinacao": {
+      "setor": "TIC",
+      "tipo_pesquisa": "PA - Pesquisa Aplicada",
+      "natureza": "Produto",
+      "count": 529
+    },
+    "arquivo_saida": "grupos_categoria_TIC_PA_-_Pesquisa_Aplicada_Produto_sublote3.csv",
+    "total_projetos": 162,
+    "resposta_length": 10549,
+    "requer_merge": true,
+    "timestamp": "2025-08-18T13:14:33.040188"
+  },
+  {
+    "combinacao": {
+      "setor": "TIC",
+      "tipo_pesquisa": "PA - Pesquisa Aplicada",
+      "natureza": "Produto",
+      "count": 529
+    },
+    "arquivo_saida": "grupos_categoria_TIC_PA_-_Pesquisa_Aplicada_Produto_sublote4.csv",
+    "total_projetos": 123,
+    "resposta_length": 5312,
+    "requer_merge": true,
+    "timestamp": "2025-08-18T13:14:33.040194"
+  },
+  {
+    "combinacao": {
+      "setor": "TIC",
+      "tipo_pesquisa": "PA - Pesquisa Aplicada",
+      "natureza": "Serviço",
+      "count": 184
+    },
+    "arquivo_saida": "grupos_categoria_TIC_PA_-_Pesquisa_Aplicada_Serviço_sublote1.csv",
+    "total_projetos": 142,
+    "resposta_length": 11048,
+    "requer_merge": true,
+    "timestamp": "2025-08-18T13:14:33.040199"
+  },
+  {
+    "combinacao": {
+      "setor": "TIC",
+      "tipo_pesquisa": "PA - Pesquisa Aplicada",
+      "natureza": "Serviço",
+      "count": 184
+    },
+    "arquivo_saida": "grupos_categoria_TIC_PA_-_Pesquisa_Aplicada_Serviço_sublote2.csv",
+    "total_projetos": 62,
+    "resposta_length": 5758,
+    "requer_merge": true,
+    "timestamp": "2025-08-18T13:14:33.040205"
+  },
+  {
+    "combinacao": {
+      "setor": "TIC",
+      "tipo_pesquisa": "PB - Pesquisa Básica",
+      "natureza": "Processo",
+      "count": 43
+    },
+    "arquivo_saida": "grupos_categoria_TIC_PB_-_Pesquisa_Básica_Processo_completa.csv",
+    "total_projetos": 43,
+    "resposta_length": 3872,
+    "requer_merge": false,
+    "timestamp": "2025-08-18T13:14:33.040211"
+  },
+  {
+    "combinacao": {
+      "setor": "TIC",
+      "tipo_pesquisa": "PB - Pesquisa Básica",
+      "natureza": "Produto",
+      "count": 78
+    },
+    "arquivo_saida": "grupos_categoria_TIC_PB_-_Pesquisa_Básica_Produto_completa.csv",
+    "total_projetos": 78,
+    "resposta_length": 4187,
+    "requer_merge": false,
+    "timestamp": "2025-08-18T13:14:33.040219"
+  },
+  {
+    "combinacao": {
+      "setor": "TIC",
+      "tipo_pesquisa": "PB - Pesquisa Básica",
+      "natureza": "Serviço",
+      "count": 19
+    },
+    "arquivo_saida": "grupos_categoria_TIC_PB_-_Pesquisa_Básica_Serviço_completa.csv",
+    "total_projetos": 19,
+    "resposta_length": 2214,
+    "requer_merge": false,
+    "timestamp": "2025-08-18T13:14:33.040225"
+  },
+  {
+    "combinacao": {
+      "setor": "Transversal",
+      "tipo_pesquisa": "DE - Desenvolvimento Experimental",
+      "natureza": "Processo",
+      "count": 1366
+    },
+    "arquivo_saida": "grupos_categoria_Transversal_DE_-_Desenvolvimento_Expe_Processo_sublote1.csv",
+    "total_projetos": 142,
+    "resposta_length": 3727,
+    "requer_merge": true,
+    "timestamp": "2025-08-18T13:14:33.040231"
+  },
+  {
+    "combinacao": {
+      "setor": "Transversal",
+      "tipo_pesquisa": "DE - Desenvolvimento Experimental",
+      "natureza": "Processo",
+      "count": 1366
+    },
+    "arquivo_saida": "grupos_categoria_Transversal_DE_-_Desenvolvimento_Expe_Processo_sublote2.csv",
+    "total_projetos": 162,
+    "resposta_length": 4778,
+    "requer_merge": true,
+    "timestamp": "2025-08-18T13:14:33.040236"
+  },
+  {
+    "combinacao": {
+      "setor": "Transversal",
+      "tipo_pesquisa": "DE - Desenvolvimento Experimental",
+      "natureza": "Processo",
+      "count": 1366
+    },
+    "arquivo_saida": "grupos_categoria_Transversal_DE_-_Desenvolvimento_Expe_Processo_sublote3.csv",
+    "total_projetos": 162,
+    "resposta_length": 10837,
+    "requer_merge": true,
+    "timestamp": "2025-08-18T13:14:33.040242"
+  },
+  {
+    "combinacao": {
+      "setor": "Transversal",
+      "tipo_pesquisa": "DE - Desenvolvimento Experimental",
+      "natureza": "Processo",
+      "count": 1366
+    },
+    "arquivo_saida": "grupos_categoria_Transversal_DE_-_Desenvolvimento_Expe_Processo_sublote4.csv",
+    "total_projetos": 162,
+    "resposta_length": 11403,
+    "requer_merge": true,
+    "timestamp": "2025-08-18T13:14:33.040247"
+  },
+  {
+    "combinacao": {
+      "setor": "Transversal",
+      "tipo_pesquisa": "DE - Desenvolvimento Experimental",
+      "natureza": "Processo",
+      "count": 1366
+    },
+    "arquivo_saida": "grupos_categoria_Transversal_DE_-_Desenvolvimento_Expe_Processo_sublote5.csv",
+    "total_projetos": 162,
+    "resposta_length": 10543,
+    "requer_merge": true,
+    "timestamp": "2025-08-18T13:14:33.040253"
+  },
+  {
+    "combinacao": {
+      "setor": "Transversal",
+      "tipo_pesquisa": "DE - Desenvolvimento Experimental",
+      "natureza": "Processo",
+      "count": 1366
+    },
+    "arquivo_saida": "grupos_categoria_Transversal_DE_-_Desenvolvimento_Expe_Processo_sublote6.csv",
+    "total_projetos": 162,
+    "resposta_length": 12332,
+    "requer_merge": true,
+    "timestamp": "2025-08-18T13:14:33.040259"
+  },
+  {
+    "combinacao": {
+      "setor": "Transversal",
+      "tipo_pesquisa": "DE - Desenvolvimento Experimental",
+      "natureza": "Processo",
+      "count": 1366
+    },
+    "arquivo_saida": "grupos_categoria_Transversal_DE_-_Desenvolvimento_Expe_Processo_sublote7.csv",
+    "total_projetos": 162,
+    "resposta_length": 10479,
+    "requer_merge": true,
+    "timestamp": "2025-08-18T13:14:33.040265"
+  },
+  {
+    "combinacao": {
+      "setor": "Transversal",
+      "tipo_pesquisa": "DE - Desenvolvimento Experimental",
+      "natureza": "Processo",
+      "count": 1366
+    },
+    "arquivo_saida": "grupos_categoria_Transversal_DE_-_Desenvolvimento_Expe_Processo_sublote8.csv",
+    "total_projetos": 162,
+    "resposta_length": 5634,
+    "requer_merge": true,
+    "timestamp": "2025-08-18T13:14:33.040271"
+  },
+  {
+    "combinacao": {
+      "setor": "Transversal",
+      "tipo_pesquisa": "DE - Desenvolvimento Experimental",
+      "natureza": "Processo",
+      "count": 1366
+    },
+    "arquivo_saida": "grupos_categoria_Transversal_DE_-_Desenvolvimento_Expe_Processo_sublote9.csv",
+    "total_projetos": 162,
+    "resposta_length": 11424,
+    "requer_merge": true,
+    "timestamp": "2025-08-18T13:14:33.040276"
+  },
+  {
+    "combinacao": {
+      "setor": "Transversal",
+      "tipo_pesquisa": "DE - Desenvolvimento Experimental",
+      "natureza": "Processo",
+      "count": 1366
+    },
+    "arquivo_saida": "grupos_categoria_Transversal_DE_-_Desenvolvimento_Expe_Processo_sublote10.csv",
+    "total_projetos": 108,
+    "resposta_length": 10782,
+    "requer_merge": true,
+    "timestamp": "2025-08-18T13:14:33.040282"
+  },
+  {
+    "combinacao": {
+      "setor": "Transversal",
+      "tipo_pesquisa": "DE - Desenvolvimento Experimental",
+      "natureza": "Produto",
+      "count": 2301
+    },
+    "arquivo_saida": "grupos_categoria_Transversal_DE_-_Desenvolvimento_Expe_Produto_sublote1.csv",
+    "total_projetos": 142,
+    "resposta_length": 11860,
+    "requer_merge": true,
+    "timestamp": "2025-08-18T13:14:33.040293"
+  },
+  {
+    "combinacao": {
+      "setor": "Transversal",
+      "tipo_pesquisa": "DE - Desenvolvimento Experimental",
+      "natureza": "Produto",
+      "count": 2301
+    },
+    "arquivo_saida": "grupos_categoria_Transversal_DE_-_Desenvolvimento_Expe_Produto_sublote2.csv",
+    "total_projetos": 162,
+    "resposta_length": 11622,
+    "requer_merge": true,
+    "timestamp": "2025-08-18T13:14:33.040300"
+  },
+  {
+    "combinacao": {
+      "setor": "Transversal",
+      "tipo_pesquisa": "DE - Desenvolvimento Experimental",
+      "natureza": "Produto",
+      "count": 2301
+    },
+    "arquivo_saida": "grupos_categoria_Transversal_DE_-_Desenvolvimento_Expe_Produto_sublote3.csv",
+    "total_projetos": 162,
+    "resposta_length": 10990,
+    "requer_merge": true,
+    "timestamp": "2025-08-18T13:14:33.040306"
+  },
+  {
+    "combinacao": {
+      "setor": "Transversal",
+      "tipo_pesquisa": "DE - Desenvolvimento Experimental",
+      "natureza": "Produto",
+      "count": 2301
+    },
+    "arquivo_saida": "grupos_categoria_Transversal_DE_-_Desenvolvimento_Expe_Produto_sublote4.csv",
+    "total_projetos": 162,
+    "resposta_length": 10567,
+    "requer_merge": true,
+    "timestamp": "2025-08-18T13:14:33.040312"
+  },
+  {
+    "combinacao": {
+      "setor": "Transversal",
+      "tipo_pesquisa": "DE - Desenvolvimento Experimental",
+      "natureza": "Produto",
+      "count": 2301
+    },
+    "arquivo_saida": "grupos_categoria_Transversal_DE_-_Desenvolvimento_Expe_Produto_sublote5.csv",
+    "total_projetos": 162,
+    "resposta_length": 9721,
+    "requer_merge": true,
+    "timestamp": "2025-08-18T13:14:33.040318"
+  },
+  {
+    "combinacao": {
+      "setor": "Transversal",
+      "tipo_pesquisa": "DE - Desenvolvimento Experimental",
+      "natureza": "Produto",
+      "count": 2301
+    },
+    "arquivo_saida": "grupos_categoria_Transversal_DE_-_Desenvolvimento_Expe_Produto_sublote6.csv",
+    "total_projetos": 162,
+    "resposta_length": 10575,
+    "requer_merge": true,
+    "timestamp": "2025-08-18T13:14:33.040324"
+  },
+  {
+    "combinacao": {
+      "setor": "Transversal",
+      "tipo_pesquisa": "DE - Desenvolvimento Experimental",
+      "natureza": "Produto",
+      "count": 2301
+    },
+    "arquivo_saida": "grupos_categoria_Transversal_DE_-_Desenvolvimento_Expe_Produto_sublote7.csv",
+    "total_projetos": 162,
+    "resposta_length": 9531,
+    "requer_merge": true,
+    "timestamp": "2025-08-18T13:14:33.040330"
+  },
+  {
+    "combinacao": {
+      "setor": "Transversal",
+      "tipo_pesquisa": "DE - Desenvolvimento Experimental",
+      "natureza": "Produto",
+      "count": 2301
+    },
+    "arquivo_saida": "grupos_categoria_Transversal_DE_-_Desenvolvimento_Expe_Produto_sublote8.csv",
+    "total_projetos": 162,
+    "resposta_length": 10259,
+    "requer_merge": true,
+    "timestamp": "2025-08-18T13:14:33.040335"
+  },
+  {
+    "combinacao": {
+      "setor": "Transversal",
+      "tipo_pesquisa": "DE - Desenvolvimento Experimental",
+      "natureza": "Produto",
+      "count": 2301
+    },
+    "arquivo_saida": "grupos_categoria_Transversal_DE_-_Desenvolvimento_Expe_Produto_sublote9.csv",
+    "total_projetos": 162,
+    "resposta_length": 10515,
+    "requer_merge": true,
+    "timestamp": "2025-08-18T13:14:33.040341"
+  },
+  {
+    "combinacao": {
+      "setor": "Transversal",
+      "tipo_pesquisa": "DE - Desenvolvimento Experimental",
+      "natureza": "Produto",
+      "count": 2301
+    },
+    "arquivo_saida": "grupos_categoria_Transversal_DE_-_Desenvolvimento_Expe_Produto_sublote10.csv",
+    "total_projetos": 162,
+    "resposta_length": 10812,
+    "requer_merge": true,
+    "timestamp": "2025-08-18T13:14:33.040346"
+  },
+  {
+    "combinacao": {
+      "setor": "Transversal",
+      "tipo_pesquisa": "DE - Desenvolvimento Experimental",
+      "natureza": "Produto",
+      "count": 2301
+    },
+    "arquivo_saida": "grupos_categoria_Transversal_DE_-_Desenvolvimento_Expe_Produto_sublote11.csv",
+    "total_projetos": 162,
+    "resposta_length": 7021,
+    "requer_merge": true,
+    "timestamp": "2025-08-18T13:14:33.040352"
+  },
+  {
+    "combinacao": {
+      "setor": "Transversal",
+      "tipo_pesquisa": "DE - Desenvolvimento Experimental",
+      "natureza": "Produto",
+      "count": 2301
+    },
+    "arquivo_saida": "grupos_categoria_Transversal_DE_-_Desenvolvimento_Expe_Produto_sublote12.csv",
+    "total_projetos": 162,
+    "resposta_length": 11224,
+    "requer_merge": true,
+    "timestamp": "2025-08-18T13:14:33.040358"
+  },
+  {
+    "combinacao": {
+      "setor": "Transversal",
+      "tipo_pesquisa": "DE - Desenvolvimento Experimental",
+      "natureza": "Produto",
+      "count": 2301
+    },
+    "arquivo_saida": "grupos_categoria_Transversal_DE_-_Desenvolvimento_Expe_Produto_sublote13.csv",
+    "total_projetos": 162,
+    "resposta_length": 10502,
+    "requer_merge": true,
+    "timestamp": "2025-08-18T13:14:33.040364"
+  },
+  {
+    "combinacao": {
+      "setor": "Transversal",
+      "tipo_pesquisa": "DE - Desenvolvimento Experimental",
+      "natureza": "Produto",
+      "count": 2301
+    },
+    "arquivo_saida": "grupos_categoria_Transversal_DE_-_Desenvolvimento_Expe_Produto_sublote14.csv",
+    "total_projetos": 162,
+    "resposta_length": 12019,
+    "requer_merge": true,
+    "timestamp": "2025-08-18T13:14:33.040370"
+  },
+  {
+    "combinacao": {
+      "setor": "Transversal",
+      "tipo_pesquisa": "DE - Desenvolvimento Experimental",
+      "natureza": "Produto",
+      "count": 2301
+    },
+    "arquivo_saida": "grupos_categoria_Transversal_DE_-_Desenvolvimento_Expe_Produto_sublote15.csv",
+    "total_projetos": 162,
+    "resposta_length": 11820,
+    "requer_merge": true,
+    "timestamp": "2025-08-18T13:14:33.040376"
+  },
+  {
+    "combinacao": {
+      "setor": "Transversal",
+      "tipo_pesquisa": "DE - Desenvolvimento Experimental",
+      "natureza": "Produto",
+      "count": 2301
+    },
+    "arquivo_saida": "grupos_categoria_Transversal_DE_-_Desenvolvimento_Expe_Produto_sublote16.csv",
+    "total_projetos": 162,
+    "resposta_length": 10407,
+    "requer_merge": true,
+    "timestamp": "2025-08-18T13:14:33.040381"
+  },
+  {
+    "combinacao": {
+      "setor": "Transversal",
+      "tipo_pesquisa": "DE - Desenvolvimento Experimental",
+      "natureza": "Produto",
+      "count": 2301
+    },
+    "arquivo_saida": "grupos_categoria_Transversal_DE_-_Desenvolvimento_Expe_Produto_sublote17.csv",
+    "total_projetos": 49,
+    "resposta_length": 4531,
+    "requer_merge": true,
+    "timestamp": "2025-08-18T13:14:33.040387"
+  },
+  {
+    "combinacao": {
+      "setor": "Transversal",
+      "tipo_pesquisa": "DE - Desenvolvimento Experimental",
+      "natureza": "Serviço",
+      "count": 137
+    },
+    "arquivo_saida": "grupos_categoria_Transversal_DE_-_Desenvolvimento_Expe_Serviço_completa.csv",
+    "total_projetos": 137,
+    "resposta_length": 10936,
+    "requer_merge": false,
+    "timestamp": "2025-08-18T13:14:33.040393"
+  },
+  {
+    "combinacao": {
+      "setor": "Transversal",
+      "tipo_pesquisa": "PA - Pesquisa Aplicada",
+      "natureza": "Processo",
+      "count": 378
+    },
+    "arquivo_saida": "grupos_categoria_Transversal_PA_-_Pesquisa_Aplicada_Processo_sublote1.csv",
+    "total_projetos": 142,
+    "resposta_length": 3829,
+    "requer_merge": true,
+    "timestamp": "2025-08-18T13:14:33.040398"
+  },
+  {
+    "combinacao": {
+      "setor": "Transversal",
+      "tipo_pesquisa": "PA - Pesquisa Aplicada",
+      "natureza": "Processo",
+      "count": 378
+    },
+    "arquivo_saida": "grupos_categoria_Transversal_PA_-_Pesquisa_Aplicada_Processo_sublote2.csv",
+    "total_projetos": 162,
+    "resposta_length": 10559,
+    "requer_merge": true,
+    "timestamp": "2025-08-18T13:14:33.040408"
+  },
+  {
+    "combinacao": {
+      "setor": "Transversal",
+      "tipo_pesquisa": "PA - Pesquisa Aplicada",
+      "natureza": "Processo",
+      "count": 378
+    },
+    "arquivo_saida": "grupos_categoria_Transversal_PA_-_Pesquisa_Aplicada_Processo_sublote3.csv",
+    "total_projetos": 114,
+    "resposta_length": 9996,
+    "requer_merge": true,
+    "timestamp": "2025-08-18T13:14:33.040414"
+  },
+  {
+    "combinacao": {
+      "setor": "Transversal",
+      "tipo_pesquisa": "PA - Pesquisa Aplicada",
+      "natureza": "Produto",
+      "count": 555
+    },
+    "arquivo_saida": "grupos_categoria_Transversal_PA_-_Pesquisa_Aplicada_Produto_sublote1.csv",
+    "total_projetos": 142,
+    "resposta_length": 10833,
+    "requer_merge": true,
+    "timestamp": "2025-08-18T13:14:33.040420"
+  },
+  {
+    "combinacao": {
+      "setor": "Transversal",
+      "tipo_pesquisa": "PA - Pesquisa Aplicada",
+      "natureza": "Produto",
+      "count": 555
+    },
+    "arquivo_saida": "grupos_categoria_Transversal_PA_-_Pesquisa_Aplicada_Produto_sublote2.csv",
+    "total_projetos": 162,
+    "resposta_length": 10496,
+    "requer_merge": true,
+    "timestamp": "2025-08-18T13:14:33.040426"
+  },
+  {
+    "combinacao": {
+      "setor": "Transversal",
+      "tipo_pesquisa": "PA - Pesquisa Aplicada",
+      "natureza": "Produto",
+      "count": 555
+    },
+    "arquivo_saida": "grupos_categoria_Transversal_PA_-_Pesquisa_Aplicada_Produto_sublote3.csv",
+    "total_projetos": 162,
+    "resposta_length": 9541,
+    "requer_merge": true,
+    "timestamp": "2025-08-18T13:14:33.040432"
+  },
+  {
+    "combinacao": {
+      "setor": "Transversal",
+      "tipo_pesquisa": "PA - Pesquisa Aplicada",
+      "natureza": "Produto",
+      "count": 555
+    },
+    "arquivo_saida": "grupos_categoria_Transversal_PA_-_Pesquisa_Aplicada_Produto_sublote4.csv",
+    "total_projetos": 149,
+    "resposta_length": 10212,
+    "requer_merge": true,
+    "timestamp": "2025-08-18T13:14:33.040438"
+  },
+  {
+    "combinacao": {
+      "setor": "Transversal",
+      "tipo_pesquisa": "PA - Pesquisa Aplicada",
+      "natureza": "Serviço",
+      "count": 40
+    },
+    "arquivo_saida": "grupos_categoria_Transversal_PA_-_Pesquisa_Aplicada_Serviço_completa.csv",
+    "total_projetos": 40,
+    "resposta_length": 3433,
+    "requer_merge": false,
+    "timestamp": "2025-08-18T13:14:33.040444"
+  },
+  {
+    "combinacao": {
+      "setor": "Transversal",
+      "tipo_pesquisa": "PB - Pesquisa Básica",
+      "natureza": "Processo",
+      "count": 125
+    },
+    "arquivo_saida": "grupos_categoria_Transversal_PB_-_Pesquisa_Básica_Processo_completa.csv",
+    "total_projetos": 125,
+    "resposta_length": 6004,
+    "requer_merge": false,
+    "timestamp": "2025-08-18T13:14:33.040450"
+  },
+  {
+    "combinacao": {
+      "setor": "Transversal",
+      "tipo_pesquisa": "PB - Pesquisa Básica",
+      "natureza": "Produto",
+      "count": 164
+    },
+    "arquivo_saida": "grupos_categoria_Transversal_PB_-_Pesquisa_Básica_Produto_sublote1.csv",
+    "total_projetos": 142,
+    "resposta_length": 9808,
+    "requer_merge": true,
+    "timestamp": "2025-08-18T13:14:33.040456"
+  },
+  {
+    "combinacao": {
+      "setor": "Transversal",
+      "tipo_pesquisa": "PB - Pesquisa Básica",
+      "natureza": "Produto",
+      "count": 164
+    },
+    "arquivo_saida": "grupos_categoria_Transversal_PB_-_Pesquisa_Básica_Produto_sublote2.csv",
+    "total_projetos": 42,
+    "resposta_length": 3498,
+    "requer_merge": true,
+    "timestamp": "2025-08-18T13:14:33.040461"
+  },
+  {
+    "combinacao": {
+      "setor": "Transversal",
+      "tipo_pesquisa": "PB - Pesquisa Básica",
+      "natureza": "Serviço",
+      "count": 8
+    },
+    "arquivo_saida": "grupos_categoria_Transversal_PB_-_Pesquisa_Básica_Serviço_completa.csv",
+    "total_projetos": 8,
+    "resposta_length": 1024,
+    "requer_merge": false,
+    "timestamp": "2025-08-18T13:14:33.040467"
   }
 ]

@@ -1,0 +1,4 @@
+--- RESPOSTA BRUTA DA API ---
+
+MM_PB_SE_1;SL_1;85726;0.82;Pesquisa básica em tratamento de resíduos de bauxita e gestão energética na mineração  
+MM_PB_SE_1;SL_1;85725;0.80;Pesquisa básica em melhorias de processos de bauxita com foco em sustentabilidade e ESG

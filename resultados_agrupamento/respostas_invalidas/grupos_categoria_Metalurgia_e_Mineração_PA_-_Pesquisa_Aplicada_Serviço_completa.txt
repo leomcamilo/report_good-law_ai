@@ -1,0 +1,10 @@
+--- RESPOSTA BRUTA DA API ---
+
+MM_PA_SE_1;SL_1;46820;0.90;Serviços de terceiros para implantação e montagem de nova linha de produção de painéis  
+MM_PA_SE_1;SL_1;60445;0.92;Serviços de terceiros para implantação e montagem de nova linha de produção de painéis  
+MM_PA_SE_1;SL_1;46819;0.85;Serviços de movimentação e montagem para implantação de nova linha de produção de painéis  
+MM_PA_SE_2;SL_1;54326;0.88;Integração de sistemas via EAI para troca de mensagens entre aplicativos  
+MM_PA_SE_2;SL_1;54325;0.86;Integração de sistemas via XML para importação de dados no ERP  
+MM_PA_SE_3;SL_1;60461;0.80;Implementação de área de qualidade para nova linha de produção  
+MM_PA_SE_0;SL_1;83926;0.00;Projeto único sobre gerenciamento de riscos de segurança industrial  
+MM_PA_SE_0;SL_1;54323;0.00;Projeto único sobre integração de WhatsApp para envio de mensagens
