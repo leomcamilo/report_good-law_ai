@@ -1,0 +1,13 @@
+{
+    "sqltools.connections": [
+        {
+            "previewLimit": 50,
+            "server": "cid-uff.net",
+            "port": 5432,
+            "driver": "PostgreSQL",
+            "name": "dbs_mctic2",
+            "username": "mcti",
+            "database": "dbs_mctic2"
+        }
+    ]
+}

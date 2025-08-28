@@ -1,6 +1,4 @@
-SELECT DISTINCT do_justificativa_padronizada
-FROM
-(select lst.idprenchimentosituacaoanalise as id_empresa_ano
+select lst.idprenchimentosituacaoanalise as id_empresa_ano
 , lst.nranobase as ano_referencia
 --
 -- Projeto - caracterização
@@ -8,10 +6,39 @@ FROM
 , do_setor.nosetor as setor
 , daproj.tpnatureza as natureza
 , daproj.tppbpade as tipo_pesquisa
-, concat('CNPJ: '::text , lst.nrcnpj::text ,' RAZÃO SOCIAL:'::text , lst.norazaosocial::text, ' ATIVIDADE ECONOMICA:'::text, lst.noatividadeeconomica::text,' Cd ATIV.ECONOMICA IBGE:'::text, lst.cdatividadeeconomicaibge::text, ' PORTE: '::text, lst.notipoportepessoajuridica::text, ' ID EMPRESA/ANO:'::text, lst.idprenchimentosituacaoanalise) as Empresa
+, concat('CNPJ: '::text , lst.nrcnpj::text ,' RAZÃO SOCIAL :'::text , lst.norazaosocial::text, ' ATIVIDADE ECONOMICA :'::text, lst.noatividadeeconomica::text,' Cd ATIV.ECONOMICA IBGE :'::text, lst.cdatividadeeconomicaibge::text, ' PORTE '::text, lst.notipoportepessoajuridica::text, ' ID EMPRESA/ANO :'::text, lst.idprenchimentosituacaoanalise) as Empresa
 , concat('NÚMERO: '::text, daproj.nritem::text ,' ID ÚNICO: '::text, daproj.iddadoanaliseprojeto::text ,' NOME: '::text, daproj.noprojeto::text ,' DESCRIÇÂO: '::text, daproj.dsprojeto::text ,' AREA: '::text, daproj.dsareaprojeto::text ,' PALAVRAS CHAVE: '::text, daproj.dspalavrachave::text ,' ELEMENTO TECNOLÓGICO: '::text, daproj.dselementotecnologico::text ,' DESAFIO TECNOLÓGICO: '::text, daproj.dsdesafiotecnologico::text ,' METODOLOGIA: '::text, daproj.dsmetodologiautilizada::text ,' INFORMAÇÃO COMPLEMENTAR: '::text, daproj.dsinformacaocomplementar::text  ) as projeto
 , concat('CICLO MAIOR QUE 1 ANO: '::text, daproj.icciclomaior::text , ' ATIVIDADE PDI CONTINUADA ANO ANTERIOR :'::text, daproj.dsatividadepdicontinuadaanobase::text) as projeto_multianual
 , concat('ECONOMICO: '::text, daproj.dsresultadoeconomico::text ,' INOVACAO: '::text, daproj.dsresultadoinovacao::text ) as projeto_resultados
+--
+, dapdisp.cddadoanaliseprojetotipodispendio as cd_dispendio
+, dapdisp.tptitulacao as titulacao
+, dapdisp.vlhoras as horas
+, dapdisp.vltotal as valor
+, coalesce( dapdisp.vltotal/ nullif(dapdisp.vlhoras,0),0) as hh
+--
+-- Titulacao, Despesas
+--
+,total.valortotalproj
+,doutor.valordoutorproj
+,doutor.quantdoutorproj
+,mestre.valormestreproj
+,mestre.quantmestreproj
+,rh.valorrhproj
+,rh.quantrhproj
+,ict.valorictproj 
+,universidades.valoruniversidadesproj 
+,servterceiros.valorservterceirosproj 
+,coalesce(servterceiros.valorservterceirosproj/nullif(total.valortotalproj,0),0) as percservterceirosproj
+,pessoalempresa.quantpessoalempresa
+,coalesce(pessoalempresa.quantpessoalempresa/nullif(dapree.nrtotalfuncionario ,0),0) as percpessoalalocadoempresa
+,doutorempresa.quantdoutorempresa
+,mestreempresa.quantmestreempresa 
+,totalempresa.valortotalempresa 
+,servterceirosempresa.valorserterceirosempresa 
+,coalesce(servterceirosempresa.valorserterceirosempresa/nullif(totalempresa.valortotalempresa,0),0) as percservterceirosempresa
+,bensequipempresa.valorbensequipempresa 
+,coalesce(bensequipempresa.valorbensequipempresa/nullif(totalempresa.valortotalempresa,0),0) as percbensequipempresa
 --
 -- DO analise
 --
@@ -25,6 +52,9 @@ FROM
 , concat(do_a_proj.do_japroj_nojustificativaanalise::text,' / '::text, do_a_proj.do_japroj_notitulojustificativaanalise::text,' / '::text, do_a_proj.do_japroj_nocorpojustificativaanalise::text,' / '::text, do_a_proj.do_japroj_norodapejustificativaanalise::text,' / '::text, do_a_proj.do_japroj_notitulojustificativagrupoobjetoanaliseindividual::text) as do_justificativa_padronizada
 , do_a_proj.do_tjaproj_notipojustificativaanalise as do_tipo_justificativa
 , do_taaproj.notipoavaliacaoanalise as do_resultado_analise
+, do_aomproj.vltotaldeclarado as do_valor_projeto
+, do_disp_vl.do_disp_vlglosa as do_disp_vlglosa
+, do_disp_vl.do_disp_vlindicadoanalise as do_disp_vlindicadoanalise
 --
 -- Parecer
 --
@@ -34,6 +64,9 @@ FROM
 , concat(p_a_proj.p_japroj_nojustificativaanalise::text,' / '::text, p_a_proj.p_japroj_notitulojustificativaanalise::text,' / '::text, p_a_proj.p_japroj_nocorpojustificativaanalise::text,' / '::text, p_a_proj.p_japroj_norodapejustificativaanalise::text,' / '::text, p_a_proj.p_japroj_notitulojustificativagrupoobjetoanaliseindividual::text) as p_justificativa_padronizada
 , p_a_proj.p_tjaproj_notipojustificativaanalise as p_tipo_justificativa
 , p_taaproj.notipoavaliacaoanalise as p_resultado_analise
+, p_aomproj.vltotaldeclarado as p_valor_projeto
+, p_disp_vl.p_disp_vlglosa as p_disp_vlglosa
+, p_disp_vl.p_disp_vlindicadoanalise as p_disp_vlindicadoanalise
 --
 -- DO contestacao
 --
@@ -48,6 +81,9 @@ FROM
 , concat(do_c_a_proj.do_c_japroj_nojustificativaanalise::text,' / '::text, do_c_a_proj.do_c_japroj_notitulojustificativaanalise::text,' / '::text, do_c_a_proj.do_c_japroj_nocorpojustificativaanalise::text,' / '::text, do_c_a_proj.do_c_japroj_norodapejustificativaanalise::text,' / '::text, do_c_a_proj.do_c_japroj_notitulojustificativagrupoobjetoanaliseindividual::text) as do_c_justificativa_padronizada
 , do_c_a_proj.do_c_tjaproj_notipojustificativaanalise as do_c_tipo_justificativa
 , do_c_taaproj.notipoavaliacaoanalise as do_c_resultado_analise
+, do_c_aomproj.vltotaldeclarado as do_c_valor_projeto
+, do_c_disp_vl.do_c_disp_vlglosa as do_c_disp_vlglosa
+, do_c_disp_vl.do_c_disp_vlindicadoanalise as do_c_disp_vlindicadoanalise
 --
 -- Parecer contestacao
 --
@@ -58,6 +94,9 @@ FROM
 , concat(p_c_a_proj.p_c_japroj_nojustificativaanalise::text,' / '::text, p_c_a_proj.p_c_japroj_notitulojustificativaanalise::text,' / '::text, p_c_a_proj.p_c_japroj_nocorpojustificativaanalise::text,' / '::text, p_c_a_proj.p_c_japroj_norodapejustificativaanalise::text,' / '::text, p_c_a_proj.p_c_japroj_notitulojustificativagrupoobjetoanaliseindividual::text) as p_c_justificativa_padronizada
 , p_c_a_proj.p_c_tjaproj_notipojustificativaanalise as p_c_tipo_justificativa
 , p_c_taaproj.notipoavaliacaoanalise as p_c_resultado_analise
+, p_c_aomproj.vltotaldeclarado as p_c_valor_projeto
+, p_c_disp_vl.p_c_disp_vlglosa as p_c_disp_vlglosa
+, p_c_disp_vl.p_c_disp_vlindicadoanalise as p_c_disp_vlindicadoanalise
 --
 -- Recurso Administrativo
 --
@@ -68,9 +107,104 @@ FROM
 , concat(ra_a_proj.ra_japroj_nojustificativaanalise::text,' / '::text, ra_a_proj.ra_japroj_notitulojustificativaanalise::text,' / '::text, ra_a_proj.ra_japroj_nocorpojustificativaanalise::text,' / '::text, ra_a_proj.ra_japroj_norodapejustificativaanalise::text,' / '::text, ra_a_proj.ra_japroj_notitulojustificativagrupoobjetoanaliseindividual::text) as ra_justificativa_padronizada
 , ra_a_proj.ra_tjaproj_notipojustificativaanalise as ra_tipo_justificativa
 , ra_taaproj.notipoavaliacaoanalise as ra_resultado_analise
+, ra_aomproj.vltotaldeclarado as ra_valor_projeto
+, ra_disp_vl.ra_disp_vlglosa as ra_disp_vlglosa
+, ra_disp_vl.ra_disp_vlindicadoanalise as ra_disp_vlindicadoanalise
+--
+--select count(*)
 from tbdadoanaliseprojeto daproj
 left join tbdadoempresamarco dem on dem.idprenchimentosituacaoanalise = daproj.idprenchimentosituacaoanalise 
+left join tbdadoanalisepreenchimento dapree on dapree.idprenchimentosituacaoanalise = dem.idprenchimentosituacaoanalise 
 left join listaempresasporanobasesituacaoanalise lst on lst.idprenchimentosituacaoanalise = dem.idprenchimentosituacaoanalise 
+--
+left join tbdadoanaliseprojetodispendio dapdisp on dapdisp.iddadoanaliseprojeto = daproj.iddadoanaliseprojeto 
+--
+left join (
+		select dapdisp.iddadoanaliseprojeto, sum(dapdisp.vltotal ) as valortotalproj 
+		from tbdadoanaliseprojeto daproj 
+		left join tbdadoanaliseprojetodispendio dapdisp on daproj.iddadoanaliseprojeto = dapdisp.iddadoanaliseprojeto 
+		left join tbdadoanaliseprojetotipodispendio daptdisp on daptdisp.cddadoanaliseprojetotipodispendio = dapdisp.cddadoanaliseprojetotipodispendio
+		group by dapdisp.iddadoanaliseprojeto ) total on total.iddadoanaliseprojeto = daproj.iddadoanaliseprojeto
+left join (
+		select dapdisp.iddadoanaliseprojeto, sum(dapdisp.vltotal ) as valordoutorproj , count(dapdisp.nrcnpjcpf  ) as quantdoutorproj
+		from tbdadoanaliseprojeto daproj 
+		left join tbdadoanaliseprojetodispendio dapdisp on daproj.iddadoanaliseprojeto = dapdisp.iddadoanaliseprojeto 
+		left join tbdadoanaliseprojetotipodispendio daptdisp on daptdisp.cddadoanaliseprojetotipodispendio = dapdisp.cddadoanaliseprojetotipodispendio
+		where dapdisp.tptitulacao = 'Doutor'
+		group by dapdisp.iddadoanaliseprojeto ) doutor on doutor.iddadoanaliseprojeto = daproj.iddadoanaliseprojeto
+left join (
+		select dapdisp.iddadoanaliseprojeto, sum(dapdisp.vltotal ) as valormestreproj , count(dapdisp.nrcnpjcpf  ) as quantmestreproj
+		from tbdadoanaliseprojeto daproj 
+		left join tbdadoanaliseprojetodispendio dapdisp on daproj.iddadoanaliseprojeto = dapdisp.iddadoanaliseprojeto 
+		left join tbdadoanaliseprojetotipodispendio daptdisp on daptdisp.cddadoanaliseprojetotipodispendio = dapdisp.cddadoanaliseprojetotipodispendio
+		where dapdisp.tptitulacao in ('Doutor', 'Mestre')
+		group by dapdisp.iddadoanaliseprojeto ) mestre on mestre.iddadoanaliseprojeto = daproj.iddadoanaliseprojeto
+left join (
+		select dapdisp.iddadoanaliseprojeto, sum(dapdisp.vltotal ) as valorrhproj , count(dapdisp.nrcnpjcpf  ) as quantrhproj
+		from tbdadoanaliseprojeto daproj 
+		left join tbdadoanaliseprojetodispendio dapdisp on daproj.iddadoanaliseprojeto = dapdisp.iddadoanaliseprojeto 
+		left join tbdadoanaliseprojetotipodispendio daptdisp on daptdisp.cddadoanaliseprojetotipodispendio = dapdisp.cddadoanaliseprojetotipodispendio
+		where dapdisp.cddadoanaliseprojetotipodispendio = 9
+		group by dapdisp.iddadoanaliseprojeto ) rh on rh.iddadoanaliseprojeto = daproj.iddadoanaliseprojeto
+left join (
+		select dapdisp.iddadoanaliseprojeto, sum(dapdisp.vltotal ) as valorictproj
+		from tbdadoanaliseprojeto daproj 
+		left join tbdadoanaliseprojetodispendio dapdisp on daproj.iddadoanaliseprojeto = dapdisp.iddadoanaliseprojeto 
+		left join tbdadoanaliseprojetotipodispendio daptdisp on daptdisp.cddadoanaliseprojetotipodispendio = dapdisp.cddadoanaliseprojetotipodispendio
+		where dapdisp.cddadoanaliseprojetotipodispendio = 2 
+		group by dapdisp.iddadoanaliseprojeto ) ict on ict.iddadoanaliseprojeto = daproj.iddadoanaliseprojeto
+left join (
+		select dapdisp.iddadoanaliseprojeto, sum(dapdisp.vltotal ) as valoruniversidadesproj
+		from tbdadoanaliseprojeto daproj 
+		left join tbdadoanaliseprojetodispendio dapdisp on daproj.iddadoanaliseprojeto = dapdisp.iddadoanaliseprojeto 
+		left join tbdadoanaliseprojetotipodispendio daptdisp on daptdisp.cddadoanaliseprojetotipodispendio = dapdisp.cddadoanaliseprojetotipodispendio
+		where dapdisp.cddadoanaliseprojetotipodispendio = 1 
+		group by dapdisp.iddadoanaliseprojeto ) universidades on universidades.iddadoanaliseprojeto = daproj.iddadoanaliseprojeto
+left join (
+		select dapdisp.iddadoanaliseprojeto, sum(dapdisp.vltotal ) as valorservterceirosproj
+		from tbdadoanaliseprojeto daproj 
+		left join tbdadoanaliseprojetodispendio dapdisp on daproj.iddadoanaliseprojeto = dapdisp.iddadoanaliseprojeto 
+		left join tbdadoanaliseprojetotipodispendio daptdisp on daptdisp.cddadoanaliseprojetotipodispendio = dapdisp.cddadoanaliseprojetotipodispendio
+		where dapdisp.cddadoanaliseprojetotipodispendio in  ( 7, 8, 10)
+		group by dapdisp.iddadoanaliseprojeto ) servterceiros on servterceiros.iddadoanaliseprojeto = daproj.iddadoanaliseprojeto
+left join (
+		select daproj.idprenchimentosituacaoanalise , count(distinct dapdisp.nrcnpjcpf  ) as quantpessoalempresa 
+		from tbdadoanaliseprojeto daproj 
+		left join tbdadoanaliseprojetodispendio dapdisp on daproj.iddadoanaliseprojeto = dapdisp.iddadoanaliseprojeto 
+		left join tbdadoanaliseprojetotipodispendio daptdisp on daptdisp.cddadoanaliseprojetotipodispendio = dapdisp.cddadoanaliseprojetotipodispendio
+		where dapdisp.cddadoanaliseprojetotipodispendio = 9 
+		group by daproj.idprenchimentosituacaoanalise  ) pessoalempresa on pessoalempresa.idprenchimentosituacaoanalise  = daproj.idprenchimentosituacaoanalise 
+left join (
+		select daproj.idprenchimentosituacaoanalise , count(distinct dapdisp.nrcnpjcpf  ) as quantdoutorempresa  
+		from tbdadoanaliseprojeto daproj 
+		left join tbdadoanaliseprojetodispendio dapdisp on daproj.iddadoanaliseprojeto = dapdisp.iddadoanaliseprojeto 
+		left join tbdadoanaliseprojetotipodispendio daptdisp on daptdisp.cddadoanaliseprojetotipodispendio = dapdisp.cddadoanaliseprojetotipodispendio
+		where dapdisp.tptitulacao = 'Doutor'
+		group by daproj.idprenchimentosituacaoanalise ) doutorempresa on doutorempresa.idprenchimentosituacaoanalise  = daproj.idprenchimentosituacaoanalise
+left join (
+		select daproj.idprenchimentosituacaoanalise , count(distinct dapdisp.nrcnpjcpf  ) as quantmestreempresa 
+		from tbdadoanaliseprojeto daproj 
+		left join tbdadoanaliseprojetodispendio dapdisp on daproj.iddadoanaliseprojeto = dapdisp.iddadoanaliseprojeto 
+		left join tbdadoanaliseprojetotipodispendio daptdisp on daptdisp.cddadoanaliseprojetotipodispendio = dapdisp.cddadoanaliseprojetotipodispendio
+		where dapdisp.tptitulacao = 'Mestre'
+		group by daproj.idprenchimentosituacaoanalise ) mestreempresa on mestreempresa.idprenchimentosituacaoanalise  = daproj.idprenchimentosituacaoanalise
+left join (
+		select daproj.idprenchimentosituacaoanalise , sum(dapdisp.vltotal  ) as valorserterceirosempresa 
+		from tbdadoanaliseprojeto daproj 
+		left join tbdadoanaliseprojetodispendio dapdisp on daproj.iddadoanaliseprojeto = dapdisp.iddadoanaliseprojeto 
+		left join tbdadoanaliseprojetotipodispendio daptdisp on daptdisp.cddadoanaliseprojetotipodispendio = dapdisp.cddadoanaliseprojetotipodispendio
+		where dapdisp.cddadoanaliseprojetotipodispendio in  ( 7, 8, 10)
+		group by daproj.idprenchimentosituacaoanalise ) servterceirosempresa on servterceirosempresa.idprenchimentosituacaoanalise  = daproj.idprenchimentosituacaoanalise		
+left join (
+		select daproj.idprenchimentosituacaoanalise , sum(dapdisp.vltotal  ) as valortotalempresa 
+		from tbdadoanaliseprojeto daproj 
+		left join tbdadoanaliseprojetodispendio dapdisp on daproj.iddadoanaliseprojeto = dapdisp.iddadoanaliseprojeto 
+		left join tbdadoanaliseprojetotipodispendio daptdisp on daptdisp.cddadoanaliseprojetotipodispendio = dapdisp.cddadoanaliseprojetotipodispendio
+		group by daproj.idprenchimentosituacaoanalise ) totalempresa on totalempresa.idprenchimentosituacaoanalise  = daproj.idprenchimentosituacaoanalise		
+left join (
+		select daequip.idprenchimentosituacaoanalise , sum(daequip.vlbensintangiveisequipamento   ) as valorbensequipempresa 
+		from tbdadoanalisebensintangiveisequipamento daequip 
+		group by daequip.idprenchimentosituacaoanalise ) bensequipempresa on bensequipempresa.idprenchimentosituacaoanalise  = daproj.idprenchimentosituacaoanalise
 --
 -- DO
 --
@@ -97,6 +231,13 @@ left join(
 		left join tbjustificativaanalise do_japroj on do_japroj.idjustificativaanalise = do_aomprojj.idjustificativaanalise
 		left join tbtipojustificativaanalise do_tjaproj on do_tjaproj.cdtipojustificativaanalise = do_japroj.cdtipojustificativaanalise
 		group by do_aomprojj.idanaliseobjetomarcoprojeto ) do_a_proj on do_a_proj.idanaliseobjetomarcoprojeto = do_aomproj.idanaliseobjetomarcoprojeto
+left join (
+		select aomdisp.idmarcoanalise, daproj.iddadoanaliseprojeto , sum(aomdisp.vlglosa::decimal ) as do_disp_vlglosa, sum(aomdisp.vlindicadoanalise::decimal  ) as do_disp_vlindicadoanalise 
+		from tbdadoanaliseprojeto daproj 
+		left join tbdadoanaliseprojetodispendio dapdisp on daproj.iddadoanaliseprojeto = dapdisp.iddadoanaliseprojeto 
+		left join tbanaliseobjetomarcodispendio aomdisp on aomdisp.iddadoanaliseprojetodispendio = dapdisp.iddadoanaliseprojetodispendio 
+		group by aomdisp.idmarcoanalise, daproj.iddadoanaliseprojeto 
+		) do_disp_vl on do_disp_vl.iddadoanaliseprojeto  = daproj.iddadoanaliseprojeto and do_disp_vl.idmarcoanalise = do_ma.idmarcoanalise
 --
 --PARECER
 --
@@ -124,6 +265,13 @@ left join(
 			where hsa2.cdtiposituacaomarco = 2
 			group by hsa2.idmarcoanalise )		
 		) p_hsa on p_hsa.idmarcoanalise = p_ma.idmarcoanalise 
+left join (
+		select aomdisp.idmarcoanalise, daproj.iddadoanaliseprojeto , sum(aomdisp.vlglosa::decimal ) as p_disp_vlglosa, sum(aomdisp.vlindicadoanalise::decimal  ) as p_disp_vlindicadoanalise 
+		from tbdadoanaliseprojeto daproj 
+		left join tbdadoanaliseprojetodispendio dapdisp on daproj.iddadoanaliseprojeto = dapdisp.iddadoanaliseprojeto 
+		left join tbanaliseobjetomarcodispendio aomdisp on aomdisp.iddadoanaliseprojetodispendio = dapdisp.iddadoanaliseprojetodispendio 
+		group by aomdisp.idmarcoanalise, daproj.iddadoanaliseprojeto 
+		) p_disp_vl on p_disp_vl.iddadoanaliseprojeto  = daproj.iddadoanaliseprojeto and p_disp_vl.idmarcoanalise = p_ma.idmarcoanalise
 --
 --DO CONTESTACAO
 --
@@ -152,6 +300,13 @@ left join(
 		left join tbjustificativaanalise do_c_japroj on do_c_japroj.idjustificativaanalise = do_c_aomprojj.idjustificativaanalise
 		left join tbtipojustificativaanalise do_c_tjaproj on do_c_tjaproj.cdtipojustificativaanalise = do_c_japroj.cdtipojustificativaanalise
 		group by do_c_aomprojj.idanaliseobjetomarcoprojeto ) do_c_a_proj on do_c_a_proj.idanaliseobjetomarcoprojeto = do_c_aomproj.idanaliseobjetomarcoprojeto
+left join (
+		select aomdisp.idmarcoanalise, daproj.iddadoanaliseprojeto , sum(aomdisp.vlglosa::decimal ) as do_c_disp_vlglosa, sum(aomdisp.vlindicadoanalise::decimal  ) as do_c_disp_vlindicadoanalise 
+		from tbdadoanaliseprojeto daproj 
+		left join tbdadoanaliseprojetodispendio dapdisp on daproj.iddadoanaliseprojeto = dapdisp.iddadoanaliseprojeto 
+		left join tbanaliseobjetomarcodispendio aomdisp on aomdisp.iddadoanaliseprojetodispendio = dapdisp.iddadoanaliseprojetodispendio 
+		group by aomdisp.idmarcoanalise, daproj.iddadoanaliseprojeto 
+		) do_c_disp_vl on do_c_disp_vl.iddadoanaliseprojeto  = daproj.iddadoanaliseprojeto and do_c_disp_vl.idmarcoanalise = do_c_ma.idmarcoanalise
 --
 --PARECER CONTESTACAO
 --
@@ -182,6 +337,13 @@ left join(
 			where hsa2.cdtiposituacaomarco = 15
 			group by hsa2.idmarcoanalise )		
 		) p_c_hsa on p_c_hsa.idmarcoanalise = p_c_ma.idmarcoanalise 
+left join (
+		select aomdisp.idmarcoanalise, daproj.iddadoanaliseprojeto , sum(aomdisp.vlglosa::decimal ) as p_c_disp_vlglosa, sum(aomdisp.vlindicadoanalise::decimal  ) as p_c_disp_vlindicadoanalise 
+		from tbdadoanaliseprojeto daproj 
+		left join tbdadoanaliseprojetodispendio dapdisp on daproj.iddadoanaliseprojeto = dapdisp.iddadoanaliseprojeto 
+		left join tbanaliseobjetomarcodispendio aomdisp on aomdisp.iddadoanaliseprojetodispendio = dapdisp.iddadoanaliseprojetodispendio 
+		group by aomdisp.idmarcoanalise, daproj.iddadoanaliseprojeto 
+		) p_c_disp_vl on p_c_disp_vl.iddadoanaliseprojeto  = daproj.iddadoanaliseprojeto and p_c_disp_vl.idmarcoanalise = p_c_ma.idmarcoanalise
 --
 --RECURSO ADMINISTRATIVO
 --
@@ -211,12 +373,21 @@ left join(
 			from tbhistoricosituacaoanalise hsa2
 			where hsa2.cdtiposituacaomarco = 36
 			group by hsa2.idmarcoanalise )		
-		) ra_hsa on ra_hsa.idmarcoanalise = ra_ma.idmarcoanalise)
--- where daproj.iddadoanaliseprojeto = '34904'
--- OR daproj.iddadoanaliseprojeto = '34918'
--- OR daproj.iddadoanaliseprojeto = '34906'
--- OR daproj.iddadoanaliseprojeto = '34905'
--- OR daproj.iddadoanaliseprojeto = '34521'
--- OR daproj.iddadoanaliseprojeto = '34522'
--- OR daproj.iddadoanaliseprojeto = '34523');
---where do_setor.nosetor = 'Remediation'
+		) ra_hsa on ra_hsa.idmarcoanalise = ra_ma.idmarcoanalise 
+left join (
+		select aomdisp.idmarcoanalise, daproj.iddadoanaliseprojeto , sum(aomdisp.vlglosa::decimal ) as ra_disp_vlglosa, sum(aomdisp.vlindicadoanalise::decimal  ) as ra_disp_vlindicadoanalise 
+		from tbdadoanaliseprojeto daproj 
+		left join tbdadoanaliseprojetodispendio dapdisp on daproj.iddadoanaliseprojeto = dapdisp.iddadoanaliseprojeto 
+		left join tbanaliseobjetomarcodispendio aomdisp on aomdisp.iddadoanaliseprojetodispendio = dapdisp.iddadoanaliseprojetodispendio 
+		group by aomdisp.idmarcoanalise, daproj.iddadoanaliseprojeto 
+		) ra_disp_vl on ra_disp_vl.iddadoanaliseprojeto  = daproj.iddadoanaliseprojeto and ra_disp_vl.idmarcoanalise = ra_ma.idmarcoanalise
+where dem.idprenchimentosituacaoanalise = 753;
+
+-- dapdisp.cddadoanaliseprojetotipodispendio = 9
+-- --dapdisp.iddadoanaliseprojetodispendio = 1110862
+-- --dem.idprenchimentosituacaoanalise = 753
+-- and dapdisp.vlhoras > 2700
+-- and lst.nranobase > 2020
+
+-- where lst.nranobase = 2023
+-- and daproj.dsatividadepdicontinuadaanobase is not null

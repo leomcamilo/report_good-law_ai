@@ -12280,3 +12280,869 @@
 2025-08-18 13:16:50,252 - INFO -   -> ✅ Carregado: 'grupos_categoria_TIC_DE_-_Desenvolvimento_Expe_Processo_sublote26.csv' (38 linhas)
 2025-08-18 13:16:50,254 - INFO -   -> ✅ Carregado: 'grupos_categoria_Transversal_DE_-_Desenvolvimento_Expe_Produto_sublote11.csv' (63 linhas)
 2025-08-18 13:16:50,255 - INFO - 🔄 Iniciando consolidação e enriquecimento de dados...
+2025-08-21 12:00:19,862 - INFO - 🔗 4872 grupos de projetos multianuais identificados.
+2025-08-21 12:00:21,578 - INFO - 🤖 Projetos para LLM: 45114 (Projetos multianuais duplicados foram removidos, mantendo apenas o mais antigo de cada grupo)
+2025-08-21 12:00:21,646 - INFO - 📄 Relatório de multianuais salvo: resultados_agrupamento/projetos_multianuais_identificados.csv
+2025-08-21 12:00:27,578 - INFO - ✅ API Deepseek configurada com sucesso
+2025-08-21 12:00:27,579 - INFO - 💰 Estimativa de custo:
+2025-08-21 12:00:27,580 - INFO -    📊 Total de combinações: 63
+2025-08-21 12:00:27,581 - INFO -    📋 Total de projetos: 45114
+2025-08-21 12:00:27,582 - INFO -    🔤 Tokens estimados: 13,534,200
+2025-08-21 12:00:27,582 - INFO -    💵 Custo estimado: $18.95 USD
+2025-08-21 12:00:36,399 - INFO - 🔍 Categoria filtrada com Tipo 'DE - Desenvolvimento Experimental' e Natureza 'Processo': 1425 projetos
+2025-08-21 12:00:36,400 - INFO - 📅 Anos encontrados: [np.float64(2020.0), np.float64(2021.0), np.float64(2022.0), np.float64(2023.0)]
+2025-08-21 12:00:36,402 - INFO - 📦 Categoria dividida: 1425 projetos → 11 sub-lotes
+2025-08-21 12:00:36,403 - INFO -    🔗 Sobreposição: 20 projetos entre sub-lotes
+2025-08-21 12:00:36,432 - INFO - 🔍 Categoria filtrada com Tipo 'DE - Desenvolvimento Experimental' e Natureza 'Produto': 2595 projetos
+2025-08-21 12:00:36,433 - INFO - 📅 Anos encontrados: [np.float64(2020.0), np.float64(2021.0), np.float64(2022.0), np.float64(2023.0)]
+2025-08-21 12:00:36,435 - INFO - 📦 Categoria dividida: 2595 projetos → 19 sub-lotes
+2025-08-21 12:00:36,436 - INFO -    🔗 Sobreposição: 20 projetos entre sub-lotes
+2025-08-21 12:00:36,451 - INFO - 🔍 Categoria filtrada com Tipo 'DE - Desenvolvimento Experimental' e Natureza 'Serviço': 113 projetos
+2025-08-21 12:00:36,452 - INFO - 📅 Anos encontrados: [np.float64(2020.0), np.float64(2021.0), np.float64(2022.0), np.float64(2023.0)]
+2025-08-21 12:00:36,466 - INFO - 🔍 Categoria filtrada com Tipo 'PA - Pesquisa Aplicada' e Natureza 'Processo': 319 projetos
+2025-08-21 12:00:36,467 - INFO - 📅 Anos encontrados: [np.float64(2020.0), np.float64(2021.0), np.float64(2022.0), np.float64(2023.0)]
+2025-08-21 12:00:36,468 - INFO - 📦 Categoria dividida: 319 projetos → 3 sub-lotes
+2025-08-21 12:00:36,469 - INFO -    🔗 Sobreposição: 20 projetos entre sub-lotes
+2025-08-21 12:00:36,483 - INFO - 🔍 Categoria filtrada com Tipo 'PA - Pesquisa Aplicada' e Natureza 'Produto': 705 projetos
+2025-08-21 12:00:36,483 - INFO - 📅 Anos encontrados: [np.float64(2020.0), np.float64(2021.0), np.float64(2022.0), np.float64(2023.0)]
+2025-08-21 12:00:36,485 - INFO - 📦 Categoria dividida: 705 projetos → 5 sub-lotes
+2025-08-21 12:00:36,485 - INFO -    🔗 Sobreposição: 20 projetos entre sub-lotes
+2025-08-21 12:00:36,496 - INFO - 🔍 Categoria filtrada com Tipo 'PA - Pesquisa Aplicada' e Natureza 'Serviço': 18 projetos
+2025-08-21 12:00:36,497 - INFO - 📅 Anos encontrados: [np.float64(2020.0), np.float64(2021.0), np.float64(2022.0), np.float64(2023.0)]
+2025-08-21 12:00:36,507 - INFO - 🔍 Categoria filtrada com Tipo 'PB - Pesquisa Básica' e Natureza 'Processo': 23 projetos
+2025-08-21 12:00:36,508 - INFO - 📅 Anos encontrados: [np.float64(2020.0), np.float64(2021.0), np.float64(2022.0), np.float64(2023.0)]
+2025-08-21 12:00:36,519 - INFO - 🔍 Categoria filtrada com Tipo 'PB - Pesquisa Básica' e Natureza 'Produto': 102 projetos
+2025-08-21 12:00:36,521 - INFO - 📅 Anos encontrados: [np.float64(2020.0), np.float64(2021.0), np.float64(2022.0), np.float64(2023.0)]
+2025-08-21 12:00:36,532 - INFO - 🔍 Categoria filtrada com Tipo 'PB - Pesquisa Básica' e Natureza 'Serviço': 4 projetos
+2025-08-21 12:00:36,533 - INFO - 📅 Anos encontrados: [np.float64(2020.0), np.float64(2021.0), np.float64(2022.0)]
+2025-08-21 12:00:36,546 - INFO - 🔍 Categoria filtrada com Tipo 'DE - Desenvolvimento Experimental' e Natureza 'Processo': 844 projetos
+2025-08-21 12:00:36,547 - INFO - 📅 Anos encontrados: [np.float64(2020.0), np.float64(2021.0), np.float64(2022.0), np.float64(2023.0)]
+2025-08-21 12:00:36,548 - INFO - 📦 Categoria dividida: 844 projetos → 6 sub-lotes
+2025-08-21 12:00:36,549 - INFO -    🔗 Sobreposição: 20 projetos entre sub-lotes
+2025-08-21 12:00:36,565 - INFO - 🔍 Categoria filtrada com Tipo 'DE - Desenvolvimento Experimental' e Natureza 'Produto': 2005 projetos
+2025-08-21 12:00:36,566 - INFO - 📅 Anos encontrados: [np.float64(2020.0), np.float64(2021.0), np.float64(2022.0), np.float64(2023.0)]
+2025-08-21 12:00:36,567 - INFO - 📦 Categoria dividida: 2005 projetos → 15 sub-lotes
+2025-08-21 12:00:36,568 - INFO -    🔗 Sobreposição: 20 projetos entre sub-lotes
+2025-08-21 12:00:36,579 - INFO - 🔍 Categoria filtrada com Tipo 'DE - Desenvolvimento Experimental' e Natureza 'Serviço': 95 projetos
+2025-08-21 12:00:36,580 - INFO - 📅 Anos encontrados: [np.float64(2020.0), np.float64(2021.0), np.float64(2022.0), np.float64(2023.0)]
+2025-08-21 12:00:36,591 - INFO - 🔍 Categoria filtrada com Tipo 'PA - Pesquisa Aplicada' e Natureza 'Processo': 268 projetos
+2025-08-21 12:00:36,592 - INFO - 📅 Anos encontrados: [np.float64(2020.0), np.float64(2021.0), np.float64(2022.0), np.float64(2023.0)]
+2025-08-21 12:00:36,593 - INFO - 📦 Categoria dividida: 268 projetos → 2 sub-lotes
+2025-08-21 12:00:36,593 - INFO -    🔗 Sobreposição: 20 projetos entre sub-lotes
+2025-08-21 12:00:36,606 - INFO - 🔍 Categoria filtrada com Tipo 'PA - Pesquisa Aplicada' e Natureza 'Produto': 748 projetos
+2025-08-21 12:00:36,607 - INFO - 📅 Anos encontrados: [np.float64(2020.0), np.float64(2021.0), np.float64(2022.0), np.float64(2023.0)]
+2025-08-21 12:00:36,608 - INFO - 📦 Categoria dividida: 748 projetos → 6 sub-lotes
+2025-08-21 12:00:36,609 - INFO -    🔗 Sobreposição: 20 projetos entre sub-lotes
+2025-08-21 12:00:36,620 - INFO - 🔍 Categoria filtrada com Tipo 'PA - Pesquisa Aplicada' e Natureza 'Serviço': 18 projetos
+2025-08-21 12:00:36,621 - INFO - 📅 Anos encontrados: [np.float64(2020.0), np.float64(2021.0), np.float64(2022.0), np.float64(2023.0)]
+2025-08-21 12:00:36,632 - INFO - 🔍 Categoria filtrada com Tipo 'PB - Pesquisa Básica' e Natureza 'Processo': 50 projetos
+2025-08-21 12:00:36,633 - INFO - 📅 Anos encontrados: [np.float64(2020.0), np.float64(2021.0), np.float64(2022.0), np.float64(2023.0)]
+2025-08-21 12:00:36,644 - INFO - 🔍 Categoria filtrada com Tipo 'PB - Pesquisa Básica' e Natureza 'Produto': 102 projetos
+2025-08-21 12:00:36,644 - INFO - 📅 Anos encontrados: [np.float64(2020.0), np.float64(2021.0), np.float64(2022.0), np.float64(2023.0)]
+2025-08-21 12:00:36,655 - INFO - 🔍 Categoria filtrada com Tipo 'PB - Pesquisa Básica' e Natureza 'Serviço': 24 projetos
+2025-08-21 12:00:36,656 - INFO - 📅 Anos encontrados: [np.float64(2020.0), np.float64(2021.0), np.float64(2023.0)]
+2025-08-21 12:00:36,671 - INFO - 🔍 Categoria filtrada com Tipo 'DE - Desenvolvimento Experimental' e Natureza 'Processo': 1652 projetos
+2025-08-21 12:00:36,672 - INFO - 📅 Anos encontrados: [np.float64(2020.0), np.float64(2021.0), np.float64(2022.0), np.float64(2023.0)]
+2025-08-21 12:00:36,673 - INFO - 📦 Categoria dividida: 1652 projetos → 12 sub-lotes
+2025-08-21 12:00:36,673 - INFO -    🔗 Sobreposição: 20 projetos entre sub-lotes
+2025-08-21 12:00:36,691 - INFO - 🔍 Categoria filtrada com Tipo 'DE - Desenvolvimento Experimental' e Natureza 'Produto': 2649 projetos
+2025-08-21 12:00:36,692 - INFO - 📅 Anos encontrados: [np.float64(2020.0), np.float64(2021.0), np.float64(2022.0), np.float64(2023.0)]
+2025-08-21 12:00:36,693 - INFO - 📦 Categoria dividida: 2649 projetos → 19 sub-lotes
+2025-08-21 12:00:36,694 - INFO -    🔗 Sobreposição: 20 projetos entre sub-lotes
+2025-08-21 12:00:36,705 - INFO - 🔍 Categoria filtrada com Tipo 'DE - Desenvolvimento Experimental' e Natureza 'Serviço': 88 projetos
+2025-08-21 12:00:36,706 - INFO - 📅 Anos encontrados: [np.float64(2020.0), np.float64(2021.0), np.float64(2022.0), np.float64(2023.0)]
+2025-08-21 12:00:36,717 - INFO - 🔍 Categoria filtrada com Tipo 'PA - Pesquisa Aplicada' e Natureza 'Processo': 258 projetos
+2025-08-21 12:00:36,718 - INFO - 📅 Anos encontrados: [np.float64(2020.0), np.float64(2021.0), np.float64(2022.0), np.float64(2023.0)]
+2025-08-21 12:00:36,718 - INFO - 📦 Categoria dividida: 258 projetos → 2 sub-lotes
+2025-08-21 12:00:36,719 - INFO -    🔗 Sobreposição: 20 projetos entre sub-lotes
+2025-08-21 12:00:36,732 - INFO - 🔍 Categoria filtrada com Tipo 'PA - Pesquisa Aplicada' e Natureza 'Produto': 724 projetos
+2025-08-21 12:00:36,733 - INFO - 📅 Anos encontrados: [np.float64(2020.0), np.float64(2021.0), np.float64(2022.0), np.float64(2023.0)]
+2025-08-21 12:00:36,734 - INFO - 📦 Categoria dividida: 724 projetos → 6 sub-lotes
+2025-08-21 12:00:36,734 - INFO -    🔗 Sobreposição: 20 projetos entre sub-lotes
+2025-08-21 12:00:36,745 - INFO - 🔍 Categoria filtrada com Tipo 'PA - Pesquisa Aplicada' e Natureza 'Serviço': 12 projetos
+2025-08-21 12:00:36,746 - INFO - 📅 Anos encontrados: [np.float64(2020.0), np.float64(2021.0), np.float64(2022.0), np.float64(2023.0)]
+2025-08-21 12:00:36,757 - INFO - 🔍 Categoria filtrada com Tipo 'PB - Pesquisa Básica' e Natureza 'Processo': 87 projetos
+2025-08-21 12:00:36,758 - INFO - 📅 Anos encontrados: [np.float64(2020.0), np.float64(2021.0), np.float64(2022.0), np.float64(2023.0)]
+2025-08-21 12:00:36,769 - INFO - 🔍 Categoria filtrada com Tipo 'PB - Pesquisa Básica' e Natureza 'Produto': 66 projetos
+2025-08-21 12:00:36,770 - INFO - 📅 Anos encontrados: [np.float64(2020.0), np.float64(2021.0), np.float64(2022.0), np.float64(2023.0)]
+2025-08-21 12:00:36,781 - INFO - 🔍 Categoria filtrada com Tipo 'PB - Pesquisa Básica' e Natureza 'Serviço': 3 projetos
+2025-08-21 12:00:36,782 - INFO - 📅 Anos encontrados: [np.float64(2020.0), np.float64(2022.0)]
+2025-08-21 12:00:36,796 - INFO - 🔍 Categoria filtrada com Tipo 'DE - Desenvolvimento Experimental' e Natureza 'Processo': 1101 projetos
+2025-08-21 12:00:36,796 - INFO - 📅 Anos encontrados: [np.float64(2020.0), np.float64(2021.0), np.float64(2022.0), np.float64(2023.0)]
+2025-08-21 12:00:36,797 - INFO - 📦 Categoria dividida: 1101 projetos → 8 sub-lotes
+2025-08-21 12:00:36,798 - INFO -    🔗 Sobreposição: 20 projetos entre sub-lotes
+2025-08-21 12:00:36,812 - INFO - 🔍 Categoria filtrada com Tipo 'DE - Desenvolvimento Experimental' e Natureza 'Produto': 1211 projetos
+2025-08-21 12:00:36,813 - INFO - 📅 Anos encontrados: [np.float64(2020.0), np.float64(2021.0), np.float64(2022.0), np.float64(2023.0)]
+2025-08-21 12:00:36,814 - INFO - 📦 Categoria dividida: 1211 projetos → 9 sub-lotes
+2025-08-21 12:00:36,814 - INFO -    🔗 Sobreposição: 20 projetos entre sub-lotes
+2025-08-21 12:00:36,825 - INFO - 🔍 Categoria filtrada com Tipo 'DE - Desenvolvimento Experimental' e Natureza 'Serviço': 42 projetos
+2025-08-21 12:00:36,826 - INFO - 📅 Anos encontrados: [np.float64(2020.0), np.float64(2021.0), np.float64(2022.0), np.float64(2023.0)]
+2025-08-21 12:00:36,838 - INFO - 🔍 Categoria filtrada com Tipo 'PA - Pesquisa Aplicada' e Natureza 'Processo': 363 projetos
+2025-08-21 12:00:36,838 - INFO - 📅 Anos encontrados: [np.float64(2020.0), np.float64(2021.0), np.float64(2022.0), np.float64(2023.0)]
+2025-08-21 12:00:36,839 - INFO - 📦 Categoria dividida: 363 projetos → 3 sub-lotes
+2025-08-21 12:00:36,840 - INFO -    🔗 Sobreposição: 20 projetos entre sub-lotes
+2025-08-21 12:00:36,852 - INFO - 🔍 Categoria filtrada com Tipo 'PA - Pesquisa Aplicada' e Natureza 'Produto': 274 projetos
+2025-08-21 12:00:36,853 - INFO - 📅 Anos encontrados: [np.float64(2020.0), np.float64(2021.0), np.float64(2022.0), np.float64(2023.0)]
+2025-08-21 12:00:36,854 - INFO - 📦 Categoria dividida: 274 projetos → 2 sub-lotes
+2025-08-21 12:00:36,855 - INFO -    🔗 Sobreposição: 20 projetos entre sub-lotes
+2025-08-21 12:00:36,866 - INFO - 🔍 Categoria filtrada com Tipo 'PA - Pesquisa Aplicada' e Natureza 'Serviço': 8 projetos
+2025-08-21 12:00:36,866 - INFO - 📅 Anos encontrados: [np.float64(2020.0), np.float64(2021.0), np.float64(2022.0)]
+2025-08-21 12:00:36,877 - INFO - 🔍 Categoria filtrada com Tipo 'PB - Pesquisa Básica' e Natureza 'Processo': 20 projetos
+2025-08-21 12:00:36,878 - INFO - 📅 Anos encontrados: [np.float64(2020.0), np.float64(2021.0), np.float64(2022.0), np.float64(2023.0)]
+2025-08-21 12:00:36,888 - INFO - 🔍 Categoria filtrada com Tipo 'PB - Pesquisa Básica' e Natureza 'Produto': 48 projetos
+2025-08-21 12:00:36,889 - INFO - 📅 Anos encontrados: [np.float64(2020.0), np.float64(2021.0), np.float64(2022.0), np.float64(2023.0)]
+2025-08-21 12:00:36,902 - INFO - 🔍 Categoria filtrada com Tipo 'PB - Pesquisa Básica' e Natureza 'Serviço': 2 projetos
+2025-08-21 12:00:36,903 - INFO - 📅 Anos encontrados: [np.float64(2022.0)]
+2025-08-21 12:00:36,917 - INFO - 🔍 Categoria filtrada com Tipo 'DE - Desenvolvimento Experimental' e Natureza 'Processo': 1068 projetos
+2025-08-21 12:00:36,918 - INFO - 📅 Anos encontrados: [np.float64(2020.0), np.float64(2021.0), np.float64(2022.0), np.float64(2023.0)]
+2025-08-21 12:00:36,918 - INFO - 📦 Categoria dividida: 1068 projetos → 8 sub-lotes
+2025-08-21 12:00:36,919 - INFO -    🔗 Sobreposição: 20 projetos entre sub-lotes
+2025-08-21 12:00:36,941 - INFO - 🔍 Categoria filtrada com Tipo 'DE - Desenvolvimento Experimental' e Natureza 'Produto': 4784 projetos
+2025-08-21 12:00:36,942 - INFO - 📅 Anos encontrados: [np.float64(2020.0), np.float64(2021.0), np.float64(2022.0), np.float64(2023.0)]
+2025-08-21 12:00:36,943 - INFO - 📦 Categoria dividida: 4784 projetos → 34 sub-lotes
+2025-08-21 12:00:36,944 - INFO -    🔗 Sobreposição: 20 projetos entre sub-lotes
+2025-08-21 12:00:36,955 - INFO - 🔍 Categoria filtrada com Tipo 'DE - Desenvolvimento Experimental' e Natureza 'Serviço': 84 projetos
+2025-08-21 12:00:36,956 - INFO - 📅 Anos encontrados: [np.float64(2020.0), np.float64(2021.0), np.float64(2022.0), np.float64(2023.0)]
+2025-08-21 12:00:36,968 - INFO - 🔍 Categoria filtrada com Tipo 'PA - Pesquisa Aplicada' e Natureza 'Processo': 406 projetos
+2025-08-21 12:00:36,968 - INFO - 📅 Anos encontrados: [np.float64(2020.0), np.float64(2021.0), np.float64(2022.0), np.float64(2023.0)]
+2025-08-21 12:00:36,969 - INFO - 📦 Categoria dividida: 406 projetos → 3 sub-lotes
+2025-08-21 12:00:36,970 - INFO -    🔗 Sobreposição: 20 projetos entre sub-lotes
+2025-08-21 12:00:36,984 - INFO - 🔍 Categoria filtrada com Tipo 'PA - Pesquisa Aplicada' e Natureza 'Produto': 1188 projetos
+2025-08-21 12:00:36,985 - INFO - 📅 Anos encontrados: [np.float64(2020.0), np.float64(2021.0), np.float64(2022.0), np.float64(2023.0)]
+2025-08-21 12:00:36,986 - INFO - 📦 Categoria dividida: 1188 projetos → 9 sub-lotes
+2025-08-21 12:00:36,987 - INFO -    🔗 Sobreposição: 20 projetos entre sub-lotes
+2025-08-21 12:00:36,998 - INFO - 🔍 Categoria filtrada com Tipo 'PA - Pesquisa Aplicada' e Natureza 'Serviço': 36 projetos
+2025-08-21 12:00:36,999 - INFO - 📅 Anos encontrados: [np.float64(2020.0), np.float64(2021.0), np.float64(2022.0), np.float64(2023.0)]
+2025-08-21 12:00:37,009 - INFO - 🔍 Categoria filtrada com Tipo 'PB - Pesquisa Básica' e Natureza 'Processo': 40 projetos
+2025-08-21 12:00:37,010 - INFO - 📅 Anos encontrados: [np.float64(2020.0), np.float64(2021.0), np.float64(2022.0), np.float64(2023.0)]
+2025-08-21 12:00:37,022 - INFO - 🔍 Categoria filtrada com Tipo 'PB - Pesquisa Básica' e Natureza 'Produto': 273 projetos
+2025-08-21 12:00:37,023 - INFO - 📅 Anos encontrados: [np.float64(2020.0), np.float64(2021.0), np.float64(2022.0), np.float64(2023.0)]
+2025-08-21 12:00:37,023 - INFO - 📦 Categoria dividida: 273 projetos → 2 sub-lotes
+2025-08-21 12:00:37,024 - INFO -    🔗 Sobreposição: 20 projetos entre sub-lotes
+2025-08-21 12:00:37,035 - INFO - 🔍 Categoria filtrada com Tipo 'PB - Pesquisa Básica' e Natureza 'Serviço': 6 projetos
+2025-08-21 12:00:37,036 - INFO - 📅 Anos encontrados: [np.float64(2020.0), np.float64(2023.0)]
+2025-08-21 12:00:37,059 - INFO - 🔍 Categoria filtrada com Tipo 'DE - Desenvolvimento Experimental' e Natureza 'Processo': 4823 projetos
+2025-08-21 12:00:37,060 - INFO - 📅 Anos encontrados: [np.float64(2020.0), np.float64(2021.0), np.float64(2022.0), np.float64(2023.0)]
+2025-08-21 12:00:37,061 - INFO - 📦 Categoria dividida: 4823 projetos → 34 sub-lotes
+2025-08-21 12:00:37,062 - INFO -    🔗 Sobreposição: 20 projetos entre sub-lotes
+2025-08-21 12:00:37,085 - INFO - 🔍 Categoria filtrada com Tipo 'DE - Desenvolvimento Experimental' e Natureza 'Produto': 4493 projetos
+2025-08-21 12:00:37,085 - INFO - 📅 Anos encontrados: [np.float64(2020.0), np.float64(2021.0), np.float64(2022.0), np.float64(2023.0)]
+2025-08-21 12:00:37,087 - INFO - 📦 Categoria dividida: 4493 projetos → 32 sub-lotes
+2025-08-21 12:00:37,087 - INFO -    🔗 Sobreposição: 20 projetos entre sub-lotes
+2025-08-21 12:00:37,107 - INFO - 🔍 Categoria filtrada com Tipo 'DE - Desenvolvimento Experimental' e Natureza 'Serviço': 3490 projetos
+2025-08-21 12:00:37,108 - INFO - 📅 Anos encontrados: [np.float64(2020.0), np.float64(2021.0), np.float64(2022.0), np.float64(2023.0)]
+2025-08-21 12:00:37,109 - INFO - 📦 Categoria dividida: 3490 projetos → 25 sub-lotes
+2025-08-21 12:00:37,110 - INFO -    🔗 Sobreposição: 20 projetos entre sub-lotes
+2025-08-21 12:00:37,122 - INFO - 🔍 Categoria filtrada com Tipo 'PA - Pesquisa Aplicada' e Natureza 'Processo': 430 projetos
+2025-08-21 12:00:37,123 - INFO - 📅 Anos encontrados: [np.float64(2020.0), np.float64(2021.0), np.float64(2022.0), np.float64(2023.0)]
+2025-08-21 12:00:37,123 - INFO - 📦 Categoria dividida: 430 projetos → 4 sub-lotes
+2025-08-21 12:00:37,124 - INFO -    🔗 Sobreposição: 20 projetos entre sub-lotes
+2025-08-21 12:00:37,137 - INFO - 🔍 Categoria filtrada com Tipo 'PA - Pesquisa Aplicada' e Natureza 'Produto': 529 projetos
+2025-08-21 12:00:37,138 - INFO - 📅 Anos encontrados: [np.float64(2020.0), np.float64(2021.0), np.float64(2022.0), np.float64(2023.0)]
+2025-08-21 12:00:37,138 - INFO - 📦 Categoria dividida: 529 projetos → 4 sub-lotes
+2025-08-21 12:00:37,139 - INFO -    🔗 Sobreposição: 20 projetos entre sub-lotes
+2025-08-21 12:00:37,150 - INFO - 🔍 Categoria filtrada com Tipo 'PA - Pesquisa Aplicada' e Natureza 'Serviço': 184 projetos
+2025-08-21 12:00:37,151 - INFO - 📅 Anos encontrados: [np.float64(2020.0), np.float64(2021.0), np.float64(2022.0), np.float64(2023.0)]
+2025-08-21 12:00:37,152 - INFO - 📦 Categoria dividida: 184 projetos → 2 sub-lotes
+2025-08-21 12:00:37,152 - INFO -    🔗 Sobreposição: 20 projetos entre sub-lotes
+2025-08-21 12:00:37,163 - INFO - 🔍 Categoria filtrada com Tipo 'PB - Pesquisa Básica' e Natureza 'Processo': 43 projetos
+2025-08-21 12:00:37,164 - INFO - 📅 Anos encontrados: [np.float64(2020.0), np.float64(2021.0), np.float64(2022.0), np.float64(2023.0)]
+2025-08-21 12:00:37,175 - INFO - 🔍 Categoria filtrada com Tipo 'PB - Pesquisa Básica' e Natureza 'Produto': 78 projetos
+2025-08-21 12:00:37,176 - INFO - 📅 Anos encontrados: [np.float64(2020.0), np.float64(2021.0), np.float64(2022.0), np.float64(2023.0)]
+2025-08-21 12:00:37,187 - INFO - 🔍 Categoria filtrada com Tipo 'PB - Pesquisa Básica' e Natureza 'Serviço': 19 projetos
+2025-08-21 12:00:37,187 - INFO - 📅 Anos encontrados: [np.float64(2021.0), np.float64(2022.0), np.float64(2023.0)]
+2025-08-21 12:00:37,202 - INFO - 🔍 Categoria filtrada com Tipo 'DE - Desenvolvimento Experimental' e Natureza 'Processo': 1366 projetos
+2025-08-21 12:00:37,203 - INFO - 📅 Anos encontrados: [np.float64(2020.0), np.float64(2021.0), np.float64(2022.0), np.float64(2023.0)]
+2025-08-21 12:00:37,203 - INFO - 📦 Categoria dividida: 1366 projetos → 10 sub-lotes
+2025-08-21 12:00:37,204 - INFO -    🔗 Sobreposição: 20 projetos entre sub-lotes
+2025-08-21 12:00:37,221 - INFO - 🔍 Categoria filtrada com Tipo 'DE - Desenvolvimento Experimental' e Natureza 'Produto': 2301 projetos
+2025-08-21 12:00:37,222 - INFO - 📅 Anos encontrados: [np.float64(2020.0), np.float64(2021.0), np.float64(2022.0), np.float64(2023.0)]
+2025-08-21 12:00:37,222 - INFO - 📦 Categoria dividida: 2301 projetos → 17 sub-lotes
+2025-08-21 12:00:37,223 - INFO -    🔗 Sobreposição: 20 projetos entre sub-lotes
+2025-08-21 12:00:37,235 - INFO - 🔍 Categoria filtrada com Tipo 'DE - Desenvolvimento Experimental' e Natureza 'Serviço': 137 projetos
+2025-08-21 12:00:37,235 - INFO - 📅 Anos encontrados: [np.float64(2020.0), np.float64(2021.0), np.float64(2022.0), np.float64(2023.0)]
+2025-08-21 12:00:37,247 - INFO - 🔍 Categoria filtrada com Tipo 'PA - Pesquisa Aplicada' e Natureza 'Processo': 378 projetos
+2025-08-21 12:00:37,248 - INFO - 📅 Anos encontrados: [np.float64(2020.0), np.float64(2021.0), np.float64(2022.0), np.float64(2023.0)]
+2025-08-21 12:00:37,248 - INFO - 📦 Categoria dividida: 378 projetos → 3 sub-lotes
+2025-08-21 12:00:37,249 - INFO -    🔗 Sobreposição: 20 projetos entre sub-lotes
+2025-08-21 12:00:37,262 - INFO - 🔍 Categoria filtrada com Tipo 'PA - Pesquisa Aplicada' e Natureza 'Produto': 555 projetos
+2025-08-21 12:00:37,262 - INFO - 📅 Anos encontrados: [np.float64(2020.0), np.float64(2021.0), np.float64(2022.0), np.float64(2023.0)]
+2025-08-21 12:00:37,263 - INFO - 📦 Categoria dividida: 555 projetos → 4 sub-lotes
+2025-08-21 12:00:37,264 - INFO -    🔗 Sobreposição: 20 projetos entre sub-lotes
+2025-08-21 12:00:37,276 - INFO - 🔍 Categoria filtrada com Tipo 'PA - Pesquisa Aplicada' e Natureza 'Serviço': 40 projetos
+2025-08-21 12:00:37,277 - INFO - 📅 Anos encontrados: [np.float64(2020.0), np.float64(2021.0), np.float64(2022.0), np.float64(2023.0)]
+2025-08-21 12:00:37,288 - INFO - 🔍 Categoria filtrada com Tipo 'PB - Pesquisa Básica' e Natureza 'Processo': 125 projetos
+2025-08-21 12:00:37,288 - INFO - 📅 Anos encontrados: [np.float64(2020.0), np.float64(2021.0), np.float64(2022.0), np.float64(2023.0)]
+2025-08-21 12:00:37,300 - INFO - 🔍 Categoria filtrada com Tipo 'PB - Pesquisa Básica' e Natureza 'Produto': 164 projetos
+2025-08-21 12:00:37,300 - INFO - 📅 Anos encontrados: [np.float64(2020.0), np.float64(2021.0), np.float64(2022.0), np.float64(2023.0)]
+2025-08-21 12:00:37,301 - INFO - 📦 Categoria dividida: 164 projetos → 2 sub-lotes
+2025-08-21 12:00:37,302 - INFO -    🔗 Sobreposição: 20 projetos entre sub-lotes
+2025-08-21 12:00:37,313 - INFO - 🔍 Categoria filtrada com Tipo 'PB - Pesquisa Básica' e Natureza 'Serviço': 8 projetos
+2025-08-21 12:00:37,313 - INFO - 📅 Anos encontrados: [np.float64(2020.0), np.float64(2021.0), np.float64(2022.0), np.float64(2023.0)]
+2025-08-21 12:00:37,314 - INFO - 📋 Plano por categoria criado: 352 itens
+2025-08-21 12:00:37,315 - INFO -    🟢 Categorias processadas completas: 31
+2025-08-21 12:00:37,315 - INFO -    🟡 Sub-lotes para merge posterior: 321
+2025-08-21 12:00:37,336 - INFO - 📄 Plano por categoria salvo: resultados_agrupamento/plano_processamento_categoria.csv
+2025-08-21 12:00:42,500 - INFO - ✅ API Deepseek configurada para uso assíncrono
+2025-08-21 12:00:42,502 - INFO - 📡 Loop de eventos já ativo, usando nest_asyncio
+2025-08-21 12:00:42,527 - INFO - 🚀 Iniciando processamento assíncrono de 352 itens...
+2025-08-21 12:00:42,528 - INFO - ⚡ Configuração: 20 requisições simultâneas, lotes de 20
+2025-08-21 12:00:42,528 - INFO - 📦 Divisão para processamento assíncrono: 352 itens → 18 lotes
+2025-08-21 12:00:42,529 - INFO - 
+============================================================
+2025-08-21 12:00:42,530 - INFO - 📦 Processando lote 1/18 (20 itens)
+2025-08-21 12:00:42,532 - INFO - 🔄 Processando async: Agroindústria e Alimentos - 142 projetos
+2025-08-21 12:00:42,539 - INFO - 📋 Formatados 142 projetos para análise
+2025-08-21 12:00:42,541 - INFO - ✅ Tamanho do prompt OK: 39080 tokens estimados
+2025-08-21 12:00:42,542 - INFO - 📤 Enviando para API Deepseek (async via thread)...
+2025-08-21 12:00:42,544 - INFO - 🔄 Processando async: Agroindústria e Alimentos - 162 projetos
+2025-08-21 12:00:42,552 - INFO - 📋 Formatados 162 projetos para análise
+2025-08-21 12:00:42,553 - INFO - ✅ Tamanho do prompt OK: 39715 tokens estimados
+2025-08-21 12:00:42,555 - INFO - 📤 Enviando para API Deepseek (async via thread)...
+2025-08-21 12:00:42,558 - INFO - 🔄 Processando async: Agroindústria e Alimentos - 162 projetos
+2025-08-21 12:00:42,578 - INFO - 📋 Formatados 162 projetos para análise
+2025-08-21 12:00:42,579 - INFO - ✅ Tamanho do prompt OK: 38651 tokens estimados
+2025-08-21 12:00:42,580 - INFO - 📤 Enviando para API Deepseek (async via thread)...
+2025-08-21 12:00:42,584 - INFO - 🔄 Processando async: Agroindústria e Alimentos - 162 projetos
+2025-08-21 12:00:42,594 - INFO - 📋 Formatados 162 projetos para análise
+2025-08-21 12:00:42,595 - INFO - ✅ Tamanho do prompt OK: 37703 tokens estimados
+2025-08-21 12:00:42,597 - INFO - 📤 Enviando para API Deepseek (async via thread)...
+2025-08-21 12:00:42,599 - INFO - 🔄 Processando async: Agroindústria e Alimentos - 162 projetos
+2025-08-21 12:00:42,611 - INFO - 📋 Formatados 162 projetos para análise
+2025-08-21 12:00:42,613 - INFO - ✅ Tamanho do prompt OK: 38517 tokens estimados
+2025-08-21 12:00:42,613 - INFO - 📤 Enviando para API Deepseek (async via thread)...
+2025-08-21 12:00:42,615 - INFO - 🔄 Processando async: Agroindústria e Alimentos - 162 projetos
+2025-08-21 12:00:42,627 - INFO - 📋 Formatados 162 projetos para análise
+2025-08-21 12:00:42,628 - INFO - ✅ Tamanho do prompt OK: 39096 tokens estimados
+2025-08-21 12:00:42,629 - INFO - 📤 Enviando para API Deepseek (async via thread)...
+2025-08-21 12:00:42,633 - INFO - 🔄 Processando async: Agroindústria e Alimentos - 162 projetos
+2025-08-21 12:00:42,642 - INFO - 📋 Formatados 162 projetos para análise
+2025-08-21 12:00:42,644 - INFO - ✅ Tamanho do prompt OK: 37507 tokens estimados
+2025-08-21 12:00:42,644 - INFO - 📤 Enviando para API Deepseek (async via thread)...
+2025-08-21 12:00:42,648 - INFO - 🔄 Processando async: Agroindústria e Alimentos - 162 projetos
+2025-08-21 12:00:42,657 - INFO - 📋 Formatados 162 projetos para análise
+2025-08-21 12:00:42,658 - INFO - ✅ Tamanho do prompt OK: 37033 tokens estimados
+2025-08-21 12:00:42,659 - INFO - 📤 Enviando para API Deepseek (async via thread)...
+2025-08-21 12:00:42,661 - INFO - 🔄 Processando async: Agroindústria e Alimentos - 162 projetos
+2025-08-21 12:00:42,672 - INFO - 📋 Formatados 162 projetos para análise
+2025-08-21 12:00:42,673 - INFO - ✅ Tamanho do prompt OK: 37627 tokens estimados
+2025-08-21 12:00:42,674 - INFO - 📤 Enviando para API Deepseek (async via thread)...
+2025-08-21 12:00:42,678 - INFO - 🔄 Processando async: Agroindústria e Alimentos - 162 projetos
+2025-08-21 12:00:42,687 - INFO - 📋 Formatados 162 projetos para análise
+2025-08-21 12:00:42,689 - INFO - ✅ Tamanho do prompt OK: 36844 tokens estimados
+2025-08-21 12:00:42,690 - INFO - 📤 Enviando para API Deepseek (async via thread)...
+2025-08-21 12:00:42,695 - INFO - 🔄 Processando async: Agroindústria e Alimentos - 25 projetos
+2025-08-21 12:00:42,699 - INFO - 📋 Formatados 25 projetos para análise
+2025-08-21 12:00:42,700 - INFO - ✅ Tamanho do prompt OK: 6382 tokens estimados
+2025-08-21 12:00:42,702 - INFO - 📤 Enviando para API Deepseek (async via thread)...
+2025-08-21 12:00:42,705 - INFO - 🔄 Processando async: Agroindústria e Alimentos - 142 projetos
+2025-08-21 12:00:42,714 - INFO - 📋 Formatados 142 projetos para análise
+2025-08-21 12:00:42,716 - INFO - ✅ Tamanho do prompt OK: 39161 tokens estimados
+2025-08-21 12:00:42,717 - INFO - 📤 Enviando para API Deepseek (async via thread)...
+2025-08-21 12:00:42,721 - INFO - 🔄 Processando async: Agroindústria e Alimentos - 162 projetos
+2025-08-21 12:00:42,730 - INFO - 📋 Formatados 162 projetos para análise
+2025-08-21 12:00:42,730 - INFO - ✅ Tamanho do prompt OK: 43313 tokens estimados
+2025-08-21 12:00:42,731 - INFO - 📤 Enviando para API Deepseek (async via thread)...
+2025-08-21 12:00:42,732 - INFO - 🔄 Processando async: Agroindústria e Alimentos - 162 projetos
+2025-08-21 12:00:42,744 - INFO - 📋 Formatados 162 projetos para análise
+2025-08-21 12:00:42,745 - INFO - ✅ Tamanho do prompt OK: 39472 tokens estimados
+2025-08-21 12:00:42,746 - INFO - 📤 Enviando para API Deepseek (async via thread)...
+2025-08-21 12:00:42,747 - INFO - 🔄 Processando async: Agroindústria e Alimentos - 162 projetos
+2025-08-21 12:00:42,758 - INFO - 📋 Formatados 162 projetos para análise
+2025-08-21 12:00:42,759 - INFO - ✅ Tamanho do prompt OK: 38991 tokens estimados
+2025-08-21 12:00:42,760 - INFO - 📤 Enviando para API Deepseek (async via thread)...
+2025-08-21 12:00:42,761 - INFO - 🔄 Processando async: Agroindústria e Alimentos - 162 projetos
+2025-08-21 12:00:42,772 - INFO - 📋 Formatados 162 projetos para análise
+2025-08-21 12:00:42,773 - INFO - ✅ Tamanho do prompt OK: 39305 tokens estimados
+2025-08-21 12:00:42,774 - INFO - 📤 Enviando para API Deepseek (async via thread)...
+2025-08-21 12:00:42,776 - INFO - 🔄 Processando async: Agroindústria e Alimentos - 162 projetos
+2025-08-21 12:00:42,787 - INFO - 📋 Formatados 162 projetos para análise
+2025-08-21 12:00:42,788 - INFO - ✅ Tamanho do prompt OK: 39663 tokens estimados
+2025-08-21 12:00:42,789 - INFO - 📤 Enviando para API Deepseek (async via thread)...
+2025-08-21 12:00:42,792 - INFO - 🔄 Processando async: Agroindústria e Alimentos - 162 projetos
+2025-08-21 12:00:42,801 - INFO - 📋 Formatados 162 projetos para análise
+2025-08-21 12:00:42,802 - INFO - ✅ Tamanho do prompt OK: 39493 tokens estimados
+2025-08-21 12:00:42,803 - INFO - 📤 Enviando para API Deepseek (async via thread)...
+2025-08-21 12:00:42,804 - INFO - 🔄 Processando async: Agroindústria e Alimentos - 162 projetos
+2025-08-21 12:00:42,815 - INFO - 📋 Formatados 162 projetos para análise
+2025-08-21 12:00:42,816 - INFO - ✅ Tamanho do prompt OK: 38648 tokens estimados
+2025-08-21 12:00:42,817 - INFO - 📤 Enviando para API Deepseek (async via thread)...
+2025-08-21 12:00:42,819 - INFO - 🔄 Processando async: Agroindústria e Alimentos - 162 projetos
+2025-08-21 12:00:42,829 - INFO - 📋 Formatados 162 projetos para análise
+2025-08-21 12:00:42,830 - INFO - ✅ Tamanho do prompt OK: 40291 tokens estimados
+2025-08-21 12:00:42,831 - INFO - 📤 Enviando para API Deepseek (async via thread)...
+2025-08-21 12:00:43,479 - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-08-21 12:00:43,663 - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-08-21 12:00:43,850 - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-08-21 12:00:43,921 - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-08-21 12:00:43,934 - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-08-21 12:00:43,938 - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-08-21 12:00:43,949 - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-08-21 12:00:43,951 - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-08-21 12:00:44,029 - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-08-21 12:00:44,169 - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-08-21 12:00:44,203 - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-08-21 12:00:44,250 - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-08-21 12:00:44,282 - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-08-21 12:00:44,310 - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-08-21 12:00:44,428 - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-08-21 12:00:44,435 - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-08-21 12:00:44,999 - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-08-21 12:00:47,284 - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-08-21 12:00:47,584 - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-08-21 12:00:52,377 - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-08-21 12:01:38,557 - INFO - 🔗 4872 grupos de projetos multianuais identificados.
+2025-08-21 12:01:40,236 - INFO - 🤖 Projetos para LLM: 45114 (Projetos multianuais duplicados foram removidos, mantendo apenas o mais antigo de cada grupo)
+2025-08-21 12:01:40,298 - INFO - 📄 Relatório de multianuais salvo: resultados_agrupamento/projetos_multianuais_identificados.csv
+2025-08-21 12:01:44,555 - INFO - ✅ API Deepseek configurada com sucesso
+2025-08-21 12:01:44,557 - INFO - 💰 Estimativa de custo:
+2025-08-21 12:01:44,557 - INFO -    📊 Total de combinações: 63
+2025-08-21 12:01:44,558 - INFO -    📋 Total de projetos: 45114
+2025-08-21 12:01:44,559 - INFO -    🔤 Tokens estimados: 13,534,200
+2025-08-21 12:01:44,559 - INFO -    💵 Custo estimado: $18.95 USD
+2025-08-21 12:01:52,834 - INFO - 🔍 Categoria filtrada com Tipo 'DE - Desenvolvimento Experimental' e Natureza 'Processo': 1425 projetos
+2025-08-21 12:01:52,835 - INFO - 📅 Anos encontrados: [np.float64(2020.0), np.float64(2021.0), np.float64(2022.0), np.float64(2023.0)]
+2025-08-21 12:01:52,836 - INFO - 📦 Categoria dividida: 1425 projetos → 11 sub-lotes
+2025-08-21 12:01:52,837 - INFO -    🔗 Sobreposição: 20 projetos entre sub-lotes
+2025-08-21 12:01:52,864 - INFO - 🔍 Categoria filtrada com Tipo 'DE - Desenvolvimento Experimental' e Natureza 'Produto': 2595 projetos
+2025-08-21 12:01:52,864 - INFO - 📅 Anos encontrados: [np.float64(2020.0), np.float64(2021.0), np.float64(2022.0), np.float64(2023.0)]
+2025-08-21 12:01:52,866 - INFO - 📦 Categoria dividida: 2595 projetos → 19 sub-lotes
+2025-08-21 12:01:52,867 - INFO -    🔗 Sobreposição: 20 projetos entre sub-lotes
+2025-08-21 12:01:52,882 - INFO - 🔍 Categoria filtrada com Tipo 'DE - Desenvolvimento Experimental' e Natureza 'Serviço': 113 projetos
+2025-08-21 12:01:52,883 - INFO - 📅 Anos encontrados: [np.float64(2020.0), np.float64(2021.0), np.float64(2022.0), np.float64(2023.0)]
+2025-08-21 12:01:52,898 - INFO - 🔍 Categoria filtrada com Tipo 'PA - Pesquisa Aplicada' e Natureza 'Processo': 319 projetos
+2025-08-21 12:01:52,899 - INFO - 📅 Anos encontrados: [np.float64(2020.0), np.float64(2021.0), np.float64(2022.0), np.float64(2023.0)]
+2025-08-21 12:01:52,899 - INFO - 📦 Categoria dividida: 319 projetos → 3 sub-lotes
+2025-08-21 12:01:52,900 - INFO -    🔗 Sobreposição: 20 projetos entre sub-lotes
+2025-08-21 12:01:52,914 - INFO - 🔍 Categoria filtrada com Tipo 'PA - Pesquisa Aplicada' e Natureza 'Produto': 705 projetos
+2025-08-21 12:01:52,915 - INFO - 📅 Anos encontrados: [np.float64(2020.0), np.float64(2021.0), np.float64(2022.0), np.float64(2023.0)]
+2025-08-21 12:01:52,916 - INFO - 📦 Categoria dividida: 705 projetos → 5 sub-lotes
+2025-08-21 12:01:52,916 - INFO -    🔗 Sobreposição: 20 projetos entre sub-lotes
+2025-08-21 12:01:52,928 - INFO - 🔍 Categoria filtrada com Tipo 'PA - Pesquisa Aplicada' e Natureza 'Serviço': 18 projetos
+2025-08-21 12:01:52,928 - INFO - 📅 Anos encontrados: [np.float64(2020.0), np.float64(2021.0), np.float64(2022.0), np.float64(2023.0)]
+2025-08-21 12:01:52,939 - INFO - 🔍 Categoria filtrada com Tipo 'PB - Pesquisa Básica' e Natureza 'Processo': 23 projetos
+2025-08-21 12:01:52,940 - INFO - 📅 Anos encontrados: [np.float64(2020.0), np.float64(2021.0), np.float64(2022.0), np.float64(2023.0)]
+2025-08-21 12:01:52,951 - INFO - 🔍 Categoria filtrada com Tipo 'PB - Pesquisa Básica' e Natureza 'Produto': 102 projetos
+2025-08-21 12:01:52,951 - INFO - 📅 Anos encontrados: [np.float64(2020.0), np.float64(2021.0), np.float64(2022.0), np.float64(2023.0)]
+2025-08-21 12:01:52,962 - INFO - 🔍 Categoria filtrada com Tipo 'PB - Pesquisa Básica' e Natureza 'Serviço': 4 projetos
+2025-08-21 12:01:52,963 - INFO - 📅 Anos encontrados: [np.float64(2020.0), np.float64(2021.0), np.float64(2022.0)]
+2025-08-21 12:01:52,975 - INFO - 🔍 Categoria filtrada com Tipo 'DE - Desenvolvimento Experimental' e Natureza 'Processo': 844 projetos
+2025-08-21 12:01:52,976 - INFO - 📅 Anos encontrados: [np.float64(2020.0), np.float64(2021.0), np.float64(2022.0), np.float64(2023.0)]
+2025-08-21 12:01:52,977 - INFO - 📦 Categoria dividida: 844 projetos → 6 sub-lotes
+2025-08-21 12:01:52,977 - INFO -    🔗 Sobreposição: 20 projetos entre sub-lotes
+2025-08-21 12:01:52,993 - INFO - 🔍 Categoria filtrada com Tipo 'DE - Desenvolvimento Experimental' e Natureza 'Produto': 2005 projetos
+2025-08-21 12:01:52,993 - INFO - 📅 Anos encontrados: [np.float64(2020.0), np.float64(2021.0), np.float64(2022.0), np.float64(2023.0)]
+2025-08-21 12:01:52,994 - INFO - 📦 Categoria dividida: 2005 projetos → 15 sub-lotes
+2025-08-21 12:01:52,996 - INFO -    🔗 Sobreposição: 20 projetos entre sub-lotes
+2025-08-21 12:01:53,006 - INFO - 🔍 Categoria filtrada com Tipo 'DE - Desenvolvimento Experimental' e Natureza 'Serviço': 95 projetos
+2025-08-21 12:01:53,007 - INFO - 📅 Anos encontrados: [np.float64(2020.0), np.float64(2021.0), np.float64(2022.0), np.float64(2023.0)]
+2025-08-21 12:01:53,019 - INFO - 🔍 Categoria filtrada com Tipo 'PA - Pesquisa Aplicada' e Natureza 'Processo': 268 projetos
+2025-08-21 12:01:53,019 - INFO - 📅 Anos encontrados: [np.float64(2020.0), np.float64(2021.0), np.float64(2022.0), np.float64(2023.0)]
+2025-08-21 12:01:53,020 - INFO - 📦 Categoria dividida: 268 projetos → 2 sub-lotes
+2025-08-21 12:01:53,021 - INFO -    🔗 Sobreposição: 20 projetos entre sub-lotes
+2025-08-21 12:01:53,033 - INFO - 🔍 Categoria filtrada com Tipo 'PA - Pesquisa Aplicada' e Natureza 'Produto': 748 projetos
+2025-08-21 12:01:53,034 - INFO - 📅 Anos encontrados: [np.float64(2020.0), np.float64(2021.0), np.float64(2022.0), np.float64(2023.0)]
+2025-08-21 12:01:53,034 - INFO - 📦 Categoria dividida: 748 projetos → 6 sub-lotes
+2025-08-21 12:01:53,035 - INFO -    🔗 Sobreposição: 20 projetos entre sub-lotes
+2025-08-21 12:01:53,046 - INFO - 🔍 Categoria filtrada com Tipo 'PA - Pesquisa Aplicada' e Natureza 'Serviço': 18 projetos
+2025-08-21 12:01:53,047 - INFO - 📅 Anos encontrados: [np.float64(2020.0), np.float64(2021.0), np.float64(2022.0), np.float64(2023.0)]
+2025-08-21 12:01:53,058 - INFO - 🔍 Categoria filtrada com Tipo 'PB - Pesquisa Básica' e Natureza 'Processo': 50 projetos
+2025-08-21 12:01:53,058 - INFO - 📅 Anos encontrados: [np.float64(2020.0), np.float64(2021.0), np.float64(2022.0), np.float64(2023.0)]
+2025-08-21 12:01:53,069 - INFO - 🔍 Categoria filtrada com Tipo 'PB - Pesquisa Básica' e Natureza 'Produto': 102 projetos
+2025-08-21 12:01:53,070 - INFO - 📅 Anos encontrados: [np.float64(2020.0), np.float64(2021.0), np.float64(2022.0), np.float64(2023.0)]
+2025-08-21 12:01:53,081 - INFO - 🔍 Categoria filtrada com Tipo 'PB - Pesquisa Básica' e Natureza 'Serviço': 24 projetos
+2025-08-21 12:01:53,081 - INFO - 📅 Anos encontrados: [np.float64(2020.0), np.float64(2021.0), np.float64(2023.0)]
+2025-08-21 12:01:53,095 - INFO - 🔍 Categoria filtrada com Tipo 'DE - Desenvolvimento Experimental' e Natureza 'Processo': 1652 projetos
+2025-08-21 12:01:53,096 - INFO - 📅 Anos encontrados: [np.float64(2020.0), np.float64(2021.0), np.float64(2022.0), np.float64(2023.0)]
+2025-08-21 12:01:53,097 - INFO - 📦 Categoria dividida: 1652 projetos → 12 sub-lotes
+2025-08-21 12:01:53,098 - INFO -    🔗 Sobreposição: 20 projetos entre sub-lotes
+2025-08-21 12:01:53,114 - INFO - 🔍 Categoria filtrada com Tipo 'DE - Desenvolvimento Experimental' e Natureza 'Produto': 2649 projetos
+2025-08-21 12:01:53,115 - INFO - 📅 Anos encontrados: [np.float64(2020.0), np.float64(2021.0), np.float64(2022.0), np.float64(2023.0)]
+2025-08-21 12:01:53,116 - INFO - 📦 Categoria dividida: 2649 projetos → 19 sub-lotes
+2025-08-21 12:01:53,116 - INFO -    🔗 Sobreposição: 20 projetos entre sub-lotes
+2025-08-21 12:01:53,128 - INFO - 🔍 Categoria filtrada com Tipo 'DE - Desenvolvimento Experimental' e Natureza 'Serviço': 88 projetos
+2025-08-21 12:01:53,128 - INFO - 📅 Anos encontrados: [np.float64(2020.0), np.float64(2021.0), np.float64(2022.0), np.float64(2023.0)]
+2025-08-21 12:01:53,140 - INFO - 🔍 Categoria filtrada com Tipo 'PA - Pesquisa Aplicada' e Natureza 'Processo': 258 projetos
+2025-08-21 12:01:53,141 - INFO - 📅 Anos encontrados: [np.float64(2020.0), np.float64(2021.0), np.float64(2022.0), np.float64(2023.0)]
+2025-08-21 12:01:53,141 - INFO - 📦 Categoria dividida: 258 projetos → 2 sub-lotes
+2025-08-21 12:01:53,142 - INFO -    🔗 Sobreposição: 20 projetos entre sub-lotes
+2025-08-21 12:01:53,154 - INFO - 🔍 Categoria filtrada com Tipo 'PA - Pesquisa Aplicada' e Natureza 'Produto': 724 projetos
+2025-08-21 12:01:53,155 - INFO - 📅 Anos encontrados: [np.float64(2020.0), np.float64(2021.0), np.float64(2022.0), np.float64(2023.0)]
+2025-08-21 12:01:53,156 - INFO - 📦 Categoria dividida: 724 projetos → 6 sub-lotes
+2025-08-21 12:01:53,157 - INFO -    🔗 Sobreposição: 20 projetos entre sub-lotes
+2025-08-21 12:01:53,168 - INFO - 🔍 Categoria filtrada com Tipo 'PA - Pesquisa Aplicada' e Natureza 'Serviço': 12 projetos
+2025-08-21 12:01:53,168 - INFO - 📅 Anos encontrados: [np.float64(2020.0), np.float64(2021.0), np.float64(2022.0), np.float64(2023.0)]
+2025-08-21 12:01:53,179 - INFO - 🔍 Categoria filtrada com Tipo 'PB - Pesquisa Básica' e Natureza 'Processo': 87 projetos
+2025-08-21 12:01:53,180 - INFO - 📅 Anos encontrados: [np.float64(2020.0), np.float64(2021.0), np.float64(2022.0), np.float64(2023.0)]
+2025-08-21 12:01:53,191 - INFO - 🔍 Categoria filtrada com Tipo 'PB - Pesquisa Básica' e Natureza 'Produto': 66 projetos
+2025-08-21 12:01:53,191 - INFO - 📅 Anos encontrados: [np.float64(2020.0), np.float64(2021.0), np.float64(2022.0), np.float64(2023.0)]
+2025-08-21 12:01:53,202 - INFO - 🔍 Categoria filtrada com Tipo 'PB - Pesquisa Básica' e Natureza 'Serviço': 3 projetos
+2025-08-21 12:01:53,203 - INFO - 📅 Anos encontrados: [np.float64(2020.0), np.float64(2022.0)]
+2025-08-21 12:01:53,216 - INFO - 🔍 Categoria filtrada com Tipo 'DE - Desenvolvimento Experimental' e Natureza 'Processo': 1101 projetos
+2025-08-21 12:01:53,217 - INFO - 📅 Anos encontrados: [np.float64(2020.0), np.float64(2021.0), np.float64(2022.0), np.float64(2023.0)]
+2025-08-21 12:01:53,217 - INFO - 📦 Categoria dividida: 1101 projetos → 8 sub-lotes
+2025-08-21 12:01:53,218 - INFO -    🔗 Sobreposição: 20 projetos entre sub-lotes
+2025-08-21 12:01:53,232 - INFO - 🔍 Categoria filtrada com Tipo 'DE - Desenvolvimento Experimental' e Natureza 'Produto': 1211 projetos
+2025-08-21 12:01:53,232 - INFO - 📅 Anos encontrados: [np.float64(2020.0), np.float64(2021.0), np.float64(2022.0), np.float64(2023.0)]
+2025-08-21 12:01:53,233 - INFO - 📦 Categoria dividida: 1211 projetos → 9 sub-lotes
+2025-08-21 12:01:53,234 - INFO -    🔗 Sobreposição: 20 projetos entre sub-lotes
+2025-08-21 12:01:53,245 - INFO - 🔍 Categoria filtrada com Tipo 'DE - Desenvolvimento Experimental' e Natureza 'Serviço': 42 projetos
+2025-08-21 12:01:53,245 - INFO - 📅 Anos encontrados: [np.float64(2020.0), np.float64(2021.0), np.float64(2022.0), np.float64(2023.0)]
+2025-08-21 12:01:53,257 - INFO - 🔍 Categoria filtrada com Tipo 'PA - Pesquisa Aplicada' e Natureza 'Processo': 363 projetos
+2025-08-21 12:01:53,258 - INFO - 📅 Anos encontrados: [np.float64(2020.0), np.float64(2021.0), np.float64(2022.0), np.float64(2023.0)]
+2025-08-21 12:01:53,258 - INFO - 📦 Categoria dividida: 363 projetos → 3 sub-lotes
+2025-08-21 12:01:53,259 - INFO -    🔗 Sobreposição: 20 projetos entre sub-lotes
+2025-08-21 12:01:53,270 - INFO - 🔍 Categoria filtrada com Tipo 'PA - Pesquisa Aplicada' e Natureza 'Produto': 274 projetos
+2025-08-21 12:01:53,271 - INFO - 📅 Anos encontrados: [np.float64(2020.0), np.float64(2021.0), np.float64(2022.0), np.float64(2023.0)]
+2025-08-21 12:01:53,272 - INFO - 📦 Categoria dividida: 274 projetos → 2 sub-lotes
+2025-08-21 12:01:53,272 - INFO -    🔗 Sobreposição: 20 projetos entre sub-lotes
+2025-08-21 12:01:53,283 - INFO - 🔍 Categoria filtrada com Tipo 'PA - Pesquisa Aplicada' e Natureza 'Serviço': 8 projetos
+2025-08-21 12:01:53,284 - INFO - 📅 Anos encontrados: [np.float64(2020.0), np.float64(2021.0), np.float64(2022.0)]
+2025-08-21 12:01:53,295 - INFO - 🔍 Categoria filtrada com Tipo 'PB - Pesquisa Básica' e Natureza 'Processo': 20 projetos
+2025-08-21 12:01:53,295 - INFO - 📅 Anos encontrados: [np.float64(2020.0), np.float64(2021.0), np.float64(2022.0), np.float64(2023.0)]
+2025-08-21 12:01:53,306 - INFO - 🔍 Categoria filtrada com Tipo 'PB - Pesquisa Básica' e Natureza 'Produto': 48 projetos
+2025-08-21 12:01:53,307 - INFO - 📅 Anos encontrados: [np.float64(2020.0), np.float64(2021.0), np.float64(2022.0), np.float64(2023.0)]
+2025-08-21 12:01:53,317 - INFO - 🔍 Categoria filtrada com Tipo 'PB - Pesquisa Básica' e Natureza 'Serviço': 2 projetos
+2025-08-21 12:01:53,318 - INFO - 📅 Anos encontrados: [np.float64(2022.0)]
+2025-08-21 12:01:53,331 - INFO - 🔍 Categoria filtrada com Tipo 'DE - Desenvolvimento Experimental' e Natureza 'Processo': 1068 projetos
+2025-08-21 12:01:53,332 - INFO - 📅 Anos encontrados: [np.float64(2020.0), np.float64(2021.0), np.float64(2022.0), np.float64(2023.0)]
+2025-08-21 12:01:53,333 - INFO - 📦 Categoria dividida: 1068 projetos → 8 sub-lotes
+2025-08-21 12:01:53,333 - INFO -    🔗 Sobreposição: 20 projetos entre sub-lotes
+2025-08-21 12:01:53,353 - INFO - 🔍 Categoria filtrada com Tipo 'DE - Desenvolvimento Experimental' e Natureza 'Produto': 4784 projetos
+2025-08-21 12:01:53,354 - INFO - 📅 Anos encontrados: [np.float64(2020.0), np.float64(2021.0), np.float64(2022.0), np.float64(2023.0)]
+2025-08-21 12:01:53,356 - INFO - 📦 Categoria dividida: 4784 projetos → 34 sub-lotes
+2025-08-21 12:01:53,356 - INFO -    🔗 Sobreposição: 20 projetos entre sub-lotes
+2025-08-21 12:01:53,367 - INFO - 🔍 Categoria filtrada com Tipo 'DE - Desenvolvimento Experimental' e Natureza 'Serviço': 84 projetos
+2025-08-21 12:01:53,368 - INFO - 📅 Anos encontrados: [np.float64(2020.0), np.float64(2021.0), np.float64(2022.0), np.float64(2023.0)]
+2025-08-21 12:01:53,380 - INFO - 🔍 Categoria filtrada com Tipo 'PA - Pesquisa Aplicada' e Natureza 'Processo': 406 projetos
+2025-08-21 12:01:53,380 - INFO - 📅 Anos encontrados: [np.float64(2020.0), np.float64(2021.0), np.float64(2022.0), np.float64(2023.0)]
+2025-08-21 12:01:53,381 - INFO - 📦 Categoria dividida: 406 projetos → 3 sub-lotes
+2025-08-21 12:01:53,382 - INFO -    🔗 Sobreposição: 20 projetos entre sub-lotes
+2025-08-21 12:01:53,395 - INFO - 🔍 Categoria filtrada com Tipo 'PA - Pesquisa Aplicada' e Natureza 'Produto': 1188 projetos
+2025-08-21 12:01:53,396 - INFO - 📅 Anos encontrados: [np.float64(2020.0), np.float64(2021.0), np.float64(2022.0), np.float64(2023.0)]
+2025-08-21 12:01:53,397 - INFO - 📦 Categoria dividida: 1188 projetos → 9 sub-lotes
+2025-08-21 12:01:53,397 - INFO -    🔗 Sobreposição: 20 projetos entre sub-lotes
+2025-08-21 12:01:53,408 - INFO - 🔍 Categoria filtrada com Tipo 'PA - Pesquisa Aplicada' e Natureza 'Serviço': 36 projetos
+2025-08-21 12:01:53,409 - INFO - 📅 Anos encontrados: [np.float64(2020.0), np.float64(2021.0), np.float64(2022.0), np.float64(2023.0)]
+2025-08-21 12:01:53,420 - INFO - 🔍 Categoria filtrada com Tipo 'PB - Pesquisa Básica' e Natureza 'Processo': 40 projetos
+2025-08-21 12:01:53,421 - INFO - 📅 Anos encontrados: [np.float64(2020.0), np.float64(2021.0), np.float64(2022.0), np.float64(2023.0)]
+2025-08-21 12:01:53,432 - INFO - 🔍 Categoria filtrada com Tipo 'PB - Pesquisa Básica' e Natureza 'Produto': 273 projetos
+2025-08-21 12:01:53,432 - INFO - 📅 Anos encontrados: [np.float64(2020.0), np.float64(2021.0), np.float64(2022.0), np.float64(2023.0)]
+2025-08-21 12:01:53,433 - INFO - 📦 Categoria dividida: 273 projetos → 2 sub-lotes
+2025-08-21 12:01:53,434 - INFO -    🔗 Sobreposição: 20 projetos entre sub-lotes
+2025-08-21 12:01:53,445 - INFO - 🔍 Categoria filtrada com Tipo 'PB - Pesquisa Básica' e Natureza 'Serviço': 6 projetos
+2025-08-21 12:01:53,446 - INFO - 📅 Anos encontrados: [np.float64(2020.0), np.float64(2023.0)]
+2025-08-21 12:01:53,466 - INFO - 🔍 Categoria filtrada com Tipo 'DE - Desenvolvimento Experimental' e Natureza 'Processo': 4823 projetos
+2025-08-21 12:01:53,467 - INFO - 📅 Anos encontrados: [np.float64(2020.0), np.float64(2021.0), np.float64(2022.0), np.float64(2023.0)]
+2025-08-21 12:01:53,468 - INFO - 📦 Categoria dividida: 4823 projetos → 34 sub-lotes
+2025-08-21 12:01:53,469 - INFO -    🔗 Sobreposição: 20 projetos entre sub-lotes
+2025-08-21 12:01:53,489 - INFO - 🔍 Categoria filtrada com Tipo 'DE - Desenvolvimento Experimental' e Natureza 'Produto': 4493 projetos
+2025-08-21 12:01:53,489 - INFO - 📅 Anos encontrados: [np.float64(2020.0), np.float64(2021.0), np.float64(2022.0), np.float64(2023.0)]
+2025-08-21 12:01:53,491 - INFO - 📦 Categoria dividida: 4493 projetos → 32 sub-lotes
+2025-08-21 12:01:53,492 - INFO -    🔗 Sobreposição: 20 projetos entre sub-lotes
+2025-08-21 12:01:53,510 - INFO - 🔍 Categoria filtrada com Tipo 'DE - Desenvolvimento Experimental' e Natureza 'Serviço': 3490 projetos
+2025-08-21 12:01:53,510 - INFO - 📅 Anos encontrados: [np.float64(2020.0), np.float64(2021.0), np.float64(2022.0), np.float64(2023.0)]
+2025-08-21 12:01:53,511 - INFO - 📦 Categoria dividida: 3490 projetos → 25 sub-lotes
+2025-08-21 12:01:53,512 - INFO -    🔗 Sobreposição: 20 projetos entre sub-lotes
+2025-08-21 12:01:53,524 - INFO - 🔍 Categoria filtrada com Tipo 'PA - Pesquisa Aplicada' e Natureza 'Processo': 430 projetos
+2025-08-21 12:01:53,525 - INFO - 📅 Anos encontrados: [np.float64(2020.0), np.float64(2021.0), np.float64(2022.0), np.float64(2023.0)]
+2025-08-21 12:01:53,525 - INFO - 📦 Categoria dividida: 430 projetos → 4 sub-lotes
+2025-08-21 12:01:53,526 - INFO -    🔗 Sobreposição: 20 projetos entre sub-lotes
+2025-08-21 12:01:53,538 - INFO - 🔍 Categoria filtrada com Tipo 'PA - Pesquisa Aplicada' e Natureza 'Produto': 529 projetos
+2025-08-21 12:01:53,539 - INFO - 📅 Anos encontrados: [np.float64(2020.0), np.float64(2021.0), np.float64(2022.0), np.float64(2023.0)]
+2025-08-21 12:01:53,540 - INFO - 📦 Categoria dividida: 529 projetos → 4 sub-lotes
+2025-08-21 12:01:53,540 - INFO -    🔗 Sobreposição: 20 projetos entre sub-lotes
+2025-08-21 12:01:53,552 - INFO - 🔍 Categoria filtrada com Tipo 'PA - Pesquisa Aplicada' e Natureza 'Serviço': 184 projetos
+2025-08-21 12:01:53,553 - INFO - 📅 Anos encontrados: [np.float64(2020.0), np.float64(2021.0), np.float64(2022.0), np.float64(2023.0)]
+2025-08-21 12:01:53,554 - INFO - 📦 Categoria dividida: 184 projetos → 2 sub-lotes
+2025-08-21 12:01:53,554 - INFO -    🔗 Sobreposição: 20 projetos entre sub-lotes
+2025-08-21 12:01:53,565 - INFO - 🔍 Categoria filtrada com Tipo 'PB - Pesquisa Básica' e Natureza 'Processo': 43 projetos
+2025-08-21 12:01:53,566 - INFO - 📅 Anos encontrados: [np.float64(2020.0), np.float64(2021.0), np.float64(2022.0), np.float64(2023.0)]
+2025-08-21 12:01:53,577 - INFO - 🔍 Categoria filtrada com Tipo 'PB - Pesquisa Básica' e Natureza 'Produto': 78 projetos
+2025-08-21 12:01:53,577 - INFO - 📅 Anos encontrados: [np.float64(2020.0), np.float64(2021.0), np.float64(2022.0), np.float64(2023.0)]
+2025-08-21 12:01:53,588 - INFO - 🔍 Categoria filtrada com Tipo 'PB - Pesquisa Básica' e Natureza 'Serviço': 19 projetos
+2025-08-21 12:01:53,589 - INFO - 📅 Anos encontrados: [np.float64(2021.0), np.float64(2022.0), np.float64(2023.0)]
+2025-08-21 12:01:53,603 - INFO - 🔍 Categoria filtrada com Tipo 'DE - Desenvolvimento Experimental' e Natureza 'Processo': 1366 projetos
+2025-08-21 12:01:53,604 - INFO - 📅 Anos encontrados: [np.float64(2020.0), np.float64(2021.0), np.float64(2022.0), np.float64(2023.0)]
+2025-08-21 12:01:53,605 - INFO - 📦 Categoria dividida: 1366 projetos → 10 sub-lotes
+2025-08-21 12:01:53,605 - INFO -    🔗 Sobreposição: 20 projetos entre sub-lotes
+2025-08-21 12:01:53,621 - INFO - 🔍 Categoria filtrada com Tipo 'DE - Desenvolvimento Experimental' e Natureza 'Produto': 2301 projetos
+2025-08-21 12:01:53,622 - INFO - 📅 Anos encontrados: [np.float64(2020.0), np.float64(2021.0), np.float64(2022.0), np.float64(2023.0)]
+2025-08-21 12:01:53,623 - INFO - 📦 Categoria dividida: 2301 projetos → 17 sub-lotes
+2025-08-21 12:01:53,623 - INFO -    🔗 Sobreposição: 20 projetos entre sub-lotes
+2025-08-21 12:01:53,635 - INFO - 🔍 Categoria filtrada com Tipo 'DE - Desenvolvimento Experimental' e Natureza 'Serviço': 137 projetos
+2025-08-21 12:01:53,635 - INFO - 📅 Anos encontrados: [np.float64(2020.0), np.float64(2021.0), np.float64(2022.0), np.float64(2023.0)]
+2025-08-21 12:01:53,647 - INFO - 🔍 Categoria filtrada com Tipo 'PA - Pesquisa Aplicada' e Natureza 'Processo': 378 projetos
+2025-08-21 12:01:53,648 - INFO - 📅 Anos encontrados: [np.float64(2020.0), np.float64(2021.0), np.float64(2022.0), np.float64(2023.0)]
+2025-08-21 12:01:53,648 - INFO - 📦 Categoria dividida: 378 projetos → 3 sub-lotes
+2025-08-21 12:01:53,649 - INFO -    🔗 Sobreposição: 20 projetos entre sub-lotes
+2025-08-21 12:01:53,661 - INFO - 🔍 Categoria filtrada com Tipo 'PA - Pesquisa Aplicada' e Natureza 'Produto': 555 projetos
+2025-08-21 12:01:53,662 - INFO - 📅 Anos encontrados: [np.float64(2020.0), np.float64(2021.0), np.float64(2022.0), np.float64(2023.0)]
+2025-08-21 12:01:53,663 - INFO - 📦 Categoria dividida: 555 projetos → 4 sub-lotes
+2025-08-21 12:01:53,663 - INFO -    🔗 Sobreposição: 20 projetos entre sub-lotes
+2025-08-21 12:01:53,675 - INFO - 🔍 Categoria filtrada com Tipo 'PA - Pesquisa Aplicada' e Natureza 'Serviço': 40 projetos
+2025-08-21 12:01:53,676 - INFO - 📅 Anos encontrados: [np.float64(2020.0), np.float64(2021.0), np.float64(2022.0), np.float64(2023.0)]
+2025-08-21 12:01:53,687 - INFO - 🔍 Categoria filtrada com Tipo 'PB - Pesquisa Básica' e Natureza 'Processo': 125 projetos
+2025-08-21 12:01:53,687 - INFO - 📅 Anos encontrados: [np.float64(2020.0), np.float64(2021.0), np.float64(2022.0), np.float64(2023.0)]
+2025-08-21 12:01:53,698 - INFO - 🔍 Categoria filtrada com Tipo 'PB - Pesquisa Básica' e Natureza 'Produto': 164 projetos
+2025-08-21 12:01:53,699 - INFO - 📅 Anos encontrados: [np.float64(2020.0), np.float64(2021.0), np.float64(2022.0), np.float64(2023.0)]
+2025-08-21 12:01:53,700 - INFO - 📦 Categoria dividida: 164 projetos → 2 sub-lotes
+2025-08-21 12:01:53,700 - INFO -    🔗 Sobreposição: 20 projetos entre sub-lotes
+2025-08-21 12:01:53,711 - INFO - 🔍 Categoria filtrada com Tipo 'PB - Pesquisa Básica' e Natureza 'Serviço': 8 projetos
+2025-08-21 12:01:53,712 - INFO - 📅 Anos encontrados: [np.float64(2020.0), np.float64(2021.0), np.float64(2022.0), np.float64(2023.0)]
+2025-08-21 12:01:53,713 - INFO - 📋 Plano por categoria criado: 352 itens
+2025-08-21 12:01:53,713 - INFO -    🟢 Categorias processadas completas: 31
+2025-08-21 12:01:53,714 - INFO -    🟡 Sub-lotes para merge posterior: 321
+2025-08-21 12:01:53,719 - INFO - 📄 Plano por categoria salvo: resultados_agrupamento/plano_processamento_categoria.csv
+2025-08-21 12:03:50,642 - INFO -   -> ✅ Carregado: 'grupos_categoria_Transversal_DE_-_Desenvolvimento_Expe_Processo_sublote8.csv' (54 linhas)
+2025-08-21 12:03:50,657 - INFO -   -> ✅ Carregado: 'grupos_categoria_Química_e_Farmácia_DE_-_Desenvolvimento_Expe_Produto_sublote34.csv' (116 linhas)
+2025-08-21 12:03:50,662 - INFO -   -> ✅ Carregado: 'grupos_categoria_Metalurgia_e_Mineração_DE_-_Desenvolvimento_Expe_Processo_sublote2.csv' (70 linhas)
+2025-08-21 12:03:50,668 - INFO -   -> ✅ Carregado: 'grupos_categoria_Agroindústria_e_Alimentos_DE_-_Desenvolvimento_Expe_Produto_sublote3.csv' (106 linhas)
+2025-08-21 12:03:50,672 - INFO -   -> ✅ Carregado: 'grupos_categoria_Metalurgia_e_Mineração_DE_-_Desenvolvimento_Expe_Produto_sublote1.csv' (59 linhas)
+2025-08-21 12:03:50,677 - INFO -   -> ✅ Carregado: 'grupos_categoria_Transversal_PA_-_Pesquisa_Aplicada_Processo_sublote1.csv' (39 linhas)
+2025-08-21 12:03:50,683 - INFO -   -> ✅ Carregado: 'grupos_categoria_Agroindústria_e_Alimentos_DE_-_Desenvolvimento_Expe_Produto_sublote15.csv' (86 linhas)
+2025-08-21 12:03:50,688 - INFO -   -> ✅ Carregado: 'grupos_categoria_Eletroeletrônica_DE_-_Desenvolvimento_Expe_Produto_sublote13.csv' (104 linhas)
+2025-08-21 12:03:50,693 - INFO -   -> ✅ Carregado: 'grupos_categoria_Transversal_DE_-_Desenvolvimento_Expe_Processo_sublote10.csv' (108 linhas)
+2025-08-21 12:03:50,720 - INFO -   -> ✅ Carregado: 'grupos_categoria_TIC_DE_-_Desenvolvimento_Expe_Produto_sublote25.csv' (120 linhas)
+2025-08-21 12:03:50,747 - INFO -   -> ✅ Carregado: 'grupos_categoria_TIC_DE_-_Desenvolvimento_Expe_Serviço_sublote8.csv' (125 linhas)
+2025-08-21 12:03:50,779 - INFO -   -> ✅ Carregado: 'grupos_categoria_TIC_DE_-_Desenvolvimento_Expe_Serviço_sublote3.csv' (51 linhas)
+2025-08-21 12:03:50,784 - INFO -   -> ✅ Carregado: 'grupos_categoria_Eletroeletrônica_PA_-_Pesquisa_Aplicada_Produto_sublote6.csv' (58 linhas)
+2025-08-21 12:03:50,789 - INFO -   -> ✅ Carregado: 'grupos_categoria_Química_e_Farmácia_PA_-_Pesquisa_Aplicada_Produto_sublote6.csv' (102 linhas)
+2025-08-21 12:03:50,794 - INFO -   -> ✅ Carregado: 'grupos_categoria_Agroindústria_e_Alimentos_DE_-_Desenvolvimento_Expe_Produto_sublote1.csv' (65 linhas)
+2025-08-21 12:03:50,799 - INFO -   -> ✅ Carregado: 'grupos_categoria_TIC_DE_-_Desenvolvimento_Expe_Processo_sublote6.csv' (47 linhas)
+2025-08-21 12:03:50,804 - INFO -   -> ✅ Carregado: 'grupos_categoria_Química_e_Farmácia_DE_-_Desenvolvimento_Expe_Produto_sublote16.csv' (46 linhas)
+2025-08-21 12:03:50,810 - INFO -   -> ✅ Carregado: 'grupos_categoria_Transversal_DE_-_Desenvolvimento_Expe_Produto_sublote16.csv' (133 linhas)
+2025-08-21 12:03:50,815 - INFO -   -> ✅ Carregado: 'grupos_categoria_Transversal_PA_-_Pesquisa_Aplicada_Produto_sublote4.csv' (112 linhas)
+2025-08-21 12:03:50,822 - INFO -   -> ✅ Carregado: 'grupos_categoria_Química_e_Farmácia_DE_-_Desenvolvimento_Expe_Produto_sublote26.csv' (113 linhas)
+2025-08-21 12:03:50,826 - INFO -   -> ✅ Carregado: 'grupos_categoria_Metalurgia_e_Mineração_PA_-_Pesquisa_Aplicada_Produto_sublote1.csv' (37 linhas)
+2025-08-21 12:03:50,831 - INFO -   -> ✅ Carregado: 'grupos_categoria_Química_e_Farmácia_DE_-_Desenvolvimento_Expe_Produto_sublote9.csv' (49 linhas)
+2025-08-21 12:03:50,836 - INFO -   -> ✅ Carregado: 'grupos_categoria_TIC_DE_-_Desenvolvimento_Expe_Processo_sublote9.csv' (111 linhas)
+2025-08-21 12:03:50,841 - INFO -   -> ✅ Carregado: 'grupos_categoria_TIC_DE_-_Desenvolvimento_Expe_Produto_sublote27.csv' (125 linhas)
+2025-08-21 12:03:50,847 - INFO -   -> ✅ Carregado: 'grupos_categoria_Agroindústria_e_Alimentos_DE_-_Desenvolvimento_Expe_Produto_sublote17.csv' (57 linhas)
+2025-08-21 12:03:50,851 - INFO -   -> ✅ Carregado: 'grupos_categoria_TIC_DE_-_Desenvolvimento_Expe_Processo_sublote2.csv' (63 linhas)
+2025-08-21 12:03:50,856 - INFO -   -> ✅ Carregado: 'grupos_categoria_TIC_DE_-_Desenvolvimento_Expe_Serviço_sublote6.csv' (116 linhas)
+2025-08-21 12:03:50,861 - INFO -   -> ✅ Carregado: 'grupos_categoria_Mecânica_e_Transporte_DE_-_Desenvolvimento_Expe_Processo_sublote5.csv' (123 linhas)
+2025-08-21 12:03:50,865 - INFO -   -> ✅ Carregado: 'grupos_categoria_Transversal_PB_-_Pesquisa_Básica_Processo_completa.csv' (62 linhas)
+2025-08-21 12:03:50,868 - INFO -   -> ✅ Carregado: 'grupos_categoria_Química_e_Farmácia_DE_-_Desenvolvimento_Expe_Produto_sublote11.csv' (42 linhas)
+2025-08-21 12:03:50,872 - INFO -   -> ✅ Carregado: 'grupos_categoria_Mecânica_e_Transporte_DE_-_Desenvolvimento_Expe_Produto_sublote5.csv' (130 linhas)
+2025-08-21 12:03:50,876 - INFO -   -> ✅ Carregado: 'grupos_categoria_TIC_DE_-_Desenvolvimento_Expe_Serviço_sublote15.csv' (35 linhas)
+2025-08-21 12:03:50,880 - INFO -   -> ✅ Carregado: 'grupos_categoria_TIC_DE_-_Desenvolvimento_Expe_Serviço_sublote19.csv' (45 linhas)
+2025-08-21 12:03:50,883 - INFO -   -> ✅ Carregado: 'grupos_categoria_Eletroeletrônica_DE_-_Desenvolvimento_Expe_Produto_sublote3.csv' (53 linhas)
+2025-08-21 12:03:50,887 - INFO -   -> ✅ Carregado: 'grupos_categoria_TIC_DE_-_Desenvolvimento_Expe_Produto_sublote15.csv' (62 linhas)
+2025-08-21 12:03:50,891 - INFO -   -> ✅ Carregado: 'grupos_categoria_Química_e_Farmácia_DE_-_Desenvolvimento_Expe_Serviço_completa.csv' (69 linhas)
+2025-08-21 12:03:50,894 - INFO -   -> ✅ Carregado: 'grupos_categoria_TIC_DE_-_Desenvolvimento_Expe_Produto_sublote30.csv' (54 linhas)
+2025-08-21 12:03:50,897 - INFO -   -> ✅ Carregado: 'grupos_categoria_Mecânica_e_Transporte_DE_-_Desenvolvimento_Expe_Produto_sublote4.csv' (58 linhas)
+2025-08-21 12:03:50,901 - INFO -   -> ✅ Carregado: 'grupos_categoria_Eletroeletrônica_DE_-_Desenvolvimento_Expe_Processo_sublote6.csv' (135 linhas)
+2025-08-21 12:03:50,904 - INFO -   -> ✅ Carregado: 'grupos_categoria_TIC_DE_-_Desenvolvimento_Expe_Serviço_sublote21.csv' (65 linhas)
+2025-08-21 12:03:50,907 - INFO -   -> ✅ Carregado: 'grupos_categoria_TIC_PB_-_Pesquisa_Básica_Serviço_completa.csv' (19 linhas)
+2025-08-21 12:03:50,911 - INFO -   -> ✅ Carregado: 'grupos_categoria_Química_e_Farmácia_DE_-_Desenvolvimento_Expe_Processo_sublote2.csv' (122 linhas)
+2025-08-21 12:03:50,914 - INFO -   -> ✅ Carregado: 'grupos_categoria_TIC_DE_-_Desenvolvimento_Expe_Processo_sublote8.csv' (122 linhas)
+2025-08-21 12:03:50,917 - INFO -   -> ✅ Carregado: 'grupos_categoria_Eletroeletrônica_DE_-_Desenvolvimento_Expe_Produto_sublote8.csv' (118 linhas)
+2025-08-21 12:03:50,921 - INFO -   -> ✅ Carregado: 'grupos_categoria_TIC_DE_-_Desenvolvimento_Expe_Produto_sublote29.csv' (66 linhas)
+2025-08-21 12:03:50,924 - INFO -   -> ✅ Carregado: 'grupos_categoria_TIC_DE_-_Desenvolvimento_Expe_Processo_sublote20.csv' (132 linhas)
+2025-08-21 12:03:50,927 - INFO -   -> ✅ Carregado: 'grupos_categoria_Agroindústria_e_Alimentos_PA_-_Pesquisa_Aplicada_Produto_sublote2.csv' (91 linhas)
+2025-08-21 12:03:50,930 - INFO -   -> ✅ Carregado: 'grupos_categoria_Agroindústria_e_Alimentos_DE_-_Desenvolvimento_Expe_Produto_sublote6.csv' (96 linhas)
+2025-08-21 12:03:50,933 - INFO -   -> ✅ Carregado: 'grupos_categoria_Química_e_Farmácia_DE_-_Desenvolvimento_Expe_Produto_sublote28.csv' (99 linhas)
+2025-08-21 12:03:50,936 - INFO -   -> ✅ Carregado: 'grupos_categoria_Mecânica_e_Transporte_DE_-_Desenvolvimento_Expe_Processo_sublote3.csv' (65 linhas)
+2025-08-21 12:03:50,939 - INFO -   -> ✅ Carregado: 'grupos_categoria_Eletroeletrônica_DE_-_Desenvolvimento_Expe_Processo_sublote1.csv' (32 linhas)
+2025-08-21 12:03:50,941 - INFO -   -> ✅ Carregado: 'grupos_categoria_TIC_DE_-_Desenvolvimento_Expe_Processo_sublote29.csv' (41 linhas)
+2025-08-21 12:03:50,944 - INFO -   -> ✅ Carregado: 'grupos_categoria_Mecânica_e_Transporte_DE_-_Desenvolvimento_Expe_Produto_sublote12.csv' (48 linhas)
+2025-08-21 12:03:50,947 - INFO -   -> ✅ Carregado: 'grupos_categoria_TIC_DE_-_Desenvolvimento_Expe_Serviço_sublote17.csv' (33 linhas)
+2025-08-21 12:03:50,950 - INFO -   -> ✅ Carregado: 'grupos_categoria_Transversal_DE_-_Desenvolvimento_Expe_Produto_sublote6.csv' (114 linhas)
+2025-08-21 12:03:50,953 - INFO -   -> ✅ Carregado: 'grupos_categoria_Eletroeletrônica_DE_-_Desenvolvimento_Expe_Produto_sublote4.csv' (111 linhas)
+2025-08-21 12:03:50,956 - INFO -   -> ✅ Carregado: 'grupos_categoria_Química_e_Farmácia_DE_-_Desenvolvimento_Expe_Produto_sublote1.csv' (64 linhas)
+2025-08-21 12:03:50,959 - INFO -   -> ✅ Carregado: 'grupos_categoria_Química_e_Farmácia_PB_-_Pesquisa_Básica_Processo_completa.csv' (40 linhas)
+2025-08-21 12:03:50,962 - INFO -   -> ✅ Carregado: 'grupos_categoria_TIC_DE_-_Desenvolvimento_Expe_Produto_sublote18.csv' (130 linhas)
+2025-08-21 12:03:50,964 - INFO -   -> ✅ Carregado: 'grupos_categoria_Agroindústria_e_Alimentos_PB_-_Pesquisa_Básica_Serviço_completa.csv' (4 linhas)
+2025-08-21 12:03:50,967 - INFO -   -> ✅ Carregado: 'grupos_categoria_Metalurgia_e_Mineração_DE_-_Desenvolvimento_Expe_Produto_sublote9.csv' (95 linhas)
+2025-08-21 12:03:50,970 - INFO -   -> ✅ Carregado: 'grupos_categoria_TIC_DE_-_Desenvolvimento_Expe_Processo_sublote4.csv' (102 linhas)
+2025-08-21 12:03:50,972 - INFO -   -> ✅ Carregado: 'grupos_categoria_TIC_DE_-_Desenvolvimento_Expe_Serviço_sublote9.csv' (115 linhas)
+2025-08-21 12:03:50,975 - INFO -   -> ✅ Carregado: 'grupos_categoria_TIC_DE_-_Desenvolvimento_Expe_Processo_sublote18.csv' (43 linhas)
+2025-08-21 12:03:50,978 - INFO -   -> ✅ Carregado: 'grupos_categoria_Química_e_Farmácia_DE_-_Desenvolvimento_Expe_Produto_sublote3.csv' (116 linhas)
+2025-08-21 12:03:50,981 - INFO -   -> ✅ Carregado: 'grupos_categoria_Mecânica_e_Transporte_DE_-_Desenvolvimento_Expe_Produto_sublote15.csv' (73 linhas)
+2025-08-21 12:03:50,983 - INFO -   -> ✅ Carregado: 'grupos_categoria_TIC_PA_-_Pesquisa_Aplicada_Processo_sublote3.csv' (111 linhas)
+2025-08-21 12:03:50,986 - INFO -   -> ✅ Carregado: 'grupos_categoria_Transversal_DE_-_Desenvolvimento_Expe_Produto_sublote5.csv' (106 linhas)
+2025-08-21 12:03:50,988 - INFO -   -> ✅ Carregado: 'grupos_categoria_Eletroeletrônica_PB_-_Pesquisa_Básica_Serviço_completa.csv' (24 linhas)
+2025-08-21 12:03:50,991 - INFO -   -> ✅ Carregado: 'grupos_categoria_Transversal_DE_-_Desenvolvimento_Expe_Produto_sublote2.csv' (115 linhas)
+2025-08-21 12:03:50,994 - INFO -   -> ✅ Carregado: 'grupos_categoria_Eletroeletrônica_PB_-_Pesquisa_Básica_Processo_completa.csv' (48 linhas)
+2025-08-21 12:03:50,996 - INFO -   -> ✅ Carregado: 'grupos_categoria_Eletroeletrônica_DE_-_Desenvolvimento_Expe_Produto_sublote9.csv' (111 linhas)
+2025-08-21 12:03:50,999 - INFO -   -> ✅ Carregado: 'grupos_categoria_Mecânica_e_Transporte_DE_-_Desenvolvimento_Expe_Produto_sublote16.csv' (112 linhas)
+2025-08-21 12:03:51,002 - INFO -   -> ✅ Carregado: 'grupos_categoria_Eletroeletrônica_DE_-_Desenvolvimento_Expe_Processo_sublote5.csv' (48 linhas)
+2025-08-21 12:03:51,004 - INFO -   -> ✅ Carregado: 'grupos_categoria_Mecânica_e_Transporte_DE_-_Desenvolvimento_Expe_Produto_sublote18.csv' (111 linhas)
+2025-08-21 12:03:51,007 - INFO -   -> ✅ Carregado: 'grupos_categoria_Metalurgia_e_Mineração_DE_-_Desenvolvimento_Expe_Processo_sublote3.csv' (111 linhas)
+2025-08-21 12:03:51,010 - INFO -   -> ✅ Carregado: 'grupos_categoria_Química_e_Farmácia_DE_-_Desenvolvimento_Expe_Produto_sublote4.csv' (66 linhas)
+2025-08-21 12:03:51,012 - INFO -   -> ✅ Carregado: 'grupos_categoria_TIC_DE_-_Desenvolvimento_Expe_Processo_sublote28.csv' (29 linhas)
+2025-08-21 12:03:51,014 - INFO -   -> ✅ Carregado: 'grupos_categoria_TIC_DE_-_Desenvolvimento_Expe_Serviço_sublote1.csv' (97 linhas)
+2025-08-21 12:03:51,017 - INFO -   -> ✅ Carregado: 'grupos_categoria_Mecânica_e_Transporte_DE_-_Desenvolvimento_Expe_Produto_sublote1.csv' (81 linhas)
+2025-08-21 12:03:51,019 - INFO -   -> ✅ Carregado: 'grupos_categoria_Mecânica_e_Transporte_DE_-_Desenvolvimento_Expe_Processo_sublote8.csv' (105 linhas)
+2025-08-21 12:03:51,022 - INFO -   -> ✅ Carregado: 'grupos_categoria_Metalurgia_e_Mineração_DE_-_Desenvolvimento_Expe_Processo_sublote6.csv' (120 linhas)
+2025-08-21 12:03:51,024 - INFO -   -> ✅ Carregado: 'grupos_categoria_Eletroeletrônica_DE_-_Desenvolvimento_Expe_Produto_sublote6.csv' (47 linhas)
+2025-08-21 12:03:51,027 - INFO -   -> ✅ Carregado: 'grupos_categoria_Mecânica_e_Transporte_PA_-_Pesquisa_Aplicada_Produto_sublote2.csv' (85 linhas)
+2025-08-21 12:03:51,029 - INFO -   -> ✅ Carregado: 'grupos_categoria_Transversal_DE_-_Desenvolvimento_Expe_Produto_sublote3.csv' (100 linhas)
+2025-08-21 12:03:51,032 - INFO -   -> ✅ Carregado: 'grupos_categoria_Transversal_DE_-_Desenvolvimento_Expe_Processo_sublote7.csv' (134 linhas)
+2025-08-21 12:03:51,034 - INFO -   -> ✅ Carregado: 'grupos_categoria_Eletroeletrônica_PA_-_Pesquisa_Aplicada_Produto_sublote1.csv' (50 linhas)
+2025-08-21 12:03:51,037 - INFO -   -> ✅ Carregado: 'grupos_categoria_Transversal_DE_-_Desenvolvimento_Expe_Produto_sublote7.csv' (107 linhas)
+2025-08-21 12:03:51,039 - INFO -   -> ✅ Carregado: 'grupos_categoria_TIC_DE_-_Desenvolvimento_Expe_Processo_sublote5.csv' (37 linhas)
+2025-08-21 12:03:51,041 - INFO -   -> ✅ Carregado: 'grupos_categoria_TIC_DE_-_Desenvolvimento_Expe_Produto_sublote20.csv' (20 linhas)
+2025-08-21 12:03:51,044 - INFO -   -> ✅ Carregado: 'grupos_categoria_TIC_PA_-_Pesquisa_Aplicada_Produto_sublote1.csv' (123 linhas)
+2025-08-21 12:03:51,046 - INFO -   -> ✅ Carregado: 'grupos_categoria_Transversal_DE_-_Desenvolvimento_Expe_Processo_sublote6.csv' (110 linhas)
+2025-08-21 12:03:51,049 - INFO -   -> ✅ Carregado: 'grupos_categoria_TIC_DE_-_Desenvolvimento_Expe_Produto_sublote3.csv' (120 linhas)
+2025-08-21 12:03:51,052 - INFO -   -> ✅ Carregado: 'grupos_categoria_TIC_DE_-_Desenvolvimento_Expe_Produto_sublote13.csv' (121 linhas)
+2025-08-21 12:03:51,054 - INFO -   -> ✅ Carregado: 'grupos_categoria_Agroindústria_e_Alimentos_DE_-_Desenvolvimento_Expe_Produto_sublote19.csv' (47 linhas)
+2025-08-21 12:03:51,056 - INFO -   -> ✅ Carregado: 'grupos_categoria_Química_e_Farmácia_DE_-_Desenvolvimento_Expe_Processo_sublote4.csv' (38 linhas)
+2025-08-21 12:03:51,059 - INFO -   -> ✅ Carregado: 'grupos_categoria_Química_e_Farmácia_DE_-_Desenvolvimento_Expe_Produto_sublote12.csv' (26 linhas)
+2025-08-21 12:03:51,061 - INFO -   -> ✅ Carregado: 'grupos_categoria_Metalurgia_e_Mineração_DE_-_Desenvolvimento_Expe_Processo_sublote4.csv' (72 linhas)
+2025-08-21 12:03:51,063 - INFO -   -> ✅ Carregado: 'grupos_categoria_TIC_DE_-_Desenvolvimento_Expe_Produto_sublote7.csv' (110 linhas)
+2025-08-21 12:03:51,066 - INFO -   -> ✅ Carregado: 'grupos_categoria_Transversal_DE_-_Desenvolvimento_Expe_Produto_sublote12.csv' (124 linhas)
+2025-08-21 12:03:51,068 - INFO -   -> ✅ Carregado: 'grupos_categoria_Agroindústria_e_Alimentos_PA_-_Pesquisa_Aplicada_Processo_sublote1.csv' (34 linhas)
+2025-08-21 12:03:51,070 - INFO -   -> ✅ Carregado: 'grupos_categoria_Mecânica_e_Transporte_DE_-_Desenvolvimento_Expe_Produto_sublote11.csv' (53 linhas)
+2025-08-21 12:03:51,073 - INFO -   -> ✅ Carregado: 'grupos_categoria_Transversal_PA_-_Pesquisa_Aplicada_Produto_sublote3.csv' (138 linhas)
+2025-08-21 12:03:51,076 - INFO -   -> ✅ Carregado: 'grupos_categoria_Química_e_Farmácia_PA_-_Pesquisa_Aplicada_Produto_sublote4.csv' (108 linhas)
+2025-08-21 12:03:51,078 - INFO -   -> ✅ Carregado: 'grupos_categoria_Metalurgia_e_Mineração_PB_-_Pesquisa_Básica_Produto_completa.csv' (48 linhas)
+2025-08-21 12:03:51,080 - INFO -   -> ✅ Carregado: 'grupos_categoria_Transversal_DE_-_Desenvolvimento_Expe_Produto_sublote8.csv' (130 linhas)
+2025-08-21 12:03:51,083 - INFO -   -> ✅ Carregado: 'grupos_categoria_TIC_DE_-_Desenvolvimento_Expe_Serviço_sublote10.csv' (117 linhas)
+2025-08-21 12:03:51,085 - INFO -   -> ✅ Carregado: 'grupos_categoria_TIC_DE_-_Desenvolvimento_Expe_Processo_sublote23.csv' (54 linhas)
+2025-08-21 12:03:51,087 - INFO -   -> ✅ Carregado: 'grupos_categoria_Mecânica_e_Transporte_PA_-_Pesquisa_Aplicada_Produto_sublote1.csv' (62 linhas)
+2025-08-21 12:03:51,089 - INFO -   -> ✅ Carregado: 'grupos_categoria_Mecânica_e_Transporte_DE_-_Desenvolvimento_Expe_Processo_sublote1.csv' (36 linhas)
+2025-08-21 12:03:51,092 - INFO -   -> ✅ Carregado: 'grupos_categoria_Mecânica_e_Transporte_DE_-_Desenvolvimento_Expe_Produto_sublote10.csv' (126 linhas)
+2025-08-21 12:03:51,094 - INFO -   -> ✅ Carregado: 'grupos_categoria_TIC_DE_-_Desenvolvimento_Expe_Serviço_sublote5.csv' (120 linhas)
+2025-08-21 12:03:51,097 - INFO -   -> ✅ Carregado: 'grupos_categoria_Metalurgia_e_Mineração_PA_-_Pesquisa_Aplicada_Processo_sublote2.csv' (130 linhas)
+2025-08-21 12:03:51,099 - INFO -   -> ✅ Carregado: 'grupos_categoria_Transversal_PB_-_Pesquisa_Básica_Produto_sublote1.csv' (134 linhas)
+2025-08-21 12:03:51,101 - INFO -   -> ✅ Carregado: 'grupos_categoria_TIC_PB_-_Pesquisa_Básica_Produto_completa.csv' (43 linhas)
+2025-08-21 12:03:51,104 - INFO -   -> ✅ Carregado: 'grupos_categoria_TIC_DE_-_Desenvolvimento_Expe_Produto_sublote22.csv' (113 linhas)
+2025-08-21 12:03:51,106 - INFO -   -> ✅ Carregado: 'grupos_categoria_TIC_DE_-_Desenvolvimento_Expe_Processo_sublote25.csv' (53 linhas)
+2025-08-21 12:03:51,108 - INFO -   -> ✅ Carregado: 'grupos_categoria_Química_e_Farmácia_PA_-_Pesquisa_Aplicada_Produto_sublote9.csv' (64 linhas)
+2025-08-21 12:03:51,110 - INFO -   -> ✅ Carregado: 'grupos_categoria_Agroindústria_e_Alimentos_DE_-_Desenvolvimento_Expe_Produto_sublote16.csv' (51 linhas)
+2025-08-21 12:03:51,112 - INFO -   -> ✅ Carregado: 'grupos_categoria_TIC_DE_-_Desenvolvimento_Expe_Processo_sublote3.csv' (52 linhas)
+2025-08-21 12:03:51,114 - INFO -   -> ✅ Carregado: 'grupos_categoria_Mecânica_e_Transporte_PB_-_Pesquisa_Básica_Serviço_completa.csv' (3 linhas)
+2025-08-21 12:03:51,117 - INFO -   -> ✅ Carregado: 'grupos_categoria_Química_e_Farmácia_PB_-_Pesquisa_Básica_Produto_sublote1.csv' (32 linhas)
+2025-08-21 12:03:51,119 - INFO -   -> ✅ Carregado: 'grupos_categoria_Mecânica_e_Transporte_DE_-_Desenvolvimento_Expe_Produto_sublote19.csv' (106 linhas)
+2025-08-21 12:03:51,122 - INFO -   -> ✅ Carregado: 'grupos_categoria_Química_e_Farmácia_DE_-_Desenvolvimento_Expe_Produto_sublote10.csv' (126 linhas)
+2025-08-21 12:03:51,124 - INFO -   -> ✅ Carregado: 'grupos_categoria_TIC_DE_-_Desenvolvimento_Expe_Produto_sublote12.csv' (122 linhas)
+2025-08-21 12:03:51,126 - INFO -   -> ✅ Carregado: 'grupos_categoria_TIC_DE_-_Desenvolvimento_Expe_Serviço_sublote13.csv' (122 linhas)
+2025-08-21 12:03:51,129 - INFO -   -> ✅ Carregado: 'grupos_categoria_Mecânica_e_Transporte_DE_-_Desenvolvimento_Expe_Processo_sublote9.csv' (137 linhas)
+2025-08-21 12:03:51,131 - INFO -   -> ✅ Carregado: 'grupos_categoria_Agroindústria_e_Alimentos_DE_-_Desenvolvimento_Expe_Processo_sublote3.csv' (121 linhas)
+2025-08-21 12:03:51,133 - INFO -   -> ✅ Carregado: 'grupos_categoria_Química_e_Farmácia_PA_-_Pesquisa_Aplicada_Processo_sublote2.csv' (130 linhas)
+2025-08-21 12:03:51,135 - INFO -   -> ✅ Carregado: 'grupos_categoria_Transversal_DE_-_Desenvolvimento_Expe_Produto_sublote1.csv' (88 linhas)
+2025-08-21 12:03:51,138 - INFO -   -> ✅ Carregado: 'grupos_categoria_TIC_DE_-_Desenvolvimento_Expe_Produto_sublote1.csv' (40 linhas)
+2025-08-21 12:03:51,140 - INFO -   -> ✅ Carregado: 'grupos_categoria_Transversal_PA_-_Pesquisa_Aplicada_Processo_sublote2.csv' (134 linhas)
+2025-08-21 12:03:51,142 - INFO -   -> ✅ Carregado: 'grupos_categoria_Eletroeletrônica_PA_-_Pesquisa_Aplicada_Produto_sublote4.csv' (50 linhas)
+2025-08-21 12:03:51,144 - INFO -   -> ✅ Carregado: 'grupos_categoria_Mecânica_e_Transporte_PA_-_Pesquisa_Aplicada_Produto_sublote3.csv' (108 linhas)
+2025-08-21 12:03:51,147 - INFO -   -> ✅ Carregado: 'grupos_categoria_Metalurgia_e_Mineração_DE_-_Desenvolvimento_Expe_Processo_sublote7.csv' (122 linhas)
+2025-08-21 12:03:51,149 - INFO -   -> ✅ Carregado: 'grupos_categoria_Química_e_Farmácia_DE_-_Desenvolvimento_Expe_Produto_sublote2.csv' (92 linhas)
+2025-08-21 12:03:51,151 - INFO -   -> ✅ Carregado: 'grupos_categoria_TIC_PA_-_Pesquisa_Aplicada_Processo_sublote4.csv' (24 linhas)
+2025-08-21 12:03:51,153 - INFO -   -> ✅ Carregado: 'grupos_categoria_Química_e_Farmácia_PA_-_Pesquisa_Aplicada_Produto_sublote2.csv' (59 linhas)
+2025-08-21 12:03:51,155 - INFO -   -> ✅ Carregado: 'grupos_categoria_Agroindústria_e_Alimentos_DE_-_Desenvolvimento_Expe_Processo_sublote2.csv' (37 linhas)
+2025-08-21 12:03:51,157 - INFO -   -> ✅ Carregado: 'grupos_categoria_TIC_DE_-_Desenvolvimento_Expe_Produto_sublote9.csv' (71 linhas)
+2025-08-21 12:03:51,159 - INFO -   -> ✅ Carregado: 'grupos_categoria_Transversal_DE_-_Desenvolvimento_Expe_Produto_sublote9.csv' (124 linhas)
+2025-08-21 12:03:51,162 - INFO -   -> ✅ Carregado: 'grupos_categoria_Química_e_Farmácia_DE_-_Desenvolvimento_Expe_Processo_sublote6.csv' (108 linhas)
+2025-08-21 12:03:51,165 - INFO -   -> ✅ Carregado: 'grupos_categoria_Mecânica_e_Transporte_DE_-_Desenvolvimento_Expe_Processo_sublote4.csv' (28 linhas)
+2025-08-21 12:03:51,167 - INFO -   -> ✅ Carregado: 'grupos_categoria_TIC_DE_-_Desenvolvimento_Expe_Produto_sublote6.csv' (36 linhas)
+2025-08-21 12:03:51,169 - INFO -   -> ✅ Carregado: 'grupos_categoria_Mecânica_e_Transporte_PA_-_Pesquisa_Aplicada_Serviço_completa.csv' (12 linhas)
+2025-08-21 12:03:51,171 - INFO -   -> ✅ Carregado: 'grupos_categoria_Química_e_Farmácia_PB_-_Pesquisa_Básica_Produto_sublote2.csv' (68 linhas)
+2025-08-21 12:03:51,173 - INFO -   -> ✅ Carregado: 'grupos_categoria_TIC_DE_-_Desenvolvimento_Expe_Processo_sublote33.csv' (38 linhas)
+2025-08-21 12:03:51,176 - INFO -   -> ✅ Carregado: 'grupos_categoria_Química_e_Farmácia_DE_-_Desenvolvimento_Expe_Processo_sublote1.csv' (99 linhas)
+2025-08-21 12:03:51,178 - INFO -   -> ✅ Carregado: 'grupos_categoria_Mecânica_e_Transporte_DE_-_Desenvolvimento_Expe_Processo_sublote6.csv' (61 linhas)
+2025-08-21 12:03:51,180 - INFO -   -> ✅ Carregado: 'grupos_categoria_TIC_DE_-_Desenvolvimento_Expe_Processo_sublote7.csv' (59 linhas)
+2025-08-21 12:03:51,182 - INFO -   -> ✅ Carregado: 'grupos_categoria_TIC_DE_-_Desenvolvimento_Expe_Produto_sublote8.csv' (113 linhas)
+2025-08-21 12:03:51,184 - INFO -   -> ✅ Carregado: 'grupos_categoria_TIC_DE_-_Desenvolvimento_Expe_Serviço_sublote23.csv' (73 linhas)
+2025-08-21 12:03:51,186 - INFO -   -> ✅ Carregado: 'grupos_categoria_Química_e_Farmácia_DE_-_Desenvolvimento_Expe_Processo_sublote8.csv' (94 linhas)
+2025-08-21 12:03:51,189 - INFO -   -> ✅ Carregado: 'grupos_categoria_Eletroeletrônica_DE_-_Desenvolvimento_Expe_Produto_sublote1.csv' (43 linhas)
+2025-08-21 12:03:51,191 - INFO -   -> ✅ Carregado: 'grupos_categoria_TIC_DE_-_Desenvolvimento_Expe_Processo_sublote15.csv' (119 linhas)
+2025-08-21 12:03:51,193 - INFO -   -> ✅ Carregado: 'grupos_categoria_Transversal_DE_-_Desenvolvimento_Expe_Processo_sublote1.csv' (36 linhas)
+2025-08-21 12:03:51,195 - INFO -   -> ✅ Carregado: 'grupos_categoria_TIC_DE_-_Desenvolvimento_Expe_Processo_sublote34.csv' (56 linhas)
+2025-08-21 12:03:51,197 - INFO -   -> ✅ Carregado: 'grupos_categoria_Agroindústria_e_Alimentos_DE_-_Desenvolvimento_Expe_Processo_sublote8.csv' (130 linhas)
+2025-08-21 12:03:51,200 - INFO -   -> ✅ Carregado: 'grupos_categoria_Transversal_DE_-_Desenvolvimento_Expe_Processo_sublote5.csv' (120 linhas)
+2025-08-21 12:03:51,202 - INFO -   -> ✅ Carregado: 'grupos_categoria_TIC_DE_-_Desenvolvimento_Expe_Processo_sublote17.csv' (28 linhas)
+2025-08-21 12:03:51,204 - INFO -   -> ✅ Carregado: 'grupos_categoria_Metalurgia_e_Mineração_DE_-_Desenvolvimento_Expe_Produto_sublote5.csv' (123 linhas)
+2025-08-21 12:03:51,206 - INFO -   -> ✅ Carregado: 'grupos_categoria_TIC_DE_-_Desenvolvimento_Expe_Produto_sublote16.csv' (69 linhas)
+2025-08-21 12:03:51,208 - INFO -   -> ✅ Carregado: 'grupos_categoria_Agroindústria_e_Alimentos_DE_-_Desenvolvimento_Expe_Produto_sublote14.csv' (62 linhas)
+2025-08-21 12:03:51,211 - INFO -   -> ✅ Carregado: 'grupos_categoria_Eletroeletrônica_DE_-_Desenvolvimento_Expe_Produto_sublote12.csv' (120 linhas)
+2025-08-21 12:03:51,213 - INFO -   -> ✅ Carregado: 'grupos_categoria_TIC_DE_-_Desenvolvimento_Expe_Serviço_sublote22.csv' (102 linhas)
+2025-08-21 12:03:51,216 - INFO -   -> ✅ Carregado: 'grupos_categoria_Transversal_PA_-_Pesquisa_Aplicada_Processo_sublote3.csv' (92 linhas)
+2025-08-21 12:03:51,218 - INFO -   -> ✅ Carregado: 'grupos_categoria_Mecânica_e_Transporte_DE_-_Desenvolvimento_Expe_Processo_sublote12.csv' (94 linhas)
+2025-08-21 12:03:51,220 - INFO -   -> ✅ Carregado: 'grupos_categoria_Eletroeletrônica_PA_-_Pesquisa_Aplicada_Serviço_completa.csv' (18 linhas)
+2025-08-21 12:03:51,222 - INFO -   -> ✅ Carregado: 'grupos_categoria_Química_e_Farmácia_DE_-_Desenvolvimento_Expe_Produto_sublote6.csv' (81 linhas)
+2025-08-21 12:03:51,225 - INFO -   -> ✅ Carregado: 'grupos_categoria_TIC_DE_-_Desenvolvimento_Expe_Processo_sublote12.csv' (41 linhas)
+2025-08-21 12:03:51,227 - INFO -   -> ✅ Carregado: 'grupos_categoria_TIC_DE_-_Desenvolvimento_Expe_Serviço_sublote18.csv' (23 linhas)
+2025-08-21 12:03:51,229 - INFO -   -> ✅ Carregado: 'grupos_categoria_Agroindústria_e_Alimentos_DE_-_Desenvolvimento_Expe_Produto_sublote11.csv' (79 linhas)
+2025-08-21 12:03:51,231 - INFO -   -> ✅ Carregado: 'grupos_categoria_Mecânica_e_Transporte_DE_-_Desenvolvimento_Expe_Processo_sublote11.csv' (23 linhas)
+2025-08-21 12:03:51,233 - INFO -   -> ✅ Carregado: 'grupos_categoria_TIC_PA_-_Pesquisa_Aplicada_Produto_sublote3.csv' (120 linhas)
+2025-08-21 12:03:51,235 - INFO -   -> ✅ Carregado: 'grupos_categoria_Agroindústria_e_Alimentos_DE_-_Desenvolvimento_Expe_Produto_sublote10.csv' (51 linhas)
+2025-08-21 12:03:51,238 - INFO -   -> ✅ Carregado: 'grupos_categoria_Agroindústria_e_Alimentos_DE_-_Desenvolvimento_Expe_Serviço_completa.csv' (52 linhas)
+2025-08-21 12:03:51,240 - INFO -   -> ✅ Carregado: 'grupos_categoria_Química_e_Farmácia_DE_-_Desenvolvimento_Expe_Produto_sublote21.csv' (78 linhas)
+2025-08-21 12:03:51,242 - INFO -   -> ✅ Carregado: 'grupos_categoria_TIC_DE_-_Desenvolvimento_Expe_Produto_sublote24.csv' (118 linhas)
+2025-08-21 12:03:51,244 - INFO -   -> ✅ Carregado: 'grupos_categoria_TIC_DE_-_Desenvolvimento_Expe_Processo_sublote19.csv' (95 linhas)
+2025-08-21 12:03:51,247 - INFO -   -> ✅ Carregado: 'grupos_categoria_Agroindústria_e_Alimentos_DE_-_Desenvolvimento_Expe_Produto_sublote5.csv' (123 linhas)
+2025-08-21 12:03:51,249 - INFO -   -> ✅ Carregado: 'grupos_categoria_Mecânica_e_Transporte_PA_-_Pesquisa_Aplicada_Processo_sublote2.csv' (105 linhas)
+2025-08-21 12:03:51,251 - INFO -   -> ✅ Carregado: 'grupos_categoria_TIC_DE_-_Desenvolvimento_Expe_Produto_sublote2.csv' (51 linhas)
+2025-08-21 12:03:51,253 - INFO -   -> ✅ Carregado: 'grupos_categoria_Agroindústria_e_Alimentos_DE_-_Desenvolvimento_Expe_Produto_sublote18.csv' (125 linhas)
+2025-08-21 12:03:51,255 - INFO -   -> ✅ Carregado: 'grupos_categoria_TIC_DE_-_Desenvolvimento_Expe_Processo_sublote21.csv' (38 linhas)
+2025-08-21 12:03:51,258 - INFO -   -> ✅ Carregado: 'grupos_categoria_Agroindústria_e_Alimentos_DE_-_Desenvolvimento_Expe_Produto_sublote9.csv' (70 linhas)
+2025-08-21 12:03:51,260 - INFO -   -> ✅ Carregado: 'grupos_categoria_Agroindústria_e_Alimentos_PA_-_Pesquisa_Aplicada_Produto_sublote5.csv' (46 linhas)
+2025-08-21 12:03:51,262 - INFO -   -> ✅ Carregado: 'grupos_categoria_Química_e_Farmácia_DE_-_Desenvolvimento_Expe_Produto_sublote15.csv' (107 linhas)
+2025-08-21 12:03:51,264 - INFO -   -> ✅ Carregado: 'grupos_categoria_Metalurgia_e_Mineração_PA_-_Pesquisa_Aplicada_Processo_sublote3.csv' (82 linhas)
+2025-08-21 12:03:51,266 - INFO -   -> ✅ Carregado: 'grupos_categoria_Eletroeletrônica_PA_-_Pesquisa_Aplicada_Processo_sublote1.csv' (121 linhas)
+2025-08-21 12:03:51,268 - INFO -   -> ✅ Carregado: 'grupos_categoria_Agroindústria_e_Alimentos_PA_-_Pesquisa_Aplicada_Produto_sublote3.csv' (54 linhas)
+2025-08-21 12:03:51,271 - INFO -   -> ✅ Carregado: 'grupos_categoria_Metalurgia_e_Mineração_DE_-_Desenvolvimento_Expe_Processo_sublote8.csv' (112 linhas)
+2025-08-21 12:03:51,273 - INFO -   -> ✅ Carregado: 'grupos_categoria_TIC_DE_-_Desenvolvimento_Expe_Produto_sublote23.csv' (119 linhas)
+2025-08-21 12:03:51,275 - INFO -   -> ✅ Carregado: 'grupos_categoria_Mecânica_e_Transporte_PB_-_Pesquisa_Básica_Produto_completa.csv' (46 linhas)
+2025-08-21 12:03:51,277 - INFO -   -> ✅ Carregado: 'grupos_categoria_Agroindústria_e_Alimentos_DE_-_Desenvolvimento_Expe_Processo_sublote9.csv' (114 linhas)
+2025-08-21 12:03:51,279 - INFO -   -> ✅ Carregado: 'grupos_categoria_Agroindústria_e_Alimentos_PA_-_Pesquisa_Aplicada_Processo_sublote2.csv' (72 linhas)
+2025-08-21 12:03:51,281 - INFO -   -> ✅ Carregado: 'grupos_categoria_Agroindústria_e_Alimentos_PA_-_Pesquisa_Aplicada_Serviço_completa.csv' (18 linhas)
+2025-08-21 12:03:51,283 - INFO -   -> ✅ Carregado: 'grupos_categoria_Mecânica_e_Transporte_DE_-_Desenvolvimento_Expe_Produto_sublote9.csv' (42 linhas)
+2025-08-21 12:03:51,285 - INFO -   -> ✅ Carregado: 'grupos_categoria_TIC_DE_-_Desenvolvimento_Expe_Processo_sublote31.csv' (31 linhas)
+2025-08-21 12:03:51,287 - INFO -   -> ✅ Carregado: 'grupos_categoria_Mecânica_e_Transporte_DE_-_Desenvolvimento_Expe_Processo_sublote7.csv' (23 linhas)
+2025-08-21 12:03:51,290 - INFO -   -> ✅ Carregado: 'grupos_categoria_TIC_DE_-_Desenvolvimento_Expe_Produto_sublote11.csv' (132 linhas)
+2025-08-21 12:03:51,294 - INFO -   -> ✅ Carregado: 'grupos_categoria_Química_e_Farmácia_DE_-_Desenvolvimento_Expe_Produto_sublote25.csv' (114 linhas)
+2025-08-21 12:03:51,319 - INFO -   -> ✅ Carregado: 'grupos_categoria_TIC_DE_-_Desenvolvimento_Expe_Produto_sublote28.csv' (110 linhas)
+2025-08-21 12:03:51,322 - INFO -   -> ✅ Carregado: 'grupos_categoria_Metalurgia_e_Mineração_DE_-_Desenvolvimento_Expe_Produto_sublote7.csv' (114 linhas)
+2025-08-21 12:03:51,324 - INFO -   -> ✅ Carregado: 'grupos_categoria_TIC_DE_-_Desenvolvimento_Expe_Produto_sublote17.csv' (33 linhas)
+2025-08-21 12:03:51,326 - INFO -   -> ✅ Carregado: 'grupos_categoria_Transversal_DE_-_Desenvolvimento_Expe_Produto_sublote14.csv' (106 linhas)
+2025-08-21 12:03:51,328 - INFO -   -> ✅ Carregado: 'grupos_categoria_Química_e_Farmácia_DE_-_Desenvolvimento_Expe_Produto_sublote33.csv' (83 linhas)
+2025-08-21 12:03:51,330 - INFO -   -> ✅ Carregado: 'grupos_categoria_TIC_PA_-_Pesquisa_Aplicada_Processo_sublote1.csv' (63 linhas)
+2025-08-21 12:03:51,333 - INFO -   -> ✅ Carregado: 'grupos_categoria_Eletroeletrônica_DE_-_Desenvolvimento_Expe_Processo_sublote3.csv' (115 linhas)
+2025-08-21 12:03:51,336 - INFO -   -> ✅ Carregado: 'grupos_categoria_Química_e_Farmácia_DE_-_Desenvolvimento_Expe_Produto_sublote27.csv' (121 linhas)
+2025-08-21 12:03:51,338 - INFO -   -> ✅ Carregado: 'grupos_categoria_Metalurgia_e_Mineração_DE_-_Desenvolvimento_Expe_Produto_sublote6.csv' (118 linhas)
+2025-08-21 12:03:51,341 - INFO -   -> ✅ Carregado: 'grupos_categoria_TIC_PB_-_Pesquisa_Básica_Processo_completa.csv' (43 linhas)
+2025-08-21 12:03:51,343 - INFO -   -> ✅ Carregado: 'grupos_categoria_Mecânica_e_Transporte_PA_-_Pesquisa_Aplicada_Produto_sublote5.csv' (124 linhas)
+2025-08-21 12:03:51,346 - INFO -   -> ✅ Carregado: 'grupos_categoria_Agroindústria_e_Alimentos_DE_-_Desenvolvimento_Expe_Produto_sublote12.csv' (98 linhas)
+2025-08-21 12:03:51,348 - INFO -   -> ✅ Carregado: 'grupos_categoria_Metalurgia_e_Mineração_DE_-_Desenvolvimento_Expe_Serviço_completa.csv' (40 linhas)
+2025-08-21 12:03:51,351 - INFO -   -> ✅ Carregado: 'grupos_categoria_Transversal_DE_-_Desenvolvimento_Expe_Produto_sublote4.csv' (120 linhas)
+2025-08-21 12:03:51,354 - INFO -   -> ✅ Carregado: 'grupos_categoria_Mecânica_e_Transporte_DE_-_Desenvolvimento_Expe_Produto_sublote7.csv' (116 linhas)
+2025-08-21 12:03:51,356 - INFO -   -> ✅ Carregado: 'grupos_categoria_TIC_DE_-_Desenvolvimento_Expe_Processo_sublote13.csv' (38 linhas)
+2025-08-21 12:03:51,359 - INFO -   -> ✅ Carregado: 'grupos_categoria_TIC_DE_-_Desenvolvimento_Expe_Produto_sublote32.csv' (112 linhas)
+2025-08-21 12:03:51,361 - INFO -   -> ✅ Carregado: 'grupos_categoria_Agroindústria_e_Alimentos_DE_-_Desenvolvimento_Expe_Processo_sublote1.csv' (33 linhas)
+2025-08-21 12:03:51,363 - INFO -   -> ✅ Carregado: 'grupos_categoria_Mecânica_e_Transporte_DE_-_Desenvolvimento_Expe_Processo_sublote2.csv' (30 linhas)
+2025-08-21 12:03:51,366 - INFO -   -> ✅ Carregado: 'grupos_categoria_TIC_DE_-_Desenvolvimento_Expe_Produto_sublote26.csv' (118 linhas)
+2025-08-21 12:03:51,368 - INFO -   -> ✅ Carregado: 'grupos_categoria_Metalurgia_e_Mineração_PA_-_Pesquisa_Aplicada_Produto_sublote2.csv' (87 linhas)
+2025-08-21 12:03:51,371 - INFO -   -> ✅ Carregado: 'grupos_categoria_TIC_DE_-_Desenvolvimento_Expe_Serviço_sublote14.csv' (50 linhas)
+2025-08-21 12:03:51,373 - INFO -   -> ✅ Carregado: 'grupos_categoria_TIC_DE_-_Desenvolvimento_Expe_Serviço_sublote24.csv' (131 linhas)
+2025-08-21 12:03:51,376 - INFO -   -> ✅ Carregado: 'grupos_categoria_Química_e_Farmácia_DE_-_Desenvolvimento_Expe_Produto_sublote14.csv' (120 linhas)
+2025-08-21 12:03:51,378 - INFO -   -> ✅ Carregado: 'grupos_categoria_Eletroeletrônica_DE_-_Desenvolvimento_Expe_Produto_sublote11.csv' (110 linhas)
+2025-08-21 12:03:51,381 - INFO -   -> ✅ Carregado: 'grupos_categoria_TIC_PA_-_Pesquisa_Aplicada_Serviço_sublote2.csv' (58 linhas)
+2025-08-21 12:03:51,383 - INFO -   -> ✅ Carregado: 'grupos_categoria_Eletroeletrônica_DE_-_Desenvolvimento_Expe_Processo_sublote2.csv' (39 linhas)
+2025-08-21 12:03:51,386 - INFO -   -> ✅ Carregado: 'grupos_categoria_Metalurgia_e_Mineração_DE_-_Desenvolvimento_Expe_Processo_sublote5.csv' (132 linhas)
+2025-08-21 12:03:51,388 - INFO -   -> ✅ Carregado: 'grupos_categoria_Eletroeletrônica_DE_-_Desenvolvimento_Expe_Produto_sublote15.csv' (37 linhas)
+2025-08-21 12:03:51,391 - INFO -   -> ✅ Carregado: 'grupos_categoria_TIC_DE_-_Desenvolvimento_Expe_Produto_sublote4.csv' (125 linhas)
+2025-08-21 12:03:51,393 - INFO -   -> ✅ Carregado: 'grupos_categoria_TIC_DE_-_Desenvolvimento_Expe_Processo_sublote30.csv' (142 linhas)
+2025-08-21 12:03:51,396 - INFO -   -> ✅ Carregado: 'grupos_categoria_TIC_DE_-_Desenvolvimento_Expe_Serviço_sublote20.csv' (128 linhas)
+2025-08-21 12:03:51,398 - INFO -   -> ✅ Carregado: 'grupos_categoria_Transversal_PA_-_Pesquisa_Aplicada_Serviço_completa.csv' (40 linhas)
+2025-08-21 12:03:51,400 - INFO -   -> ✅ Carregado: 'grupos_categoria_Agroindústria_e_Alimentos_DE_-_Desenvolvimento_Expe_Processo_sublote10.csv' (49 linhas)
+2025-08-21 12:03:51,403 - INFO -   -> ✅ Carregado: 'grupos_categoria_Agroindústria_e_Alimentos_DE_-_Desenvolvimento_Expe_Produto_sublote4.csv' (108 linhas)
+2025-08-21 12:03:51,405 - INFO -   -> ✅ Carregado: 'grupos_categoria_TIC_DE_-_Desenvolvimento_Expe_Processo_sublote14.csv' (65 linhas)
+2025-08-21 12:03:51,408 - INFO -   -> ✅ Carregado: 'grupos_categoria_TIC_DE_-_Desenvolvimento_Expe_Serviço_sublote4.csv' (111 linhas)
+2025-08-21 12:03:51,410 - INFO -   -> ✅ Carregado: 'grupos_categoria_TIC_DE_-_Desenvolvimento_Expe_Serviço_sublote7.csv' (27 linhas)
+2025-08-21 12:03:51,412 - INFO -   -> ✅ Carregado: 'grupos_categoria_Metalurgia_e_Mineração_PA_-_Pesquisa_Aplicada_Processo_sublote1.csv' (84 linhas)
+2025-08-21 12:03:51,415 - INFO -   -> ✅ Carregado: 'grupos_categoria_Eletroeletrônica_PA_-_Pesquisa_Aplicada_Produto_sublote5.csv' (111 linhas)
+2025-08-21 12:03:51,417 - INFO -   -> ✅ Carregado: 'grupos_categoria_TIC_DE_-_Desenvolvimento_Expe_Processo_sublote11.csv' (123 linhas)
+2025-08-21 12:03:51,420 - INFO -   -> ✅ Carregado: 'grupos_categoria_Química_e_Farmácia_DE_-_Desenvolvimento_Expe_Produto_sublote22.csv' (37 linhas)
+2025-08-21 12:03:51,422 - INFO -   -> ✅ Carregado: 'grupos_categoria_Transversal_DE_-_Desenvolvimento_Expe_Produto_sublote17.csv' (49 linhas)
+2025-08-21 12:03:51,424 - INFO -   -> ✅ Carregado: 'grupos_categoria_Química_e_Farmácia_DE_-_Desenvolvimento_Expe_Produto_sublote7.csv' (53 linhas)
+2025-08-21 12:03:51,426 - INFO -   -> ✅ Carregado: 'grupos_categoria_Agroindústria_e_Alimentos_DE_-_Desenvolvimento_Expe_Produto_sublote7.csv' (62 linhas)
+2025-08-21 12:03:51,429 - INFO -   -> ✅ Carregado: 'grupos_categoria_Mecânica_e_Transporte_PA_-_Pesquisa_Aplicada_Produto_sublote4.csv' (111 linhas)
+2025-08-21 12:03:51,431 - INFO -   -> ✅ Carregado: 'grupos_categoria_TIC_DE_-_Desenvolvimento_Expe_Processo_sublote16.csv' (31 linhas)
+2025-08-21 12:03:51,433 - INFO -   -> ✅ Carregado: 'grupos_categoria_Mecânica_e_Transporte_DE_-_Desenvolvimento_Expe_Serviço_completa.csv' (46 linhas)
+2025-08-21 12:03:51,436 - INFO -   -> ✅ Carregado: 'grupos_categoria_Mecânica_e_Transporte_DE_-_Desenvolvimento_Expe_Produto_sublote3.csv' (111 linhas)
+2025-08-21 12:03:51,438 - INFO -   -> ✅ Carregado: 'grupos_categoria_Agroindústria_e_Alimentos_PB_-_Pesquisa_Básica_Produto_completa.csv' (37 linhas)
+2025-08-21 12:03:51,440 - INFO -   -> ✅ Carregado: 'grupos_categoria_Química_e_Farmácia_DE_-_Desenvolvimento_Expe_Produto_sublote17.csv' (74 linhas)
+2025-08-21 12:03:51,442 - INFO -   -> ✅ Carregado: 'grupos_categoria_Metalurgia_e_Mineração_PB_-_Pesquisa_Básica_Processo_completa.csv' (20 linhas)
+2025-08-21 12:03:51,445 - INFO -   -> ✅ Carregado: 'grupos_categoria_Eletroeletrônica_DE_-_Desenvolvimento_Expe_Produto_sublote7.csv' (116 linhas)
+2025-08-21 12:03:51,447 - INFO -   -> ✅ Carregado: 'grupos_categoria_Química_e_Farmácia_DE_-_Desenvolvimento_Expe_Processo_sublote3.csv' (46 linhas)
+2025-08-21 12:03:51,450 - INFO -   -> ✅ Carregado: 'grupos_categoria_Eletroeletrônica_DE_-_Desenvolvimento_Expe_Produto_sublote5.csv' (114 linhas)
+2025-08-21 12:03:51,452 - INFO -   -> ✅ Carregado: 'grupos_categoria_Química_e_Farmácia_DE_-_Desenvolvimento_Expe_Produto_sublote19.csv' (123 linhas)
+2025-08-21 12:03:51,455 - INFO -   -> ✅ Carregado: 'grupos_categoria_Mecânica_e_Transporte_DE_-_Desenvolvimento_Expe_Produto_sublote2.csv' (78 linhas)
+2025-08-21 12:03:51,457 - INFO -   -> ✅ Carregado: 'grupos_categoria_Transversal_PA_-_Pesquisa_Aplicada_Produto_sublote2.csv' (131 linhas)
+2025-08-21 12:03:51,459 - INFO -   -> ✅ Carregado: 'grupos_categoria_TIC_DE_-_Desenvolvimento_Expe_Produto_sublote14.csv' (61 linhas)
+2025-08-21 12:03:51,461 - INFO -   -> ✅ Carregado: 'grupos_categoria_Química_e_Farmácia_DE_-_Desenvolvimento_Expe_Produto_sublote8.csv' (45 linhas)
+2025-08-21 12:03:51,464 - INFO -   -> ✅ Carregado: 'grupos_categoria_Transversal_DE_-_Desenvolvimento_Expe_Produto_sublote15.csv' (92 linhas)
+2025-08-21 12:03:51,466 - INFO -   -> ✅ Carregado: 'grupos_categoria_Eletroeletrônica_PB_-_Pesquisa_Básica_Produto_completa.csv' (57 linhas)
+2025-08-21 12:03:51,468 - INFO -   -> ✅ Carregado: 'grupos_categoria_Química_e_Farmácia_DE_-_Desenvolvimento_Expe_Produto_sublote13.csv' (45 linhas)
+2025-08-21 12:03:51,471 - INFO -   -> ✅ Carregado: 'grupos_categoria_Eletroeletrônica_PA_-_Pesquisa_Aplicada_Produto_sublote3.csv' (116 linhas)
+2025-08-21 12:03:51,473 - INFO -   -> ✅ Carregado: 'grupos_categoria_Agroindústria_e_Alimentos_PA_-_Pesquisa_Aplicada_Produto_sublote1.csv' (116 linhas)
+2025-08-21 12:03:51,475 - INFO -   -> ✅ Carregado: 'grupos_categoria_TIC_DE_-_Desenvolvimento_Expe_Processo_sublote10.csv' (26 linhas)
+2025-08-21 12:03:51,477 - INFO -   -> ✅ Carregado: 'grupos_categoria_Transversal_PA_-_Pesquisa_Aplicada_Produto_sublote1.csv' (103 linhas)
+2025-08-21 12:03:51,481 - INFO -   -> ✅ Carregado: 'grupos_categoria_Agroindústria_e_Alimentos_DE_-_Desenvolvimento_Expe_Processo_sublote11.csv' (25 linhas)
+2025-08-21 12:03:51,483 - INFO -   -> ✅ Carregado: 'grupos_categoria_TIC_DE_-_Desenvolvimento_Expe_Serviço_sublote12.csv' (35 linhas)
+2025-08-21 12:03:51,486 - INFO -   -> ✅ Carregado: 'grupos_categoria_Transversal_DE_-_Desenvolvimento_Expe_Processo_sublote4.csv' (123 linhas)
+2025-08-21 12:03:51,488 - INFO -   -> ✅ Carregado: 'grupos_categoria_TIC_DE_-_Desenvolvimento_Expe_Serviço_sublote11.csv' (34 linhas)
+2025-08-21 12:03:51,490 - INFO -   -> ✅ Carregado: 'grupos_categoria_TIC_PA_-_Pesquisa_Aplicada_Produto_sublote2.csv' (106 linhas)
+2025-08-21 12:03:51,492 - INFO -   -> ✅ Carregado: 'grupos_categoria_Química_e_Farmácia_DE_-_Desenvolvimento_Expe_Produto_sublote23.csv' (60 linhas)
+2025-08-21 12:03:51,495 - INFO -   -> ✅ Carregado: 'grupos_categoria_TIC_DE_-_Desenvolvimento_Expe_Processo_sublote27.csv' (126 linhas)
+2025-08-21 12:03:51,497 - INFO -   -> ✅ Carregado: 'grupos_categoria_Química_e_Farmácia_DE_-_Desenvolvimento_Expe_Produto_sublote18.csv' (117 linhas)
+2025-08-21 12:03:51,500 - INFO -   -> ✅ Carregado: 'grupos_categoria_Agroindústria_e_Alimentos_DE_-_Desenvolvimento_Expe_Produto_sublote2.csv' (46 linhas)
+2025-08-21 12:03:51,502 - INFO -   -> ✅ Carregado: 'grupos_categoria_TIC_DE_-_Desenvolvimento_Expe_Produto_sublote5.csv' (48 linhas)
+2025-08-21 12:03:51,504 - INFO -   -> ✅ Carregado: 'grupos_categoria_Transversal_DE_-_Desenvolvimento_Expe_Processo_sublote3.csv' (127 linhas)
+2025-08-21 12:03:51,506 - INFO -   -> ✅ Carregado: 'grupos_categoria_Química_e_Farmácia_DE_-_Desenvolvimento_Expe_Produto_sublote29.csv' (68 linhas)
+2025-08-21 12:03:51,508 - INFO -   -> ✅ Carregado: 'grupos_categoria_Química_e_Farmácia_PB_-_Pesquisa_Básica_Serviço_completa.csv' (6 linhas)
+2025-08-21 12:03:51,511 - INFO -   -> ✅ Carregado: 'grupos_categoria_Química_e_Farmácia_DE_-_Desenvolvimento_Expe_Produto_sublote24.csv' (82 linhas)
+2025-08-21 12:03:51,513 - INFO -   -> ✅ Carregado: 'grupos_categoria_Mecânica_e_Transporte_PA_-_Pesquisa_Aplicada_Processo_sublote1.csv' (124 linhas)
+2025-08-21 12:03:51,515 - INFO -   -> ✅ Carregado: 'grupos_categoria_TIC_DE_-_Desenvolvimento_Expe_Produto_sublote31.csv' (55 linhas)
+2025-08-21 12:03:51,517 - INFO -   -> ✅ Carregado: 'grupos_categoria_TIC_PA_-_Pesquisa_Aplicada_Produto_sublote4.csv' (55 linhas)
+2025-08-21 12:03:51,520 - INFO -   -> ✅ Carregado: 'grupos_categoria_TIC_DE_-_Desenvolvimento_Expe_Produto_sublote19.csv' (120 linhas)
+2025-08-21 12:03:51,522 - INFO -   -> ✅ Carregado: 'grupos_categoria_Transversal_DE_-_Desenvolvimento_Expe_Processo_sublote9.csv' (120 linhas)
+2025-08-21 12:03:51,524 - INFO -   -> ✅ Carregado: 'grupos_categoria_Agroindústria_e_Alimentos_PA_-_Pesquisa_Aplicada_Processo_sublote3.csv' (52 linhas)
+2025-08-21 12:03:51,526 - INFO -   -> ✅ Carregado: 'grupos_categoria_Agroindústria_e_Alimentos_DE_-_Desenvolvimento_Expe_Processo_sublote5.csv' (45 linhas)
+2025-08-21 12:03:51,529 - INFO -   -> ✅ Carregado: 'grupos_categoria_Agroindústria_e_Alimentos_DE_-_Desenvolvimento_Expe_Produto_sublote8.csv' (90 linhas)
+2025-08-21 12:03:51,531 - INFO -   -> ✅ Carregado: 'grupos_categoria_TIC_DE_-_Desenvolvimento_Expe_Serviço_sublote2.csv' (110 linhas)
+2025-08-21 12:03:51,533 - INFO -   -> ✅ Carregado: 'grupos_categoria_Agroindústria_e_Alimentos_DE_-_Desenvolvimento_Expe_Processo_sublote7.csv' (38 linhas)
+2025-08-21 12:03:51,535 - INFO -   -> ✅ Carregado: 'grupos_categoria_Química_e_Farmácia_DE_-_Desenvolvimento_Expe_Produto_sublote32.csv' (126 linhas)
+2025-08-21 12:03:51,538 - INFO -   -> ✅ Carregado: 'grupos_categoria_Mecânica_e_Transporte_PB_-_Pesquisa_Básica_Processo_completa.csv' (50 linhas)
+2025-08-21 12:03:51,540 - INFO -   -> ✅ Carregado: 'grupos_categoria_Eletroeletrônica_DE_-_Desenvolvimento_Expe_Serviço_completa.csv' (95 linhas)
+2025-08-21 12:03:51,542 - INFO -   -> ✅ Carregado: 'grupos_categoria_Química_e_Farmácia_PA_-_Pesquisa_Aplicada_Processo_sublote3.csv' (107 linhas)
+2025-08-21 12:03:51,544 - INFO -   -> ✅ Carregado: 'grupos_categoria_TIC_DE_-_Desenvolvimento_Expe_Processo_sublote32.csv' (31 linhas)
+2025-08-21 12:03:51,546 - INFO -   -> ✅ Carregado: 'grupos_categoria_Química_e_Farmácia_DE_-_Desenvolvimento_Expe_Produto_sublote20.csv' (46 linhas)
+2025-08-21 12:03:51,549 - INFO -   -> ✅ Carregado: 'grupos_categoria_Química_e_Farmácia_DE_-_Desenvolvimento_Expe_Produto_sublote5.csv' (136 linhas)
+2025-08-21 12:03:51,551 - INFO -   -> ✅ Carregado: 'grupos_categoria_Química_e_Farmácia_PA_-_Pesquisa_Aplicada_Produto_sublote8.csv' (130 linhas)
+2025-08-21 12:03:51,554 - INFO -   -> ✅ Carregado: 'grupos_categoria_Mecânica_e_Transporte_DE_-_Desenvolvimento_Expe_Produto_sublote17.csv' (122 linhas)
+2025-08-21 12:03:51,556 - INFO -   -> ✅ Carregado: 'grupos_categoria_TIC_PA_-_Pesquisa_Aplicada_Serviço_sublote1.csv' (132 linhas)
+2025-08-21 12:03:51,558 - INFO -   -> ✅ Carregado: 'grupos_categoria_Química_e_Farmácia_DE_-_Desenvolvimento_Expe_Processo_sublote5.csv' (112 linhas)
+2025-08-21 12:03:51,561 - INFO -   -> ✅ Carregado: 'grupos_categoria_Química_e_Farmácia_PA_-_Pesquisa_Aplicada_Produto_sublote5.csv' (113 linhas)
+2025-08-21 12:03:51,563 - INFO -   -> ✅ Carregado: 'grupos_categoria_Agroindústria_e_Alimentos_DE_-_Desenvolvimento_Expe_Processo_sublote4.csv' (54 linhas)
+2025-08-21 12:03:51,565 - INFO -   -> ✅ Carregado: 'grupos_categoria_Química_e_Farmácia_PA_-_Pesquisa_Aplicada_Produto_sublote3.csv' (115 linhas)
+2025-08-21 12:03:51,568 - INFO -   -> ✅ Carregado: 'grupos_categoria_Transversal_DE_-_Desenvolvimento_Expe_Processo_sublote2.csv' (39 linhas)
+2025-08-21 12:03:51,570 - INFO -   -> ✅ Carregado: 'grupos_categoria_Transversal_PB_-_Pesquisa_Básica_Serviço_completa.csv' (8 linhas)
+2025-08-21 12:03:51,572 - INFO -   -> ✅ Carregado: 'grupos_categoria_Química_e_Farmácia_PA_-_Pesquisa_Aplicada_Produto_sublote7.csv' (122 linhas)
+2025-08-21 12:03:51,574 - INFO -   -> ✅ Carregado: 'grupos_categoria_Transversal_PB_-_Pesquisa_Básica_Produto_sublote2.csv' (39 linhas)
+2025-08-21 12:03:51,576 - INFO -   -> ✅ Carregado: 'grupos_categoria_Metalurgia_e_Mineração_DE_-_Desenvolvimento_Expe_Produto_sublote4.csv' (44 linhas)
+2025-08-21 12:03:51,579 - INFO -   -> ✅ Carregado: 'grupos_categoria_Mecânica_e_Transporte_DE_-_Desenvolvimento_Expe_Produto_sublote6.csv' (119 linhas)
+2025-08-21 12:03:51,581 - INFO -   -> ✅ Carregado: 'grupos_categoria_Metalurgia_e_Mineração_DE_-_Desenvolvimento_Expe_Processo_sublote1.csv' (95 linhas)
+2025-08-21 12:03:51,583 - INFO -   -> ✅ Carregado: 'grupos_categoria_Agroindústria_e_Alimentos_DE_-_Desenvolvimento_Expe_Processo_sublote6.csv' (126 linhas)
+2025-08-21 12:03:51,585 - INFO -   -> ✅ Carregado: 'grupos_categoria_Química_e_Farmácia_DE_-_Desenvolvimento_Expe_Produto_sublote31.csv' (121 linhas)
+2025-08-21 12:03:51,588 - INFO -   -> ✅ Carregado: 'grupos_categoria_Mecânica_e_Transporte_DE_-_Desenvolvimento_Expe_Processo_sublote10.csv' (119 linhas)
+2025-08-21 12:03:51,590 - INFO -   -> ✅ Carregado: 'grupos_categoria_Transversal_DE_-_Desenvolvimento_Expe_Produto_sublote13.csv' (123 linhas)
+2025-08-21 12:03:51,592 - INFO -   -> ✅ Carregado: 'grupos_categoria_Eletroeletrônica_DE_-_Desenvolvimento_Expe_Processo_sublote4.csv' (81 linhas)
+2025-08-21 12:03:51,594 - INFO -   -> ✅ Carregado: 'grupos_categoria_Química_e_Farmácia_PA_-_Pesquisa_Aplicada_Produto_sublote1.csv' (124 linhas)
+2025-08-21 12:03:51,597 - INFO -   -> ✅ Carregado: 'grupos_categoria_Agroindústria_e_Alimentos_PA_-_Pesquisa_Aplicada_Produto_sublote4.csv' (128 linhas)
+2025-08-21 12:03:51,599 - INFO -   -> ✅ Carregado: 'grupos_categoria_Agroindústria_e_Alimentos_PB_-_Pesquisa_Básica_Processo_completa.csv' (22 linhas)
+2025-08-21 12:03:51,601 - INFO -   -> ✅ Carregado: 'grupos_categoria_Eletroeletrônica_DE_-_Desenvolvimento_Expe_Produto_sublote2.csv' (106 linhas)
+2025-08-21 12:03:51,603 - INFO -   -> ✅ Carregado: 'grupos_categoria_Mecânica_e_Transporte_DE_-_Desenvolvimento_Expe_Produto_sublote8.csv' (37 linhas)
+2025-08-21 12:03:51,605 - INFO -   -> ✅ Carregado: 'grupos_categoria_Mecânica_e_Transporte_PA_-_Pesquisa_Aplicada_Produto_sublote6.csv' (34 linhas)
+2025-08-21 12:03:51,607 - INFO -   -> ✅ Carregado: 'grupos_categoria_TIC_PA_-_Pesquisa_Aplicada_Processo_sublote2.csv' (44 linhas)
+2025-08-21 12:03:51,609 - INFO -   -> ✅ Carregado: 'grupos_categoria_Eletroeletrônica_PA_-_Pesquisa_Aplicada_Processo_sublote2.csv' (122 linhas)
+2025-08-21 12:03:51,612 - INFO -   -> ✅ Carregado: 'grupos_categoria_TIC_DE_-_Desenvolvimento_Expe_Serviço_sublote25.csv' (102 linhas)
+2025-08-21 12:03:51,614 - INFO -   -> ✅ Carregado: 'grupos_categoria_Química_e_Farmácia_PA_-_Pesquisa_Aplicada_Serviço_completa.csv' (36 linhas)
+2025-08-21 12:03:51,616 - INFO -   -> ✅ Carregado: 'grupos_categoria_Mecânica_e_Transporte_DE_-_Desenvolvimento_Expe_Produto_sublote13.csv' (63 linhas)
+2025-08-21 12:03:51,618 - INFO -   -> ✅ Carregado: 'grupos_categoria_TIC_DE_-_Desenvolvimento_Expe_Processo_sublote1.csv' (122 linhas)
+2025-08-21 12:03:51,620 - INFO -   -> ✅ Carregado: 'grupos_categoria_Mecânica_e_Transporte_DE_-_Desenvolvimento_Expe_Produto_sublote14.csv' (47 linhas)
+2025-08-21 12:03:51,622 - INFO -   -> ✅ Carregado: 'grupos_categoria_Metalurgia_e_Mineração_DE_-_Desenvolvimento_Expe_Produto_sublote2.csv' (116 linhas)
+2025-08-21 12:03:51,624 - INFO -   -> ✅ Carregado: 'grupos_categoria_Química_e_Farmácia_DE_-_Desenvolvimento_Expe_Processo_sublote7.csv' (33 linhas)
+2025-08-21 12:03:51,626 - INFO -   -> ✅ Carregado: 'grupos_categoria_TIC_DE_-_Desenvolvimento_Expe_Processo_sublote24.csv' (41 linhas)
+2025-08-21 12:03:51,640 - INFO -   -> ✅ Carregado: 'grupos_categoria_Eletroeletrônica_DE_-_Desenvolvimento_Expe_Produto_sublote14.csv' (148 linhas)
+2025-08-21 12:03:51,642 - INFO -   -> ✅ Carregado: 'grupos_categoria_Metalurgia_e_Mineração_DE_-_Desenvolvimento_Expe_Produto_sublote3.csv' (55 linhas)
+2025-08-21 12:03:51,645 - INFO -   -> ✅ Carregado: 'grupos_categoria_Eletroeletrônica_DE_-_Desenvolvimento_Expe_Produto_sublote10.csv' (123 linhas)
+2025-08-21 12:03:51,647 - INFO -   -> ✅ Carregado: 'grupos_categoria_Agroindústria_e_Alimentos_DE_-_Desenvolvimento_Expe_Produto_sublote13.csv' (35 linhas)
+2025-08-21 12:03:51,650 - INFO -   -> ✅ Carregado: 'grupos_categoria_TIC_DE_-_Desenvolvimento_Expe_Serviço_sublote16.csv' (119 linhas)
+2025-08-21 12:03:51,652 - INFO -   -> ✅ Carregado: 'grupos_categoria_TIC_DE_-_Desenvolvimento_Expe_Processo_sublote22.csv' (118 linhas)
+2025-08-21 12:03:51,655 - INFO -   -> ✅ Carregado: 'grupos_categoria_Transversal_DE_-_Desenvolvimento_Expe_Produto_sublote10.csv' (117 linhas)
+2025-08-21 12:03:51,657 - INFO -   -> ✅ Carregado: 'grupos_categoria_Química_e_Farmácia_DE_-_Desenvolvimento_Expe_Produto_sublote30.csv' (127 linhas)
+2025-08-21 12:03:51,659 - INFO -   -> ✅ Carregado: 'grupos_categoria_Metalurgia_e_Mineração_DE_-_Desenvolvimento_Expe_Produto_sublote8.csv' (66 linhas)
+2025-08-21 12:03:51,662 - INFO -   -> ✅ Carregado: 'grupos_categoria_Transversal_DE_-_Desenvolvimento_Expe_Serviço_completa.csv' (126 linhas)
+2025-08-21 12:03:51,664 - INFO -   -> ✅ Carregado: 'grupos_categoria_Eletroeletrônica_PA_-_Pesquisa_Aplicada_Produto_sublote2.csv' (37 linhas)
+2025-08-21 12:03:51,667 - INFO -   -> ✅ Carregado: 'grupos_categoria_Química_e_Farmácia_PA_-_Pesquisa_Aplicada_Processo_sublote1.csv' (104 linhas)
+2025-08-21 12:03:51,669 - INFO -   -> ✅ Carregado: 'grupos_categoria_TIC_DE_-_Desenvolvimento_Expe_Produto_sublote21.csv' (80 linhas)
+2025-08-21 12:03:51,671 - INFO -   -> ✅ Carregado: 'grupos_categoria_TIC_DE_-_Desenvolvimento_Expe_Produto_sublote10.csv' (54 linhas)
+2025-08-21 12:03:51,673 - INFO -   -> ✅ Carregado: 'grupos_categoria_TIC_DE_-_Desenvolvimento_Expe_Processo_sublote26.csv' (38 linhas)
+2025-08-21 12:03:51,676 - INFO -   -> ✅ Carregado: 'grupos_categoria_Transversal_DE_-_Desenvolvimento_Expe_Produto_sublote11.csv' (63 linhas)
+2025-08-21 12:03:51,676 - INFO - 🔄 Iniciando consolidação e enriquecimento de dados...
+2025-08-21 12:03:51,930 - ERROR - ❌ Erro na consolidação completa: '>' not supported between instances of 'str' and 'int'

@@ -390,7 +390,7 @@ left join(
 		left join tbjustificativaanalise ra_japroj on ra_japroj.idjustificativaanalise = ra_aomprojj.idjustificativaanalise
 		left join tbtipojustificativaanalise ra_tjaproj on ra_tjaproj.cdtipojustificativaanalise = ra_japroj.cdtipojustificativaanalise
 		group by ra_aomprojj.idanaliseobjetomarcoprojeto ) ra_a_proj on ra_a_proj.idanaliseobjetomarcoprojeto = ra_aomproj.idanaliseobjetomarcoprojeto
-where do_aat.iddadoanaliseprojeto = '46257' OR do_aat.iddadoanaliseprojeto = '49621' --OR do_aat.iddadoanaliseprojeto = '54623'
+where lst.idprenchimentosituacaoanalise = '107685' --OR do_aat.iddadoanaliseprojeto = '54623'
 -- where do_taaproj.notipoavaliacaoanalise = 'Recomendado' AND p_taaproj.notipoavaliacaoanalise = 'Não Recomendado'
 order by dem.idprenchimentosituacaoanalise, daproj.nritem
 
