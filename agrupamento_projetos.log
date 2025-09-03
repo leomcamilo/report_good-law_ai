@@ -13146,3 +13146,6 @@
 2025-08-21 12:03:51,676 - INFO -   -> ✅ Carregado: 'grupos_categoria_Transversal_DE_-_Desenvolvimento_Expe_Produto_sublote11.csv' (63 linhas)
 2025-08-21 12:03:51,676 - INFO - 🔄 Iniciando consolidação e enriquecimento de dados...
 2025-08-21 12:03:51,930 - ERROR - ❌ Erro na consolidação completa: '>' not supported between instances of 'str' and 'int'
+2025-09-01 20:15:34,884 - INFO - 🔗 4872 grupos de projetos multianuais identificados.
+2025-09-01 20:15:36,632 - INFO - 🤖 Projetos para LLM: 45114 (Projetos multianuais duplicados foram removidos, mantendo apenas o mais antigo de cada grupo)
+2025-09-01 20:15:36,701 - INFO - 📄 Relatório de multianuais salvo: resultados_agrupamento/projetos_multianuais_identificados.csv
