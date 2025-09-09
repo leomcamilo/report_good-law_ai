@@ -9,5 +9,6 @@
             "username": "mcti",
             "database": "dbs_mctic2"
         }
-    ]
+    ],
+    "workbench.editorLargeFileConfirmation": 30
 }
