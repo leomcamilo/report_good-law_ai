@@ -38,6 +38,8 @@ dependencies = [
     "plotly>=6.2.0",
     "nest-asyncio>=1.6.0",
     "asyncio>=4.0.0",
+    "tensorflow>=2.18.1",
+    "tf-keras>=2.18.0",
 ]
 
 [tool.uv]
