@@ -40,6 +40,7 @@ dependencies = [
     "asyncio>=4.0.0",
     "tensorflow>=2.18.1",
     "tf-keras>=2.18.0",
+    "ollama>=0.6.1",
 ]
 
 [tool.uv]
