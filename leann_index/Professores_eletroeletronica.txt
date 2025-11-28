@@ -1,0 +1,141 @@
+Professor 1:
+Possui graduação em Engenharia Eletrônica pela Universidade Federal de Pernambuco (1987), mestrado em Tecnologias Energéticas Nucleares pela Universidade Federal de Pernambuco (1992) e doutorado em Geophysique - Université Joseph Fourier - Grenoble 1 (1997). Atualmente é pesquisador titular da Comissão Nacional de Energia Nuclear (CNEN) no Centro Regional de Ciências Nucleares do Nordeste (CRCN-NE) e colaborador em grupos de pesquisa da Universidade Federal de Pernambuco (UFPE) e de Sergipe (UFSE); Professor do PROTEN-UFPE, orientador de mestrado e doutorado na Pós-Graduação. Coordenador do Laboratório de Desenvolvimento Tecnológico da empresa de base tecnológica SCIENTS coordenando projeto de inovação tecnológica em instrumentos de medição e sistemas de instrumentação técnica-científica. Tem experiência na área de Engenharia eletrônica, com ênfase em Instrumentação Nuclear, atuando principalmente nos seguintes temas: Dosimetria, Raios-X, Proteção Radiológica, Instrumentação para física médica (Radiodiagnósico, Radioterapia, Medicina Nuclear). Atua também nas seguintes áreas: Instrumentação para geofísica, hidrologia e ambiental (aplicação de propagação de campos em meios não-homogêneos, estratificados e porosos); Sensores; Dispositivos eletrônicos; Sistemas de instrumentação com aplicações em engenharias, física, química, medicina, forense, nanociências e nanotecnologia, e afins.
+Formação acadêmica:
+1994 - 1997
+Doutorado em GEOPHYSIQUE.
+Université Joseph Fourier - Grenoble 1, UJF, França.
+Título: Développement d´une nouvelle méthode de détermination des profils de teneur en eau dans les sols par inversion d´un signal TDR, Ano de obtenção: 1997.
+Orientador: Georges Vachaud.
+Bolsista do(a): Coordenação de Aperfeiçoamento de Pessoal de Nível Superior, CAPES, Brasil.
+Palavras-chave: Tdr; Perfil de umidade de solos; TDR Signal Spatial Deconvolution; Soil Water.
+Grande área: Ciências Exatas e da Terra
+Grande Área: Ciências Exatas e da Terra / Área: Geociências / Subárea: Geofísica.
+Setores de atividade: Produtos e Serviços Voltados Para A Defesa e Proteção do Meio Ambiente, Incluindo O Desenvolvimento Sustentado; Fabricação de Equipamentos de Instrumentação Médico-Hospitalares, Instrumentos de Precisão e Ópticos, Equipamentos Para Automação Industrial, Cronômetros e Relógios.
+1989 - 1992
+Mestrado em Tecnologias Energéticas Nucleares.
+Universidade Federal de Pernambuco, UFPE, Brasil.
+Título: Estudo da viabilidade da utilização de fotodiodos na determinação de umidade de solos por transmissão gama. , Ano de Obtenção: 1992.
+Orientador: Helen Jamil Khoury.
+Bolsista do(a): Conselho Nacional de Desenvolvimento Científico e Tecnológico, CNPq, Brasil.
+Palavras-chave: Fotodiodo; Transmissao Gama; Umidade de Solos.
+Grande área: Engenharias
+Grande Área: Ciências Exatas e da Terra / Área: Geociências / Subárea: Geofísica.
+Setores de atividade: Fabricação de Equipamentos de Instrumentação Médico-Hospitalares, Instrumentos de Precisão e Ópticos, Equipamentos Para Automação Industrial, Cronômetros e Relógios; Produtos e Serviços Voltados Para A Defesa e Proteção do Meio Ambiente, Incluindo O Desenvolvimento Sustentado.
+1982 - 1987
+Graduação em Engenharia Eletrônica e Sistemas.
+Universidade Federal de Pernambuco, UFPE, Brasil.
+1978 - 1981
+Curso técnico/profissionalizante.
+Escola Técnica Federal de Pernambuco, ETFPE, Brasil.
+Pós-doutorado
+2004 - 2005
+Pós-Doutorado.
+Universidade Federal de Pernambuco, UFPE, Brasil.
+Bolsista do(a): Conselho Nacional de Desenvolvimento Científico e Tecnológico, CNPq, Brasil.
+Grande área: Ciências Exatas e da Terra
+
+Professor 2:
+Nascido em São Paulo, SP, em abril de 1955. Possui graduação em Licenciatura com ênfase em Eletricidade (1978), graduação em Engenharia Elétrica (1978), mestrado em Engenharia Elétrica (1981), todos pela Universidade Federal de Santa Catarina (UFSC) e doutorado em Engenharia Elétrica pelo Institut National Polytechnique de Toulouse, França (1986). Galgou todos os níveis da carreira de magistério por concurso público, chegando a Professor Titular em janeiro de 1993. Atualmente é Supervisor do INEP (Instituto de Eletrônica de Potência), e professor do Departamento de Engenharia Elétrica da Universidade Federal de Santa Catarina, onde leciona disciplinas de graduação e pós-graduação. Foi Chefe do Departamento de Engenharia Elétrica da UFSC por dois mandatos entre abril de 2007 a abril de 2011. Foi Coordenador do Programa de Pós-Graduação em Engenharia Elétrica do Centro Tecnológico da UFSC. Sócio Fundador da SOBRAEP (Sociedade Brasileira de Eletrônica de Potência). Foi Presidente da SOBRAEP (Sociedade Brasileira de Eletrônica de Potência). Já desenvolveu vários projetos tecnológicos em parceria com Empresas Nacionais. É membro das Sociedades: SOBRAEP, SBA e IEEE. É credenciado pelo Programa de Pós-Graduação em Engenharia Elétrica da UFSC para orientar alunos em dissertação de mestrado e em tese de doutorado. Tem experiência na área de Engenharia Elétrica, com ênfase em Eletrônica de Potência, atuando principalmente nos seguintes temas: conversores estáticos CC-CC e CC-CA, correção de fator de potência, qualidade de energia, processamento eletrônico da energia elétrica, redes ativas de distribuição, sistemas de geração distribuída, microrredes CC e CA, simulação de conversores estáticos e acionamentos elétricos. Possui em torno de 350 artigos científicos publicados. Publicou quatro livros nacionais na área de Eletrônica de Potência e três capítulos de livros internacionais na área de processamento eletrônico da energia solar fotovoltaica. É Senior Member do IEEE. Em 2020 foi classificado pela Universidade de Stanford (USA) como estando entre os 100 mil top cientistas de maior influência no mundo.
+Formação Acadêmica:
+1983 - 1986
+Doutorado em Engenharia Elétrica.
+Institut National Polytechnique de Toulouse, INPT, França.
+Título: Estudo da Variação do Passo de Cálculo na Simulação Numérica de Conversores Estáticos - Programa SCRIPT - Modelagem do Transistor de Potência, Ano de obtenção: 1986.
+Orientador: Frederick Bordry.
+Bolsista do(a): Conselho Nacional de Desenvolvimento Científico e Tecnológico, CNPq, Brasil.
+Palavras-chave: Simulação Numérica; Passo de Cálcullo Variável; Modelagem de Semicondutores de Potência.
+Grande área: Engenharias
+Grande Área: Engenharias / Área: Engenharia Elétrica / Subárea: Simulação de Conversores Estáticos.
+Setores de atividade: Industria Eletro-Eletrônica; Educação.
+1979 - 1981
+Mestrado em Engenharia Elétrica.
+Universidade Federal de Santa Catarina, UFSC, Brasil.
+Título: Contribuição ao Estudo do Motor de Indução Trifásico Alimentado por Gradador. , Ano de Obtenção: 1981.
+Orientador: Ivo Barbi.
+Palavras-chave: Motor de Indução Trifásico; Acionamento Elétrico; Gradador Trifásico.
+Grande área: Engenharias
+Grande Área: Engenharias / Área: Engenharia Elétrica / Subárea: Acionamento Elétrico.
+Setores de atividade: Industria Eletro-Eletrônica; Educação.
+1976 - 1978
+Graduação em Licenciatura Em Eletricidade.
+Universidade Federal de Santa Catarina, UFSC, Brasil.
+1974 - 1978
+Graduação em Engenharia Elétrica.
+Universidade Federal de Santa Catarina, UFSC, Brasil.
+
+Professor 3:
+Graduou-se em Engenharia Mecânica com ênfase em Mecatrônica pela Escola de Engenharia de São Carlos - Universidade de São Paulo (EESC-USP) em 1993. Concluiu seu mestrado e doutorado em Engenharia Mecânica na Faculdade de Engenharia Mecânica da Universidade Estadual de Campinas (FEM-Unicamp), respectivamente em 1997 e 2000. Realizou um estágio no Institute of Robotics no Eidgenoessische Technische Hochschule Zürich - ETHZ, Suíça (1999-2000) e um Pós-Doutoramento no Autonomous Systems Lab na École Polytechnique Fédérale de Lausanne - EPFL, Suíça (2005-2006). Atuou no Instituto Politécnico da Pontifícia Universidade Católica de Minas Gerais (IPUC-PUC Minas) de 2001 a 2008 na área de Engenharia Mecatrônica, tendo coordenado o Grupo de Estudos em Automação e Robótica (GEAR) e atuado como Coordenador Adjunto do Curso de Graduação em Engenharia Mecatrônica. Atualmente é Professor Associado 3 no Departamento de Engenharia Mecânica da Escola de Engenharia de São Carlos - Universidade de São Paulo (SEM-EESC-USP), Lider do Grupo de Robótica Móvel do SEM-EESC-USP e Coordenador e Membro do Conselho Diretor do CRob-SC (Centro de Robótica de São Carlos). Concluiu sua Livre Docência na Escola de Engenharia de São Carlos - Universidade de São Paulo (EESC-USP) em 2011, na área de Navegação de Robôs Móveis. Desde 2021 é Co-Presidente da ETH Alumni Chapter em São Paulo. No momento participa de projetos de pesquisa financiados pelo CNPq, EMBRAPII e FAPESP, coordenando 3 destes projetos. Orienta alunos de IC, de Mestrado, de Doutorado e de Pós-doutorado com bolsas CNPq, CAPES, FAFQ e FAPESP. Atua na área de Engenharia Mecatrônica, com ênfase em Automação, Robótica, Robótica Móvel, Sistemas de Percepção e Projeto de Sistemas Mecatrônicos. Seus projetos tem atualmente como áreas foco a Agricultura e a Automação Industrial.
+Formação acadêmica:
+1997 - 2000
+Doutorado em Doutorado em Engenharia Mecânica.
+Universidade Estadual de Campinas, UNICAMP, Brasil.
+com período sanduíche
+Título: Aplicação de Técnicas de Controle em Cadeiras de Rodas Inteligentes, Ano de obtenção: 2000.
+Orientador: Franco Giuseppe Dedini.
+Bolsista do(a): Conselho Nacional de Desenvolvimento Científico e Tecnológico, CNPq, Brasil.
+Palavras-chave: Robótica; Robôs Móveis; Navegação Autônoma; Desvio de Obstáculos; Planejamento de Trajetórias.
+Grande área: Outros
+Setores de atividade: Pesquisa e desenvolvimento científico.
+1994 - 1997
+Mestrado em Engenharia Mecânica.
+Universidade Estadual de Campinas, UNICAMP, Brasil.
+Título: Robôs de Locomoção: Formas Construtivas, Dirigibilidade e Controle, Ano de Obtenção: 1997.
+Orientador: Franco Giuseppe Dedini.
+Bolsista do(a): Conselho Nacional de Desenvolvimento Científico e Tecnológico, CNPq, Brasil.
+Palavras-chave: Robôs Móveis; Veículos; Dirigibilidade; Estabilidade Dinâmica; Controle; Lógica Fuzzy.
+Grande área: Outros
+Grande Área: Engenharias / Área: Engenharia Mecânica / Subárea: Mecânica dos Sólidos / Especialidade: Dinâmica dos Corpos Rígidos, Elásticos e Plásticos.
+Grande Área: Engenharias / Área: Engenharia Elétrica / Subárea: Eletrônica Industrial, Sistemas e Controles Eletrônicos / Especialidade: Controle de Processos Eletrônicos, Retroalimentação.
+Setores de atividade: Indústria Metal-Mecânica; Logística de Transporte, Armazenagem e Comunicações.
+1989 - 1993
+Graduação em Engenharia Mecânica.
+Escola de Engenharia de São Carlos Universidade de São Paulo, EESC - USP, Brasil.
+2011
+Livre-docência.
+Escola de Engenharia de São Carlos Universidade de São Paulo, EESC - USP, Brasil.
+Título: Sistemas de Navegação aplicados a Robôs Móveis em Ambientes Indoor e Outdoor, Ano de obtenção: 2011.
+Palavras-chave: Mecatrônica; Robôs Móveis; Robótica; Controle; Navegação Autônoma; Navegação Assistida.
+Grande área: Outros
+Setores de atividade: Pesquisa e desenvolvimento científico.
+2005 - 2006
+Pós-Doutorado.
+Ecole Polytechnique Fédérale de Lausanne, EPFL, Suiça.
+Bolsista do(a): Coordenação de Aperfeiçoamento de Pessoal de Nível Superior, CAPES, Brasil.
+Grande área: Engenharias
+Grande Área: Outros / Área: Robótica, Mecatrônica e Automação.
+
+Professor 4:
+Graduação em Engenharia Elétrica pela Universidade Estadual Paulista Júlio de Mesquita Filho (1990), mestrado em Engenharia Elétrica pela Universidade Federal de Uberlândia (1994) , doutorado em Engenharia Elétrica pela Universidade Estadual de Campinas (2003) e Livre Docência pela Universidade Estadual Paulista Júlio de Mesquita Filho (2008). Em março de 2022 assumiu o cargo de Professor Titular na Universidade Estadual Paulista Júlio de Mesquita Filho. Foi Coordenador do Programa de Pós-Graduação em Engenharia Elétrica da Unesp - Campus de Ilha Solteira por dois mandatos consecutivos (entre 2017 e 2021 e entre 2021 e 2025). Possui experiência na área de Engenharia Elétrica, com ênfase em Transmissão da Energia Elétrica, Distribuição da Energia Elétrica, atuando principalmente no Desenvolvimento de Modelos de Linhas de Transmissão de Energia Elétrica para Simulações de Transitórios Eletromagnéticos em Sistemas de Potência e análise de sistemas elétricos submetidos a transitórios eletromagnéticos.
+Formação acadêmica:
+1999 - 2003
+Doutorado em Engenharia Elétrica.
+Universidade Estadual de Campinas, UNICAMP, Brasil.
+Título: Parâmetros Longitudinais e Transversais de Linhas de Transmissão Calculados a Partir de Correntes e Tensões de Fase , Ano de obtenção: 2003.
+Orientador: José Pissolato Filho.
+Bolsista do(a): Coordenação de Aperfeiçoamento de Pessoal de Nível Superior, CAPES, Brasil.
+Palavras-chave: Linha de transmissão; Quasi-modos; domínio do tempo; domínio modal; parâmetros longitudinais e transversais; Transitórios eletromagnéticos.
+Grande área: Engenharias
+Grande Área: Engenharias / Área: Engenharia Elétrica / Subárea: Sistemas Elétricos de Potência / Especialidade: Transmissão da Energia Elétrica, Distribuição da Energia Elétrica.
+Setores de atividade: Produção e Distribuição de Energia Elétrica.
+1991 - 1994
+Mestrado em Engenharia Elétrica.
+Universidade Federal de Uberlândia, UFU, Brasil.
+Título: Desenvolvimento de um estabilizador de tensão alternada de variação contínua utilizando MOSFET's, Ano de Obtenção: 1994.
+Orientador: João Batista Vieira Júnior.
+Bolsista do(a): Coordenação de Aperfeiçoamento de Pessoal de Nível Superior, CAPES, Brasil.
+Palavras-chave: Estabilizador de tensão alternada; variação contínua; mosfets.
+Grande área: Engenharias
+1986 - 1990
+Graduação em Graduação em Engenharia Elétrica.
+Universidade Estadual Paulista Júlio de Mesquita Filho, UNESP, Brasil.
+2008
+Livre-docência.
+Universidade Estadual Paulista Júlio de Mesquita Filho, UNESP, Brasil.
+Título: Linhas de Transmissão de Energia Elétrica: Desenvolvimento de Modelos e Análise de Parâmetros, Ano de obtenção: 2008.
+Palavras-chave: Linhas de transmissão de energia elétrica; modelos de linhas de transmissão; parâmetros dependentes da freqüência; Transitórios eletromagnéticos.
+Grande área: Engenharias
+Setores de atividade: Produção e Distribuição de Eletricidade, Gás e Água.
+2003 - 2004
+Pós-Doutorado.
+Universidade Estadual de Campinas, UNICAMP, Brasil.
+Grande área: Engenharias

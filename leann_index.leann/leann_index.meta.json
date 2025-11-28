@@ -1,0 +1,19 @@
+{
+  "version": "1.0",
+  "backend_name": "hnsw",
+  "embedding_model": "nomic-embed-text",
+  "dimensions": 768,
+  "backend_kwargs": {},
+  "embedding_mode": "ollama",
+  "passage_sources": [
+    {
+      "type": "jsonl",
+      "path": "leann_index.passages.jsonl",
+      "index_path": "leann_index.passages.idx",
+      "path_relative": "leann_index.passages.jsonl",
+      "index_path_relative": "leann_index.passages.idx"
+    }
+  ],
+  "is_compact": true,
+  "is_pruned": true
+}
